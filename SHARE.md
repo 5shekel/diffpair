@@ -1,0 +1,95 @@
+# diffpair — Public Share on zrok
+
+**Live URL:** https://diffpair.z.idiot.io/
+
+The Diffpair Mapper page is served publicly from the reserved zrok name
+`diffpair` (public namespace) of the self-hosted zrok instance
+(`https://z.idiot.io`). The page's 🪄 AI Console works against the
+watchdog, so instructions/commits/restore are usable from the public URL.
+
+## Architecture
+
+```
+https://diffpair.z.idiot.io
+        │  (zrok2 share, agent mode, reserved name "diffpair")
+        ▼
+gate.js (:8090, 127.0.0.1)      webroot/gate.js
+        │  only allows: / , /diffpair-mapper.html, /api/*
+        │  everything else → 403
+        ▼
+node watchdog.js (:8737)        started: node watchdog.js
+        │  serves the page + /api/* (status, commits, instruction, restore, SSE)
+        │  version-controls diffpair-mapper.html into .versions/
+        ▼
+/home/user/diffpair/diffpair-mapper.html
+```
+
+### Why the gate?
+The watchdog serves the **entire project directory** statically
+(including `.env` with a token, `.git/`, `.versions/`, logs, ...). The gate
+(`webroot/gate.js`) sits in front and only exposes the page and its
+`/api/*` endpoints; all other paths return 403.
+
+## Running processes
+
+| Process | Port | Log |
+|---|---|---|
+| `node watchdog.js` | 8737 | `watchdog.log` (also the AI Console instruction feed) |
+| `node webroot/gate.js` | 8090 | `gate.log` |
+| `zrok2 agent start` | unix socket `~/.zrok2/agent.socket` | `agent.log` |
+| `zrok2 share public http://127.0.0.1:8090 -n public:diffpair --force-agent --headless` | — | `zrok-share.log` |
+
+## Repro steps
+
+```sh
+# 1. Reserved name (one-time)
+zrok2 create name diffpair            # namespace token defaults to "public"
+zrok2 list names                      # verify RESERVED = true
+
+# 2. Agent (needed for the share; foreground command → nohup it)
+rm -f ~/.zrok2/agent.socket           # only if a stale socket blocks it
+nohup zrok2 agent start > agent.log 2>&1 &
+
+# 3. Watchdog (serves the page + console API on :8737)
+nohup node watchdog.js > watchdog.log 2>&1 &
+
+# 4. Gate (path filter on :8090)
+nohup node webroot/gate.js > gate.log 2>&1 &
+
+# 5. Publish on the reserved name:  -n <namespaceToken>:<name>
+nohup zrok2 share public http://127.0.0.1:8090 -n public:diffpair \
+  --force-agent --headless > zrok-share.log 2>&1 &
+```
+
+## Caveats
+
+- **SSE does not stream through this zrok instance.** The zrok proxy
+  buffers chunked/streamed responses until the body ends (verified with a
+  controlled streaming test, both local and agent share modes). So on the
+  public URL the console's live feed (`/api/events`) hangs — the connection
+  dot stays "connecting", and live commit/breakage notifications won't
+  appear. SSE works fine directly on `http://localhost:8737`.
+- Everything else on the public URL works: page, `POST /api/instruction`
+  (instructions still land in the watchdog terminal + `instructions.log`),
+  `GET /api/commits`, `GET /api/status`, `POST /api/restore|/api/revert`.
+- `-n` selector format is `<namespaceToken>:<name>` (bare `-n diffpair`
+  fails — parsed as a namespace token). This zrok2 build has no
+  `run`/`reserve` commands; equivalents are `share public ...` /
+  `create name ...`.
+- The gate forwards `transfer-encoding: chunked` for streamed responses;
+  without it, HTTP clients treat the body as read-until-close.
+
+## Stop / restart
+
+```sh
+pkill -f 'zrok2 share public http://127[.]0[.]0[.]1:8090'   # tunnel
+pkill -f 'node webroot/[g]ate.js'                            # gate
+pkill -f 'zrok2 agent sta[r]t'                               # agent
+# watchdog: leave running, or  pkill -f 'watchdog[.]js'
+```
+
+Restart with the numbered steps above. The reserved name `diffpair`
+persists across sessions; only the tunnel/agent need recreating.
+
+Note: `pkill -f` patterns must avoid matching their own command line —
+use the bracket trick (e.g. `[g]ate`) or patterns not present verbatim.
