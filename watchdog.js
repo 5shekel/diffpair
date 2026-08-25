@@ -45,6 +45,41 @@ const MIME = {
   ".woff2": "font/woff2",
 };
 
+// ------------------------------------------------------------- control plane
+// The watchdog only version-controls and health-checks TARGET. Its own code
+// (this file, and the public gate) is a trust boundary — it decides what
+// "healthy" means and what the public internet can touch — so an edit to it
+// should never be auto-applied or silently ignored. This can only *detect*
+// drift after the fact (log + /api/status + SSE), not prevent it: anything
+// with filesystem write access, including an AI agent editing this repo,
+// can still change this file directly.
+const GATE_FILE = path.join(ROOT, "webroot", "gate.js");
+
+function sha8File(p) {
+  try {
+    return sha8(fs.readFileSync(p));
+  } catch {
+    return null;
+  }
+}
+
+const bootControlHash = { watchdog: sha8File(__filename), gate: sha8File(GATE_FILE) };
+const controlDrift = { watchdog: false, gate: false };
+
+function checkControlPlaneDrift() {
+  const cur = { watchdog: sha8File(__filename), gate: sha8File(GATE_FILE) };
+  for (const key of Object.keys(bootControlHash)) {
+    const changed = cur[key] !== bootControlHash[key];
+    if (changed && !controlDrift[key]) {
+      const label = key === "watchdog" ? path.basename(__filename) : "webroot/gate.js";
+      console.error(`\x1b[35m[watchdog]\x1b[0m ⚠ control-plane file changed on disk: ${label} — the running process is still the old code; review the change before restarting`);
+      sse("control-drift", { file: key, time: Date.now() });
+    }
+    controlDrift[key] = changed;
+  }
+}
+setInterval(checkControlPlaneDrift, 20000);
+
 const clients = new Set();
 function sse(event, data) {
   const msg = `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
@@ -193,8 +228,16 @@ function onDirEvent() {
   }, 700);
 }
 
+const TARGET_NAME = path.basename(TARGET);
+
 try {
-  fs.watch(ROOT, onDirEvent);
+  // filename is only reliably reported on Linux/inotify; when the OS omits
+  // it, fall back to checking on every event rather than silently missing
+  // real edits.
+  fs.watch(ROOT, (eventType, filename) => {
+    if (!filename || filename === TARGET_NAME) onDirEvent();
+    if (!filename || filename === path.basename(__filename)) checkControlPlaneDrift();
+  });
 } catch (e) {
   console.error("fs.watch failed, falling back to polling:", e.message);
   setInterval(onDirEvent, 2000);
@@ -236,6 +279,10 @@ function statusObj() {
     lastCommit: last || null,
     commits: list.length,
     lastKnownGood: fs.existsSync(LAST_GOOD) ? fs.statSync(LAST_GOOD).size : 0,
+    controlPlane: {
+      watchdogChanged: controlDrift.watchdog,
+      gateChanged: controlDrift.gate,
+    },
   };
 }
 

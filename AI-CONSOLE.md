@@ -43,9 +43,11 @@ open so remote suggestions still work.
    big banner to the terminal running `watchdog.js`** — so an agent (e.g. pi)
    running it there sees instructions live.
 2. The AI edits `diffpair-mapper.html` directly.
-3. The watchdog (fs watcher on the directory) detects any change — including
-   renames/replacements (`sed -i`, `git checkout`, agent rewrites) — and
-   health-checks it:
+3. The watchdog (fs watcher on the directory) reacts only to
+   `diffpair-mapper.html` — including renames/replacements (`sed -i`,
+   `git checkout`, agent rewrites) — everything else in the project
+   (`agent.log`, `instructions.log`, `photos/`, ...) is ignored rather than
+   triggering a wasted 2 MB read + hash. It health-checks the file:
    - size sanity (not tiny, not 4× ballooned)
    - page identity markers (`<!doctype html>`, "diffpair")
    - balanced `<script>` tags, proper closing tag
@@ -57,11 +59,29 @@ open so remote suggestions still work.
    Broken → SSE `breakage` event, terminal alert, last-known-good copy kept
    at `.versions/last-known-good.html`.
 
+## Watching the watchdog
+
+`watchdog.js` and `webroot/gate.js` are the trust boundary — they decide
+what counts as "healthy" and what the public internet can touch — so the
+watchdog treats edits to its *own* code differently from edits to the page:
+it hashes both files at boot and checks for drift (instantly for
+`watchdog.js` via the same fs watcher, every 20s for `gate.js` since it's in
+a subdirectory the non-recursive watcher can't see into). A change is never
+auto-applied or auto-restarted — it's only logged loudly and surfaced as
+`controlPlane.{watchdogChanged,gateChanged}` in `/api/status` plus a
+`control-drift` SSE event, so a changed control file doesn't go live until
+someone reviews it and restarts on purpose.
+
+This is detection, not prevention: anything with filesystem write access —
+including an AI agent editing this repo — can still change `watchdog.js` or
+`gate.js` directly. There's no OS-level barrier stopping that; this just
+makes sure it can't happen silently.
+
 ## API
 
 | Route | Purpose |
 |---|---|
-| `GET /api/status` | `{healthy, problems, uptimeSec, lastCommit, commits, lastKnownGood}` |
+| `GET /api/status` | `{healthy, problems, uptimeSec, lastCommit, commits, lastKnownGood, controlPlane}` |
 | `GET /api/commits` | last 30 commits (newest first) |
 | `POST /api/instruction` `{text}` | record an instruction |
 | `POST /api/revert` `{id}` | restore a specific commit — commits with note `"reverted to <id>"` |

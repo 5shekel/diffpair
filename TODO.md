@@ -47,10 +47,12 @@ Status legend: [ ] open · [x] done
 
 ### Robustness
 14. **SSE responses have no `error` handler** — a dying client can raise an
-    unhandled 'error' on `res.write` and crash the server.
+    unhandled 'error' on `res.write` and crash the server. [x] fixed.
 15. **Watcher re-hashes on *any* file change in the project root** — log
     writes (agent.log, instructions.log, photos) trigger a 2 MB read + sha256.
-    Wasteful, not wrong.
+    Wasteful, not wrong. [x] fixed — see "T15-watcher" below (this finding
+    was never actually given a task number; T15 in the Tasks list below is a
+    different, still-open item — the instruction ack queue).
 
 ### Housekeeping
 16. **`webroot/` is a dead design** — duplicate copies of the HTML, a dead
@@ -108,3 +110,22 @@ Status legend: [ ] open · [x] done
       zrok tunnel (documented buffering caveat in SHARE.md), so public
       viewers poll indefinitely — 15s keeps that from generating another
       68k-hit log.
+- [x] T15-watcher (finding #15, not the instruction-queue T15 above):
+      `fs.watch(ROOT, ...)` now filters on `filename` and only reacts to
+      `diffpair-mapper.html` — writes to `agent.log`, `instructions.log`,
+      `photos/`, etc. no longer trigger a 2 MB read + sha256.
+- [x] T18 (new, from "how do we monitor AI edits to watchdog.js itself?"):
+      control-plane drift detection. The watcher fix above means the
+      watchdog now ignores *everything* except its own target file — so an
+      edit to `watchdog.js`/`gate.js` (by an AI agent or anyone else) would
+      otherwise go completely unnoticed by the running process. Added a
+      boot-time hash of both files + a drift check (instant via the fs
+      watcher for `watchdog.js`, every 20s for `gate.js` since it's in a
+      subdirectory the non-recursive watcher can't see into). On drift:
+      logs loudly, sets `controlPlane.{watchdogChanged,gateChanged}` in
+      `/api/status`, and emits a `control-drift` SSE event — but never
+      auto-applies or auto-restarts. This is detection only, not
+      prevention: nothing stops filesystem-write access (including an AI
+      coding session) from editing these files directly; see AI-CONSOLE.md
+      "Watching the watchdog" for the caveat. Real prevention would need
+      OS-level permissions or a separate trust boundary — not done.
