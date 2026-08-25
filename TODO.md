@@ -91,10 +91,6 @@ Status legend: [ ] open · [x] done
       untracked in git, byte-identical to the real files, and unused —
       `gate.js` only proxies, it never serves them). Kept `webroot/gate.js`,
       the actively-run public gate.
-- [ ] T14: Auth for the public share (token in URL/header for POSTs, or
-      read-only public page). Not done — T8 already blocks the two
-      destructive endpoints publicly, so this is lower urgency now; still
-      needs a decision on the token/UX scheme before implementing.
 - [ ] T15: Instruction queue with ack state (e.g. instructions.json with
       status: pending/done) so agents can't silently miss instructions.
       Not done — needs a decision on who/what consumes the ack state.
@@ -129,3 +125,58 @@ Status legend: [ ] open · [x] done
       coding session) from editing these files directly; see AI-CONSOLE.md
       "Watching the watchdog" for the caveat. Real prevention would need
       OS-level permissions or a separate trust boundary — not done.
+
+## 2026-08-25 (later) — agent.log pollution, round 2
+
+19. **`agent.log` grew again (271 KB and climbing, ~1 req/sec)** — not the
+    same cause as finding #5. Root cause: a handful of already-open browser
+    tabs on `diffpair.z.idiot.io` (all from IP `37.142.148.130`) are still
+    running the *pre-T17* inline JS, which polled `/api/status` every 4s
+    instead of 15s. The currently-served page already polls at 15s (T17)
+    — this is stale code sitting in tabs that loaded before that fix
+    shipped, not a regression. Confirmed by grepping `.versions/` for the
+    literal `4000)` interval: present in the snapshot from 15:15 UTC,
+    absent from the current file.
+    - [x] Immediate: reset `agent.log`. Naive truncate doesn't work here —
+      zrok's writer doesn't reopen on truncate, so the fd's internal write
+      offset stays put and you get a sparse file that *looks* huge again
+      (this is the same failure mode T16 already diagnosed). Real fix is a
+      clean restart: killed `zrok2 share` + `zrok2 agent`, found the
+      backend still had the old share token registered (`zrok2 overview`
+      showed `iein0x6pk2fz` still bound to `diffpair.z.idiot.io` after the
+      local process died — restarting `zrok2 agent` alone hit `409
+      shareConflict` trying to auto-rejoin it), cleared it with
+      `zrok2 delete share <token>`, then re-shared clean. Verified: gate
+      (8090), watchdog (8737), and the public URL all return 200 on
+      `/api/status` afterward, `agent.log` back to ~11 KB of boot-only
+      lines.
+    - [x] Forward fix: the poller-only path (what public/SSE-less tabs run
+      forever) never checked whether the page it loaded is still current —
+      `showReload()` was only ever called from SSE events or a local
+      restore/revert. Added `checkDrift()` in `diffpair-mapper.html`: the
+      poller now remembers the `lastCommit.hash` from its first
+      `/api/status` response and shows the reload banner the moment a
+      later poll reports a different hash. This can't retroactively fix
+      tabs that were *already* open when this shipped (they're running the
+      old JS, which is the whole problem) but it means the *next* time the
+      page changes, any tab still open — poller or SSE — finds out instead
+      of silently drifting forever.
+    - [x] The stale tabs kept polling every 4s post-restart as expected
+      (confirmed — nothing server-side reaches an already-loaded page), so
+      rather than chase that, silenced the actual symptom at the source:
+      `zrok2 agent start`'s stdout is now piped through
+      `grep -v '"msg":"map\[method:'` before landing in `agent.log` (see
+      SHARE.md's new "agent.log — filtered, on purpose" section). Verified
+      3 requests through the public URL landed 200s with zero new
+      `msg:access` lines in the file, then watched it 15s with the stale
+      tabs still hitting it — flat. `zrok2` has no built-in log-level flag
+      for this (`-v` only adds verbosity), so filtering the pipe was the
+      only option short of dropping the log entirely.
+    - Hit a second, unrelated gotcha along the way: `zrok2 agent` persists
+      a local registry (`~/.zrok2/agent-registry.json`) and replays it on
+      every boot to auto-recreate shares. Restarting the agent *and* also
+      re-running `zrok2 share public ...` (as SHARE.md's old repro steps
+      did) races the two and leaves duplicate registry entries that
+      permanently 409-conflict with each other. Fixed by hand-editing the
+      registry down to one entry; SHARE.md now says to restart the agent
+      alone and only fall back to re-sharing if that doesn't bring it back.

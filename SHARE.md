@@ -36,7 +36,7 @@ The watchdog serves the **entire project directory** statically
 |---|---|---|
 | `node watchdog.js` | 8737 | `watchdog.log` (also the AI Console instruction feed) |
 | `node webroot/gate.js` | 8090 | `gate.log` |
-| `zrok2 agent start` | unix socket `~/.zrok2/agent.socket` | `agent.log` |
+| `zrok2 agent start` | unix socket `~/.zrok2/agent.socket` | `agent.log` (filtered — see below) |
 | `zrok2 share public http://127.0.0.1:8090 -n public:diffpair --force-agent --headless` | — | `zrok-share.log` |
 
 ## Repro steps
@@ -48,7 +48,7 @@ zrok2 list names                      # verify RESERVED = true
 
 # 2. Agent (needed for the share; foreground command → nohup it)
 rm -f ~/.zrok2/agent.socket           # only if a stale socket blocks it
-nohup zrok2 agent start > agent.log 2>&1 &
+nohup sh -c 'zrok2 agent start 2>&1 | grep --line-buffered -v "\"msg\":\"map\[method:" >> agent.log' &
 
 # 3. Watchdog (serves the page + console API on :8737)
 nohup node watchdog.js > watchdog.log 2>&1 &
@@ -60,6 +60,31 @@ nohup node webroot/gate.js > gate.log 2>&1 &
 nohup zrok2 share public http://127.0.0.1:8090 -n public:diffpair \
   --force-agent --headless > zrok-share.log 2>&1 &
 ```
+
+### `agent.log` — filtered, on purpose
+
+`zrok2 agent`'s stdout is a structured JSON log of every boot/error/retry
+event **plus one `"msg":"access"` line per HTTP request through the tunnel**
+— that access-log stream is the only thing that ever makes this file grow
+unboundedly (a browser tab left open on the public URL, polling
+`/api/status`, is enough to add ~1 line/sec forever). It has no ongoing
+value here — the app-level request handling is already visible in
+`watchdog.log`/`gate.log` if needed — so step 2 above pipes the agent's
+output through `grep -v` to drop those lines before they ever hit disk,
+keeping only boot/warn/error lines (which is what actually mattered the one
+time this needed debugging — see TODO.md's 2026-08-25 "round 2" entry).
+`zrok2` itself has no quieter log-level flag (`-v` only *adds* verbosity),
+so filtering the stream is the only way to silence it.
+
+**Gotcha:** the agent also persists a local registry at
+`~/.zrok2/agent-registry.json` and replays it on every boot to
+auto-recreate shares — so restarting the agent process alone is enough to
+bring the `diffpair` share back; you generally do **not** need to also
+re-run the `zrok2 share public ...` command from step 5 after an agent
+restart (doing both races and produces duplicate registry entries that
+permanently 409-conflict with each other, needing a manual edit of that
+file to fix — worth checking `cat ~/.zrok2/agent-registry.json` first if a
+restart ever leaves the share stuck retrying).
 
 ## Caveats
 

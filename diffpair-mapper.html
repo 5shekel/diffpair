@@ -1547,10 +1547,23 @@
     if ((e.ctrlKey || e.metaKey) && e.key === "Enter") { e.preventDefault(); send(); }
   });
 
+  // Baseline commit hash this tab loaded with. If a later /api/status shows a
+  // different lastCommit hash, the page has changed since this tab opened \u2014
+  // surface the reload banner even for poller-only tabs (no SSE, e.g. the
+  // public zrok URL) so a stale tab doesn't just keep polling forever.
+  var loadedHash = null;
+  function checkDrift(s){
+    var h = s.lastCommit && s.lastCommit.hash;
+    if (!h) return;
+    if (loadedHash === null) { loadedHash = h; return; }
+    if (h !== loadedHash) showReload();
+  }
+
   function renderStatus(s){
     document.getElementById("acDot").classList.add("on");
     toggle.classList.remove("ac-offline");
     if (state.className.indexOf("ok") < 0) setState("watchdog connected \u00b7 " + s.commits + " commit(s)");
+    checkDrift(s);
     if (s.healthy === false) {
       health.innerHTML = "\u26a0 BREAKAGE: " + ((s.problems || [])[0] || "unknown") + '<button id="acRestore">restore last good</button>';
       health.classList.add("bad");
