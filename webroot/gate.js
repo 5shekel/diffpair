@@ -18,6 +18,11 @@ const UP = "http://127.0.0.1:8737";
 // allowed paths: "/", "/diffpair-mapper.html", "/api/..."
 const ALLOW = /^\/(api\/[a-zA-Z0-9_-]*$|diffpair-mapper\.html$|$)/;
 
+// state-changing routes blocked from the public internet — no auth yet, so
+// don't let anyone on the tunnel overwrite the file. /api/instruction stays
+// open so remote suggestions still work.
+const BLOCK_PUBLIC_POST = /^\/api\/(restore|revert)$/;
+
 const server = http.createServer((req, res) => {
   let p;
   try {
@@ -29,6 +34,10 @@ const server = http.createServer((req, res) => {
   if (!ALLOW.test(p)) {
     res.writeHead(403);
     return res.end("forbidden");
+  }
+  if (req.method === "POST" && BLOCK_PUBLIC_POST.test(p)) {
+    res.writeHead(403);
+    return res.end("forbidden (state-changing endpoint, local-only)");
   }
   const up = http.request(UP + req.url, { method: req.method, headers: req.headers }, (upRes) => {
     // Keep transfer-encoding (chunked) for streamed responses such as SSE —

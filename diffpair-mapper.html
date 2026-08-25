@@ -1547,26 +1547,44 @@
     if ((e.ctrlKey || e.metaKey) && e.key === "Enter") { e.preventDefault(); send(); }
   });
 
-  // ---- status poll (connection dot)
-  setInterval(function(){
+  function renderStatus(s){
+    document.getElementById("acDot").classList.add("on");
+    toggle.classList.remove("ac-offline");
+    if (state.className.indexOf("ok") < 0) setState("watchdog connected \u00b7 " + s.commits + " commit(s)");
+    if (s.healthy === false) {
+      health.innerHTML = "\u26a0 BREAKAGE: " + ((s.problems || [])[0] || "unknown") + '<button id="acRestore">restore last good</button>';
+      health.classList.add("bad");
+      var btn = document.getElementById("acRestore");
+      if (btn) btn.addEventListener("click", function(){
+        fetch("/api/restore", { method: "POST" }).then(function(){ setState("restored last known-good version", "ok"); showReload(); });
+      });
+    } else if (s.lastCommit) {
+      health.innerHTML = "\u2705 healthy \u00b7 last commit " + fmtTime(s.lastCommit.time);
+      health.classList.remove("bad");
+    }
+  }
+
+  // ---- status poll (connection dot) \u2014 runs until SSE is confirmed live,
+  // then only as a fallback if the SSE connection drops. 15s, not 4s: over
+  // the public zrok tunnel SSE never connects (proxy buffers streamed
+  // responses), so this poll runs forever there \u2014 keep it infrequent.
+  var sseLive = false;
+  var statusPoll = setInterval(function(){
+    if (sseLive) return;
     fetch("/api/status", { cache: "no-store" })
       .then(function(r){ return r.json(); })
-      .then(function(s){
-        document.getElementById("acDot").classList.add("on");
-        toggle.classList.remove("ac-offline");
-        if (state.className.indexOf("ok") < 0) setState("watchdog connected \u00b7 " + s.commits + " commit(s)");
-        if (s.lastCommit) health.innerHTML = "\u2705 healthy \u00b7 last commit " + fmtTime(s.lastCommit.time);
-      })
+      .then(renderStatus)
       .catch(function(){
         document.getElementById("acDot").classList.remove("on");
         toggle.classList.add("ac-offline");
         health.textContent = "\u26a0 watchdog offline \u2014 node watchdog.js";
       });
-  }, 4000);
+  }, 15000);
 
   // ---- live events
   try {
     var es = new EventSource("/api/events");
+    es.addEventListener("open", function(){ sseLive = true; });
     es.addEventListener("commit", function(e){
       var d = JSON.parse(e.data);
       health.innerHTML = "\u2705 healthy \u00b7 commit " + (d.entry.hash || d.entry.id) + " just landed";
@@ -1588,14 +1606,8 @@
       showReload();
       loadCommits();
     });
-    es.addEventListener("status", function(e){
-      var s = JSON.parse(e.data);
-      if (s.lastCommit) {
-        health.innerHTML = "\u2705 healthy \u00b7 last commit " + fmtTime(s.lastCommit.time);
-        health.classList.remove("bad");
-      }
-    });
-    es.onerror = function(){ /* poller keeps the dot honest */ };
+    es.addEventListener("status", function(e){ renderStatus(JSON.parse(e.data)); });
+    es.onerror = function(){ sseLive = false; /* poller takes back over */ };
   } catch (err) { /* older browsers: poller only */ }
 
   loadCommits();

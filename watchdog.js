@@ -48,7 +48,9 @@ const MIME = {
 const clients = new Set();
 function sse(event, data) {
   const msg = `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
-  for (const res of clients) res.write(msg);
+  for (const res of clients) {
+    try { res.write(msg); } catch { clients.delete(res); }
+  }
 }
 
 // ---------------------------------------------------------------- versions
@@ -70,18 +72,25 @@ function writeManifest(list) {
 }
 
 function commit(buf, note, meta) {
-  const id = Date.now().toString(36) + sha8(buf).slice(0, 4);
+  const hash = sha8(buf);
+  const list = readManifest();
+  const last = list[list.length - 1];
+  if (last && last.hash === hash) {
+    // byte-identical to the last commit — nothing new happened, don't add noise
+    if (!meta || meta.healthy !== false) fs.writeFileSync(LAST_GOOD, buf);
+    return last;
+  }
+  const id = Date.now().toString(36) + hash.slice(0, 4);
   const file = path.join(VERSIONS_DIR, `${id}.html`);
   fs.writeFileSync(file, buf);
   const entry = {
     id,
-    hash: sha8(buf),
+    hash,
     size: buf.length,
     time: new Date().toISOString(),
     note: note || "change detected",
     ...(meta || {}),
   };
-  const list = readManifest();
   list.push(entry);
   // retention: keep the newest 25 snapshots
   const trimmed = list.slice(-25);
@@ -89,7 +98,7 @@ function commit(buf, note, meta) {
     try { fs.unlinkSync(path.join(VERSIONS_DIR, `${old.id}.html`)); } catch {}
   }
   writeManifest(trimmed);
-  if (note === "restored" || !meta || meta.healthy !== false) {
+  if (!meta || meta.healthy !== false) {
     fs.writeFileSync(LAST_GOOD, buf);
   }
   return entry;
@@ -141,6 +150,7 @@ function healthCheck(buf, prevSize) {
 let lastGoodSize = 0;
 let debounce = null;
 let lastHash = null;
+let currentHealth = { healthy: true, problems: [], time: Date.now() };
 
 function onDirEvent() {
   let buf;
@@ -153,15 +163,29 @@ function onDirEvent() {
   if (sha8(buf) === lastHash) return; // no real change
   clearTimeout(debounce);
   debounce = setTimeout(() => {
+    // re-read at fire time rather than trusting the buf captured above — a
+    // restore/revert (or another rapid edit) may have landed while we waited
+    // out the debounce, and reacting to stale content would clobber the
+    // health state a concurrent restore just set.
+    let buf;
+    try {
+      buf = fs.readFileSync(TARGET);
+    } catch {
+      sse("breakage", { problems: ["file missing"], time: Date.now() });
+      return;
+    }
+    if (sha8(buf) === lastHash) return; // settled back to a known state already
     lastHash = sha8(buf);
     const prevSize = lastGoodSize || buf.length;
     const hc = healthCheck(buf, prevSize);
     if (hc.ok) {
       lastGoodSize = buf.length;
+      currentHealth = { healthy: true, problems: [], time: Date.now() };
       const entry = commit(buf, "watchdog: change detected");
       console.log(`\x1b[32m[watchdog]\x1b[0m healthy change committed — ${entry.id} (${(buf.length / 1024).toFixed(0)} KB, ${entry.hash})`);
       sse("commit", { entry, healthy: true });
     } else {
+      currentHealth = { healthy: false, problems: hc.problems, time: Date.now() };
       console.error(`\x1b[31m[watchdog]\x1b[0m BREAKAGE detected:\n  - ${hc.problems.join("\n  - ")}\n`);
       console.error("[watchdog] restore with:  curl -X POST localhost:8737/api/restore");
       sse("breakage", { problems: hc.problems, time: Date.now() });
@@ -206,7 +230,8 @@ function statusObj() {
   const list = readManifest();
   const last = list[list.length - 1];
   return {
-    healthy: true,
+    healthy: currentHealth.healthy,
+    problems: currentHealth.problems,
     uptimeSec: Math.round(process.uptime()),
     lastCommit: last || null,
     commits: list.length,
@@ -229,6 +254,10 @@ const server = http.createServer(async (req, res) => {
     clients.add(res);
     const hb = setInterval(() => res.write(": ping\n\n"), 15000);
     req.on("close", () => {
+      clearInterval(hb);
+      clients.delete(res);
+    });
+    res.on("error", () => {
       clearInterval(hb);
       clients.delete(res);
     });
@@ -263,20 +292,24 @@ const server = http.createServer(async (req, res) => {
 
   // ---- restore last known-good
   if (req.method === "POST" && (u.pathname === "/api/restore" || u.pathname === "/api/revert")) {
-    let target;
-    if (u.pathname === "/api/revert" && req.method === "POST") {
+    let target, note;
+    if (u.pathname === "/api/revert") {
       const body = JSON.parse((await readBody(req)) || "{}");
       const entry = readManifest().find((c) => c.id === body.id);
       if (!entry) return json(res, 404, { error: "unknown commit id" });
       target = path.join(VERSIONS_DIR, `${entry.id}.html`);
+      note = `reverted to ${entry.id}`;
     } else {
       target = LAST_GOOD;
+      note = "restored last-known-good";
     }
     if (!fs.existsSync(target)) return json(res, 404, { error: "no snapshot available" });
     const buf = fs.readFileSync(target);
     fs.writeFileSync(TARGET, buf);
-    const entry = commit(buf, "restored last-known-good");
+    const entry = commit(buf, note);
     lastHash = sha8(buf); // don't let the watcher double-commit this write
+    lastGoodSize = buf.length;
+    currentHealth = { healthy: true, problems: [], time: Date.now() };
     console.log(`\x1b[33m[watchdog]\x1b[0m restored -> ${entry.id} (${(buf.length / 1024).toFixed(0)} KB)`);
     sse("restore", { entry });
     return json(res, 200, { ok: true, entry });
@@ -324,7 +357,16 @@ if (list.length === 0) {
 }
 if (list.length === 0) lastHash = sha8(bootBuf); // init branch: bootBuf is the latest state too
 
-server.listen(PORT, () => {
+server.on("error", (err) => {
+  if (err.code === "EADDRINUSE") {
+    console.error(`\x1b[31m[watchdog]\x1b[0m port ${PORT} is already in use — a watchdog is probably already running.`);
+    console.error(`[watchdog] check with:  ss -ltnp | grep ${PORT}   (or lsof -i :${PORT})`);
+    process.exit(1);
+  }
+  throw err;
+});
+
+server.listen(PORT, "127.0.0.1", () => {
   console.log(`\x1b[1m\x1b[32m🪄 AI Console watchdog\x1b[0m listening on http://localhost:${PORT}/`);
   console.log(`   watching ${path.basename(TARGET)}`);
   console.log(`   instructions -> ${path.basename(INSTRUCTIONS_LOG)} (and this terminal)`);
