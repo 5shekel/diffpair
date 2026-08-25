@@ -317,6 +317,70 @@
 
   footer{ margin-top:22px; color:var(--ink-faint); font-size:12px; line-height:1.6; }
   footer b{ color:var(--ink-dim); font-weight:600; }
+  /* ---------- AI console ---------- */
+  #aiToggle{
+    position:fixed; right:22px; bottom:22px; z-index:50;
+    width:54px; height:54px; border-radius:50%;
+    background:var(--panel-bg-raised);
+    border:1px solid var(--border-strong);
+    font-size:26px; line-height:1; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 24px rgba(0,0,0,.55);
+    transition:transform .15s ease, box-shadow .15s ease, opacity .15s;
+  }
+  #aiToggle:hover{ transform:scale(1.1) rotate(-12deg); box-shadow:0 0 20px rgba(91,255,160,.4); }
+  #aiToggle.ac-offline{ opacity:.4; }
+  #aiToggle.ac-offline:hover{ opacity:.7; }
+  #aiConsole{
+    position:fixed; top:0; right:0; bottom:0; z-index:49;
+    width:min(370px, 94vw);
+    background:var(--panel-bg);
+    border-left:1px solid var(--border-strong);
+    box-shadow:-12px 0 40px rgba(0,0,0,.55);
+    transform:translateX(105%);
+    transition:transform .22s cubic-bezier(.2,.8,.25,1);
+    display:flex; flex-direction:column; gap:12px;
+    padding:18px 18px 22px;
+    overflow-y:auto;
+  }
+  #aiConsole.open{ transform:translateX(0); }
+  .ac-head{ display:flex; align-items:center; gap:10px; }
+  .ac-head h3{ font-family:'Iceberg',cursive; font-weight:400; font-size:17px; margin:0; letter-spacing:.5px; flex:1; }
+  .ac-dot{ width:9px; height:9px; border-radius:50%; background:var(--danger); box-shadow:0 0 6px rgba(255,107,107,.7); flex:none; }
+  .ac-dot.on{ background:var(--accent); box-shadow:0 0 6px rgba(91,255,160,.8); }
+  .ac-close{ background:none; border:none; color:var(--ink-faint); font-size:20px; cursor:pointer; padding:2px 6px; }
+  .ac-close:hover{ color:var(--ink); }
+  .ac-hint{ margin:0; font-size:12px; color:var(--ink-dim); line-height:1.5; }
+  #acInput{
+    flex:1; min-height:110px; max-height:40vh;
+    background:var(--bg); color:var(--ink);
+    border:1px solid var(--border); border-radius:8px;
+    padding:10px 12px; font:13px/1.55 'IBM Plex Mono',monospace;
+    resize:vertical; outline:none;
+  }
+  #acInput:focus{ border-color:var(--border-strong); box-shadow:0 0 0 2px rgba(91,255,160,.12); }
+  .ac-row{ display:flex; align-items:center; gap:10px; }
+  .ac-row .btn{ margin-left:auto; }
+  .ac-kbd{ font-size:11px; color:var(--ink-faint); font-family:'IBM Plex Mono',monospace; }
+  .ac-state{ font-size:12px; color:var(--ink-dim); min-height:16px; }
+  .ac-state.ok{ color:var(--accent); }
+  .ac-state.err{ color:var(--danger); }
+  .ac-health{ font-size:12px; line-height:1.5; padding:9px 11px; border-radius:8px; background:var(--bg); border:1px solid var(--border); color:var(--ink-dim); }
+  .ac-health.bad{ border-color:var(--danger); color:var(--danger); }
+  .ac-health button{ background:none; border:1px solid var(--danger); color:var(--danger); border-radius:6px; padding:2px 8px; cursor:pointer; font-size:11px; margin-left:6px; }
+  .ac-health button:hover{ background:rgba(255,107,107,.12); }
+  .ac-reload{ display:none; align-items:center; gap:8px; font-size:12px; color:var(--accent); padding:9px 11px; border:1px dashed rgba(91,255,160,.4); border-radius:8px; }
+  .ac-reload.show{ display:flex; }
+  .ac-reload button{ margin-left:auto; background:var(--accent); color:var(--accent-ink); border:none; border-radius:6px; padding:4px 10px; cursor:pointer; font-weight:600; font-size:12px; }
+  .ac-commits h4{ margin:2px 0 0; font-size:11px; text-transform:uppercase; letter-spacing:1.2px; color:var(--ink-faint); font-weight:600; }
+  .ac-commits ul{ list-style:none; margin:6px 0 0; padding:0; display:flex; flex-direction:column; gap:4px; }
+  .ac-commits li{ display:flex; align-items:center; gap:8px; font:11px/1.4 'IBM Plex Mono',monospace; color:var(--ink-dim); padding:5px 8px; border:1px solid var(--border); border-radius:6px; background:var(--bg); }
+  .ac-commits li .h{ color:var(--accent); }
+  .ac-commits li .t{ flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .ac-commits li button{ background:none; border:1px solid var(--border-strong); color:var(--ink-dim); border-radius:5px; padding:1px 7px; cursor:pointer; font-size:11px; flex:none; }
+  .ac-commits li button:hover{ color:var(--amber); border-color:var(--amber); }
+  .ac-commits .empty{ font-size:11px; color:var(--ink-faint); }
+
 </style>
 
 <div class="wrap">
@@ -364,6 +428,31 @@
 </div>
 
 <div class="toast" id="toast"></div>
+
+<button id="aiToggle" title="AI Console &mdash; Ctrl+Shift+L" aria-label="Toggle AI Console">&#129516;</button>
+<aside id="aiConsole" aria-label="AI Console">
+  <div class="ac-head">
+    <h3>&#129516; AI Console</h3>
+    <span class="ac-dot" id="acDot"></span>
+    <button class="ac-close" id="acClose" title="Close (Esc)" aria-label="Close">&times;</button>
+  </div>
+  <p class="ac-hint">Tell the AI what to build or change &mdash; new features, flow, styling, whatever. It edits this very page. Every change is committed; anything can be reverted. <b>Ctrl+Shift+L</b> toggles this panel.</p>
+  <textarea id="acInput" placeholder="e.g. &lsquo;add a zoom-to-fit button&rsquo;, &lsquo;make selected routes glow&rsquo;, &lsquo;reorder the route list by net name&rsquo;&hellip;"></textarea>
+  <div class="ac-row">
+    <span class="ac-kbd">Ctrl+Enter to send</span>
+    <button class="btn small" id="acSend">Send to AI &#10024;</button>
+  </div>
+  <div class="ac-state" id="acState">watchdog offline &mdash; run <b>node watchdog.js</b></div>
+  <div class="ac-health" id="acHealth">waiting for watchdog&hellip;</div>
+  <div class="ac-reload" id="acReload">
+    <span>&#128640; New version of this page is on disk.</span>
+    <button id="acReloadBtn">Reload &#8635;</button>
+  </div>
+  <div class="ac-commits">
+    <h4>Commit history</h4>
+    <ul id="acCommitList"></ul>
+  </div>
+</aside>
 
 <script>
 (function(){
@@ -1364,5 +1453,151 @@
 
   buildPanels();
   renderAllBoards();
+})();
+</script>
+
+<script>
+/* ---------- AI Console ---------- */
+(function(){
+  "use strict";
+
+  var toggle = document.getElementById("aiToggle");
+  var panel = document.getElementById("aiConsole");
+  var input = document.getElementById("acInput");
+  var sendBtn = document.getElementById("acSend");
+  var state = document.getElementById("acState");
+  var health = document.getElementById("acHealth");
+  var reloadWrap = document.getElementById("acReload");
+  var commitList = document.getElementById("acCommitList");
+
+  function openPanel(){ panel.classList.add("open"); setTimeout(function(){ input.focus(); }, 240); }
+  function closePanel(){ panel.classList.remove("open"); }
+  function togglePanel(){ panel.classList.contains("open") ? closePanel() : openPanel(); }
+
+  toggle.addEventListener("click", togglePanel);
+  document.getElementById("acClose").addEventListener("click", closePanel);
+  document.addEventListener("keydown", function(e){
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "L" || e.key === "l")) {
+      e.preventDefault();
+      togglePanel();
+      return;
+    }
+    if (e.key === "Escape" && panel.classList.contains("open")) closePanel();
+  });
+
+  function setState(msg, cls){
+    state.textContent = msg;
+    state.className = "ac-state" + (cls ? " " + cls : "");
+  }
+
+  function fmtTime(iso){
+    var d = new Date(iso);
+    return ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2) + ":" + ("0" + d.getSeconds()).slice(-2);
+  }
+
+  function commitLi(entry){
+    var li = document.createElement("li");
+    var h = document.createElement("span"); h.className = "h"; h.textContent = entry.hash || entry.id;
+    var t = document.createElement("span"); t.className = "t"; t.textContent = fmtTime(entry.time) + " \u00b7 " + Math.round(entry.size / 1024) + " KB" + (entry.note ? " \u00b7 " + entry.note : "");
+    var b = document.createElement("button"); b.textContent = "\u21a9"; b.title = "Revert to this version";
+    b.addEventListener("click", function(){
+      fetch("/api/revert", { method: "POST", headers: {"content-type":"application/json"}, body: JSON.stringify({ id: entry.id }) })
+        .then(function(r){ return r.json(); })
+        .then(function(j){ if (j.ok) { setState("reverted \u2192 " + j.entry.id, "ok"); showReload(); } })
+        .catch(function(){ setState("revert failed", "err"); });
+    });
+    li.appendChild(h); li.appendChild(t); li.appendChild(b);
+    return li;
+  }
+
+  function loadCommits(){
+    fetch("/api/commits").then(function(r){ return r.json(); }).then(function(j){
+      commitList.innerHTML = "";
+      (j.commits || []).slice(0, 10).forEach(function(entry){ commitList.appendChild(commitLi(entry)); });
+      if (!(j.commits || []).length) commitList.innerHTML = '<span class="empty">no commits yet</span>';
+    }).catch(function(){});
+  }
+
+  function showReload(){ reloadWrap.classList.add("show"); }
+  document.getElementById("acReloadBtn").addEventListener("click", function(){ location.reload(); });
+
+  // ---- send instruction
+  function send(){
+    var text = input.value.trim();
+    if (!text) return;
+    sendBtn.disabled = true;
+    fetch("/api/instruction", { method: "POST", headers: {"content-type":"application/json"}, body: JSON.stringify({ text: text }) })
+      .then(function(r){ return r.json().then(function(j){ return { ok: r.ok, j: j }; }); })
+      .then(function(res){
+        sendBtn.disabled = false;
+        if (res.ok) {
+          input.value = "";
+          setState("\u2728 sent \u2014 the AI is on it. New versions show up below.", "ok");
+        } else {
+          setState((res.j && res.j.error) || "send failed", "err");
+        }
+      })
+      .catch(function(){
+        sendBtn.disabled = false;
+        setState("watchdog offline \u2014 run <b>node watchdog.js</b> and open the page via http://localhost:8737/", "err");
+      });
+  }
+  sendBtn.addEventListener("click", send);
+  input.addEventListener("keydown", function(e){
+    if ((e.ctrlKey || e.metaKey) && e.key === "Enter") { e.preventDefault(); send(); }
+  });
+
+  // ---- status poll (connection dot)
+  setInterval(function(){
+    fetch("/api/status", { cache: "no-store" })
+      .then(function(r){ return r.json(); })
+      .then(function(s){
+        document.getElementById("acDot").classList.add("on");
+        toggle.classList.remove("ac-offline");
+        if (state.className.indexOf("ok") < 0) setState("watchdog connected \u00b7 " + s.commits + " commit(s)");
+        if (s.lastCommit) health.innerHTML = "\u2705 healthy \u00b7 last commit " + fmtTime(s.lastCommit.time);
+      })
+      .catch(function(){
+        document.getElementById("acDot").classList.remove("on");
+        toggle.classList.add("ac-offline");
+        health.textContent = "\u26a0 watchdog offline \u2014 node watchdog.js";
+      });
+  }, 4000);
+
+  // ---- live events
+  try {
+    var es = new EventSource("/api/events");
+    es.addEventListener("commit", function(e){
+      var d = JSON.parse(e.data);
+      health.innerHTML = "\u2705 healthy \u00b7 commit " + (d.entry.hash || d.entry.id) + " just landed";
+      health.classList.remove("bad");
+      showReload();
+      loadCommits();
+    });
+    es.addEventListener("breakage", function(e){
+      var d = JSON.parse(e.data);
+      health.innerHTML = "\u26a0 BREAKAGE: " + (d.problems || ["unknown"])[0] + '<button id="acRestore">restore last good</button>';
+      health.classList.add("bad");
+      document.getElementById("acRestore").addEventListener("click", function(){
+        fetch("/api/restore", { method: "POST" }).then(function(){ setState("restored last known-good version", "ok"); showReload(); });
+      });
+    });
+    es.addEventListener("restore", function(){
+      health.innerHTML = "\u2705 restored \u2014 last known-good version is live";
+      health.classList.remove("bad");
+      showReload();
+      loadCommits();
+    });
+    es.addEventListener("status", function(e){
+      var s = JSON.parse(e.data);
+      if (s.lastCommit) {
+        health.innerHTML = "\u2705 healthy \u00b7 last commit " + fmtTime(s.lastCommit.time);
+        health.classList.remove("bad");
+      }
+    });
+    es.onerror = function(){ /* poller keeps the dot honest */ };
+  } catch (err) { /* older browsers: poller only */ }
+
+  loadCommits();
 })();
 </script>
