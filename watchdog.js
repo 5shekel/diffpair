@@ -21,7 +21,7 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
-const { spawnSync } = require("child_process");
+const { spawnSync, spawn } = require("child_process");
 
 const ROOT = __dirname;
 const PORT = Number(process.env.PORT || 8737);
@@ -31,6 +31,16 @@ const MANIFEST = path.join(VERSIONS_DIR, "manifest.json");
 const LAST_GOOD = path.join(VERSIONS_DIR, "last-known-good.html");
 const INSTRUCTIONS_LOG = path.join(ROOT, "instructions.log");
 const MIN_SIZE = 10 * 1024; // an intact page is ~2 MB; anything tiny is destroyed
+
+// agent runner tuning — see "agent runner" section below
+const RUNS_DIR = path.join(VERSIONS_DIR, "runs");
+const AGENT_MODEL = process.env.AI_CONSOLE_MODEL || "sonnet";
+const AGENT_TIMEOUT_MS = Number(process.env.AI_CONSOLE_TIMEOUT_MS) || 5 * 60 * 1000;
+const AGENT_MAX_BUDGET_USD = process.env.AI_CONSOLE_MAX_BUDGET_USD || "1";
+const INSTR_WINDOW_MS = 5 * 60 * 1000;
+const INSTR_MAX_PER_WINDOW = 6; // /api/instruction is open to the public tunnel — cap spend/abuse
+const MAX_QUEUE_LEN = 10;
+let instrTimestamps = [];
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
@@ -180,6 +190,176 @@ function healthCheck(buf, prevSize) {
   return { ok: problems.length === 0, problems };
 }
 
+// ------------------------------------------------------------- agent runner
+// Turns an AI Console instruction into a real edit: shells out to the
+// `claude` CLI (headless, -p) restricted to Read/Edit/Glob/Grep in this
+// directory. The directory watcher below still does the actual health check
+// + commit — this just feeds it real changes and records what happened so
+// the panel can show *why* a commit landed. Runs are serialized (one at a
+// time) so two instructions never edit the file concurrently.
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function writeRun(record) {
+  fs.mkdirSync(RUNS_DIR, { recursive: true });
+  fs.writeFileSync(path.join(RUNS_DIR, `${record.id}.json`), JSON.stringify(record, null, 2));
+  sse("run", record);
+}
+
+function readRun(id) {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(RUNS_DIR, `${id}.json`), "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+function listRuns(limit) {
+  fs.mkdirSync(RUNS_DIR, { recursive: true });
+  const files = fs.readdirSync(RUNS_DIR).filter((f) => f.endsWith(".json"));
+  const runs = files
+    .map((f) => {
+      try {
+        return JSON.parse(fs.readFileSync(path.join(RUNS_DIR, f), "utf8"));
+      } catch {
+        return null;
+      }
+    })
+    .filter(Boolean)
+    .sort((a, b) => (a.startedAt < b.startedAt ? 1 : -1));
+  // retention: keep the newest 100 run logs on disk
+  for (const old of runs.slice(100)) {
+    try { fs.unlinkSync(path.join(RUNS_DIR, `${old.id}.json`)); } catch {}
+  }
+  return runs.slice(0, limit || 50);
+}
+
+function buildPrompt(text) {
+  return [
+    "You are the automated AI Console agent for diffpair-mapper.html.",
+    "Apply exactly this instruction by editing diffpair-mapper.html in the current directory:",
+    "",
+    text,
+    "",
+    "Rules:",
+    "- Only edit diffpair-mapper.html. Never touch watchdog.js, webroot/gate.js, .git, instructions.log, instructions2.log, or anything under .versions/.",
+    "- Keep it a single self-contained, valid HTML page — don't drop the doctype, and keep every <script> tag balanced and syntactically valid.",
+    "- Make the smallest change that satisfies the instruction.",
+    "- Don't run shell commands, install packages, or touch the network.",
+  ].join("\n");
+}
+
+function runClaude(prompt) {
+  return new Promise((resolve) => {
+    const args = [
+      "-p", prompt,
+      "--output-format", "json",
+      "--permission-mode", "acceptEdits",
+      "--allowedTools", "Read Edit Glob Grep",
+      "--disallowedTools", "Bash Write WebFetch WebSearch NotebookEdit Agent",
+      "--model", AGENT_MODEL,
+      "--max-budget-usd", AGENT_MAX_BUDGET_USD,
+    ];
+    let child;
+    try {
+      child = spawn("claude", args, { cwd: ROOT, stdio: ["ignore", "pipe", "pipe"] });
+    } catch (err) {
+      resolve({ code: -1, stdout: "", stderr: String((err && err.message) || err), timedOut: false, spawnError: true });
+      return;
+    }
+    let stdout = "";
+    let stderr = "";
+    let timedOut = false;
+    const timer = setTimeout(() => {
+      timedOut = true;
+      child.kill("SIGKILL");
+    }, AGENT_TIMEOUT_MS);
+    child.stdout.on("data", (d) => { stdout += d; });
+    child.stderr.on("data", (d) => { stderr += d; });
+    child.on("error", (err) => {
+      clearTimeout(timer);
+      resolve({ code: -1, stdout, stderr: stderr + "\n" + String((err && err.message) || err), timedOut: false, spawnError: true });
+    });
+    child.on("close", (code) => {
+      clearTimeout(timer);
+      resolve({ code, stdout, stderr, timedOut, spawnError: false });
+    });
+  });
+}
+
+let activeRun = null; // { id, events: [] } while a claude run is in flight
+const runQueue = [];
+let runBusy = false;
+
+async function processInstruction(item) {
+  const { id, text, ts } = item;
+  activeRun = { id, events: [] };
+  writeRun({ id, instruction: text, startedAt: ts, finishedAt: null, status: "running" });
+  console.log(`\x1b[36m[agent]\x1b[0m run ${id} started`);
+
+  const result = await runClaude(buildPrompt(text));
+
+  // give the directory watcher's 700ms debounce room to attribute a trailing
+  // edit to this run before we clear activeRun and move to the next one.
+  await sleep(900);
+  const events = activeRun ? activeRun.events : [];
+  activeRun = null;
+
+  let parsed = null;
+  if (result.stdout) {
+    try { parsed = JSON.parse(result.stdout.trim().split("\n").pop()); } catch {}
+  }
+
+  const status = result.spawnError ? "cli-missing"
+    : result.timedOut ? "timeout"
+    : result.code !== 0 ? "process-error"
+    : (parsed && parsed.is_error) ? "agent-error"
+    : events.some((e) => e.type === "breakage") ? "unhealthy"
+    : events.length === 0 ? "no-changes"
+    : "ok";
+
+  const record = {
+    id,
+    instruction: text,
+    startedAt: ts,
+    finishedAt: new Date().toISOString(),
+    status,
+    sessionId: parsed ? parsed.session_id : null,
+    costUsd: parsed ? parsed.total_cost_usd : null,
+    durationMs: parsed ? parsed.duration_ms : null,
+    resultText: parsed ? String(parsed.result || "").slice(0, 4000) : null,
+    stderr: (result.stderr || "").slice(0, 4000),
+    exitCode: result.code,
+    events,
+  };
+  writeRun(record);
+
+  const tag = status === "ok" ? "\x1b[32mOK\x1b[0m"
+    : status === "no-changes" ? "\x1b[33mNO-CHANGES\x1b[0m"
+    : "\x1b[31m" + status.toUpperCase() + "\x1b[0m";
+  console.log(`\x1b[36m[agent]\x1b[0m run ${id} finished: ${tag}${record.costUsd ? ` ($${record.costUsd.toFixed(4)})` : ""}`);
+}
+
+function pumpQueue() {
+  if (runBusy) return;
+  const item = runQueue.shift();
+  if (!item) return;
+  runBusy = true;
+  processInstruction(item)
+    .catch((err) => console.error("\x1b[31m[agent]\x1b[0m run crashed:", err))
+    .finally(() => {
+      runBusy = false;
+      pumpQueue();
+    });
+}
+
+function enqueueRun(id, text, ts) {
+  runQueue.push({ id, text, ts });
+  pumpQueue();
+}
+
 // Watch the directory (not the file): editors/agents often replace the file via
 // rename (sed -i, git checkout, cp), which silently kills a per-file watch.
 let lastGoodSize = 0;
@@ -216,14 +396,17 @@ function onDirEvent() {
     if (hc.ok) {
       lastGoodSize = buf.length;
       currentHealth = { healthy: true, problems: [], time: Date.now() };
-      const entry = commit(buf, "watchdog: change detected");
-      console.log(`\x1b[32m[watchdog]\x1b[0m healthy change committed — ${entry.id} (${(buf.length / 1024).toFixed(0)} KB, ${entry.hash})`);
+      const runId = activeRun ? activeRun.id : null;
+      const entry = commit(buf, runId ? "agent edit" : "watchdog: change detected", runId ? { runId } : undefined);
+      console.log(`\x1b[32m[watchdog]\x1b[0m healthy change committed — ${entry.id} (${(buf.length / 1024).toFixed(0)} KB, ${entry.hash})${runId ? ` [run ${runId}]` : ""}`);
       sse("commit", { entry, healthy: true });
+      if (activeRun) activeRun.events.push({ type: "commit", entry, time: Date.now() });
     } else {
       currentHealth = { healthy: false, problems: hc.problems, time: Date.now() };
       console.error(`\x1b[31m[watchdog]\x1b[0m BREAKAGE detected:\n  - ${hc.problems.join("\n  - ")}\n`);
       console.error("[watchdog] restore with:  curl -X POST localhost:8737/api/restore");
       sse("breakage", { problems: hc.problems, time: Date.now() });
+      if (activeRun) activeRun.events.push({ type: "breakage", problems: hc.problems, time: Date.now() });
     }
   }, 700);
 }
@@ -321,20 +504,50 @@ const server = http.createServer(async (req, res) => {
       return json(res, 400, { error: "expected {text: string}" });
     }
     if (!text) return json(res, 400, { error: "empty instruction" });
+
+    // /api/instruction is left open to the public tunnel (see gate.js) and now
+    // actually spawns a real agent per call — cap rate + queue depth so a
+    // burst of public requests can't run away with cost or pile up forever.
+    const now = Date.now();
+    instrTimestamps = instrTimestamps.filter((t) => now - t < INSTR_WINDOW_MS);
+    if (instrTimestamps.length >= INSTR_MAX_PER_WINDOW) {
+      return json(res, 429, { error: `rate limit: max ${INSTR_MAX_PER_WINDOW} instructions per ${INSTR_WINDOW_MS / 60000} min` });
+    }
+    if (runQueue.length >= MAX_QUEUE_LEN) {
+      return json(res, 429, { error: "agent queue is full — try again shortly" });
+    }
+    instrTimestamps.push(now);
+
     const ts = new Date().toISOString();
     fs.appendFileSync(INSTRUCTIONS_LOG, `\n[${ts}] ${text}\n`);
     console.log("\n" + "=".repeat(64));
     console.log(`\x1b[1m\x1b[36m NEW AI CONSOLE INSTRUCTION ${ts} \x1b[0m`);
     console.log(text.split("\n").map((l) => "   " + l).join("\n"));
     console.log("=".repeat(64) + "\n");
-    sse("instruction", { text, time: Date.now() });
-    return json(res, 200, { ok: true });
+
+    const runId = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+    writeRun({ id: runId, instruction: text, startedAt: ts, finishedAt: null, status: "queued" });
+    sse("instruction", { text, time: Date.now(), runId });
+    enqueueRun(runId, text, ts);
+    return json(res, 200, { ok: true, runId });
   }
 
   // ---- commits
   if (req.method === "GET" && u.pathname === "/api/commits") {
     const list = readManifest().slice().reverse().slice(0, 30);
     return json(res, 200, { commits: list });
+  }
+
+  // ---- agent run logs (query param, not a path segment, so the single-
+  // segment public gate allowlist for /api/* doesn't need touching)
+  if (req.method === "GET" && u.pathname === "/api/runs") {
+    return json(res, 200, { runs: listRuns(50) });
+  }
+  if (req.method === "GET" && u.pathname === "/api/run") {
+    const id = u.searchParams.get("id") || "";
+    const r = /^[a-z0-9]+$/i.test(id) ? readRun(id) : null;
+    if (!r) return json(res, 404, { error: "unknown run id" });
+    return json(res, 200, r);
   }
 
   // ---- restore last known-good
@@ -416,6 +629,11 @@ server.on("error", (err) => {
 server.listen(PORT, "127.0.0.1", () => {
   console.log(`\x1b[1m\x1b[32m🪄 AI Console watchdog\x1b[0m listening on http://localhost:${PORT}/`);
   console.log(`   watching ${path.basename(TARGET)}`);
-  console.log(`   instructions -> ${path.basename(INSTRUCTIONS_LOG)} (and this terminal)`);
+  console.log(`   instructions -> ${path.basename(INSTRUCTIONS_LOG)} (and this terminal) -> spawns \`claude -p\` (model: ${AGENT_MODEL})`);
+  console.log(`   run logs:     http://localhost:${PORT}/api/runs`);
   console.log(`   revert:       curl -X POST http://localhost:${PORT}/api/restore`);
+  const probe = spawnSync("claude", ["--version"], { encoding: "utf8" });
+  if (probe.error || probe.status !== 0) {
+    console.warn(`\x1b[33m[agent]\x1b[0m \`claude\` CLI not found on PATH — instructions will be logged but runs will fail with status "cli-missing".`);
+  }
 });

@@ -374,12 +374,31 @@
   .ac-reload button{ margin-left:auto; background:var(--accent); color:var(--accent-ink); border:none; border-radius:6px; padding:4px 10px; cursor:pointer; font-weight:600; font-size:12px; }
   .ac-commits h4{ margin:2px 0 0; font-size:11px; text-transform:uppercase; letter-spacing:1.2px; color:var(--ink-faint); font-weight:600; }
   .ac-commits ul{ list-style:none; margin:6px 0 0; padding:0; display:flex; flex-direction:column; gap:4px; }
-  .ac-commits li{ display:flex; align-items:center; gap:8px; font:11px/1.4 'IBM Plex Mono',monospace; color:var(--ink-dim); padding:5px 8px; border:1px solid var(--border); border-radius:6px; background:var(--bg); }
+  .ac-commits li{ display:flex; align-items:center; flex-wrap:wrap; gap:8px; font:11px/1.4 'IBM Plex Mono',monospace; color:var(--ink-dim); padding:5px 8px; border:1px solid var(--border); border-radius:6px; background:var(--bg); }
   .ac-commits li .h{ color:var(--accent); }
   .ac-commits li .t{ flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .ac-commits li button{ background:none; border:1px solid var(--border-strong); color:var(--ink-dim); border-radius:5px; padding:1px 7px; cursor:pointer; font-size:11px; flex:none; }
   .ac-commits li button:hover{ color:var(--amber); border-color:var(--amber); }
+  .ac-commits li button.log:hover{ color:var(--accent); border-color:var(--accent); }
   .ac-commits .empty{ font-size:11px; color:var(--ink-faint); }
+
+  .ac-runs h4{ margin:2px 0 0; font-size:11px; text-transform:uppercase; letter-spacing:1.2px; color:var(--ink-faint); font-weight:600; }
+  .ac-runs ul{ list-style:none; margin:6px 0 0; padding:0; display:flex; flex-direction:column; gap:4px; }
+  .ac-runs li{ font:11px/1.4 'IBM Plex Mono',monospace; color:var(--ink-dim); border:1px solid var(--border); border-radius:6px; background:var(--bg); overflow:hidden; }
+  .ac-runs li .row{ display:flex; align-items:center; gap:8px; padding:5px 8px; cursor:pointer; }
+  .ac-runs li .row:hover{ background:var(--panel-bg-raised); }
+  .ac-runs .badge{ flex:none; font-size:9px; font-weight:700; letter-spacing:.4px; padding:1px 6px; border-radius:999px; text-transform:uppercase; }
+  .ac-runs .badge.queued, .ac-runs .badge.running{ background:rgba(255,190,90,.15); color:var(--amber); }
+  .ac-runs .badge.ok{ background:rgba(91,255,160,.15); color:var(--accent); }
+  .ac-runs .badge.no-changes{ background:rgba(255,255,255,.08); color:var(--ink-faint); }
+  .ac-runs .badge.unhealthy, .ac-runs .badge.agent-error, .ac-runs .badge.process-error, .ac-runs .badge.timeout, .ac-runs .badge.cli-missing{ background:rgba(255,107,107,.15); color:var(--danger); }
+  .ac-runs .txt{ flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .ac-runs .t{ flex:none; color:var(--ink-faint); }
+  .ac-runs .empty{ font-size:11px; color:var(--ink-faint); }
+  .ac-run-detail{ display:none; flex:1 1 100%; padding:8px 10px; border-top:1px solid var(--border); background:var(--panel-bg); white-space:pre-wrap; word-break:break-word; font-size:11px; line-height:1.6; }
+  .ac-run-detail.open{ display:block; }
+  .ac-run-detail .k{ color:var(--ink-faint); }
+  .ac-run-detail .err{ color:var(--danger); }
 
 </style>
 
@@ -447,6 +466,10 @@
   <div class="ac-reload" id="acReload">
     <span>&#128640; New version of this page is on disk.</span>
     <button id="acReloadBtn">Reload &#8635;</button>
+  </div>
+  <div class="ac-runs">
+    <h4>Agent runs</h4>
+    <ul id="acRunList"></ul>
   </div>
   <div class="ac-commits">
     <h4>Commit history</h4>
@@ -1469,6 +1492,8 @@
   var health = document.getElementById("acHealth");
   var reloadWrap = document.getElementById("acReload");
   var commitList = document.getElementById("acCommitList");
+  var runList = document.getElementById("acRunList");
+  var runsCache = {}; // id -> run record, populated by loadRuns()/SSE, reused by commit "log" buttons
 
   function openPanel(){ panel.classList.add("open"); setTimeout(function(){ input.focus(); }, 240); }
   function closePanel(){ panel.classList.remove("open"); }
@@ -1507,6 +1532,23 @@
         .catch(function(){ setState("revert failed", "err"); });
     });
     li.appendChild(h); li.appendChild(t); li.appendChild(b);
+    if (entry.runId) {
+      var log = document.createElement("button"); log.className = "log"; log.textContent = "log"; log.title = "View the AI run that produced this commit";
+      var detail = document.createElement("div"); detail.className = "ac-run-detail";
+      var loaded = false;
+      log.addEventListener("click", function(){
+        detail.classList.toggle("open");
+        if (!detail.classList.contains("open") || loaded) return;
+        var cached = runsCache[entry.runId];
+        if (cached) { fillRunDetail(detail, cached); loaded = true; return; }
+        detail.textContent = "loading\u2026";
+        fetch("/api/run?id=" + encodeURIComponent(entry.runId)).then(function(r){ return r.json(); }).then(function(rec){
+          if (rec && rec.id) { runsCache[rec.id] = rec; fillRunDetail(detail, rec); loaded = true; }
+          else detail.textContent = "log not found (pruned or from before this feature existed)";
+        }).catch(function(){ detail.textContent = "failed to load log"; });
+      });
+      li.appendChild(log); li.appendChild(detail);
+    }
     return li;
   }
 
@@ -1516,6 +1558,78 @@
       (j.commits || []).slice(0, 10).forEach(function(entry){ commitList.appendChild(commitLi(entry)); });
       if (!(j.commits || []).length) commitList.innerHTML = '<span class="empty">no commits yet</span>';
     }).catch(function(){});
+  }
+
+  // ---- agent run log rendering (shared by the commit "log" button and the
+  // Agent runs list below) \u2014 everything here is untrusted text (instructions
+  // can arrive from the public tunnel), so build with textContent, never innerHTML.
+  function fmtCost(c){ return (typeof c === "number") ? ("$" + c.toFixed(4)) : "\u2014"; }
+  function fmtDur(ms){ return (typeof ms !== "number") ? "\u2014" : (ms < 1000 ? ms + "ms" : (ms / 1000).toFixed(1) + "s"); }
+  var RUN_STATUS_TEXT = {
+    "queued": "queued", "running": "running\u2026", "ok": "ok", "no-changes": "no changes",
+    "unhealthy": "unhealthy (not committed)", "agent-error": "agent error", "process-error": "process error",
+    "timeout": "timed out", "cli-missing": "claude CLI missing",
+  };
+
+  function fillRunDetail(box, record){
+    box.innerHTML = "";
+    function row(label, value){
+      var d = document.createElement("div");
+      var k = document.createElement("span"); k.className = "k"; k.textContent = label + ": ";
+      d.appendChild(k); d.appendChild(document.createTextNode(value == null ? "" : String(value)));
+      box.appendChild(d);
+    }
+    row("instruction", record.instruction);
+    row("status", RUN_STATUS_TEXT[record.status] || record.status);
+    row("cost", fmtCost(record.costUsd));
+    row("duration", fmtDur(record.durationMs));
+    if (record.resultText) row("result", record.resultText);
+    if (record.stderr) {
+      var d = document.createElement("div"); d.className = "err";
+      var k = document.createElement("span"); k.className = "k"; k.textContent = "stderr: ";
+      d.appendChild(k); d.appendChild(document.createTextNode(record.stderr));
+      box.appendChild(d);
+    }
+  }
+
+  function runRow(record){
+    var li = document.createElement("li");
+    li.dataset.runId = record.id;
+    var row = document.createElement("div"); row.className = "row";
+    var badge = document.createElement("span"); badge.className = "badge " + record.status; badge.textContent = record.status;
+    var txt = document.createElement("span"); txt.className = "txt"; txt.textContent = record.instruction;
+    var t = document.createElement("span"); t.className = "t"; t.textContent = fmtTime(record.startedAt);
+    row.appendChild(badge); row.appendChild(txt); row.appendChild(t);
+    var detail = document.createElement("div"); detail.className = "ac-run-detail";
+    row.addEventListener("click", function(){
+      detail.classList.toggle("open");
+      if (detail.classList.contains("open")) fillRunDetail(detail, runsCache[record.id] || record);
+    });
+    li.appendChild(row); li.appendChild(detail);
+    return li;
+  }
+
+  function loadRuns(){
+    fetch("/api/runs").then(function(r){ return r.json(); }).then(function(j){
+      runList.innerHTML = "";
+      (j.runs || []).slice(0, 10).forEach(function(r){ runsCache[r.id] = r; runList.appendChild(runRow(r)); });
+      if (!(j.runs || []).length) runList.innerHTML = '<span class="empty">no runs yet</span>';
+    }).catch(function(){});
+  }
+
+  function upsertRunRow(record){
+    runsCache[record.id] = record;
+    var existing = runList.querySelector('li[data-run-id="' + record.id + '"]');
+    if (existing) {
+      var wasOpen = existing.querySelector(".ac-run-detail").classList.contains("open");
+      var fresh = runRow(record);
+      if (wasOpen) { fresh.querySelector(".ac-run-detail").classList.add("open"); fillRunDetail(fresh.querySelector(".ac-run-detail"), record); }
+      existing.replaceWith(fresh);
+    } else {
+      var empty = runList.querySelector(".empty"); if (empty) empty.remove();
+      runList.insertBefore(runRow(record), runList.firstChild);
+      while (runList.children.length > 10) runList.removeChild(runList.lastChild);
+    }
   }
 
   function showReload(){ reloadWrap.classList.add("show"); }
@@ -1620,9 +1734,24 @@
       loadCommits();
     });
     es.addEventListener("status", function(e){ renderStatus(JSON.parse(e.data)); });
+    es.addEventListener("run", function(e){ upsertRunRow(JSON.parse(e.data)); });
     es.onerror = function(){ sseLive = false; /* poller takes back over */ };
   } catch (err) { /* older browsers: poller only */ }
 
   loadCommits();
+  loadRuns();
+})();
+</script>
+
+<script>
+/* ---------- blinking tab title ---------- */
+(function(){
+  "use strict";
+  var baseTitle = document.title;
+  var altTitle = "• " + baseTitle;
+  var on = false;
+  setInterval(function(){
+    document.title = (on = !on) ? altTitle : baseTitle;
+  }, 1000);
 })();
 </script>
