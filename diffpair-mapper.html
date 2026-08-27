@@ -55,9 +55,17 @@
     font-size:clamp(28px,4vw,40px);
     letter-spacing:0.04em;
     text-transform:uppercase;
-    color:var(--ink);
     margin:0 0 6px;
     text-wrap:balance;
+    background:linear-gradient(90deg, var(--ink) 40%, var(--accent) 50%, var(--ink) 60%);
+    background-size:200% auto;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    animation:title-shimmer 3s linear infinite;
+  }
+  @keyframes title-shimmer{
+    to{ background-position:-200% center; }
   }
   .title-block h1 .spark{ color:var(--accent); }
   .title-block p{
@@ -319,7 +327,7 @@
   footer b{ color:var(--ink-dim); font-weight:600; }
   /* ---------- AI console ---------- */
   #aiToggle{
-    position:fixed; right:22px; bottom:22px; z-index:50;
+    position:fixed; right:22px; top:22px; z-index:50;
     width:54px; height:54px; border-radius:50%;
     background:var(--panel-bg-raised);
     border:1px solid var(--border-strong);
@@ -399,6 +407,36 @@
   .ac-run-detail.open{ display:block; }
   .ac-run-detail .k{ color:var(--ink-faint); }
   .ac-run-detail .err{ color:var(--danger); }
+  .ac-run-detail .trace-toggle{ margin-top:6px; cursor:pointer; color:var(--ink-faint); user-select:none; }
+  .ac-run-detail .trace-toggle:hover{ color:var(--ink); }
+  .ac-run-detail .trace{ margin-top:4px; padding-top:6px; border-top:1px dashed var(--border); }
+  .trace-step{ margin:3px 0; padding:2px 0 2px 8px; border-left:2px solid var(--border); font-family:monospace; font-size:10.5px; }
+  .trace-step.tool_result{ color:var(--ink-faint); }
+  .trace-step .tool-name{ color:var(--accent, var(--ink)); font-weight:600; }
+
+  /* ---------- VCC/GND meltdown easter egg ---------- */
+  .vg-burn-flash{ position:fixed; inset:0; z-index:9998; pointer-events:none; background:radial-gradient(circle, rgba(255,140,0,.6), rgba(255,40,0,.35) 45%, transparent 75%); animation:vg-flicker .18s steps(1) infinite; }
+  @keyframes vg-flicker{ 50%{ opacity:.5; } }
+  path.trace.vg-burning{ stroke:#ff3b1f !important; filter:drop-shadow(0 0 6px #ff6a00); animation:vg-flicker .12s steps(1) infinite; }
+  .vg-falling{ transition:transform 1.3s cubic-bezier(.5,-0.3,1,1), opacity 1.3s ease-in; transform:translateY(140vh) rotate(20deg); opacity:0; }
+  .vg-roach{ position:fixed; top:50vh; font-size:32px; z-index:9999; pointer-events:none; }
+  .vg-roach.ltr{ left:-48px; animation:vg-crawl-ltr 3.6s linear forwards; }
+  .vg-roach.rtl{ right:-48px; transform:scaleX(-1); animation:vg-crawl-rtl 3.6s linear forwards; }
+  @keyframes vg-crawl-ltr{ from{ left:-48px; } to{ left:110vw; } }
+  @keyframes vg-crawl-rtl{ from{ right:-48px; } to{ right:110vw; } }
+
+  .vg-chip-burn img{ animation:vg-chip-smolder .9s ease-in-out infinite; }
+  @keyframes vg-chip-smolder{
+    0%,100%{ filter:saturate(2) brightness(.55) drop-shadow(0 0 10px #ff3b1f); }
+    50%{ filter:saturate(2.4) brightness(.7) drop-shadow(0 0 20px #ff6a00); }
+  }
+  .vg-paywall{ position:fixed; inset:0; z-index:10001; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,.6); animation:vg-fade-in .2s ease-out; }
+  @keyframes vg-fade-in{ from{ opacity:0; } to{ opacity:1; } }
+  .vg-paywall-card{ background:#15181c; border:1px solid #333; border-radius:12px; padding:24px 28px; max-width:320px; text-align:center; color:#eee; }
+  .vg-paywall-card .vg-paywall-roach{ font-size:40px; }
+  .vg-paywall-card h3{ margin:8px 0 6px; }
+  .vg-paywall-card p{ margin:0 0 16px; opacity:.8; font-size:14px; }
+  .vg-paywall-card .btn{ margin:4px; }
 
 </style>
 
@@ -412,6 +450,7 @@
     <div class="actions">
       <button class="btn ghost small" id="copyJsonBtn" title="Copy the full mapping state as JSON">Copy JSON</button>
       <button class="btn ghost small" id="resetBtn" title="Clear pins, routes and uploaded images">Reset board</button>
+      <button class="btn ghost small" id="burnSimBtn" title="Simulate the main chip burning out">&#128293; Burn Sim</button>
     </div>
   </header>
 
@@ -573,6 +612,7 @@
 
   var state = loadState();
   var selectedConnection = null; // net key
+  var vgMeltdownActive = false;
   var zoomState = {}; // boardId -> {scale, tx, ty}
 
   function getZoom(boardId){
@@ -629,6 +669,7 @@
     newName = (newName || "").trim();
     if(!newName){ renderRoutes(); return; }
     var newKey = newName.toLowerCase();
+    var isMeltdown = (net.key === "vcc" && newKey === "gnd") || (net.key === "gnd" && newKey === "vcc") || newKey === "roach";
     if(newKey !== net.key){
       if(state.netColors[newKey] === undefined && state.netColors[net.key] !== undefined){
         state.netColors[newKey] = state.netColors[net.key];
@@ -643,7 +684,78 @@
     state.boards.forEach(function(bd){ renderWrap(bd.id); });
     renderRoutes();
     scheduleRedraw();
+    if(isMeltdown) triggerVgMeltdown(newKey);
   }
+
+  // Shorting VCC to GND (or naming a net "roach"): burn the wire, drop the whole UI, send in the roaches.
+  function triggerVgMeltdown(netKey){
+    vgMeltdownActive = true;
+    requestAnimationFrame(function(){
+      els.svg.querySelectorAll('path.trace[data-netkey="'+netKey+'"]').forEach(function(t){ t.classList.add("vg-burning"); });
+    });
+    var flash = document.createElement("div");
+    flash.className = "vg-burn-flash";
+    document.body.appendChild(flash);
+    setTimeout(function(){
+      flash.remove();
+      var wrap = document.querySelector(".wrap");
+      if(wrap) wrap.classList.add("vg-falling");
+      spawnVgRoach("ltr");
+      spawnVgRoach("rtl");
+    }, 900);
+  }
+  function spawnVgRoach(dir){
+    var r = document.createElement("div");
+    r.className = "vg-roach " + dir;
+    r.textContent = "\u{1FAB3}";
+    r.style.top = (35 + Math.random()*40) + "vh";
+    document.body.appendChild(r);
+    r.addEventListener("animationend", function(){ r.remove(); });
+  }
+
+  // ---------- burn-out simulation (manual trigger, resettable) ----------
+  function startChipMeltdownSim(){
+    if(vgMeltdownActive) return;
+    vgMeltdownActive = true;
+    var wrap = wrapEls["vl813"];
+    if(wrap) wrap.classList.add("vg-chip-burn");
+    var flash = document.createElement("div");
+    flash.className = "vg-burn-flash";
+    document.body.appendChild(flash);
+    setTimeout(function(){
+      flash.remove();
+      spawnVgRoach("ltr");
+      setTimeout(showVgPaywall, 1800);
+    }, 1200);
+  }
+  function showVgPaywall(){
+    var overlay = document.createElement("div");
+    overlay.className = "vg-paywall";
+    overlay.innerHTML =
+      '<div class="vg-paywall-card">' +
+        '<div class="vg-paywall-roach">\u{1FAB3}</div>' +
+        '<h3>The main chip is toast.</h3>' +
+        '<p>Subscribe to Diffpair Mapper Pro to keep tracing nets after a meltdown.</p>' +
+        '<button class="btn small" id="vgSubBtn" type="button">Subscribe &#10024;</button>' +
+        '<button class="btn ghost small" id="vgDismissBtn" type="button">Not now</button>' +
+      '</div>';
+    document.body.appendChild(overlay);
+    overlay.querySelector("#vgSubBtn").addEventListener("click", function(){
+      overlay.remove();
+      endChipMeltdownSim();
+      showToast("Thanks! (this is a joke — nothing was charged)");
+    });
+    overlay.querySelector("#vgDismissBtn").addEventListener("click", function(){
+      overlay.remove();
+      endChipMeltdownSim();
+    });
+  }
+  function endChipMeltdownSim(){
+    vgMeltdownActive = false;
+    var wrap = wrapEls["vl813"];
+    if(wrap) wrap.classList.remove("vg-chip-burn");
+  }
+  document.getElementById("burnSimBtn").addEventListener("click", startChipMeltdownSim);
   function unlinkNet(net){
     net.members.forEach(function(m){
       var pin = findPin(m.board, m.pin);
@@ -1277,6 +1389,7 @@
   }
 
   function onPinDotPointerDown(e, boardId, pin, pinEl){
+    if(vgMeltdownActive) return;
     if(e.button !== undefined && e.button !== 0) return;
     e.preventDefault();
     var startX = e.clientX, startY = e.clientY;
@@ -1590,6 +1703,43 @@
       d.appendChild(k); d.appendChild(document.createTextNode(record.stderr));
       box.appendChild(d);
     }
+    if (record.sessionId) {
+      var traceToggle = document.createElement("div"); traceToggle.className = "trace-toggle"; traceToggle.textContent = "▸ trace";
+      var traceBody = document.createElement("div"); traceBody.className = "trace"; traceBody.style.display = "none";
+      var traceOpen = false, traceLoaded = !!record.trace;
+      traceToggle.addEventListener("click", function(e){
+        e.stopPropagation();
+        traceOpen = !traceOpen;
+        traceToggle.textContent = (traceOpen ? "▾" : "▸") + " trace";
+        traceBody.style.display = traceOpen ? "block" : "none";
+        if (!traceOpen || traceLoaded) return;
+        traceBody.textContent = "loading trace…";
+        fetch("/api/run?id=" + encodeURIComponent(record.id)).then(function(r){ return r.json(); }).then(function(rec){
+          traceLoaded = true;
+          if (rec && rec.id) { runsCache[rec.id] = rec; record.trace = rec.trace || []; }
+          renderTrace(traceBody, record.trace || []);
+        }).catch(function(){ traceBody.textContent = "failed to load trace"; });
+      });
+      box.appendChild(traceToggle); box.appendChild(traceBody);
+    }
+  }
+
+  function renderTrace(container, trace){
+    container.innerHTML = "";
+    if (!trace.length) { container.textContent = "(no tool calls)"; return; }
+    trace.forEach(function(step){
+      var s = document.createElement("div"); s.className = "trace-step " + step.type;
+      if (step.type === "text") {
+        s.appendChild(document.createTextNode(step.text));
+      } else if (step.type === "tool") {
+        var name = document.createElement("span"); name.className = "tool-name"; name.textContent = step.name + " ";
+        s.appendChild(name);
+        s.appendChild(document.createTextNode(JSON.stringify(step.input)));
+      } else if (step.type === "tool_result") {
+        s.appendChild(document.createTextNode((step.isError ? "⚠ " : "→ ") + step.text));
+      }
+      container.appendChild(s);
+    });
   }
 
   function runRow(record){

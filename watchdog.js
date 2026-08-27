@@ -19,6 +19,7 @@
 
 const http = require("http");
 const fs = require("fs");
+const os = require("os");
 const path = require("path");
 const crypto = require("crypto");
 const { spawnSync, spawn } = require("child_process");
@@ -214,6 +215,48 @@ function readRun(id) {
   } catch {
     return null;
   }
+}
+
+// Each agent run is a real Claude Code session, whose full transcript (tool
+// calls, tool results, narration text) is already persisted on disk by the
+// CLI itself — the run record only keeps the compressed final summary, so
+// pull the rest from there on demand rather than duplicating it in
+// .versions/runs/. (Extended-thinking blocks are excluded on purpose: the
+// CLI stores them with an empty `thinking` field and only an opaque replay
+// signature, so there's no plaintext reasoning to surface here.)
+const CLAUDE_PROJECTS_DIR = path.join(os.homedir(), ".claude", "projects");
+
+function readSessionTrace(sessionId) {
+  if (!sessionId) return null;
+  const projectDir = ROOT.split(path.sep).join("-"); // matches Claude Code's cwd -> projects-dir encoding
+  const file = path.join(CLAUDE_PROJECTS_DIR, projectDir, `${sessionId}.jsonl`);
+  let raw;
+  try {
+    raw = fs.readFileSync(file, "utf8");
+  } catch {
+    return null;
+  }
+  const steps = [];
+  for (const line of raw.split("\n")) {
+    if (!line.trim()) continue;
+    let entry;
+    try { entry = JSON.parse(line); } catch { continue; }
+    const content = entry && entry.message && entry.message.content;
+    if (!Array.isArray(content)) continue;
+    for (const c of content) {
+      if (c.type === "text" && c.text) {
+        steps.push({ type: "text", text: c.text });
+      } else if (c.type === "tool_use") {
+        steps.push({ type: "tool", name: c.name, input: c.input });
+      } else if (c.type === "tool_result") {
+        let text = "";
+        if (typeof c.content === "string") text = c.content;
+        else if (Array.isArray(c.content)) text = c.content.filter((x) => x && x.type === "text").map((x) => x.text).join("\n");
+        steps.push({ type: "tool_result", text: text.slice(0, 2000), isError: !!c.is_error });
+      }
+    }
+  }
+  return steps;
 }
 
 function listRuns(limit) {
@@ -547,7 +590,8 @@ const server = http.createServer(async (req, res) => {
     const id = u.searchParams.get("id") || "";
     const r = /^[a-z0-9]+$/i.test(id) ? readRun(id) : null;
     if (!r) return json(res, 404, { error: "unknown run id" });
-    return json(res, 200, r);
+    const trace = readSessionTrace(r.sessionId);
+    return json(res, 200, trace ? Object.assign({}, r, { trace }) : r);
   }
 
   // ---- restore last known-good
