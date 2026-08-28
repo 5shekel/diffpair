@@ -443,14 +443,15 @@
 <div class="wrap">
   <header>
     <div class="title-block">
-      <h1><span class="spark">&gt;</span> Diffpair Mapper</h1>
-      <p>Click a spot on any board to drop a pin and name it &mdash; accept the default name or type your own. Give a pin on another board that <em>same</em> name (the box will suggest names already in use) and the two are treated as one net, e.g. a differential-pair leg on the SFP+ receptacle sharing a name with the matching leg on the VL813. A net isn't limited to two pins &mdash; call every ground pin <b>GND</b> and they all trace together. Scroll over an image to zoom in on fine traces. The Overlay board below flips between the top photo, the bottom photo, and a blend of both, pre-aligned pixel-for-pixel &mdash; switch layers to follow a trace from a front-side pad to where it lands on the back. Everything saves in this browser as you go.</p>
+      <h1 id="appTitle"><span class="spark">&gt;</span> Diffpair Mapper <a id="gitLink" href="https://github.com/5shekel/diffpair" style="font-size:12px;font-weight:normal;opacity:.6;">git repo</a></h1>
+      <p id="appIntro">Click a spot on any board to drop a pin and name it &mdash; accept the default name or type your own. Give a pin on another board that <em>same</em> name (the box will suggest names already in use) and the two are treated as one net, e.g. a differential-pair leg on the SFP+ receptacle sharing a name with the matching leg on the VL813. A net isn't limited to two pins &mdash; call every ground pin <b>GND</b> and they all trace together. Scroll over an image to zoom in on fine traces. The Overlay board below flips between the top photo, the bottom photo, and a blend of both, pre-aligned pixel-for-pixel &mdash; switch layers to follow a trace from a front-side pad to where it lands on the back. Everything saves in this browser as you go.</p>
       <div class="status-chip"><span class="dot"></span><span id="statusText">0 pins &middot; 0 routes traced</span></div>
     </div>
     <div class="actions">
       <button class="btn ghost small" id="copyJsonBtn" title="Copy the full mapping state as JSON">Copy JSON</button>
       <button class="btn ghost small" id="resetBtn" title="Clear pins, routes and uploaded images">Reset board</button>
       <button class="btn ghost small" id="burnSimBtn" title="Simulate the main chip burning out">&#128293; Burn Sim</button>
+      <button class="btn ghost small" id="langBtn" title="Translate the interface to Assyrian (Sureth)" lang="syr" dir="rtl">&#x710;&#x72C;&#x718;&#x72A;&#x71D;&#x710;</button>
     </div>
   </header>
 
@@ -463,15 +464,15 @@
 
   <section class="routes">
     <div class="routes-head">
-      <h2>Route list</h2>
+      <h2 id="routeListTitle">Route list</h2>
       <span class="count" id="routeCount">0 routes</span>
     </div>
     <div class="routes-table">
       <table>
         <thead>
           <tr>
-            <th>Net</th>
-            <th>Pins</th>
+            <th id="thNet">Net</th>
+            <th id="thPins">Pins</th>
             <th></th>
           </tr>
         </thead>
@@ -480,7 +481,7 @@
     </div>
   </section>
 
-  <footer>
+  <footer id="appFooter">
     <b>Next up:</b> a guided question-and-answer walkthrough view (with inline photo requests) will build on top of this pin map, plus a fuller exportable route report.
   </footer>
 </div>
@@ -1903,5 +1904,53 @@
   setInterval(function(){
     document.title = (on = !on) ? altTitle : baseTitle;
   }, 1000);
+})();
+</script>
+
+<script>
+/* ---------- Assyrian (Sureth) translation ---------- */
+(function(){
+  "use strict";
+  var btn = document.getElementById("langBtn");
+  if(!btn) return;
+
+  // Assyrian Neo-Aramaic (Sureth), written in Syriac-script glyphs.
+  var AR = {
+    langBtn: "English",
+    appTitle: "<span class=\"spark\">&gt;</span> ܡܦܝܢܐ ܕܙܘܓܐ",
+    appIntro: "ܛܐܦ ܥܠ ܢܘܩܙܐ ܒܟܠ ܠܘܚܐ ܘܡܢܐ ܙܩܐ. ܗܒ ܠܙܩܐ ܦܪܝܫܐ ܚܕ ܫܡܐ ܘܦܝܫܝ ܚܫܝܒܐ ܚܕܐ ܪܫܬܐ. ܟܠ ܡܢܕܝ ܦܐܫ ܡܘܛܘܪܐ ܓܘ ܐܗܐ ܒܪܘܙܪ.",
+    copyJsonBtn: "ܢܣܟ JSON",
+    resetBtn: "ܡܕܥܪ ܠܘܚܐ",
+    burnSimBtn: "🔥 ܣܝܡܘܠܝܐ ܕܝܩܕܢܐ",
+    routeListTitle: "ܪܫܡܐ ܕܐܘܪܚܬܐ",
+    thNet: "ܪܫܬܐ",
+    thPins: "ܙܩܐ",
+    appFooter: "<b>ܐܬܐ ܒܬܪ:</b> ܚܙܘܐ ܕܫܘܐܠܐ ܘܦܘܢܝܐ ܡܕܪܟܢܐ ܒܬ ܦܐܫ ܒܢܝܐ ܥܠ ܐܗܐ ܡܦܐ."
+  };
+
+  var isAR = false;
+  var saved = {};
+
+  function apply(on){
+    Object.keys(AR).forEach(function(id){
+      var el = document.getElementById(id);
+      if(!el) return;
+      if(on){
+        if(!(id in saved)) saved[id] = el.innerHTML;
+        el.innerHTML = AR[id];
+        el.setAttribute("dir", "rtl");
+        el.setAttribute("lang", "syr");
+      } else if(id in saved){
+        el.innerHTML = saved[id];
+        el.removeAttribute("dir");
+        el.removeAttribute("lang");
+      }
+    });
+  }
+
+  btn.addEventListener("click", function(){
+    isAR = !isAR;
+    apply(isAR);
+  });
 })();
 </script>
