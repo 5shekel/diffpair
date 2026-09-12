@@ -1,0 +1,10 @@
+SFP reference filter sensitivity_high_C_low_L
+Vfeed feed 0 DC 3.3 AC 1
+Rind feed lx 0.025
+Lfilter lx out 3.76e-06
+Cbypass out 0 100n
+Rcap out cpos 0.005
+Cbulk cpos damp 2.42e-05
+Rdamp damp 0 0.4257
+Rload out 0 8
+.end

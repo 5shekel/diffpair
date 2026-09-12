@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "draft")(type "KiCad")(uri "${KIPRJMOD}/libs/draft.kicad_sym")(options "")(descr "Evidence-backed electrical draft symbols")))

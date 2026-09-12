@@ -1,0 +1,89 @@
+{
+  "status": "PASS native pad geometry/layers against manually transcribed TI drawing",
+  "source": "TPD4E02B04 SLVSD85B pp24-25, DQA0010A 4220328/A",
+  "minimum_copper_gap_mm": 0.19999999999999996,
+  "minimum_mask_web_mm": 0.09999999999999995,
+  "pads": [
+    {
+      "pin": 1,
+      "x_mm": -0.4175,
+      "y_mm": -1.0,
+      "width_mm": 0.565,
+      "height_mm": 0.2,
+      "paste_height_mm": 0.2
+    },
+    {
+      "pin": 2,
+      "x_mm": -0.4175,
+      "y_mm": -0.5,
+      "width_mm": 0.565,
+      "height_mm": 0.2,
+      "paste_height_mm": 0.2
+    },
+    {
+      "pin": 3,
+      "x_mm": -0.4175,
+      "y_mm": 0.0,
+      "width_mm": 0.565,
+      "height_mm": 0.4,
+      "paste_height_mm": 0.36
+    },
+    {
+      "pin": 4,
+      "x_mm": -0.4175,
+      "y_mm": 0.5,
+      "width_mm": 0.565,
+      "height_mm": 0.2,
+      "paste_height_mm": 0.2
+    },
+    {
+      "pin": 5,
+      "x_mm": -0.4175,
+      "y_mm": 1.0,
+      "width_mm": 0.565,
+      "height_mm": 0.2,
+      "paste_height_mm": 0.2
+    },
+    {
+      "pin": 6,
+      "x_mm": 0.4175,
+      "y_mm": 1.0,
+      "width_mm": 0.565,
+      "height_mm": 0.2,
+      "paste_height_mm": 0.2
+    },
+    {
+      "pin": 7,
+      "x_mm": 0.4175,
+      "y_mm": 0.5,
+      "width_mm": 0.565,
+      "height_mm": 0.2,
+      "paste_height_mm": 0.2
+    },
+    {
+      "pin": 8,
+      "x_mm": 0.4175,
+      "y_mm": 0.0,
+      "width_mm": 0.565,
+      "height_mm": 0.4,
+      "paste_height_mm": 0.36
+    },
+    {
+      "pin": 9,
+      "x_mm": 0.4175,
+      "y_mm": -0.5,
+      "width_mm": 0.565,
+      "height_mm": 0.2,
+      "paste_height_mm": 0.2
+    },
+    {
+      "pin": 10,
+      "x_mm": 0.4175,
+      "y_mm": -1.0,
+      "width_mm": 0.565,
+      "height_mm": 0.2,
+      "paste_height_mm": 0.2
+    }
+  ],
+  "limitations": "Not fabrication qualification, placed-board DRC, signal-integrity or ESD testing"
+}

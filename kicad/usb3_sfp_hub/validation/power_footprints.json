@@ -1,0 +1,103 @@
+{
+  "scope": "Saved land-pattern geometry only; no PCB or assembly qualification",
+  "footprints": {
+    "TI_RPJ0009A_1.5x2mm": {
+      "pads": {
+        "1": {
+          "x": -0.625,
+          "y": -0.25,
+          "w": 0.65,
+          "h": 0.2
+        },
+        "2": {
+          "x": -0.625,
+          "y": 0.25,
+          "w": 0.65,
+          "h": 0.2
+        },
+        "3": {
+          "x": -0.625,
+          "y": 0.75,
+          "w": 0.65,
+          "h": 0.2
+        },
+        "4": {
+          "x": 0.45,
+          "y": 0.75,
+          "w": 1.0,
+          "h": 0.2
+        },
+        "5": {
+          "x": 0.625,
+          "y": 0.25,
+          "w": 0.65,
+          "h": 0.2
+        },
+        "6": {
+          "x": 0.45,
+          "y": -0.25,
+          "w": 1.0,
+          "h": 0.2
+        },
+        "7": {
+          "x": 0.5,
+          "y": -0.925,
+          "w": 0.25,
+          "h": 0.55
+        },
+        "8": {
+          "x": 0.0,
+          "y": -0.925,
+          "w": 0.25,
+          "h": 0.55
+        },
+        "9": {
+          "x": -0.5,
+          "y": -0.925,
+          "w": 0.25,
+          "h": 0.55
+        }
+      },
+      "pad_count": 9,
+      "minimum_copper_gap_mm": 0.25,
+      "conservative_minimum_mask_web_mm": 0.15,
+      "source": "TPS62902.pdf",
+      "source_pages": [
+        3,
+        45,
+        46
+      ],
+      "source_sha256": "bdec8bf302759542b46ff0a3bf13078a6d60fe07164075318b0f8beedd09c477",
+      "footprint_sha256": "65f9715191745cac0c7d4fb747d19e1e2addd34cf112efff2b3cbcf72d6bad0e",
+      "status": "PASS geometry against stated manufacturer land pattern",
+      "orientation": "PCB top view; RPJ follows p45, 180-degree rotation of p3 pinout figure; XGL pad1 is local winding-start convention"
+    },
+    "L_Coilcraft_XGL4020": {
+      "pads": {
+        "1": {
+          "x": -1.185,
+          "y": 0.0,
+          "w": 0.98,
+          "h": 3.4
+        },
+        "2": {
+          "x": 1.185,
+          "y": 0.0,
+          "w": 0.98,
+          "h": 3.4
+        }
+      },
+      "pad_count": 2,
+      "minimum_copper_gap_mm": 1.3900000000000001,
+      "conservative_minimum_mask_web_mm": 1.29,
+      "source": "XGL4020.pdf",
+      "source_pages": [
+        3
+      ],
+      "source_sha256": "1e050d7e4f44f7e1f3ae3be38de87b15e4d72b2ef463c7b1f4edc292f83ad2c0",
+      "footprint_sha256": "a9a6887db6c607e807ecbbd1ac2b0c88e0f1ce109fcc6f449052bd75d6967f6b",
+      "status": "PASS geometry against stated manufacturer land pattern",
+      "orientation": "PCB top view; RPJ follows p45, 180-degree rotation of p3 pinout figure; XGL pad1 is local winding-start convention"
+    }
+  }
+}

@@ -1,0 +1,236 @@
+(footprint "L_Coilcraft_XGL4020"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Coilcraft XGL4020, Doc1529-3 2026-02-19; recommended land pattern")
+	(property "Reference" "REF**"
+		(at 0 -2.65 0)
+		(layer "F.SilkS")
+		(uuid "5c4d0b0e-64cf-4d82-8fff-40273734853c")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "L_Coilcraft_XGL4020"
+		(at 0 2.65 0)
+		(layer "F.Fab")
+		(uuid "cde9bc02-4bf8-49a4-8566-855efca0e3a8")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ceafad47-003a-4f72-9d15-bd837d56d0fb")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4b8d6378-abb8-49c4-976b-78b8d69b7c27")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Source" "Coilcraft XGL4020 Doc1529-3, recommended land pattern"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "26e2fa1a-9510-4dff-820f-545cbfcc2780")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Assembly note" "Stripe identifies short winding start. Orient stripe at pad1; L4 pad1 is SW. Numbering is local convention; part is nonpolar."
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bb60fe55-32b6-4c89-a8c5-ed8893489a54")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.27 -2.27)
+		(end 2.27 -2.27)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "ad057f74-45bc-4860-9b49-ff452c6dc8d8")
+	)
+	(fp_line
+		(start -2.27 2.27)
+		(end -2.27 -2.27)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "58531ba2-d0ef-4cc9-9bf5-d0dc39309f08")
+	)
+	(fp_line
+		(start -2.049999 -1.7)
+		(end -2.049999 1.7)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "da2cb4e8-69c7-41d9-80b4-0c24278cf917")
+	)
+	(fp_line
+		(start 2.27 -2.27)
+		(end 2.27 2.27)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "ff32edb4-8e1f-4ea3-9dae-1e16e902d018")
+	)
+	(fp_line
+		(start 2.27 2.27)
+		(end -2.27 2.27)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "19caaac2-c777-4bd4-8c6f-3a2f0e59a1ea")
+	)
+	(fp_line
+		(start -2.4 -2.4)
+		(end 2.4 -2.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "3ac0531d-fada-47b3-80bc-8e972e550f88")
+	)
+	(fp_line
+		(start -2.4 2.4)
+		(end -2.4 -2.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "af3025b4-1d29-41d5-a08c-6d9fe1a6f7ab")
+	)
+	(fp_line
+		(start 2.4 -2.4)
+		(end 2.4 2.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "f7ae7b9c-b4a8-41b6-b2f7-c0ae43db72c1")
+	)
+	(fp_line
+		(start 2.4 2.4)
+		(end -2.4 2.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "47d6beea-e623-4408-b703-a4ae55d69fb6")
+	)
+	(fp_line
+		(start -2 -2)
+		(end 2 -2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "81a90ee2-7448-4019-b7d3-c3442574b092")
+	)
+	(fp_line
+		(start -2 2)
+		(end -2 -2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "b1c4062c-7936-4daf-b6af-aae6a00706da")
+	)
+	(fp_line
+		(start -1.75 -1.8)
+		(end -1.75 1.8)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "837433f1-e22d-4946-b227-a4164ad614d4")
+	)
+	(fp_line
+		(start 2 -2)
+		(end 2 2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "1dd5d8b5-1af9-49d7-bce4-472055307d52")
+	)
+	(fp_line
+		(start 2 2)
+		(end -2 2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "a745bb9a-0b14-4e59-9e37-7c2be255169e")
+	)
+	(pad "1" smd rect
+		(at -1.185 0)
+		(size 0.98 3.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.05)
+		(solder_paste_margin 0)
+		(solder_paste_margin_ratio 0)
+		(thermal_bridge_angle 45)
+		(uuid "8de3cad5-9bc6-4c2a-a90d-c28f7e0ba96b")
+	)
+	(pad "2" smd rect
+		(at 1.185 0)
+		(size 0.98 3.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.05)
+		(solder_paste_margin 0)
+		(solder_paste_margin_ratio 0)
+		(thermal_bridge_angle 45)
+		(uuid "37627299-0bf9-40ee-ad39-db8add8a2d5f")
+	)
+	(embedded_fonts no)
+)

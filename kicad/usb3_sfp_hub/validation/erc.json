@@ -1,0 +1,467 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-12T12:14:58",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/81eaa592-cbbf-564f-99af-3c34186babe7",
+            "violations": [
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 5 [VCCA12SSRX3, Power input, Line]",
+                            "pos": {
+                                "x": 0.3683,
+                                "y": 2.0447
+                            },
+                            "uuid": "61085718-0d8a-5961-a6cc-fd5915da28e0"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 19 [VCC5I, Power input, Line]",
+                            "pos": {
+                                "x": 0.3683,
+                                "y": 2.1463
+                            },
+                            "uuid": "3e3f6d19-0350-5608-83ef-cecc30f690f4"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 20 [VCC12I, Power input, Line]",
+                            "pos": {
+                                "x": 0.3683,
+                                "y": 2.1717
+                            },
+                            "uuid": "e28df6e8-579c-5aef-b4c2-5ccecd661a00"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 31 [VBUSDET, Input, Line]",
+                            "pos": {
+                                "x": 1.4351,
+                                "y": 1.3843
+                            },
+                            "uuid": "a552b763-a374-5240-becf-e24bc8a4fee6"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 26 [SSRX0+, Input, Line]",
+                            "pos": {
+                                "x": 1.8669,
+                                "y": 0.4953
+                            },
+                            "uuid": "c197905a-4353-5674-b4ac-275e18395507"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 25 [SSRX0-, Input, Line]",
+                            "pos": {
+                                "x": 1.8669,
+                                "y": 0.5207
+                            },
+                            "uuid": "1558fef9-303c-5c59-ac0e-44b3d96b1100"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 47 [EXTPWRON, Input, Line]",
+                            "pos": {
+                                "x": 1.9177,
+                                "y": 1.3335
+                            },
+                            "uuid": "59261a93-5459-53ba-bbad-fa018ee816bc"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'SFP_RD_N'",
+                            "pos": {
+                                "x": 0.8636,
+                                "y": 0.4191
+                            },
+                            "uuid": "85b2870f-7324-5cb7-8dbd-6a9a9adb522c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'SFP_RD_P'",
+                            "pos": {
+                                "x": 0.8636,
+                                "y": 0.4445
+                            },
+                            "uuid": "36627d9d-8d8a-5b20-a48e-3ea79403d318"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'SFP_TD_P'",
+                            "pos": {
+                                "x": 0.8636,
+                                "y": 0.5715
+                            },
+                            "uuid": "141e2a46-fa98-5e8e-b2ad-ebd2de2468c4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'SFP_TD_N'",
+                            "pos": {
+                                "x": 0.8636,
+                                "y": 0.5969
+                            },
+                            "uuid": "a9a79354-a11a-5f96-9830-b96bbcc8ff70"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'DC12FB40_PENDING'",
+                            "pos": {
+                                "x": 0.9017,
+                                "y": 2.0701
+                            },
+                            "uuid": "a1f9b59c-fe1c-5f74-8af6-946221ba273a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'VBUSDET_PENDING'",
+                            "pos": {
+                                "x": 1.3843,
+                                "y": 1.3843
+                            },
+                            "uuid": "eb1a0384-4362-5cea-b79a-1c3cc2927fc1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'USBHMBR4'",
+                            "pos": {
+                                "x": 1.3843,
+                                "y": 1.4097
+                            },
+                            "uuid": "5ba256f1-1d55-50b6-8456-db949be74917"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'USBHMBR3'",
+                            "pos": {
+                                "x": 1.3843,
+                                "y": 1.4351
+                            },
+                            "uuid": "22b680d9-852a-54ab-9f07-66c9bc34d329"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'USBHMBR2'",
+                            "pos": {
+                                "x": 1.3843,
+                                "y": 1.4605
+                            },
+                            "uuid": "abe4237d-2cf6-5fb7-92fa-fdeca1d09fd5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'USBHMBR1'",
+                            "pos": {
+                                "x": 1.3843,
+                                "y": 1.4859
+                            },
+                            "uuid": "5ffb929c-01ad-5e9c-9885-5d5eb7c2647a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'COREPWRDN_N'",
+                            "pos": {
+                                "x": 1.3843,
+                                "y": 1.6129
+                            },
+                            "uuid": "aa14a912-007f-57eb-a658-3d34331616d4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'SSTX0_P'",
+                            "pos": {
+                                "x": 1.4859,
+                                "y": 0.4953
+                            },
+                            "uuid": "5dbb5346-0625-56a1-8c73-70efd3cae082"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'SSTX0_N'",
+                            "pos": {
+                                "x": 1.4859,
+                                "y": 0.5207
+                            },
+                            "uuid": "e9ed54d8-4e22-5b15-b808-f445fa2dc9d7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'SSRX0_P'",
+                            "pos": {
+                                "x": 1.9177,
+                                "y": 0.4953
+                            },
+                            "uuid": "c5dc8ecd-f227-5a3c-b639-ac423442343b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'SSRX0_N'",
+                            "pos": {
+                                "x": 1.9177,
+                                "y": 0.5207
+                            },
+                            "uuid": "52ae387e-d14a-58a6-831e-3c377da3a564"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'EXTPWRON_PENDING'",
+                            "pos": {
+                                "x": 1.9685,
+                                "y": 1.3335
+                            },
+                            "uuid": "b8a0dd48-81ff-52e0-9ff0-023e6ffe1e20"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'USBHGRN4'",
+                            "pos": {
+                                "x": 1.9685,
+                                "y": 1.3589
+                            },
+                            "uuid": "2a664180-44bc-511c-87b2-b52ecc2b36f7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'USBHGRN3'",
+                            "pos": {
+                                "x": 1.9685,
+                                "y": 1.3843
+                            },
+                            "uuid": "d1425242-0968-5c1b-8b41-c9266c938dc8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'USBHGRN2'",
+                            "pos": {
+                                "x": 1.9685,
+                                "y": 1.4097
+                            },
+                            "uuid": "0d9ad3f1-1336-52b8-a1f1-521fe87da92e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'USBHGRN1'",
+                            "pos": {
+                                "x": 1.9685,
+                                "y": 1.4351
+                            },
+                            "uuid": "f09b13ed-6a83-577c-8c6b-59932dfceaca"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                }
+            ]
+        },
+        {
+            "path": "/SFP power and management/",
+            "uuid_path": "/81eaa592-cbbf-564f-99af-3c34186babe7/f3215b86-39ab-57d1-b140-98659a3ff7ab",
+            "violations": []
+        },
+        {
+            "path": "/Hub power and clock/",
+            "uuid_path": "/81eaa592-cbbf-564f-99af-3c34186babe7/c29cd5e5-2d8c-5655-a256-f03a07318fe2",
+            "violations": []
+        },
+        {
+            "path": "/Downstream port power/",
+            "uuid_path": "/81eaa592-cbbf-564f-99af-3c34186babe7/32c4f820-24c7-5b08-8915-02cbe7662b1a",
+            "violations": []
+        },
+        {
+            "path": "/SFP regulated supply/",
+            "uuid_path": "/81eaa592-cbbf-564f-99af-3c34186babe7/ce55d780-89cc-5677-b03d-f3ceed7642be",
+            "violations": []
+        },
+        {
+            "path": "/USB3 signal protection/",
+            "uuid_path": "/81eaa592-cbbf-564f-99af-3c34186babe7/a86a6896-3b25-5572-ab90-645d34a7ad3a",
+            "violations": []
+        }
+    ],
+    "source": "usb3_sfp_hub.kicad_sch"
+}

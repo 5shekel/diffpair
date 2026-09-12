@@ -1,0 +1,103 @@
+{
+  "source_class": "Manual manufacturer-datasheet transcription, not canonical datasheet cache",
+  "part": "TPS62902RPJR",
+  "manufacturer": "Texas Instruments",
+  "datasheet": "https://www.ti.com/lit/ds/symlink/tps62902.pdf",
+  "document": "SLVSFM1A, revised November 2023",
+  "sha256": "bdec8bf302759542b46ff0a3bf13078a6d60fe07164075318b0f8beedd09c477",
+  "source_pages": [
+    3,
+    5,
+    6,
+    10,
+    11,
+    12,
+    18,
+    19,
+    20,
+    21
+  ],
+  "pinout_RPJ": {
+    "1": "PG open drain",
+    "2": "SW",
+    "3": "VOS",
+    "4": "GND",
+    "5": "EN",
+    "6": "VIN",
+    "7": "MODE/S-CONF",
+    "8": "SS/TR",
+    "9": "FB/VSET"
+  },
+  "configuration": {
+    "R22": "32.4k 1%, 100ppm/C; Table 7-1 option 10",
+    "mode": "forced PWM, 2.5MHz, VSET, output discharge enabled",
+    "VSET": "open, Table 7-2 option 16, 3.3V",
+    "EN": "local HUB_5V",
+    "PG": "10k to converter output, J8 test access only",
+    "soft_start": "10nF 5% C0G; 3.255ms initial equation14 estimate, VSET startup qualification pending"
+  },
+  "electrical_limits": {
+    "vset_accuracy_fraction_full_temperature": 0.0125,
+    "output_rating_A": 2,
+    "HS_current_limit_A": [
+      2.7,
+      3.2,
+      3.9
+    ],
+    "negative_current_limit_A": [
+      1.3,
+      1.7,
+      2.5
+    ],
+    "PG_undefined_below_VIN_V": 1.8
+  },
+  "lifecycle_observed": "ACTIVE on TI part page 2026-09-12; TI direct store unavailable, distributor stock unchecked",
+  "lifecycle_source": "https://www.ti.com/product/TPS62902/part-details/TPS62902RPJR",
+  "evaluated_alternative": "TPS62162: 1A rating and -3.5/+4% power-save initial accuracy leave less margin for filter losses and two-branch peak load; not selected",
+  "qualification": "Native pins/land patterns and selected inductors/filter capacitor/damping resistor documented. Illustrative passive SPICE load step fails connector voltage target. Converter capacitor MPNs, actual module behavior, damping pulse capability and regulator closed-loop/thermal qualification remain open.",
+  "next_actions": [
+    "Resolve failed assumed filter load step: determine module input capacitance/current rise or revise filter topology.",
+    "Select converter C52/C53 with effective capacitance evidence and check both filtered loads.",
+    "Resolve optical interface and reset/VBUS from receiver underside evidence, requested from user.",
+    "Complete protection, firmware, hub support and PCB/hardware validation."
+  ],
+  "footprints": {
+    "library": "kicad/usb3_sfp_hub/libs/power.pretty",
+    "generator": "design/build_power_footprints.py",
+    "checker": "design/check_power_footprints.py",
+    "audit": "kicad/usb3_sfp_hub/validation/power_footprints.json",
+    "RPJ_orientation": "PCB top view matches TI p45 board layout; rotated 180 degrees from p3 pinout; nine pads with no additional EP",
+    "XGL4020_orientation": "Stripe to local pad1, which is SW for L4. Numbering is a local nonpolar winding-start convention."
+  },
+  "inductors": {
+    "datasheet": "https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf",
+    "document": "Coilcraft Doc1529, revised 2026-02-19",
+    "sha256": "1e050d7e4f44f7e1f3ae3be38de87b15e4d72b2ef463c7b1f4edc292f83ad2c0",
+    "L1_L2": {
+      "MPN": "XGL4020-472MEC",
+      "L_uH": 4.7,
+      "tolerance_fraction": 0.2,
+      "DCR_max_25C_ohm": 0.0473,
+      "Isat_A_10_20_30percent_drop_25C": [
+        1.9,
+        3,
+        4.1
+      ]
+    },
+    "L4": {
+      "MPN": "XGL4020-102MEC",
+      "L_uH": 1,
+      "tolerance_fraction": 0.2,
+      "DCR_max_25C_ohm": 0.009,
+      "Isat_A_10_20_30percent_drop_25C": [
+        3.8,
+        6.3,
+        8.8
+      ]
+    },
+    "manufacturer": "Coilcraft",
+    "sourcing_status": "Present in current manufacturer catalog 2026-09-12; distributor stock/order qualification not performed",
+    "DCR_temperature_source": "https://www.coilcraft.com/en-us/resources/application-notes/current-and-temperature-ratings/",
+    "DCR_temperature_equation": "DCR(T)=DCR25*(1+0.00393*(T-25)); temperature is part temperature, not ambient alone"
+  }
+}

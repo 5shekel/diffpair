@@ -1,0 +1,154 @@
+{
+  "source": "photos/recieve_top.png",
+  "sha256": "84e332b3e93a2fc248353090b07854a15cd74d714e4f3b3035637571a6bbf212",
+  "image_size_px": [
+    963,
+    1280
+  ],
+  "external_view": {
+    "source": "photos/external view.png",
+    "sha256": "da1ccc979a1fbc0c9b9f8e912353f8440851fbdd8decc17a8462adcd1cb4ff29",
+    "user_report": "Both units are the same size.",
+    "interpretation": "Same enclosure size; absolute dimensions and internal PCB dimensions unmeasured.",
+    "visible_labels": [
+      "PC-USB3.0 Port",
+      "DC 5V",
+      "TX",
+      "RX"
+    ],
+    "limits": "No module model label visible. Do not assign the lower panel's power input to the PC-side PCB solely from the stacked arrangement."
+  },
+  "coordinate_system": "original image, x right, y down; boxes x0,y0,x1,y1",
+  "user_report": "Unbranded PC-side receiver: SFP+ port to USB female, then cable to PC. Receiver and pictured hub came together and work; optical module markings unavailable.",
+  "reference_system": {
+    "status": "working matched pair, user-reported",
+    "evidence": "User: they come togther and work. i dont have the marking",
+    "design_use": "Retain existing receiver, cable and module pair as compatibility baseline",
+    "negotiated_speed": "not independently measured or captured",
+    "new_board_compatibility": "unverified"
+  },
+  "observations": [
+    {
+      "id": "A",
+      "box_px": [
+        275,
+        22,
+        525,
+        344
+      ],
+      "title": "USB-A socket",
+      "confidence": "high",
+      "evidence": "Blue insert and Standard-A-shaped shell; contact wiring hidden."
+    },
+    {
+      "id": "B",
+      "box_px": [
+        505,
+        310,
+        770,
+        1158
+      ],
+      "title": "SFP cage",
+      "confidence": "high",
+      "evidence": "Cage obscures socket contacts and underlying board; no module label visible."
+    },
+    {
+      "id": "C",
+      "box_px": [
+        181,
+        85,
+        228,
+        298
+      ],
+      "title": "PCB marking",
+      "confidence": "high",
+      "evidence": "Reads 123486S_Y171 after rotating the crop."
+    },
+    {
+      "id": "D",
+      "box_px": [
+        370,
+        350,
+        430,
+        405
+      ],
+      "title": "Two marked resistors",
+      "confidence": "medium",
+      "evidence": "Both appear marked 331; resistance and connections unmeasured."
+    },
+    {
+      "id": "E",
+      "box_px": [
+        368,
+        426,
+        435,
+        626
+      ],
+      "title": "Five-pin IC and passives",
+      "confidence": "high",
+      "evidence": "One 1R0-marked resistor, three MLCC candidates, and an unidentified five-pin IC."
+    },
+    {
+      "id": "F",
+      "box_px": [
+        370,
+        643,
+        490,
+        763
+      ],
+      "title": "Two magnetic components",
+      "confidence": "medium",
+      "evidence": "Two inductor/ferrite candidates, each flanked by MLCC candidates; values unverified."
+    },
+    {
+      "id": "G",
+      "box_px": [
+        303,
+        778,
+        456,
+        1156
+      ],
+      "title": "LED area",
+      "confidence": "high",
+      "evidence": "Two leaded LEDs and two resistors that appear marked 331; functions and polarity unknown."
+    },
+    {
+      "id": "H",
+      "box_px": [
+        609,
+        272,
+        663,
+        317
+      ],
+      "title": "Two MLCC candidates",
+      "confidence": "medium",
+      "evidence": "Parts next to parallel trace segments; endpoints hidden by cage."
+    }
+  ],
+  "inferences": [
+    {
+      "confidence": "medium",
+      "claim": "Receiver and hub may be related designs.",
+      "basis": "Shared 123486S PCB marking prefix; similar five-pin IC, 1R0 resistor, two magnetic components and two LEDs.",
+      "limit": "Does not establish same IC, schematic, firmware, or module compatibility."
+    },
+    {
+      "confidence": "low",
+      "claim": "Five-pin IC and adjacent passives may form SFP power conditioning.",
+      "basis": "Placement and similarity to the hub's corresponding area.",
+      "limit": "No readable IC marking or confirmed net; regulator type, pinout and voltage unknown."
+    }
+  ],
+  "trust_summary": {
+    "basis": "Visual observations plus user-reported operation of the supplied matched pair; no independent electrical or speed measurements.",
+    "electrical_connections_verified": 0,
+    "module_identity": "unknown",
+    "cable_wiring": "unknown",
+    "end_to_end_operation": "existing matched pair works per user; new design untested",
+    "hidden_areas": [
+      "underside",
+      "under USB shell",
+      "under SFP cage"
+    ]
+  }
+}

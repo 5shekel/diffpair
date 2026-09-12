@@ -1,0 +1,3913 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\dev\diffpair\kicad\usb3_sfp_hub\usb3_sfp_hub.kicad_sch</source>
+    <date>2026-09-12T12:16:05</date>
+    <tool>Eeschema 10.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>usb3_sfp_hub.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>sfp_support.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>hub_support.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>port_power.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>sfp_supply.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/USB3 signal protection/" tstamps="/a86a6896-3b25-5572-ab90-645d34a7ad3a/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>usb3_esd.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9c1d9d53-948a-553b-81d2-70b688cc12e0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>af4fbd4d-e629-5fc2-bd51-e09207e1e61f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a07b44b9-e12d-5f3a-85dc-3f88b6efd432</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>879f5452-75f3-5262-8581-653fd6de0cd4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>989eccdc-fbf2-5603-b8ff-91bdc9187b4a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>401ca35f-1ed9-527f-b86a-981b036c907d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>87ffdfd2-7ff3-5215-ba63-1f31a23fa66e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>64f48005-12a6-5ce6-ba16-fbcd3e85cbe9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>SFP+ / MODULE TBD</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="SFP_PLUS" description=""/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>80b0f0d6-70e5-56b1-b637-99ccb4989c8e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>USB3-A PORT 1</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="USB3_A_SS_ONLY" description=""/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01dd7302-490d-5853-94e2-a014547c72bc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="SH"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>USB3-A PORT 2</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="USB3_A_SS_ONLY" description=""/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5648d9f4-cac9-59dc-b7d9-bf34f7694749</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="SH"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J4">
+      <value>USB3-A PORT 3</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="USB3_A_SS_ONLY" description=""/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>80c8be38-2645-560e-9785-46b1e89abe10</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="SH"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J5">
+      <value>USB3-A PORT 4</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="USB3_A_SS_ONLY" description=""/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b994b680-0a90-5c02-b58f-5c78b94d375d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="SH"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>VL813(A1)</value>
+      <footprint>lcsc:C69418_QFN-76_L9_0-W9_0-P0_40-EP6_4-TL</footprint>
+      <datasheet>../../VL813.pdf</datasheet>
+      <fields>
+        <field name="MPN">VL813(A1)</field>
+        <field name="Manufacturer">VIA Labs</field>
+        <field name="BOM Comments">EOL reference baseline; footprint and operating circuit qualification pending</field>
+        <field name="Footprint">lcsc:C69418_QFN-76_L9_0-W9_0-P0_40-EP6_4-TL</field>
+        <field name="Datasheet">../../VL813.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="VL813_A1" description=""/>
+      <property name="MPN" value="VL813(A1)"/>
+      <property name="Manufacturer" value="VIA Labs"/>
+      <property name="BOM Comments" value="EOL reference baseline; footprint and operating circuit qualification pending"/>
+      <property name="Sheetname" value="usb3_sfp_hub"/>
+      <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f5b02a30-019e-5296-bd22-512d8178be26 e066cf81-4014-578e-b7ac-233f52955433 61085718-0d8a-5961-a6cc-fd5915da28df f14ef3af-febe-55db-955d-e9d06bf62b0c 4ab3ab1e-92a6-5ad7-a4c5-57a380e59c76 e86d9e91-b4c1-510d-87ed-e8fb0f7e506f 4b25e22e-9916-5ed2-ba66-824ae16cb823 14297728-4b0d-5d8a-b6cf-896a4bae97e6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="23"/>
+            <pin num="22"/>
+            <pin num="26"/>
+            <pin num="25"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="59"/>
+            <pin num="60"/>
+            <pin num="62"/>
+            <pin num="63"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="66"/>
+            <pin num="67"/>
+            <pin num="69"/>
+            <pin num="70"/>
+          </pins>
+        </unit>
+        <unit name="D">
+          <pins>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="E">
+          <pins>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="14"/>
+            <pin num="15"/>
+          </pins>
+        </unit>
+        <unit name="F">
+          <pins>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="28"/>
+            <pin num="29"/>
+            <pin num="64"/>
+            <pin num="65"/>
+            <pin num="72"/>
+            <pin num="73"/>
+          </pins>
+        </unit>
+        <unit name="G">
+          <pins>
+            <pin num="2"/>
+            <pin num="5"/>
+            <pin num="8"/>
+            <pin num="13"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="24"/>
+            <pin num="27"/>
+            <pin num="30"/>
+            <pin num="36"/>
+            <pin num="37"/>
+            <pin num="38"/>
+            <pin num="39"/>
+            <pin num="40"/>
+            <pin num="41"/>
+            <pin num="48"/>
+            <pin num="49"/>
+            <pin num="58"/>
+            <pin num="61"/>
+            <pin num="68"/>
+            <pin num="71"/>
+            <pin num="74"/>
+            <pin num="77"/>
+          </pins>
+        </unit>
+        <unit name="H">
+          <pins>
+            <pin num="1"/>
+            <pin num="21"/>
+            <pin num="31"/>
+            <pin num="32"/>
+            <pin num="33"/>
+            <pin num="34"/>
+            <pin num="35"/>
+            <pin num="42"/>
+            <pin num="43"/>
+            <pin num="44"/>
+            <pin num="45"/>
+            <pin num="46"/>
+            <pin num="47"/>
+            <pin num="50"/>
+            <pin num="51"/>
+            <pin num="52"/>
+            <pin num="53"/>
+            <pin num="54"/>
+            <pin num="55"/>
+            <pin num="56"/>
+            <pin num="57"/>
+            <pin num="75"/>
+            <pin num="76"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>f2968d1b-bcfb-52c6-967d-205eed33ce92</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>22uF / 25V / X7R / 10%</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <datasheet>https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM32ER71E226KE15-04CA-EN_PDF_CERAMICCAPACITORSMD</datasheet>
+      <fields>
+        <field name="MPN">GRM32ER71E226KE15L</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="BOM Comments">1210; manufacturer 3.3V/25C frequency data gives about 15.2uF and 20.5mOhm at 15kHz. Typical data, not guaranteed corner. Hot-plug/filter qualification pending.</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet">https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM32ER71E226KE15-04CA-EN_PDF_CERAMICCAPACITORSMD</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_BULK" description=""/>
+      <property name="MPN" value="GRM32ER71E226KE15L"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="BOM Comments" value="1210; manufacturer 3.3V/25C frequency data gives about 15.2uF and 20.5mOhm at 15kHz. Typical data, not guaranteed corner. Hot-plug/filter qualification pending."/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>206f2af9-551e-5b82-b3e6-77842fc7ee18</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>b9233717-9a24-5af1-9713-6fe7b66db54c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C12">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>ea6a3111-70e8-5196-bb0b-c7854eca2eaa</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C13">
+      <value>22uF / 25V / X7R / 10%</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <datasheet>https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM32ER71E226KE15-04CA-EN_PDF_CERAMICCAPACITORSMD</datasheet>
+      <fields>
+        <field name="MPN">GRM32ER71E226KE15L</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="BOM Comments">1210; manufacturer 3.3V/25C frequency data gives about 15.2uF and 20.5mOhm at 15kHz. Typical data, not guaranteed corner. Hot-plug/filter qualification pending.</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet">https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM32ER71E226KE15-04CA-EN_PDF_CERAMICCAPACITORSMD</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_BULK" description=""/>
+      <property name="MPN" value="GRM32ER71E226KE15L"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="BOM Comments" value="1210; manufacturer 3.3V/25C frequency data gives about 15.2uF and 20.5mOhm at 15kHz. Typical data, not guaranteed corner. Hot-plug/filter qualification pending."/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>b9111837-55b9-539e-ba1b-6a326521ae95</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C14">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>fedf15b8-0d66-5df1-88ce-0d6ecd6543fb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J6">
+      <value>3.3V management access / footprint TBD</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="SFP_MGMT" description=""/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>a339a9ca-73db-5710-aca6-d799d64a1a0a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L1">
+      <value>4.7uH / XGL4020-472MEC</value>
+      <footprint>power:L_Coilcraft_XGL4020</footprint>
+      <datasheet>https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf</datasheet>
+      <fields>
+        <field name="MPN">XGL4020-472MEC</field>
+        <field name="Manufacturer">Coilcraft</field>
+        <field name="BOM Comments">47.3mOhm max DCR at 25C; 1.9/3.0/4.1A Isat at 10/20/30% drop at 25C; thermal/AC and filter validation pending</field>
+        <field name="Footprint">power:L_Coilcraft_XGL4020</field>
+        <field name="Datasheet">https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="L" description=""/>
+      <property name="MPN" value="XGL4020-472MEC"/>
+      <property name="Manufacturer" value="Coilcraft"/>
+      <property name="BOM Comments" value="47.3mOhm max DCR at 25C; 1.9/3.0/4.1A Isat at 10/20/30% drop at 25C; thermal/AC and filter validation pending"/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>fe91ec89-5c73-5d0b-b4ed-1b841653823d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L2">
+      <value>4.7uH / XGL4020-472MEC</value>
+      <footprint>power:L_Coilcraft_XGL4020</footprint>
+      <datasheet>https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf</datasheet>
+      <fields>
+        <field name="MPN">XGL4020-472MEC</field>
+        <field name="Manufacturer">Coilcraft</field>
+        <field name="BOM Comments">47.3mOhm max DCR at 25C; 1.9/3.0/4.1A Isat at 10/20/30% drop at 25C; thermal/AC and filter validation pending</field>
+        <field name="Footprint">power:L_Coilcraft_XGL4020</field>
+        <field name="Datasheet">https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="L" description=""/>
+      <property name="MPN" value="XGL4020-472MEC"/>
+      <property name="Manufacturer" value="Coilcraft"/>
+      <property name="BOM Comments" value="47.3mOhm max DCR at 25C; 1.9/3.0/4.1A Isat at 10/20/30% drop at 25C; thermal/AC and filter validation pending"/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>e1e0f005-9815-55fa-be94-ae8aa2f9e918</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>0.43 / 1% / 0.25W</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf</datasheet>
+      <fields>
+        <field name="MPN">ERJ8RQFR43V</field>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="BOM Comments">1206 damping candidate; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification.</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="MPN" value="ERJ8RQFR43V"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="BOM Comments" value="1206 damping candidate; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification."/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>152c1d74-2a5b-5800-8089-84abff55279e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>0.43 / 1% / 0.25W</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf</datasheet>
+      <fields>
+        <field name="MPN">ERJ8RQFR43V</field>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="BOM Comments">1206 damping candidate; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification.</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="MPN" value="ERJ8RQFR43V"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="BOM Comments" value="1206 damping candidate; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification."/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>2f92f571-638a-5508-9171-05b4ab68ec76</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>4.7k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>daef3fb7-70cf-5164-b030-33d27aefca3f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>4.7k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>3ed593e4-54e6-50b2-aa86-96e5cc3af6c8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>4.7k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>037fa75f-9cbb-5ffe-ab74-460368f60ec1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>4.7k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>43cee9fd-4334-5882-8c85-ad9359a4f4b1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>4.7k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="Sheetname" value="SFP power and management"/>
+      <property name="Sheetfile" value="sfp_support.kicad_sch"/>
+      <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
+      <tstamps>ab6178f5-fc92-5608-911a-f90f4c53fcaa</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C15">
+      <value>4.7uF / effective C TBD</value>
+      <fields>
+        <field name="Placement target">U1.19 input</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_BULK" description=""/>
+      <property name="Placement target" value="U1.19 input"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>705745f4-519a-539c-ae24-f63135d401f7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C16">
+      <value>4.7uF / effective C TBD</value>
+      <fields>
+        <field name="Placement target">U1.38 input</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_BULK" description=""/>
+      <property name="Placement target" value="U1.38 input"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>ed15c811-4145-53e1-b615-3cc5a06cd954</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C17">
+      <value>4.7uF / effective C TBD</value>
+      <fields>
+        <field name="Placement target">U1.18 LDO output</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_BULK" description=""/>
+      <property name="Placement target" value="U1.18 LDO output"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>ae277308-493e-55a3-9d97-8d612107dac6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C18">
+      <value>4.7uF / effective C TBD</value>
+      <fields>
+        <field name="Placement target">L3 output / U1.37</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_BULK" description=""/>
+      <property name="Placement target" value="L3 output / U1.37"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>22129e52-9578-554b-ab6e-aa107e816614</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C19">
+      <value>4.7uF / effective C TBD</value>
+      <fields>
+        <field name="Placement target">L3 output / U1.37</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_BULK" description=""/>
+      <property name="Placement target" value="L3 output / U1.37"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>a2c63837-5c9e-5d3a-b195-17320a09fde2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C20">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.2</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.2"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>5fd48e7c-fd10-51a3-9632-b2284448b62a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C21">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.8</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.8"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>a98f56e6-34e8-5ad5-859c-a34686362dd4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C22">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.27</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.27"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>13864bc6-6771-5eec-bcba-02f553493a13</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C23">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.36</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.36"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>9e031014-b231-5e84-b311-95f7bf3435f9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C24">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.41</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.41"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>a52f68cc-d989-5470-95dc-4be1756e5c36</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C25">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.49</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.49"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>a255c25a-75cb-5ff5-b5d1-4a0c4cd980c1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C26">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.71</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.71"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>fcbd5363-478e-5c24-9767-147e3ae39c7e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C27">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.5</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.5"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>aaa0fb6f-4749-5e0a-868e-980183903b0c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C28">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.13</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.13"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>34c4d861-a724-5c88-8aee-33b22adbf2b6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C29">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.24</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.24"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>488937b0-3d0a-5ef4-9ea3-55053d38cfcb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C30">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.30</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.30"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>245ca70d-6251-546d-9040-94c40ed58747</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C31">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.48</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.48"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>2bc3394e-0625-596c-829d-b46ff8dc3dc4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C32">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.58</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.58"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>145f116b-aaaa-561b-9d96-ba260dd15dcb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C33">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.61</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.61"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>bee99fdc-4ef8-5af8-b397-d54022d00a01</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C34">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.68</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.68"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>957d3ead-a86f-51a5-8409-2d411be0dff4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C35">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U1.74</field>
+        <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U1.74"/>
+      <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>dfe174b2-070f-5fe9-ae9c-b2cb08b99a8d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C36">
+      <value>22pF / candidate C0G</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>a62a4634-e148-5a88-a77b-18bff7270e64</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C37">
+      <value>22pF / candidate C0G</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>e8b4fca6-1e74-54aa-b169-281c5ca8234b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C38">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U12.6 to U12.2</field>
+        <field name="BOM Comments">Repurposed from former 1uF RESET RC capacitor; no capacitor directly on RESET_N</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U12.6 to U12.2"/>
+      <property name="BOM Comments" value="Repurposed from former 1uF RESET RC capacitor; no capacitor directly on RESET_N"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>15ff2edc-5609-52d5-b060-90981afe65a9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J7">
+      <value>5.0-5.2V at board / input TBD</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="DC_INPUT" description=""/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>598a836c-2780-527d-9144-e0ef85286971</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J9">
+      <value>Short 1-2 to request reset / MPN TBD</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="RESET_ACCESS" description=""/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>0d98c4c2-f537-5c18-9dde-7c42d9b16914</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L3">
+      <value>10uH / current rating TBD</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="L" description=""/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>e66d06c1-af4f-56ed-9785-50d26d4435e3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>BIAS_R_TBD</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>88935870-d63f-5ba1-9165-78c0708bd0d5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>12.1k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="BOM Comments">TPS3808 open-drain RESET pullup; leakage/low-level DC bounds checked; reset timing qualification pending</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="BOM Comments" value="TPS3808 open-drain RESET pullup; leakage/low-level DC bounds checked; reset timing qualification pending"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>d6119904-3125-5825-a9b0-7a172688fb5a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R24">
+      <value>10k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="BOM Comments">External MR pullup, in parallel with internal pullup; external control must be open-drain to GND</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="BOM Comments" value="External MR pullup, in parallel with internal pullup; external control must be open-drain to GND"/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>9f164dc2-e1b6-5127-b335-bb863e43e436</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U12">
+      <value>TPS3808G33DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps3808.pdf</datasheet>
+      <fields>
+        <field name="MPN">TPS3808G33DBVR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="BOM Comments">3.07V nominal falling threshold; CT open gives 12-28ms delay under specified test conditions. Monitors 3.3V only; core rail and optical recovery qualification pending.</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps3808.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="TPS3808_DBV" description=""/>
+      <property name="MPN" value="TPS3808G33DBVR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="BOM Comments" value="3.07V nominal falling threshold; CT open gives 12-28ms delay under specified test conditions. Monitors 3.3V only; core rail and optical recovery qualification pending."/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>24beb0a0-e7fc-59fe-a872-87d018f4edcf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Y1">
+      <value>25MHz / CL and package TBD</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="XTAL" description=""/>
+      <property name="Sheetname" value="Hub power and clock"/>
+      <property name="Sheetfile" value="hub_support.kicad_sch"/>
+      <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
+      <tstamps>a6d31a60-cfc6-55ed-bf75-e30c19f6d749</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C39">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U2.1</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U2.1"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>05a591aa-d6c2-50b8-8b9f-76ba61df622a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C40">
+      <value>220uF / 10V / 20%</value>
+      <fields>
+        <field name="BOM Comments">Polarized low-ESR output bulk; MPN/package/ripple qualification pending; pin 1 positive</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_POLAR" description=""/>
+      <property name="BOM Comments" value="Polarized low-ESR output bulk; MPN/package/ripple qualification pending; pin 1 positive"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>fb8ea2ec-10a3-55fd-a098-cdcefc3c8aa9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C41">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">J2.1</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="J2.1"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>f776399c-474b-5a95-bc9a-7634cc7f90b4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C42">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U3.1</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U3.1"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>3439c1ab-4b70-5077-abb6-94ac36017a74</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C43">
+      <value>220uF / 10V / 20%</value>
+      <fields>
+        <field name="BOM Comments">Polarized low-ESR output bulk; MPN/package/ripple qualification pending; pin 1 positive</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_POLAR" description=""/>
+      <property name="BOM Comments" value="Polarized low-ESR output bulk; MPN/package/ripple qualification pending; pin 1 positive"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>0ed8143a-d51b-5d63-a5bd-afd092c55b4d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C44">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">J3.1</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="J3.1"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>d4fdc7bf-5d6e-5ef9-917d-00e08f2977f4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C45">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U4.1</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U4.1"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>c6514742-87d7-5e37-b231-597474224769</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C46">
+      <value>220uF / 10V / 20%</value>
+      <fields>
+        <field name="BOM Comments">Polarized low-ESR output bulk; MPN/package/ripple qualification pending; pin 1 positive</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_POLAR" description=""/>
+      <property name="BOM Comments" value="Polarized low-ESR output bulk; MPN/package/ripple qualification pending; pin 1 positive"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>10a8c02a-4b5e-53e3-846c-19eedd0559be</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C47">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">J4.1</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="J4.1"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>a3c6cd66-ae15-5bf3-8e57-bdefb45aed0e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C48">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U5.1</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U5.1"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>5458a176-05fc-5fc6-8c3e-894af1089617</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C49">
+      <value>220uF / 10V / 20%</value>
+      <fields>
+        <field name="BOM Comments">Polarized low-ESR output bulk; MPN/package/ripple qualification pending; pin 1 positive</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_POLAR" description=""/>
+      <property name="BOM Comments" value="Polarized low-ESR output bulk; MPN/package/ripple qualification pending; pin 1 positive"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>b2ad848c-fd64-5bef-9da4-dbf4f0a1c2ac</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C50">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">J5.1</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="J5.1"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>770ded7f-ce34-5bed-a617-f9d3d698433d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C51">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U6.5</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U6.5"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>074ec363-ee40-53ff-ae6c-e3fca73473fc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>23.2k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="BOM Comments">TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="BOM Comments" value="TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>a6133c8d-29a4-59a9-bd63-8602349457da</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>23.2k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="BOM Comments">TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="BOM Comments" value="TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>39138d84-948c-5f07-80e0-4c28eba775e6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>23.2k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="BOM Comments">TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="BOM Comments" value="TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>41416aeb-ed60-5162-9de2-0dd70274e483</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>23.2k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="BOM Comments">TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="BOM Comments" value="TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>315f6617-ee0b-5e1a-8d76-51fc5aec4320</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R14">
+      <value>10k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>0015a094-ca42-5457-9295-9304ec6049ad</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>10k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>88d5fb9c-4b3f-5075-a8f5-196918125eac</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R16">
+      <value>10k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>268f2569-ba14-5793-83bf-5d4ddfc4428b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R17">
+      <value>10k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>c75ebd0c-70d3-5dc5-8dbb-ed0639af7f54</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R18">
+      <value>1k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="BOM Comments">Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="BOM Comments" value="Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>8e7af891-7a7a-54a5-91ca-7ea5237c0095</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R19">
+      <value>1k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="BOM Comments">Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="BOM Comments" value="Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>55c0eef3-278f-58eb-bed4-63a17dfa00cc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R20">
+      <value>1k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="BOM Comments">Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="BOM Comments" value="Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>3a641b4c-5dc9-5733-888c-d61195f4dd12</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R21">
+      <value>1k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="BOM Comments">Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="BOM Comments" value="Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>62fa2b53-dba1-52bc-8db5-820b0a1397d7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>TPS2553DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps2552.pdf</datasheet>
+      <fields>
+        <field name="MPN">TPS2553DBVR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="BOM Comments">Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified.</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps2552.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="TPS2553_DBV" description=""/>
+      <property name="MPN" value="TPS2553DBVR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="BOM Comments" value="Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified."/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>e79aa248-496d-5514-a10c-138549644628</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>TPS2553DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps2552.pdf</datasheet>
+      <fields>
+        <field name="MPN">TPS2553DBVR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="BOM Comments">Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified.</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps2552.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="TPS2553_DBV" description=""/>
+      <property name="MPN" value="TPS2553DBVR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="BOM Comments" value="Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified."/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>1a8829d3-f3bd-572c-bd9c-5dab6e21a6ef</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>TPS2553DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps2552.pdf</datasheet>
+      <fields>
+        <field name="MPN">TPS2553DBVR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="BOM Comments">Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified.</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps2552.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="TPS2553_DBV" description=""/>
+      <property name="MPN" value="TPS2553DBVR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="BOM Comments" value="Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified."/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>611ecd13-8561-5cbe-8ace-307f1c6d048d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U5">
+      <value>TPS2553DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps2552.pdf</datasheet>
+      <fields>
+        <field name="MPN">TPS2553DBVR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="BOM Comments">Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified.</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps2552.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="TPS2553_DBV" description=""/>
+      <property name="MPN" value="TPS2553DBVR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="BOM Comments" value="Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified."/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>295d595a-f130-55f4-88e5-c2762624406b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U6">
+      <value>SN74LVC1G04DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf</datasheet>
+      <fields>
+        <field name="MPN">SN74LVC1G04DBVR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="BOM Comments">Inverts hub active-low gang enable; Ioff plus R15 holds EN low at VCC=0; ramp behavior requires test</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="LVC1G04_DBV" description=""/>
+      <property name="MPN" value="SN74LVC1G04DBVR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="BOM Comments" value="Inverts hub active-low gang enable; Ioff plus R15 holds EN low at VCC=0; ramp behavior requires test"/>
+      <property name="Sheetname" value="Downstream port power"/>
+      <property name="Sheetfile" value="port_power.kicad_sch"/>
+      <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
+      <tstamps>c7b0d2e0-6853-5e41-8f6f-db6ddfe63491</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C52">
+      <value>10uF / 10V / X7R</value>
+      <fields>
+        <field name="Placement target">U7.6 to U7.4; effective capacitance qualification pending</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_BULK" description=""/>
+      <property name="Placement target" value="U7.6 to U7.4; effective capacitance qualification pending"/>
+      <property name="Sheetname" value="SFP regulated supply"/>
+      <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
+      <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
+      <tstamps>9be1bf03-f7f6-5b30-a911-13db9c82cfb0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C53">
+      <value>22uF / 10V / X7R</value>
+      <fields>
+        <field name="Placement target">L4 output to U7.4; U7.3 Kelvin sense here</field>
+        <field name="BOM Comments">Effective 11-26.4uF target from TI Table 8-3; part and filtered-load stability pending</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_BULK" description=""/>
+      <property name="Placement target" value="L4 output to U7.4; U7.3 Kelvin sense here"/>
+      <property name="BOM Comments" value="Effective 11-26.4uF target from TI Table 8-3; part and filtered-load stability pending"/>
+      <property name="Sheetname" value="SFP regulated supply"/>
+      <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
+      <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
+      <tstamps>0fda851c-5e7a-5aca-ad4f-4e96d75ded2d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C54">
+      <value>10nF / 5% / C0G</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="BOM Comments">Candidate soft start, about 3.26ms from TI equation 14; startup through SFP filters requires measurement</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="BOM Comments" value="Candidate soft start, about 3.26ms from TI equation 14; startup through SFP filters requires measurement"/>
+      <property name="Sheetname" value="SFP regulated supply"/>
+      <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
+      <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
+      <tstamps>80349471-b1fe-5183-b46b-6748e985afad</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C55">
+      <value>100nF / 0402</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Placement target">U7.6 to U7.4; minimize input switching loop</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="Placement target" value="U7.6 to U7.4; minimize input switching loop"/>
+      <property name="Sheetname" value="SFP regulated supply"/>
+      <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
+      <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
+      <tstamps>127fb4c0-cd5b-5d4e-ab4d-628f7533b9c6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J8">
+      <value>Supply test access / footprint TBD</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="SUPPLY_TEST" description=""/>
+      <property name="Sheetname" value="SFP regulated supply"/>
+      <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
+      <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
+      <tstamps>1e531d73-feaa-545d-843a-d436d36859a4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L4">
+      <value>1uH / XGL4020-102MEC</value>
+      <footprint>power:L_Coilcraft_XGL4020</footprint>
+      <datasheet>https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf</datasheet>
+      <fields>
+        <field name="MPN">XGL4020-102MEC</field>
+        <field name="Manufacturer">Coilcraft</field>
+        <field name="BOM Comments">TI Table 8-4 listed part; 9mOhm max DCR; 3.8/6.3/8.8A Isat at 10/20/30% drop at 25C; stripe faces pad1 SW; thermal/AC/fault peaks pending</field>
+        <field name="Footprint">power:L_Coilcraft_XGL4020</field>
+        <field name="Datasheet">https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="L" description=""/>
+      <property name="MPN" value="XGL4020-102MEC"/>
+      <property name="Manufacturer" value="Coilcraft"/>
+      <property name="BOM Comments" value="TI Table 8-4 listed part; 9mOhm max DCR; 3.8/6.3/8.8A Isat at 10/20/30% drop at 25C; stripe faces pad1 SW; thermal/AC/fault peaks pending"/>
+      <property name="Sheetname" value="SFP regulated supply"/>
+      <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
+      <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
+      <tstamps>b3703c39-f5e9-580b-b1bd-d9743a6d1212</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R22">
+      <value>32.4k / 1% / 100ppm</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="BOM Comments">TI Table 7-1 option 10: VSET, 2.5MHz, forced PWM, discharge enabled; total tolerance within +/-4%, pin C &lt;=30pF</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="BOM Comments" value="TI Table 7-1 option 10: VSET, 2.5MHz, forced PWM, discharge enabled; total tolerance within +/-4%, pin C &lt;=30pF"/>
+      <property name="Sheetname" value="SFP regulated supply"/>
+      <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
+      <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
+      <tstamps>9e082a1d-8b90-5299-b01d-567180da4c31</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R23">
+      <value>10k / 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="R" description=""/>
+      <property name="Sheetname" value="SFP regulated supply"/>
+      <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
+      <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
+      <tstamps>8f408a98-64eb-55e1-a49f-f04318262433</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U7">
+      <value>TPS62902RPJR</value>
+      <footprint>power:TI_RPJ0009A_1.5x2mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps62902.pdf</datasheet>
+      <fields>
+        <field name="MPN">TPS62902RPJR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="BOM Comments">RPJ nine-pad VQFN, no separate EP. Native local footprint from TI land pattern. VSET open=3.3V with 32.4k MODE; stock not verified.</field>
+        <field name="Footprint">power:TI_RPJ0009A_1.5x2mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps62902.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="TPS62902_RPJ" description=""/>
+      <property name="MPN" value="TPS62902RPJR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="BOM Comments" value="RPJ nine-pad VQFN, no separate EP. Native local footprint from TI land pattern. VSET open=3.3V with 32.4k MODE; stock not verified."/>
+      <property name="Sheetname" value="SFP regulated supply"/>
+      <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
+      <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
+      <tstamps>14eb0335-d015-54b7-882d-941ae7a24879</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U8">
+      <value>TPD4E02B04DQAR</value>
+      <footprint>protection:TI_DQA0010A_1x2.5mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf</datasheet>
+      <fields>
+        <field name="MPN">TPD4E02B04DQAR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Placement target">J2 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8</field>
+        <field name="BOM Comments">Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending.</field>
+        <field name="Footprint">protection:TI_DQA0010A_1x2.5mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="TPD4E02B04_DQA" description=""/>
+      <property name="MPN" value="TPD4E02B04DQAR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Placement target" value="J2 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8"/>
+      <property name="BOM Comments" value="Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending."/>
+      <property name="Sheetname" value="USB3 signal protection"/>
+      <property name="Sheetfile" value="usb3_esd.kicad_sch"/>
+      <sheetpath names="/USB3 signal protection/" tstamps="/a86a6896-3b25-5572-ab90-645d34a7ad3a/"/>
+      <tstamps>754e2bfe-659d-5206-95e1-02c967270c29</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U9">
+      <value>TPD4E02B04DQAR</value>
+      <footprint>protection:TI_DQA0010A_1x2.5mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf</datasheet>
+      <fields>
+        <field name="MPN">TPD4E02B04DQAR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Placement target">J3 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8</field>
+        <field name="BOM Comments">Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending.</field>
+        <field name="Footprint">protection:TI_DQA0010A_1x2.5mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="TPD4E02B04_DQA" description=""/>
+      <property name="MPN" value="TPD4E02B04DQAR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Placement target" value="J3 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8"/>
+      <property name="BOM Comments" value="Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending."/>
+      <property name="Sheetname" value="USB3 signal protection"/>
+      <property name="Sheetfile" value="usb3_esd.kicad_sch"/>
+      <sheetpath names="/USB3 signal protection/" tstamps="/a86a6896-3b25-5572-ab90-645d34a7ad3a/"/>
+      <tstamps>657e1867-417b-5608-8320-394a8a5d0cbc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U10">
+      <value>TPD4E02B04DQAR</value>
+      <footprint>protection:TI_DQA0010A_1x2.5mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf</datasheet>
+      <fields>
+        <field name="MPN">TPD4E02B04DQAR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Placement target">J4 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8</field>
+        <field name="BOM Comments">Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending.</field>
+        <field name="Footprint">protection:TI_DQA0010A_1x2.5mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="TPD4E02B04_DQA" description=""/>
+      <property name="MPN" value="TPD4E02B04DQAR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Placement target" value="J4 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8"/>
+      <property name="BOM Comments" value="Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending."/>
+      <property name="Sheetname" value="USB3 signal protection"/>
+      <property name="Sheetfile" value="usb3_esd.kicad_sch"/>
+      <sheetpath names="/USB3 signal protection/" tstamps="/a86a6896-3b25-5572-ab90-645d34a7ad3a/"/>
+      <tstamps>42a8956d-20d0-5e1f-8c66-d5ef156abd2d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U11">
+      <value>TPD4E02B04DQAR</value>
+      <footprint>protection:TI_DQA0010A_1x2.5mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf</datasheet>
+      <fields>
+        <field name="MPN">TPD4E02B04DQAR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Placement target">J5 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8</field>
+        <field name="BOM Comments">Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending.</field>
+        <field name="Footprint">protection:TI_DQA0010A_1x2.5mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="draft" part="TPD4E02B04_DQA" description=""/>
+      <property name="MPN" value="TPD4E02B04DQAR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Placement target" value="J5 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8"/>
+      <property name="BOM Comments" value="Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending."/>
+      <property name="Sheetname" value="USB3 signal protection"/>
+      <property name="Sheetfile" value="usb3_esd.kicad_sch"/>
+      <sheetpath names="/USB3 signal protection/" tstamps="/a86a6896-3b25-5572-ab90-645d34a7ad3a/"/>
+      <tstamps>6fd18aaf-5ba8-5c5f-8842-46b25a213b21</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="draft" part="C_BULK">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">22uF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="C_POLAR">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">220uF</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="C_SERIES">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="DC_INPUT">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">5V regulated input</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+5V" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="L">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">4.7uH</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="LVC1G04_DBV">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SN74LVC1G04DBVR</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="passive"/>
+        <pin num="2" name="A" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="Y" type="output"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="R">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">R</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="RESET_ACCESS">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Reset access</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="MR_N" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="SFP_MGMT">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SFP management / 3.3V only</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="VccT_REF" type="passive"/>
+        <pin num="3" name="SDA" type="passive"/>
+        <pin num="4" name="SCL" type="passive"/>
+        <pin num="5" name="MOD_ABS" type="passive"/>
+        <pin num="6" name="RX_LOS" type="passive"/>
+        <pin num="7" name="TX_FAULT" type="passive"/>
+        <pin num="8" name="TX_DISABLE" type="passive"/>
+        <pin num="9" name="RS0" type="passive"/>
+        <pin num="10" name="RS1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="SFP_PLUS">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SFP+ (module TBD)</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VeeT" type="passive"/>
+        <pin num="2" name="TX_FAULT" type="passive"/>
+        <pin num="3" name="TX_DISABLE" type="passive"/>
+        <pin num="4" name="SDA" type="passive"/>
+        <pin num="5" name="SCL" type="passive"/>
+        <pin num="6" name="MOD_ABS" type="passive"/>
+        <pin num="7" name="RS0" type="passive"/>
+        <pin num="8" name="RX_LOS" type="passive"/>
+        <pin num="9" name="RS1" type="passive"/>
+        <pin num="10" name="VeeR" type="passive"/>
+        <pin num="11" name="VeeR" type="passive"/>
+        <pin num="12" name="RD_N" type="passive"/>
+        <pin num="13" name="RD_P" type="passive"/>
+        <pin num="14" name="VeeR" type="passive"/>
+        <pin num="15" name="VccR" type="passive"/>
+        <pin num="16" name="VccT" type="passive"/>
+        <pin num="17" name="VeeT" type="passive"/>
+        <pin num="18" name="TD_P" type="passive"/>
+        <pin num="19" name="TD_N" type="passive"/>
+        <pin num="20" name="VeeT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="SUPPLY_TEST">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SFP supply test</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="passive"/>
+        <pin num="2" name="PG" type="passive"/>
+        <pin num="3" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="TPD4E02B04_DQA">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPD4E02B04DQAR</field>
+        <field name="Footprint">protection:TI_DQA0010A_1x2.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IO1" type="passive"/>
+        <pin num="2" name="IO2" type="passive"/>
+        <pin num="3" name="GND" type="passive"/>
+        <pin num="4" name="IO3" type="passive"/>
+        <pin num="5" name="IO4" type="passive"/>
+        <pin num="6" name="NC_ROUTE" type="passive"/>
+        <pin num="7" name="NC_ROUTE" type="passive"/>
+        <pin num="8" name="GND" type="passive"/>
+        <pin num="9" name="NC_ROUTE" type="passive"/>
+        <pin num="10" name="NC_ROUTE" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="TPS2553_DBV">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS2553DBVR</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="FAULT_N" type="open_collector"/>
+        <pin num="5" name="ILIM" type="passive"/>
+        <pin num="6" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="TPS3808_DBV">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS3808G33DBVR</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="RESET_N" type="open_collector"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="MR_N" type="input"/>
+        <pin num="4" name="CT" type="passive"/>
+        <pin num="5" name="SENSE" type="input"/>
+        <pin num="6" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="TPS62902_RPJ">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS62902RPJR</field>
+        <field name="Footprint">power:TI_RPJ0009A_1.5x2mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="PG" type="open_collector"/>
+        <pin num="2" name="SW" type="power_out"/>
+        <pin num="3" name="VOS" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="EN" type="input"/>
+        <pin num="6" name="VIN" type="power_in"/>
+        <pin num="7" name="MODE_SCONF" type="input"/>
+        <pin num="8" name="SS_TR" type="passive"/>
+        <pin num="9" name="FB_VSET" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="USB3_A_SS_ONLY">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">USB3-A</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="passive"/>
+        <pin num="2" name="D_N_NC" type="passive"/>
+        <pin num="3" name="D_P_NC" type="passive"/>
+        <pin num="4" name="GND" type="passive"/>
+        <pin num="5" name="SSRX_N" type="passive"/>
+        <pin num="6" name="SSRX_P" type="passive"/>
+        <pin num="7" name="DRAIN" type="passive"/>
+        <pin num="8" name="SSTX_N" type="passive"/>
+        <pin num="9" name="SSTX_P" type="passive"/>
+        <pin num="SH" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="VL813_A1">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">VL813(A1)</field>
+        <field name="Footprint">lcsc:C69418_QFN-76_L9_0-W9_0-P0_40-EP6_4-TL</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="SSREXT" type="passive"/>
+        <pin num="2" name="VCCA33SSM" type="power_in"/>
+        <pin num="3" name="SSTX3+" type="output"/>
+        <pin num="4" name="SSTX3-" type="output"/>
+        <pin num="5" name="VCCA12SSRX3" type="power_in"/>
+        <pin num="6" name="SSRX3+" type="input"/>
+        <pin num="7" name="SSRX3-" type="input"/>
+        <pin num="8" name="VCCA33SS34" type="power_in"/>
+        <pin num="9" name="USBHP3+" type="bidirectional"/>
+        <pin num="10" name="USBHP3-" type="bidirectional"/>
+        <pin num="11" name="SSTX4+" type="output"/>
+        <pin num="12" name="SSTX4-" type="output"/>
+        <pin num="13" name="VCCA12SSRX4" type="power_in"/>
+        <pin num="14" name="SSRX4+" type="input"/>
+        <pin num="15" name="SSRX4-" type="input"/>
+        <pin num="16" name="USBHP4+" type="bidirectional"/>
+        <pin num="17" name="USBHP4-" type="bidirectional"/>
+        <pin num="18" name="DC33FB" type="power_out"/>
+        <pin num="19" name="VCC5I" type="power_in"/>
+        <pin num="20" name="VCC12I" type="power_in"/>
+        <pin num="21" name="DC10FB" type="passive"/>
+        <pin num="22" name="SSTX0-" type="output"/>
+        <pin num="23" name="SSTX0+" type="output"/>
+        <pin num="24" name="VCCA12SSRX0" type="power_in"/>
+        <pin num="25" name="SSRX0-" type="input"/>
+        <pin num="26" name="SSRX0+" type="input"/>
+        <pin num="27" name="VCCA33SS0" type="power_in"/>
+        <pin num="28" name="USBDP+" type="bidirectional"/>
+        <pin num="29" name="USBDP-" type="bidirectional"/>
+        <pin num="30" name="VDD" type="power_in"/>
+        <pin num="31" name="VBUSDET" type="input"/>
+        <pin num="32" name="USBHMBR4" type="output"/>
+        <pin num="33" name="USBHMBR3" type="output"/>
+        <pin num="34" name="USBHMBR2" type="output"/>
+        <pin num="35" name="USBHMBR1" type="output"/>
+        <pin num="36" name="VSUS33" type="power_in"/>
+        <pin num="37" name="DC12FB" type="passive"/>
+        <pin num="38" name="VCC5I" type="power_in"/>
+        <pin num="39" name="LX" type="power_out"/>
+        <pin num="40" name="DC12FB" type="passive"/>
+        <pin num="41" name="VSUS33" type="power_in"/>
+        <pin num="42" name="USBHPE2B#" type="output"/>
+        <pin num="43" name="USBHPE1#" type="output"/>
+        <pin num="44" name="USBHOC2#" type="input"/>
+        <pin num="45" name="USBHOC1#" type="input"/>
+        <pin num="46" name="COREPWRDN#" type="output"/>
+        <pin num="47" name="EXTPWRON" type="input"/>
+        <pin num="48" name="VDD" type="power_in"/>
+        <pin num="49" name="VSUS33" type="power_in"/>
+        <pin num="50" name="USBHGRN4" type="output"/>
+        <pin num="51" name="USBHGRN3" type="output"/>
+        <pin num="52" name="USBHGRN2" type="output"/>
+        <pin num="53" name="USBHGRN1" type="output"/>
+        <pin num="54" name="RESET#" type="input"/>
+        <pin num="55" name="SMCLK" type="input"/>
+        <pin num="56" name="SMDAT" type="bidirectional"/>
+        <pin num="57" name="TESTEN" type="input"/>
+        <pin num="58" name="VDD" type="power_in"/>
+        <pin num="59" name="SSTX1+" type="output"/>
+        <pin num="60" name="SSTX1-" type="output"/>
+        <pin num="61" name="VCCA12SSRX1" type="power_in"/>
+        <pin num="62" name="SSRX1+" type="input"/>
+        <pin num="63" name="SSRX1-" type="input"/>
+        <pin num="64" name="USBHP1+" type="bidirectional"/>
+        <pin num="65" name="USBHP1-" type="bidirectional"/>
+        <pin num="66" name="SSTX2+" type="output"/>
+        <pin num="67" name="SSTX2-" type="output"/>
+        <pin num="68" name="VCCA12SSRX2" type="power_in"/>
+        <pin num="69" name="SSRX2+" type="input"/>
+        <pin num="70" name="SSRX2-" type="input"/>
+        <pin num="71" name="VCCA33SS12" type="power_in"/>
+        <pin num="72" name="USBHP2+" type="bidirectional"/>
+        <pin num="73" name="USBHP2-" type="bidirectional"/>
+        <pin num="74" name="VCCA12SSM" type="power_in"/>
+        <pin num="75" name="SSXI" type="input"/>
+        <pin num="76" name="SSXO" type="output"/>
+        <pin num="77" name="GND_EP" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="draft" part="XTAL">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">25MHz</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="draft">
+      <uri>${KIPRJMOD}/libs/draft.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/CHASSIS_PENDING" class="Default">
+      <node ref="J2" pin="SH" pinfunction="SHIELD_SH" pintype="passive"/>
+      <node ref="J3" pin="SH" pinfunction="SHIELD_SH" pintype="passive"/>
+      <node ref="J4" pin="SH" pinfunction="SHIELD_SH" pintype="passive"/>
+      <node ref="J5" pin="SH" pinfunction="SHIELD_SH" pintype="passive"/>
+    </net>
+    <net code="2" name="/COREPWRDN_N" class="Default">
+      <node ref="U1" pin="46" pinfunction="COREPWRDN#_46" pintype="output"/>
+    </net>
+    <net code="3" name="/DC12FB40_PENDING" class="Default">
+      <node ref="U1" pin="40" pinfunction="DC12FB_40" pintype="passive"/>
+    </net>
+    <net code="4" name="/Downstream port power/PORT1_ILIM" class="Default">
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="ILIM_5" pintype="passive"/>
+    </net>
+    <net code="5" name="/Downstream port power/PORT2_ILIM" class="Default">
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="U3" pin="5" pinfunction="ILIM_5" pintype="passive"/>
+    </net>
+    <net code="6" name="/Downstream port power/PORT3_ILIM" class="Default">
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="U4" pin="5" pinfunction="ILIM_5" pintype="passive"/>
+    </net>
+    <net code="7" name="/Downstream port power/PORT4_ILIM" class="Default">
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="U5" pin="5" pinfunction="ILIM_5" pintype="passive"/>
+    </net>
+    <net code="8" name="/Downstream port power/PORTS_EN" class="Default">
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="EN_3" pintype="input"/>
+      <node ref="U3" pin="3" pinfunction="EN_3" pintype="input"/>
+      <node ref="U4" pin="3" pinfunction="EN_3" pintype="input"/>
+      <node ref="U5" pin="3" pinfunction="EN_3" pintype="input"/>
+      <node ref="U6" pin="4" pinfunction="Y_4" pintype="output"/>
+    </net>
+    <net code="9" name="/EXTPWRON_PENDING" class="Default">
+      <node ref="U1" pin="47" pinfunction="EXTPWRON_47" pintype="input"/>
+    </net>
+    <net code="10" name="/SSRX0_N" class="Default">
+      <node ref="U1" pin="25" pinfunction="SSRX0-_25" pintype="input"/>
+    </net>
+    <net code="11" name="/SSRX0_P" class="Default">
+      <node ref="U1" pin="26" pinfunction="SSRX0+_26" pintype="input"/>
+    </net>
+    <net code="12" name="/SSTX0_N" class="Default">
+      <node ref="U1" pin="22" pinfunction="SSTX0-_22" pintype="output"/>
+    </net>
+    <net code="13" name="/SSTX0_P" class="Default">
+      <node ref="U1" pin="23" pinfunction="SSTX0+_23" pintype="output"/>
+    </net>
+    <net code="14" name="/SSTX1_N" class="Default">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="60" pinfunction="SSTX1-_60" pintype="output"/>
+    </net>
+    <net code="15" name="/SSTX1_P" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="59" pinfunction="SSTX1+_59" pintype="output"/>
+    </net>
+    <net code="16" name="/SSTX2_N" class="Default">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="67" pinfunction="SSTX2-_67" pintype="output"/>
+    </net>
+    <net code="17" name="/SSTX2_P" class="Default">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="66" pinfunction="SSTX2+_66" pintype="output"/>
+    </net>
+    <net code="18" name="/SSTX3_N" class="Default">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="SSTX3-_4" pintype="output"/>
+    </net>
+    <net code="19" name="/SSTX3_P" class="Default">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="SSTX3+_3" pintype="output"/>
+    </net>
+    <net code="20" name="/SSTX4_N" class="Default">
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="SSTX4-_12" pintype="output"/>
+    </net>
+    <net code="21" name="/SSTX4_P" class="Default">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="SSTX4+_11" pintype="output"/>
+    </net>
+    <net code="22" name="/USBHGRN1" class="Default">
+      <node ref="U1" pin="53" pinfunction="USBHGRN1_53" pintype="output"/>
+    </net>
+    <net code="23" name="/USBHGRN2" class="Default">
+      <node ref="U1" pin="52" pinfunction="USBHGRN2_52" pintype="output"/>
+    </net>
+    <net code="24" name="/USBHGRN3" class="Default">
+      <node ref="U1" pin="51" pinfunction="USBHGRN3_51" pintype="output"/>
+    </net>
+    <net code="25" name="/USBHGRN4" class="Default">
+      <node ref="U1" pin="50" pinfunction="USBHGRN4_50" pintype="output"/>
+    </net>
+    <net code="26" name="/USBHMBR1" class="Default">
+      <node ref="U1" pin="35" pinfunction="USBHMBR1_35" pintype="output"/>
+    </net>
+    <net code="27" name="/USBHMBR2" class="Default">
+      <node ref="U1" pin="34" pinfunction="USBHMBR2_34" pintype="output"/>
+    </net>
+    <net code="28" name="/USBHMBR3" class="Default">
+      <node ref="U1" pin="33" pinfunction="USBHMBR3_33" pintype="output"/>
+    </net>
+    <net code="29" name="/USBHMBR4" class="Default">
+      <node ref="U1" pin="32" pinfunction="USBHMBR4_32" pintype="output"/>
+    </net>
+    <net code="30" name="/VBUSDET_PENDING" class="Default">
+      <node ref="U1" pin="31" pinfunction="VBUSDET_31" pintype="input"/>
+    </net>
+    <net code="31" name="GND" class="Default">
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C15" pin="2" pintype="passive"/>
+      <node ref="C16" pin="2" pintype="passive"/>
+      <node ref="C17" pin="2" pintype="passive"/>
+      <node ref="C18" pin="2" pintype="passive"/>
+      <node ref="C19" pin="2" pintype="passive"/>
+      <node ref="C20" pin="2" pintype="passive"/>
+      <node ref="C21" pin="2" pintype="passive"/>
+      <node ref="C22" pin="2" pintype="passive"/>
+      <node ref="C23" pin="2" pintype="passive"/>
+      <node ref="C24" pin="2" pintype="passive"/>
+      <node ref="C25" pin="2" pintype="passive"/>
+      <node ref="C26" pin="2" pintype="passive"/>
+      <node ref="C27" pin="2" pintype="passive"/>
+      <node ref="C28" pin="2" pintype="passive"/>
+      <node ref="C29" pin="2" pintype="passive"/>
+      <node ref="C30" pin="2" pintype="passive"/>
+      <node ref="C31" pin="2" pintype="passive"/>
+      <node ref="C32" pin="2" pintype="passive"/>
+      <node ref="C33" pin="2" pintype="passive"/>
+      <node ref="C34" pin="2" pintype="passive"/>
+      <node ref="C35" pin="2" pintype="passive"/>
+      <node ref="C36" pin="2" pintype="passive"/>
+      <node ref="C37" pin="2" pintype="passive"/>
+      <node ref="C38" pin="2" pintype="passive"/>
+      <node ref="C39" pin="2" pintype="passive"/>
+      <node ref="C40" pin="2" pintype="passive"/>
+      <node ref="C41" pin="2" pintype="passive"/>
+      <node ref="C42" pin="2" pintype="passive"/>
+      <node ref="C43" pin="2" pintype="passive"/>
+      <node ref="C44" pin="2" pintype="passive"/>
+      <node ref="C45" pin="2" pintype="passive"/>
+      <node ref="C46" pin="2" pintype="passive"/>
+      <node ref="C47" pin="2" pintype="passive"/>
+      <node ref="C48" pin="2" pintype="passive"/>
+      <node ref="C49" pin="2" pintype="passive"/>
+      <node ref="C50" pin="2" pintype="passive"/>
+      <node ref="C51" pin="2" pintype="passive"/>
+      <node ref="C52" pin="2" pintype="passive"/>
+      <node ref="C53" pin="2" pintype="passive"/>
+      <node ref="C54" pin="2" pintype="passive"/>
+      <node ref="C55" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="VeeT_1" pintype="passive"/>
+      <node ref="J1" pin="10" pinfunction="VeeR_10" pintype="passive"/>
+      <node ref="J1" pin="11" pinfunction="VeeR_11" pintype="passive"/>
+      <node ref="J1" pin="14" pinfunction="VeeR_14" pintype="passive"/>
+      <node ref="J1" pin="17" pinfunction="VeeT_17" pintype="passive"/>
+      <node ref="J1" pin="20" pinfunction="VeeT_20" pintype="passive"/>
+      <node ref="J2" pin="4" pinfunction="GND_4" pintype="passive"/>
+      <node ref="J2" pin="7" pinfunction="DRAIN_7" pintype="passive"/>
+      <node ref="J3" pin="4" pinfunction="GND_4" pintype="passive"/>
+      <node ref="J3" pin="7" pinfunction="DRAIN_7" pintype="passive"/>
+      <node ref="J4" pin="4" pinfunction="GND_4" pintype="passive"/>
+      <node ref="J4" pin="7" pinfunction="DRAIN_7" pintype="passive"/>
+      <node ref="J5" pin="4" pinfunction="GND_4" pintype="passive"/>
+      <node ref="J5" pin="7" pinfunction="DRAIN_7" pintype="passive"/>
+      <node ref="J6" pin="1" pinfunction="GND_1" pintype="passive"/>
+      <node ref="J7" pin="2" pinfunction="GND_2" pintype="passive"/>
+      <node ref="J8" pin="3" pinfunction="GND_3" pintype="passive"/>
+      <node ref="J9" pin="2" pinfunction="GND_2" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+      <node ref="R22" pin="2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="VCC12I_20" pintype="power_in"/>
+      <node ref="U1" pin="77" pinfunction="GND_EP_77" pintype="power_in"/>
+      <node ref="U10" pin="3" pinfunction="GND_3" pintype="passive"/>
+      <node ref="U10" pin="8" pinfunction="GND_8" pintype="passive"/>
+      <node ref="U11" pin="3" pinfunction="GND_3" pintype="passive"/>
+      <node ref="U11" pin="8" pinfunction="GND_8" pintype="passive"/>
+      <node ref="U12" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U2" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U4" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U5" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U6" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U7" pin="4" pinfunction="GND_4" pintype="power_in"/>
+      <node ref="U8" pin="3" pinfunction="GND_3" pintype="passive"/>
+      <node ref="U8" pin="8" pinfunction="GND_8" pintype="passive"/>
+      <node ref="U9" pin="3" pinfunction="GND_3" pintype="passive"/>
+      <node ref="U9" pin="8" pinfunction="GND_8" pintype="passive"/>
+    </net>
+    <net code="32" name="HUB_1V2" class="Default">
+      <node ref="C18" pin="1" pintype="passive"/>
+      <node ref="C19" pin="1" pintype="passive"/>
+      <node ref="C27" pin="1" pintype="passive"/>
+      <node ref="C28" pin="1" pintype="passive"/>
+      <node ref="C29" pin="1" pintype="passive"/>
+      <node ref="C30" pin="1" pintype="passive"/>
+      <node ref="C31" pin="1" pintype="passive"/>
+      <node ref="C32" pin="1" pintype="passive"/>
+      <node ref="C33" pin="1" pintype="passive"/>
+      <node ref="C34" pin="1" pintype="passive"/>
+      <node ref="C35" pin="1" pintype="passive"/>
+      <node ref="L3" pin="2" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="VCCA12SSRX4_13" pintype="power_in"/>
+      <node ref="U1" pin="24" pinfunction="VCCA12SSRX0_24" pintype="power_in"/>
+      <node ref="U1" pin="30" pinfunction="VDD_30" pintype="power_in"/>
+      <node ref="U1" pin="37" pinfunction="DC12FB_37" pintype="passive"/>
+      <node ref="U1" pin="48" pinfunction="VDD_48" pintype="power_in"/>
+      <node ref="U1" pin="5" pinfunction="VCCA12SSRX3_5" pintype="power_in"/>
+      <node ref="U1" pin="58" pinfunction="VDD_58" pintype="power_in"/>
+      <node ref="U1" pin="61" pinfunction="VCCA12SSRX1_61" pintype="power_in"/>
+      <node ref="U1" pin="68" pinfunction="VCCA12SSRX2_68" pintype="power_in"/>
+      <node ref="U1" pin="74" pinfunction="VCCA12SSM_74" pintype="power_in"/>
+    </net>
+    <net code="33" name="HUB_3V3" class="Default">
+      <node ref="C17" pin="1" pintype="passive"/>
+      <node ref="C20" pin="1" pintype="passive"/>
+      <node ref="C21" pin="1" pintype="passive"/>
+      <node ref="C22" pin="1" pintype="passive"/>
+      <node ref="C23" pin="1" pintype="passive"/>
+      <node ref="C24" pin="1" pintype="passive"/>
+      <node ref="C25" pin="1" pintype="passive"/>
+      <node ref="C26" pin="1" pintype="passive"/>
+      <node ref="C38" pin="1" pintype="passive"/>
+      <node ref="C51" pin="1" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="R24" pin="1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="DC33FB_18" pintype="power_out"/>
+      <node ref="U1" pin="2" pinfunction="VCCA33SSM_2" pintype="power_in"/>
+      <node ref="U1" pin="27" pinfunction="VCCA33SS0_27" pintype="power_in"/>
+      <node ref="U1" pin="36" pinfunction="VSUS33_36" pintype="power_in"/>
+      <node ref="U1" pin="41" pinfunction="VSUS33_41" pintype="power_in"/>
+      <node ref="U1" pin="49" pinfunction="VSUS33_49" pintype="power_in"/>
+      <node ref="U1" pin="71" pinfunction="VCCA33SS12_71" pintype="power_in"/>
+      <node ref="U1" pin="8" pinfunction="VCCA33SS34_8" pintype="power_in"/>
+      <node ref="U12" pin="5" pinfunction="SENSE_5" pintype="input"/>
+      <node ref="U12" pin="6" pinfunction="VDD_6" pintype="power_in"/>
+      <node ref="U6" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+    </net>
+    <net code="34" name="HUB_5V" class="Default">
+      <node ref="C15" pin="1" pintype="passive"/>
+      <node ref="C16" pin="1" pintype="passive"/>
+      <node ref="C39" pin="1" pintype="passive"/>
+      <node ref="C42" pin="1" pintype="passive"/>
+      <node ref="C45" pin="1" pintype="passive"/>
+      <node ref="C48" pin="1" pintype="passive"/>
+      <node ref="C52" pin="1" pintype="passive"/>
+      <node ref="C55" pin="1" pintype="passive"/>
+      <node ref="J7" pin="1" pinfunction="+5V_1" pintype="passive"/>
+      <node ref="U1" pin="19" pinfunction="VCC5I_19" pintype="power_in"/>
+      <node ref="U1" pin="38" pinfunction="VCC5I_38" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="IN_1" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="IN_1" pintype="power_in"/>
+      <node ref="U4" pin="1" pinfunction="IN_1" pintype="power_in"/>
+      <node ref="U5" pin="1" pinfunction="IN_1" pintype="power_in"/>
+      <node ref="U7" pin="5" pinfunction="EN_5" pintype="input"/>
+      <node ref="U7" pin="6" pinfunction="VIN_6" pintype="power_in"/>
+    </net>
+    <net code="35" name="HUB_RESET_REQUEST_N" class="Default">
+      <node ref="J9" pin="1" pinfunction="MR_N_1" pintype="passive"/>
+      <node ref="R24" pin="2" pintype="passive"/>
+      <node ref="U12" pin="3" pinfunction="MR_N_3" pintype="input"/>
+    </net>
+    <net code="36" name="PORT1_5V_SWITCHED" class="Default">
+      <node ref="C40" pin="1" pintype="passive"/>
+      <node ref="C41" pin="1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="VBUS_1" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="OUT_6" pintype="power_out"/>
+    </net>
+    <net code="37" name="PORT1_TX_N" class="Default">
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="J2" pin="8" pinfunction="SSTX_N_8" pintype="passive"/>
+      <node ref="U8" pin="2" pinfunction="IO2_2" pintype="passive"/>
+      <node ref="U8" pin="9" pinfunction="NC_ROUTE_9" pintype="passive"/>
+    </net>
+    <net code="38" name="PORT1_TX_P" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="J2" pin="9" pinfunction="SSTX_P_9" pintype="passive"/>
+      <node ref="U8" pin="1" pinfunction="IO1_1" pintype="passive"/>
+      <node ref="U8" pin="10" pinfunction="NC_ROUTE_10" pintype="passive"/>
+    </net>
+    <net code="39" name="PORT2_5V_SWITCHED" class="Default">
+      <node ref="C43" pin="1" pintype="passive"/>
+      <node ref="C44" pin="1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="VBUS_1" pintype="passive"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="U3" pin="6" pinfunction="OUT_6" pintype="power_out"/>
+    </net>
+    <net code="40" name="PORT2_TX_N" class="Default">
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="J3" pin="8" pinfunction="SSTX_N_8" pintype="passive"/>
+      <node ref="U9" pin="2" pinfunction="IO2_2" pintype="passive"/>
+      <node ref="U9" pin="9" pinfunction="NC_ROUTE_9" pintype="passive"/>
+    </net>
+    <net code="41" name="PORT2_TX_P" class="Default">
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="J3" pin="9" pinfunction="SSTX_P_9" pintype="passive"/>
+      <node ref="U9" pin="1" pinfunction="IO1_1" pintype="passive"/>
+      <node ref="U9" pin="10" pinfunction="NC_ROUTE_10" pintype="passive"/>
+    </net>
+    <net code="42" name="PORT3_5V_SWITCHED" class="Default">
+      <node ref="C46" pin="1" pintype="passive"/>
+      <node ref="C47" pin="1" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="VBUS_1" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="U4" pin="6" pinfunction="OUT_6" pintype="power_out"/>
+    </net>
+    <net code="43" name="PORT3_TX_N" class="Default">
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="J4" pin="8" pinfunction="SSTX_N_8" pintype="passive"/>
+      <node ref="U10" pin="2" pinfunction="IO2_2" pintype="passive"/>
+      <node ref="U10" pin="9" pinfunction="NC_ROUTE_9" pintype="passive"/>
+    </net>
+    <net code="44" name="PORT3_TX_P" class="Default">
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="J4" pin="9" pinfunction="SSTX_P_9" pintype="passive"/>
+      <node ref="U10" pin="1" pinfunction="IO1_1" pintype="passive"/>
+      <node ref="U10" pin="10" pinfunction="NC_ROUTE_10" pintype="passive"/>
+    </net>
+    <net code="45" name="PORT4_5V_SWITCHED" class="Default">
+      <node ref="C49" pin="1" pintype="passive"/>
+      <node ref="C50" pin="1" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="VBUS_1" pintype="passive"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+      <node ref="U5" pin="6" pinfunction="OUT_6" pintype="power_out"/>
+    </net>
+    <net code="46" name="PORT4_TX_N" class="Default">
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="J5" pin="8" pinfunction="SSTX_N_8" pintype="passive"/>
+      <node ref="U11" pin="2" pinfunction="IO2_2" pintype="passive"/>
+      <node ref="U11" pin="9" pinfunction="NC_ROUTE_9" pintype="passive"/>
+    </net>
+    <net code="47" name="PORT4_TX_P" class="Default">
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="J5" pin="9" pinfunction="SSTX_P_9" pintype="passive"/>
+      <node ref="U11" pin="1" pinfunction="IO1_1" pintype="passive"/>
+      <node ref="U11" pin="10" pinfunction="NC_ROUTE_10" pintype="passive"/>
+    </net>
+    <net code="48" name="REG12_LX" class="Default">
+      <node ref="L3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="39" pinfunction="LX_39" pintype="power_out"/>
+    </net>
+    <net code="49" name="RESET_N" class="Default">
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U1" pin="54" pinfunction="RESET#_54" pintype="input"/>
+      <node ref="U12" pin="1" pinfunction="RESET_N_1" pintype="open_collector"/>
+    </net>
+    <net code="50" name="SFP_3V3_FEED" class="Default">
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C53" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="J8" pin="1" pinfunction="3V3_1" pintype="passive"/>
+      <node ref="L1" pin="1" pintype="passive"/>
+      <node ref="L2" pin="1" pintype="passive"/>
+      <node ref="L4" pin="2" pintype="passive"/>
+      <node ref="R23" pin="1" pintype="passive"/>
+      <node ref="U7" pin="3" pinfunction="VOS_3" pintype="input"/>
+    </net>
+    <net code="51" name="SFP_BUCK_MODE" class="Default">
+      <node ref="R22" pin="1" pintype="passive"/>
+      <node ref="U7" pin="7" pinfunction="MODE_SCONF_7" pintype="input"/>
+    </net>
+    <net code="52" name="SFP_BUCK_SS" class="Default">
+      <node ref="C54" pin="1" pintype="passive"/>
+      <node ref="U7" pin="8" pinfunction="SS_TR_8" pintype="passive"/>
+    </net>
+    <net code="53" name="SFP_BUCK_SW" class="Default">
+      <node ref="L4" pin="1" pintype="passive"/>
+      <node ref="U7" pin="2" pinfunction="SW_2" pintype="power_out"/>
+    </net>
+    <net code="54" name="SFP_DAMP_R" class="Default">
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="55" name="SFP_DAMP_T" class="Default">
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="56" name="SFP_FEED_PG" class="Default">
+      <node ref="J8" pin="2" pinfunction="PG_2" pintype="passive"/>
+      <node ref="R23" pin="2" pintype="passive"/>
+      <node ref="U7" pin="1" pinfunction="PG_1" pintype="open_collector"/>
+    </net>
+    <net code="57" name="SFP_MOD_ABS" class="Default">
+      <node ref="J1" pin="6" pinfunction="MOD_ABS_6" pintype="passive"/>
+      <node ref="J6" pin="5" pinfunction="MOD_ABS_5" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="58" name="SFP_RD_N" class="Default">
+      <node ref="J1" pin="12" pinfunction="RD_N_12" pintype="passive"/>
+    </net>
+    <net code="59" name="SFP_RD_P" class="Default">
+      <node ref="J1" pin="13" pinfunction="RD_P_13" pintype="passive"/>
+    </net>
+    <net code="60" name="SFP_RS0" class="Default">
+      <node ref="J1" pin="7" pinfunction="RS0_7" pintype="passive"/>
+      <node ref="J6" pin="9" pinfunction="RS0_9" pintype="passive"/>
+    </net>
+    <net code="61" name="SFP_RS1" class="Default">
+      <node ref="J1" pin="9" pinfunction="RS1_9" pintype="passive"/>
+      <node ref="J6" pin="10" pinfunction="RS1_10" pintype="passive"/>
+    </net>
+    <net code="62" name="SFP_RX_LOS" class="Default">
+      <node ref="J1" pin="8" pinfunction="RX_LOS_8" pintype="passive"/>
+      <node ref="J6" pin="6" pinfunction="RX_LOS_6" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="63" name="SFP_SCL" class="Default">
+      <node ref="J1" pin="5" pinfunction="SCL_5" pintype="passive"/>
+      <node ref="J6" pin="4" pinfunction="SCL_4" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="64" name="SFP_SDA" class="Default">
+      <node ref="J1" pin="4" pinfunction="SDA_4" pintype="passive"/>
+      <node ref="J6" pin="3" pinfunction="SDA_3" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="65" name="SFP_TD_N" class="Default">
+      <node ref="J1" pin="19" pinfunction="TD_N_19" pintype="passive"/>
+    </net>
+    <net code="66" name="SFP_TD_P" class="Default">
+      <node ref="J1" pin="18" pinfunction="TD_P_18" pintype="passive"/>
+    </net>
+    <net code="67" name="SFP_TX_DISABLE" class="Default">
+      <node ref="J1" pin="3" pinfunction="TX_DISABLE_3" pintype="passive"/>
+      <node ref="J6" pin="8" pinfunction="TX_DISABLE_8" pintype="passive"/>
+    </net>
+    <net code="68" name="SFP_TX_FAULT" class="Default">
+      <node ref="J1" pin="2" pinfunction="TX_FAULT_2" pintype="passive"/>
+      <node ref="J6" pin="7" pinfunction="TX_FAULT_7" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="69" name="SFP_VccR" class="Default">
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="J1" pin="15" pinfunction="VccR_15" pintype="passive"/>
+      <node ref="L2" pin="2" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="70" name="SFP_VccT" class="Default">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="J1" pin="16" pinfunction="VccT_16" pintype="passive"/>
+      <node ref="J6" pin="2" pinfunction="VccT_REF_2" pintype="passive"/>
+      <node ref="L1" pin="2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="71" name="SSREXT_PENDING" class="Default">
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="SSREXT_1" pintype="passive"/>
+    </net>
+    <net code="72" name="SSRX1_N" class="Default">
+      <node ref="J2" pin="5" pinfunction="SSRX_N_5" pintype="passive"/>
+      <node ref="U1" pin="63" pinfunction="SSRX1-_63" pintype="input"/>
+      <node ref="U8" pin="5" pinfunction="IO4_5" pintype="passive"/>
+      <node ref="U8" pin="6" pinfunction="NC_ROUTE_6" pintype="passive"/>
+    </net>
+    <net code="73" name="SSRX1_P" class="Default">
+      <node ref="J2" pin="6" pinfunction="SSRX_P_6" pintype="passive"/>
+      <node ref="U1" pin="62" pinfunction="SSRX1+_62" pintype="input"/>
+      <node ref="U8" pin="4" pinfunction="IO3_4" pintype="passive"/>
+      <node ref="U8" pin="7" pinfunction="NC_ROUTE_7" pintype="passive"/>
+    </net>
+    <net code="74" name="SSRX2_N" class="Default">
+      <node ref="J3" pin="5" pinfunction="SSRX_N_5" pintype="passive"/>
+      <node ref="U1" pin="70" pinfunction="SSRX2-_70" pintype="input"/>
+      <node ref="U9" pin="5" pinfunction="IO4_5" pintype="passive"/>
+      <node ref="U9" pin="6" pinfunction="NC_ROUTE_6" pintype="passive"/>
+    </net>
+    <net code="75" name="SSRX2_P" class="Default">
+      <node ref="J3" pin="6" pinfunction="SSRX_P_6" pintype="passive"/>
+      <node ref="U1" pin="69" pinfunction="SSRX2+_69" pintype="input"/>
+      <node ref="U9" pin="4" pinfunction="IO3_4" pintype="passive"/>
+      <node ref="U9" pin="7" pinfunction="NC_ROUTE_7" pintype="passive"/>
+    </net>
+    <net code="76" name="SSRX3_N" class="Default">
+      <node ref="J4" pin="5" pinfunction="SSRX_N_5" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="SSRX3-_7" pintype="input"/>
+      <node ref="U10" pin="5" pinfunction="IO4_5" pintype="passive"/>
+      <node ref="U10" pin="6" pinfunction="NC_ROUTE_6" pintype="passive"/>
+    </net>
+    <net code="77" name="SSRX3_P" class="Default">
+      <node ref="J4" pin="6" pinfunction="SSRX_P_6" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="SSRX3+_6" pintype="input"/>
+      <node ref="U10" pin="4" pinfunction="IO3_4" pintype="passive"/>
+      <node ref="U10" pin="7" pinfunction="NC_ROUTE_7" pintype="passive"/>
+    </net>
+    <net code="78" name="SSRX4_N" class="Default">
+      <node ref="J5" pin="5" pinfunction="SSRX_N_5" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="SSRX4-_15" pintype="input"/>
+      <node ref="U11" pin="5" pinfunction="IO4_5" pintype="passive"/>
+      <node ref="U11" pin="6" pinfunction="NC_ROUTE_6" pintype="passive"/>
+    </net>
+    <net code="79" name="SSRX4_P" class="Default">
+      <node ref="J5" pin="6" pinfunction="SSRX_P_6" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="SSRX4+_14" pintype="input"/>
+      <node ref="U11" pin="4" pinfunction="IO3_4" pintype="passive"/>
+      <node ref="U11" pin="7" pinfunction="NC_ROUTE_7" pintype="passive"/>
+    </net>
+    <net code="80" name="SSXI" class="Default">
+      <node ref="C36" pin="1" pintype="passive"/>
+      <node ref="U1" pin="75" pinfunction="SSXI_75" pintype="input"/>
+      <node ref="Y1" pin="1" pintype="passive"/>
+    </net>
+    <net code="81" name="SSXO" class="Default">
+      <node ref="C37" pin="1" pintype="passive"/>
+      <node ref="U1" pin="76" pinfunction="SSXO_76" pintype="output"/>
+      <node ref="Y1" pin="2" pintype="passive"/>
+    </net>
+    <net code="82" name="USBHOC1_N" class="Default">
+      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="U1" pin="45" pinfunction="USBHOC1#_45" pintype="input"/>
+      <node ref="U2" pin="4" pinfunction="FAULT_N_4" pintype="open_collector"/>
+      <node ref="U3" pin="4" pinfunction="FAULT_N_4" pintype="open_collector"/>
+      <node ref="U4" pin="4" pinfunction="FAULT_N_4" pintype="open_collector"/>
+      <node ref="U5" pin="4" pinfunction="FAULT_N_4" pintype="open_collector"/>
+    </net>
+    <net code="83" name="USBHOC2_N" class="Default">
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="U1" pin="44" pinfunction="USBHOC2#_44" pintype="input"/>
+    </net>
+    <net code="84" name="USBHPE1_N" class="Default">
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="U1" pin="43" pinfunction="USBHPE1#_43" pintype="output"/>
+      <node ref="U6" pin="2" pinfunction="A_2" pintype="input"/>
+    </net>
+    <net code="85" name="unconnected-(J2-D_N_NC-Pad2)" class="Default">
+      <node ref="J2" pin="2" pinfunction="D_N_NC_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="86" name="unconnected-(J2-D_P_NC-Pad3)" class="Default">
+      <node ref="J2" pin="3" pinfunction="D_P_NC_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="87" name="unconnected-(J3-D_N_NC-Pad2)" class="Default">
+      <node ref="J3" pin="2" pinfunction="D_N_NC_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="88" name="unconnected-(J3-D_P_NC-Pad3)" class="Default">
+      <node ref="J3" pin="3" pinfunction="D_P_NC_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="89" name="unconnected-(J4-D_N_NC-Pad2)" class="Default">
+      <node ref="J4" pin="2" pinfunction="D_N_NC_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="90" name="unconnected-(J4-D_P_NC-Pad3)" class="Default">
+      <node ref="J4" pin="3" pinfunction="D_P_NC_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="91" name="unconnected-(J5-D_N_NC-Pad2)" class="Default">
+      <node ref="J5" pin="2" pinfunction="D_N_NC_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="92" name="unconnected-(J5-D_P_NC-Pad3)" class="Default">
+      <node ref="J5" pin="3" pinfunction="D_P_NC_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="93" name="unconnected-(U1F-USBDP+-Pad28)" class="Default">
+      <node ref="U1" pin="28" pinfunction="USBDP+_28" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="94" name="unconnected-(U1F-USBDP--Pad29)" class="Default">
+      <node ref="U1" pin="29" pinfunction="USBDP-_29" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="95" name="unconnected-(U1F-USBHP1+-Pad64)" class="Default">
+      <node ref="U1" pin="64" pinfunction="USBHP1+_64" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="96" name="unconnected-(U1F-USBHP1--Pad65)" class="Default">
+      <node ref="U1" pin="65" pinfunction="USBHP1-_65" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="97" name="unconnected-(U1F-USBHP2+-Pad72)" class="Default">
+      <node ref="U1" pin="72" pinfunction="USBHP2+_72" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="98" name="unconnected-(U1F-USBHP2--Pad73)" class="Default">
+      <node ref="U1" pin="73" pinfunction="USBHP2-_73" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="99" name="unconnected-(U1F-USBHP3+-Pad9)" class="Default">
+      <node ref="U1" pin="9" pinfunction="USBHP3+_9" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="100" name="unconnected-(U1F-USBHP3--Pad10)" class="Default">
+      <node ref="U1" pin="10" pinfunction="USBHP3-_10" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="101" name="unconnected-(U1F-USBHP4+-Pad16)" class="Default">
+      <node ref="U1" pin="16" pinfunction="USBHP4+_16" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="102" name="unconnected-(U1F-USBHP4--Pad17)" class="Default">
+      <node ref="U1" pin="17" pinfunction="USBHP4-_17" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="103" name="unconnected-(U1H-DC10FB-Pad21)" class="Default">
+      <node ref="U1" pin="21" pinfunction="DC10FB_21" pintype="passive+no_connect"/>
+    </net>
+    <net code="104" name="unconnected-(U1H-SMCLK-Pad55)" class="Default">
+      <node ref="U1" pin="55" pinfunction="SMCLK_55" pintype="input+no_connect"/>
+    </net>
+    <net code="105" name="unconnected-(U1H-SMDAT-Pad56)" class="Default">
+      <node ref="U1" pin="56" pinfunction="SMDAT_56" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="106" name="unconnected-(U1H-TESTEN-Pad57)" class="Default">
+      <node ref="U1" pin="57" pinfunction="TESTEN_57" pintype="input+no_connect"/>
+    </net>
+    <net code="107" name="unconnected-(U1H-USBHPE2B#-Pad42)" class="Default">
+      <node ref="U1" pin="42" pinfunction="USBHPE2B#_42" pintype="output+no_connect"/>
+    </net>
+    <net code="108" name="unconnected-(U6-NC-Pad1)" class="Default">
+      <node ref="U6" pin="1" pinfunction="NC_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="109" name="unconnected-(U7-FB_VSET-Pad9)" class="Default">
+      <node ref="U7" pin="9" pinfunction="FB_VSET_9" pintype="passive+no_connect"/>
+    </net>
+    <net code="110" name="unconnected-(U12-CT-Pad4)" class="Default">
+      <node ref="U12" pin="4" pinfunction="CT_4" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

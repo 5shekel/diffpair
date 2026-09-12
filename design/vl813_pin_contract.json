@@ -1,0 +1,731 @@
+{
+  "source": "VL813.pdf revision 1.00 (2015-07-22), pages 8-11",
+  "sha256": "a1c8ffc99febba19b2c470c6eb09c3a96e4a325c842d6c6359aed90c5fd69fba",
+  "pins": [
+    {
+      "number": 1,
+      "name": "SSREXT",
+      "electrical_type": "passive",
+      "net": "SSREXT_PENDING",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 2,
+      "name": "VCCA33SSM",
+      "electrical_type": "power_in",
+      "net": "HUB_3V3",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 3,
+      "name": "SSTX3+",
+      "electrical_type": "output",
+      "net": "SSTX3_P",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 4,
+      "name": "SSTX3-",
+      "electrical_type": "output",
+      "net": "SSTX3_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 5,
+      "name": "VCCA12SSRX3",
+      "electrical_type": "power_in",
+      "net": "HUB_1V2",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 6,
+      "name": "SSRX3+",
+      "electrical_type": "input",
+      "net": "SSRX3_P",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 7,
+      "name": "SSRX3-",
+      "electrical_type": "input",
+      "net": "SSRX3_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 8,
+      "name": "VCCA33SS34",
+      "electrical_type": "power_in",
+      "net": "HUB_3V3",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 9,
+      "name": "USBHP3+",
+      "electrical_type": "bidirectional",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 10,
+      "name": "USBHP3-",
+      "electrical_type": "bidirectional",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 11,
+      "name": "SSTX4+",
+      "electrical_type": "output",
+      "net": "SSTX4_P",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 12,
+      "name": "SSTX4-",
+      "electrical_type": "output",
+      "net": "SSTX4_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 13,
+      "name": "VCCA12SSRX4",
+      "electrical_type": "power_in",
+      "net": "HUB_1V2",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 14,
+      "name": "SSRX4+",
+      "electrical_type": "input",
+      "net": "SSRX4_P",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 15,
+      "name": "SSRX4-",
+      "electrical_type": "input",
+      "net": "SSRX4_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 16,
+      "name": "USBHP4+",
+      "electrical_type": "bidirectional",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 17,
+      "name": "USBHP4-",
+      "electrical_type": "bidirectional",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 18,
+      "name": "DC33FB",
+      "electrical_type": "power_out",
+      "net": "HUB_3V3",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 19,
+      "name": "VCC5I",
+      "electrical_type": "power_in",
+      "net": "HUB_5V",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 20,
+      "name": "VCC12I",
+      "electrical_type": "power_in",
+      "net": "GND",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 21,
+      "name": "DC10FB",
+      "electrical_type": "passive",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 22,
+      "name": "SSTX0-",
+      "electrical_type": "output",
+      "net": "SSTX0_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 23,
+      "name": "SSTX0+",
+      "electrical_type": "output",
+      "net": "SSTX0_P",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 24,
+      "name": "VCCA12SSRX0",
+      "electrical_type": "power_in",
+      "net": "HUB_1V2",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 25,
+      "name": "SSRX0-",
+      "electrical_type": "input",
+      "net": "SSRX0_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 26,
+      "name": "SSRX0+",
+      "electrical_type": "input",
+      "net": "SSRX0_P",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 27,
+      "name": "VCCA33SS0",
+      "electrical_type": "power_in",
+      "net": "HUB_3V3",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 28,
+      "name": "USBDP+",
+      "electrical_type": "bidirectional",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 29,
+      "name": "USBDP-",
+      "electrical_type": "bidirectional",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 30,
+      "name": "VDD",
+      "electrical_type": "power_in",
+      "net": "HUB_1V2",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 31,
+      "name": "VBUSDET",
+      "electrical_type": "input",
+      "net": "VBUSDET_PENDING",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 32,
+      "name": "USBHMBR4",
+      "electrical_type": "output",
+      "net": "USBHMBR4",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 33,
+      "name": "USBHMBR3",
+      "electrical_type": "output",
+      "net": "USBHMBR3",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 34,
+      "name": "USBHMBR2",
+      "electrical_type": "output",
+      "net": "USBHMBR2",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 35,
+      "name": "USBHMBR1",
+      "electrical_type": "output",
+      "net": "USBHMBR1",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 36,
+      "name": "VSUS33",
+      "electrical_type": "power_in",
+      "net": "HUB_3V3",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 37,
+      "name": "DC12FB",
+      "electrical_type": "passive",
+      "net": "HUB_1V2",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 38,
+      "name": "VCC5I",
+      "electrical_type": "power_in",
+      "net": "HUB_5V",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 39,
+      "name": "LX",
+      "electrical_type": "power_out",
+      "net": "REG12_LX",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 40,
+      "name": "DC12FB",
+      "electrical_type": "passive",
+      "net": "DC12FB40_PENDING",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 41,
+      "name": "VSUS33",
+      "electrical_type": "power_in",
+      "net": "HUB_3V3",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 42,
+      "name": "USBHPE2B#",
+      "electrical_type": "output",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 43,
+      "name": "USBHPE1#",
+      "electrical_type": "output",
+      "net": "USBHPE1_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 44,
+      "name": "USBHOC2#",
+      "electrical_type": "input",
+      "net": "USBHOC2_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 45,
+      "name": "USBHOC1#",
+      "electrical_type": "input",
+      "net": "USBHOC1_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 46,
+      "name": "COREPWRDN#",
+      "electrical_type": "output",
+      "net": "COREPWRDN_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 47,
+      "name": "EXTPWRON",
+      "electrical_type": "input",
+      "net": "EXTPWRON_PENDING",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 48,
+      "name": "VDD",
+      "electrical_type": "power_in",
+      "net": "HUB_1V2",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 49,
+      "name": "VSUS33",
+      "electrical_type": "power_in",
+      "net": "HUB_3V3",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 50,
+      "name": "USBHGRN4",
+      "electrical_type": "output",
+      "net": "USBHGRN4",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 51,
+      "name": "USBHGRN3",
+      "electrical_type": "output",
+      "net": "USBHGRN3",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 52,
+      "name": "USBHGRN2",
+      "electrical_type": "output",
+      "net": "USBHGRN2",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 53,
+      "name": "USBHGRN1",
+      "electrical_type": "output",
+      "net": "USBHGRN1",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 54,
+      "name": "RESET#",
+      "electrical_type": "input",
+      "net": "RESET_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 55,
+      "name": "SMCLK",
+      "electrical_type": "input",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 56,
+      "name": "SMDAT",
+      "electrical_type": "bidirectional",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 57,
+      "name": "TESTEN",
+      "electrical_type": "input",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 11,
+      "note": ""
+    },
+    {
+      "number": 58,
+      "name": "VDD",
+      "electrical_type": "power_in",
+      "net": "HUB_1V2",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 59,
+      "name": "SSTX1+",
+      "electrical_type": "output",
+      "net": "SSTX1_P",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 60,
+      "name": "SSTX1-",
+      "electrical_type": "output",
+      "net": "SSTX1_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 61,
+      "name": "VCCA12SSRX1",
+      "electrical_type": "power_in",
+      "net": "HUB_1V2",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 62,
+      "name": "SSRX1+",
+      "electrical_type": "input",
+      "net": "SSRX1_P",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 63,
+      "name": "SSRX1-",
+      "electrical_type": "input",
+      "net": "SSRX1_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 64,
+      "name": "USBHP1+",
+      "electrical_type": "bidirectional",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 65,
+      "name": "USBHP1-",
+      "electrical_type": "bidirectional",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 66,
+      "name": "SSTX2+",
+      "electrical_type": "output",
+      "net": "SSTX2_P",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 67,
+      "name": "SSTX2-",
+      "electrical_type": "output",
+      "net": "SSTX2_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 68,
+      "name": "VCCA12SSRX2",
+      "electrical_type": "power_in",
+      "net": "HUB_1V2",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 69,
+      "name": "SSRX2+",
+      "electrical_type": "input",
+      "net": "SSRX2_P",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 70,
+      "name": "SSRX2-",
+      "electrical_type": "input",
+      "net": "SSRX2_N",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 71,
+      "name": "VCCA33SS12",
+      "electrical_type": "power_in",
+      "net": "HUB_3V3",
+      "pin_name_source_page": 8,
+      "function_source_page": 9,
+      "note": ""
+    },
+    {
+      "number": 72,
+      "name": "USBHP2+",
+      "electrical_type": "bidirectional",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 73,
+      "name": "USBHP2-",
+      "electrical_type": "bidirectional",
+      "net": null,
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 74,
+      "name": "VCCA12SSM",
+      "electrical_type": "power_in",
+      "net": "HUB_1V2",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 75,
+      "name": "SSXI",
+      "electrical_type": "input",
+      "net": "SSXI",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 76,
+      "name": "SSXO",
+      "electrical_type": "output",
+      "net": "SSXO",
+      "pin_name_source_page": 8,
+      "function_source_page": 10,
+      "note": ""
+    },
+    {
+      "number": 77,
+      "name": "GND_EP",
+      "electrical_type": "power_in",
+      "net": "GND",
+      "pin_name_source_page": 10,
+      "function_source_page": 10,
+      "note": "EPAD represented as footprint pad 77"
+    }
+  ],
+  "no_usb2_pin_numbers": [
+    9,
+    10,
+    16,
+    17,
+    28,
+    29,
+    64,
+    65,
+    72,
+    73
+  ],
+  "unconnected_normal_mode_pins": [
+    21,
+    57
+  ],
+  "unused_debug_pins": [
+    55,
+    56
+  ],
+  "unused_charging_enable_pin": 42,
+  "electrical_type_policy": "Schematic ERC types are engineering interpretations; feedback/reference pins remain passive. SMCLK/SMDAT are documented as debug-only nonstandard SMBus on page 11 and unused here.",
+  "provisional": true,
+  "open_subsystems": [
+    "optical PHY interface",
+    "power",
+    "clock/bias",
+    "reset/VBUS",
+    "SFP management",
+    "port protection",
+    "firmware"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source": "https://www.ti.com/lit/zip/SLVMDO7",
+  "product_page": "https://www.ti.com/product/TPS62902",
+  "retrieved": "2026-09-12",
+  "status": "Encrypted PSpice model; not executed",
+  "sha256": {
+    "design\\references\\tps62902_models\\SLVMDO7.zip": "cd85788004619d6ad79a6c4303001e3c205a910bf6a7315a19ba317f352ed0d9",
+    "design\\references\\tps62902_models\\pspice\\TPS62902_PSPICE_TRANS\\TPS62902_TRANS.LIB": "47c95a912ea0e0b3eae75125dc17d8ef20d236b26e66185620be43fc04e5633d"
+  }
+}

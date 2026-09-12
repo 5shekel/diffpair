@@ -1,0 +1,38 @@
+{
+  "status": "PASS for stated DC corners only; no startup/thermal/USB compliance claim",
+  "sources": {
+    "TPS2552.pdf": {
+      "sha256": "88e453700cea2b263cdb5b44fce1e883e0f6d3b975457f879ac1423eeea42071"
+    },
+    "SN74LVC1G04.pdf": {
+      "sha256": "ac04a53de979125799e57ea5a6dff4138fe53e0eceebe45c31f57523669887d5"
+    }
+  },
+  "current_limit_A": {
+    "min": 1.0237,
+    "nominal": 1.1097,
+    "max": 1.2075,
+    "source": "TPS255x Table 2: 23.2k 1%"
+  },
+  "external_load_A_per_port": 0.9,
+  "max_bleeder_A_per_port": 0.0052525252525252525,
+  "minimum_current_limit_headroom_A": 0.11844747474747475,
+  "maximum_switch_drop_V_at_design_load": 0.12220909090909092,
+  "minimum_output_V_before_trace_and_contact_loss": 4.877790909090909,
+  "remaining_trace_contact_drop_budget_V_to_4_75V_floor": 0.1277909090909093,
+  "maximum_switch_conduction_W_at_design_load": 0.11063008815427,
+  "four_port_normal_A_including_bleeders": 3.6210101010101012,
+  "four_port_simultaneous_current_limit_upper_A": 4.83,
+  "input_requirement": "5.0-5.2V measured at board under load; add hub and SFP demand to port current; adapter/connector not selected",
+  "enable_voltage_upper_V_with_logic_VCC_zero": 0.1212,
+  "minimum_switch_enable_threshold_V": 0.66,
+  "ideal_unloaded_discharge_to_0_8V_s_at_max_RC": 0.4993241948728808,
+  "bleeder_W_at_5_2V_and_min_R": 0.027313131313131317,
+  "limitations": [
+    "VCC between 0 and logic minimum is not covered by Ioff; test ramps/brownout",
+    "Discharge assumes disabled switch, no external back-drive and capacitor tolerance as stated",
+    "Current limit is a DC threshold, not a peak-short-circuit clamp",
+    "Thermal shutdown, PCB copper, cable/source transients and simultaneous hot-plug unqualified",
+    "Firmware must use ganged power and report aggregated overcurrent correctly"
+  ]
+}

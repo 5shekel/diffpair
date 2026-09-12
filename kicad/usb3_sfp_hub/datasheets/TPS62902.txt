@@ -1,0 +1,4674 @@
+PDF PAGE 1
+TPS62902, 3-V to 17-V, High Efficiency and Low IQ Buck Converter in 1.5-mm × 2-mm 
+QFN Package
+1 Features
+•
+High efficiency for wide duty cycle and load range
+–
+IQ: 4 µA typical
+–
+Selectable switching frequency of 2.5 MHz and 
+1.0 MHz
+–
+RDS(ON): 62-mΩ high side, 22-mΩ low side
+–
+Automatic efficiency enhancement (AEE)
+•
+Small 1.5-mm × 2.0-mm VQFN package with 0.5-
+mm pitch
+•
+Up to 2-A continuous output current
+•
+±0.9% feedback voltage accuracy across temp 
+(-40°C to 150°C)
+•
+Configurable ouput voltage options:
+–
+VFB external divider: 0.6 V to 5.5 V
+–
+VSET internal divider: 16 options between 0.4 V 
+and 5.5 V
+•
+DCS-Control™ topology with 100% mode
+•
+Highly flexible and easy to use
+–
+Optimized pinout for single-layer routing
+–
+Precise enable input
+–
+Forced PWM or auto power save mode
+–
+Power good output
+–
+Selectable active output discharge
+–
+Adjustable soft start and tracking
+•
+No external bootstrap capacitor required
+•
+Create a custom design using the TPS62902 using 
+the WEBENCH® Power Designer
+2 Applications
+•
+Factory automation and control
+•
+Building automation
+•
+Data center and enterprise computing
+•
+Motor drives systems
+•
+Power delivery
+•
+PC and notebooks
+3 Description
+The TPS62902 is a highly-efficient, small, and flexible 
+synchronous step-down DC-DC converter that is easy 
+to use. A selectable switching frequency of 2.5 MHz 
+or 1.0 MHz allows the use of small inductors and 
+provides fast transient response. The device supports 
+high VOUT accuracy of ± 1% with DCS-Control 
+topology. The wide input voltage range of 3-V to 17-V 
+supports a variety of nominal inputs, like 12-V supply 
+rails, single-cell or multi-cell Li-Ion, and 5-V or 3.3-V 
+rails.
+The TPS62902 can automatically enter power save 
+mode (if auto PFM/PWM is selected) at light loads to 
+maintain high efficiency. Additionally, to provide high 
+efficiency at very small loads, the device has a low 
+typical quiescent current of 4 µA. AEE, if enabled, 
+provides high efficiency across VIN, VOUT, and 
+load current. The device includes a S-CONF/MODE 
+input to set the internal/external divider, switching 
+frequency, output voltage discharge, and automatic 
+power save mode or forced PWM operation.
+The device is available in small 9-pin VQFN package 
+measuring 1.50 mm × 2.00 mm with 0.5-mm pitch.
+Package Information
+PART NUMBER
+PACKAGE(1)
+PACKAGE SIZE(2)
+TPS62902
+RPJ (VQFN-HR, 9)
+2.00 mm × 1.50 mm
+(1)
+For more information, see Section 10.
+(2)
+The package size (length × width) is a nominal value and 
+includes pins, where applicable.
+VIN
+3V t 17V
+EN
+SS/TR
+VIN
+MODE/
+S-CONF
+SW
+PG
+VOS
+FB/
+VSET
+10 …F
+ 
+ 
+22 …F
+TPS6290x
+1µH
+VOUT
+0.6V t 5.5V
+GND
+ 
+Simplified Schematic
+IOUT (A)
+Efficiency (%)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+Efficiency Versus Output Current (1.2-VO at 2.5 
+MHz-1 μH, Auto PFM/PWM)
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications, 
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+
+PDF PAGE 2
+Table of Contents
+1 Features............................................................................1
+2 Applications.....................................................................1
+3 Description.......................................................................1
+4 Revision History.............................................................. 2
+5 Pin Configuration and Functions...................................3
+6 Specifications.................................................................. 4
+6.1 Absolute Maximum Ratings ....................................... 4
+6.2 ESD Ratings .............................................................. 4
+6.3 Recommended Operating Conditions ........................4
+6.4 Thermal Information ...................................................5
+6.5 Electrical Characteristics ............................................5
+6.6 Typical Characteristics................................................7
+7 Detailed Description........................................................8
+7.1 Overview.....................................................................8
+7.2 Functional Block Diagram...........................................8
+7.3 Feature Description.....................................................9
+7.4 Device Functional Modes..........................................14
+8 Application and Implementation..................................17
+8.1 Application Information............................................. 17
+8.2 Typical Application with Adjustable Output Voltage.. 17
+8.3 System Examples..................................................... 38
+8.4 Power Supply Recommendations.............................40
+8.5 Layout....................................................................... 41
+9 Device and Documentation Support............................43
+9.1 Device Support......................................................... 43
+9.2 Receiving Notification of Documentation Updates....43
+9.3 Support Resources................................................... 43
+9.4 Trademarks...............................................................43
+9.5 Electrostatic Discharge Caution................................43
+9.6 Glossary....................................................................43
+10 Mechanical, Packaging, and Orderable 
+Information.................................................................... 43
+4 Revision History
+Changes from Revision * (March 2021) to Revision A (November 2023)
+Page
+•
+Updated typical soft-start time with equation 14...............................................................................................20
+•
+Updated the definition of VREF........................................................................................................................ 20
+•
+Added notice "Generally, TI does not recommend to configure soft-start time lower than 1 ms for inrush 
+current consideration".......................................................................................................................................20
+•
+Added maximum and minimum soft-start time calculation with equation 15, equation 16............................... 20
+•
+Deleted Precise Soft-Start Timing section........................................................................................................39
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+2
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 3
+5 Pin Configuration and Functions
+3
+2
+1
+7
+4
+5
+6
+9
+8
+VOS
+SW
+PG
+GND
+EN
+VIN
+Figure 5-1. 9-Pin RPJ VQFN Package (Top View, Device Pins Face Down) 
+Table 5-1. Pin Functions
+PIN
+I/O
+DESCRIPTION
+NUMBER
+NAME
+1
+PG
+O
+Open-drain power good output. High = VOUT is ready. Low = VOUT is below nominal 
+regulation. This pin requires a pullup resistor.
+2
+SW
+Switch pin of the converter and is connected to the internal power switches. Connect the 
+inductor between SW and the output capacitor.
+3
+VOS
+I
+Output voltage sense pin. Connect directly to the positive pin of the output capacitor.
+4
+GND
+Ground pin. It must be connected directly to the common ground plane.
+5
+EN
+I
+Enable input pin. Connect to logic low to disable the device. Pull high to enable the device. 
+Do not leave this pin unconnected.
+6
+VIN
+I
+Power supply input pin. Make sure the input capacitor is connected as close as possible 
+between the VIN and GND pins.
+7
+MODE/
+S-CONF
+I
+Device mode selection (auto PFM/PWM or forced PWM operation) and SmartConfig™ pin. 
+Connect high, low, or to a resistor to configure the device according to Table 7-1. Do not 
+leave this pin unconnected.
+8
+SS/TR
+I
+Soft Start/Tracking pin. An external capacitor connected from this pin to GND defines the 
+rise time for the internal reference voltage. The pin can also be used as an input for tracking 
+and sequencing. The pin can be left floating for the fastest ramp-up time.
+9
+FB/
+VSET
+I
+Depends on device configuration (see Section 7.3.1)
+•
+FB: Voltage feedback input. Connect resistive output voltage divider to this pin.
+•
+VSET: Output voltage setting pin. Connect a resistor to GND to choose the output 
+voltage according to Table 7-2.
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+3
+Product Folder Links: TPS62902
+
+PDF PAGE 4
+6 Specifications
+6.1 Absolute Maximum Ratings
+over operating temperature range (unless otherwise noted)(1)
+MIN
+MAX
+UNIT
+Voltage(2)
+VIN, EN, PG, MODE/S-CONF
+-0.3
+18
+V
+SW (DC)
+-0.3
+VIN + 0.3
+SW (AC, less than 10ns)(3)
+-3.0
+23
+FB/VSET, SS/TR, VOS
+-0.3
+6
+TJ
+Junction temperature
+-40
+150
+°C
+Tstg
+Storage temperature
+-65
+150
+°C
+(1)
+Operation outside the Absolute Maximum Ratings may cause permanent device damage. Absolute Maximum Ratings do not imply 
+functional operation of the device at these or any other conditions beyond those listed under Recommended Operating Conditions. 
+If used outside the Recommended Operating Conditions but within the Absolute Maximum Ratings, the device may not be fully 
+functional, and this may affect device reliability, functionality, performance, and shorten the device lifetime.
+(2)
+All voltage values are with respect to network ground terminal.
+(3)
+While switching.
+6.2 ESD Ratings
+VALUE
+UNIT
+V(ESD)
+Electrostatic discharge
+Human body model (HBM), per ANSI/ESDA/
+JEDEC JS-001, all pins(1)
+±2000
+V
+Charged device model (CDM), per JEDEC 
+specification JESD22-C101, all pins(2)
+±500
+(1)
+JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2)
+JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+6.3 Recommended Operating Conditions
+Over operating junction temperature range (unless otherwise noted)
+MIN
+NOM
+MAX
+UNIT
+VI
+Input voltage range
+3.0
+17
+V
+VO
+Output voltage range
+0.4
+5.5
+V
+CI
+Effective input capacitance
+3
+10
+µF
+CO
+Effective output capacitance (2.5MHz selection)
+10
+22
+100 (1)
+µF
+CO
+Effective output capacitance (1.0MHz selection)
+6
+22
+50 (1)
+µF
+IOUT
+Output current
+0
+2
+A
+ISINK_PG
+Sink current at PG-Pin
+1
+mA
+TJ
+Junction temperature (2)
+-40
+150
+°C
+(1)
+This is for capacitors directly at the output of the device. More capacitance is allowed if there is a series resistance associated to the 
+capacitor.
+(2)
+Operating lifetime is derated at junction temperatures greater than 125°C.
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+4
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 5
+6.4 Thermal Information
+THERMAL METRIC(1)
+TPS6290x
+UNIT
+VQFN 9-Pin
+JEDEC PCB
+TPS6290xEVM-069
+RθJA 
+Junction-to-ambient thermal resistance
+                      97.2
+                      73.5
+°C/W
+RθJC(top)
+Junction-to-case (top) thermal resistance
+                      74.4
+                       N/A
+°C/W
+RθJB
+Junction-to-board thermal resistance
+                       25
+                       N/A
+°C/W
+ΨJT
+Junction-to-top characterization parameter
+                       2.7
+                        4.3
+°C/W
+ΨJB
+Junction-to-board characterization parameter
+                       24.7
+                        28
+°C/W
+(1)
+For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application 
+report.
+6.5 Electrical Characteristics
+VI = 3 V to 17 V, TJ = -40°C to +150°C, Typical values at VI = 12.0 V and TA = 25°C,unless otherwise noted
+PARAMETER
+TEST CONDITIONS
+MIN
+TYP
+MAX
+UNIT
+SUPPLY
+IQ_PSM
+Operating Quiescent Current (Power 
+Save Mode)
+Iout = 0 mA, device not switching
+4
+µA
+IQ_PWM
+Operating Quiescent Current (PWM 
+Mode)
+VIN=12 V, VOUT=1.2 V; Iout = 0 mA,   
+device switching
+8
+mA
+ISD
+Shutdown current into VIN pin
+EN = 0 V
+0.27
+3.5
+µA
+VUVLO
+Under Voltage Lock-Out
+VIN rising
+2.85
+2.925
+3.0
+V
+Under Voltage Lock-Out
+VIN falling
+2.7
+2.775
+2.85
+V
+VUVLO_HYS
+Under Voltage Lock-Out Hysteresis
+Hysteresis
+150
+mV
+CONTROL & INTERFACE
+ILKG 
+EN Input leakage current
+EN = 12 V
+10
+300
+nA
+VIH_MODE
+High-Level Input Voltage at MODE/S-
+CONF-Pin
+1.0
+V
+TSD
+Thermal Shutdown Threshold
+TJ rising
+170
+°C
+Thermal Shutdown Hysteresis
+Hysteresis
+20
+VIH
+High-level input voltage at EN-Pin
+0.97
+1.0
+1.03
+V
+VIL
+Low-level input voltage at EN-Pin
+0.87
+0.9
+0.93
+V
+REN_PD
+Smart-Enable Internal Pulldown 
+Resistor
+EN = LOW
+0.5
+MΩ
+VPG
+Power good threshold
+VFB rising, referenced to VFB nominal
+93.5%
+96%
+99%
+VFB falling, referenced to VFB nominal
+88.5%
+93%
+96%
+Hysteresis
+1.5%
+3.5%
+6%
+VPG_OL
+Low-level output voltage at PG pin
+ISINK = 1 mA
+0.4
+V
+IPG_LKG
+Input leakage current into PG pin
+VPG = 5 V
+15
+550
+nA
+tPG_DLY
+Power good delay time
+VFB falling
+32
+µs
+RSET
+S-CONF/VSET Resistor Tolerance
+-4
++4
+%
+CSET
+Maximum Capacitance connected to 
+S-CONF/VSET Pins
+30
+pF
+POWER SWITCHES
+ILKG_SW
+Leakage current into SW-Pin
+VSW = VOS = 5.5 V
+2
+7
+µA
+RDS_ON
+High-side FET on resistance
+VIN > 4 V, ISW = 500 mA
+62
+111
+mΩ
+Low-side FET on resistance
+VIN > 4 V, ISW = 500 mA
+22
+40
+ILIM
+High-side FET current limit
+TPS62902 
+2.7
+3.2
+3.9
+A
+Low-side FET current limit
+TPS62902 
+2.6
+3
+3.5
+A
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+5
+Product Folder Links: TPS62902
+
+PDF PAGE 6
+VI = 3 V to 17 V, TJ = -40°C to +150°C, Typical values at VI = 12.0 V and TA = 25°C,unless otherwise noted
+PARAMETER
+TEST CONDITIONS
+MIN
+TYP
+MAX
+UNIT
+ILIM_SINK
+Low-side FET sink current limit
+1.3
+1.7
+2.5
+A
+fSW
+Switching frequency
+2.5-MHz selection
+2.5
+MHz
+TON(MIN)
+Minimum On-time
+50
+ns
+fSW
+Switching frequency
+1.0-MHz selection
+1.0
+MHz
+D
+Dutycycle
+1
+OUTPUT
+VO_Reg1
+Output Voltage Regulation
+VSET Configuration selected. TJ = 25 
+°C.
+-0.9%
++0.9%
+VO_Reg2
+Output Voltage Regulation
+VSET Configuration selected. 0 °C< 
+TJ <85 °C
+-1.1%
++1.1%
+VO_Reg3
+Output Voltage Regulation
+VSET Configuration selected. -40 °C< 
+TJ <150 °C
+-1.25%
++1.25%
+VFB
+Feedback Regulation Voltage
+Adjustable Configuration selected
+0.6
+V
+VFB_Reg1
+Feedback Voltage Regulation
+FB-Option selected. TJ = 25 °C.
+-0.6%
++0.6%
+VFB_Reg2
+Feedback Voltage Regulation
+FB-Option selected. 0 °C< TJ <85 °C.
+-0.65%
++0.65%
+VFB_Reg3
+Feedback Voltage Regulation
+FB-Option selected. -40 °C< TJ <150 
+°C
+-0.9%
++0.9%
+IFB
+Input leakage current into FB pin
+Adjustable configuration, VFB = 0.6 V
+1
+70
+nA
+Tdelay
+Start-up delay time
+IO = 0 mA, time from EN=HIGH 
+until start switching, Adjustable 
+Configuration selected
+600
+1400
+µs
+Start-up delay time
+IO = 0 mA, time from EN=HIGH until 
+start switching, VSET Configuration 
+selected. The typical value is based on 
+the first option of VSET configuration. 
+650
+1850
+µs
+TSS
+Soft-Start time
+IO = 0 mA after Tdelay, from 1st 
+switching pulse until target VO; TR/SS-
+Pin = OPEN
+150
+200
+µs
+ISS
+SS/TR source current
+2.3
+2.5
+2.7
+µA
+VFB/VSS/TR
+Tracking Gain, Adjustable 
+Configuration
+0.75
+VFB/VSS/TR
+Tracking Gain tolerance
+±8
+mV
+RDISCH
+Active Discharge Resistance
+Discharge = ON - Option Selected, EN 
+= LOW,
+7.5
+20
+Ω
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+6
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 7
+6.6 Typical Characteristics
+VIN (V)
+Input Current (uA)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+-40C
+0C
+25C
+125C
+150C
+Figure 6-1. Typical Quiescent Current vs VIN 
+Temperature (C)
+Input Current (uA)
+-40
+-20
+0
+20
+40
+60
+80
+100
+120
+140
+160
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+17V
+12V
+6V
+3V
+Figure 6-2. Maximum Quiescent Current vs 
+Temperature
+VIN (V)
+Input Current (uA)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+1.4
+1.6
+1.8
+-40C
+25C
+85C
+125C
+150C
+Figure 6-3. Typical Shutdown Current
+VIN (V)
+Vout Accuracy VFEB (± %)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+0.45
+0.5
+0.55
+0.6
+0.65
+0.7
+0.75
+0.8
+0.85
+-40C
+-25C
+0C
+25C
+85C
+125C
+150C
+Figure 6-4. Output Voltage Accuracy - VFEB 
+Selected
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+7
+Product Folder Links: TPS62902
+
+PDF PAGE 8
+7 Detailed Description
+7.1 Overview
+The TPS62902 synchronous switched mode power converters are based on DCS-Control (Direct Control with 
+Seamless Transition into power save mode). DCS-Control is an advanced regulation topology that combines 
+the advantages of hysteretic, voltage mode, and current mode control. This control loop takes information about 
+output voltage changes and feeds it directly to a fast comparator stage. It sets the switching frequency, which 
+is constant for steady-state operating conditions, and provides immediate response to dynamic load changes. 
+To get accurate DC load regulation, a voltage feedback loop is used. The internally-compensated regulation 
+network achieves fast and stable operation with small external components and low-ESR capacitors.
+7.2 Functional Block Diagram
+EN
+SS/TR
+VIN
+GND
+SW
+PG
+VOS
++
+±
+Ref
+1.0V
+Power Control 
+Power Save Mode
+Forced PWM
+100% Mode
+HS Limit
+LS Limit
+Direct 
+Control
++
+±
+TON timer
+VI
+VO
+VFB
+VO
+VREF
+DCS-ControlTM
+Device Control
+& Logic
+Smart-Enable
+Ref-System
+UVLO
+Start-up Handling
+Smart-CONFIGTM
+PG-Control
+Thermal Shutdown
+Device
+Control
+Resistor-to-Digital
+MODE Detection
+Internal/External 
+Divider
+Resistor-to-Digital
+Gate
+Driver
+MODE
+/S-CONF
+FB
+/VSET
+VO
+VFB
+VI
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+8
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 9
+7.3 Feature Description
+7.3.1 Mode Selection and Device Configuration MODE/S-CONF
+With MODE/S-CONF (SmartConfig), this device features an input with two functions. It can be used to customize 
+the device behavior in two ways:
+•
+Select the device mode (FPWM or auto PFM/PWM with AEE operation) traditionally with a HIGH- or LOW-
+level.
+•
+Select the device configuration (switching frequency, internal/external feedback, output discharge, and 
+PFM/PWM mode) by connecting a single resistor to the MODE/S-CONF pin.
+The device interprets this pin during the start-up sequence after the internal OTP readout and before it starts 
+switching in soft start. If the device reads a HIGH- or LOW-level, the Dynamic Mode Change is active and 
+PFM/PWM mode can be changed during operation. If the device reads a resistor value, there is no further 
+interpretation during operation and device mode or other configurations cannot be changed afterwards.
+spacing
+Note
+The MODE/S-CONF pin must not be left floating. Connect the pin high, low, or to a resistor to 
+configure the device according to Table 7-1.
+spacing
+EN & UVLO
+VOUT
+Precise
+Enable
+detection
+OTP
+Readout
+S-CONF
+Readout
+VSET
+Readout
+Softstart
+PG -> High
+Switching
+Operation
+No interpretation of
+MODE/S-CONF or VSET
+Resistor-to-Digitial 
+readout & 
+interpretation
+MODE-Pin toggling detection
+Figure 7-1. Interpretation of S-CONF and VSET Flow
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+9
+Product Folder Links: TPS62902
+
+PDF PAGE 10
+Table 7-1. SmartConfig Setting Table
+#
+LEVEL OR RESISTOR 
+VALUE [Ω] (1)
+FB/VSET-
+PIN
+FSW (MHz)
+OUTPUT 
+DISCHARGE
+MODE (AUTO OR 
+FORCED PWM)
+DYNAMIC MODE 
+CHANGE
+Setting Options by Level
+1
+GND
+external FB
+2.5
+yes
+Auto PFM/PWM with 
+AEE
+active
+2
+HIGH (>VIH_MODE)
+external FB
+2.5
+yes
+Forced PWM
+Setting Options by Resistor
+3
+7.15 k
+external FB
+2.5
+no
+Auto PFM/PWM with 
+AEE
+not active
+4
+8.87 k
+external FB
+2.5
+no
+Forced PWM
+5
+11.0 k
+external FB
+1
+yes
+Auto PFM/PWM
+6
+13.7 k
+external FB
+1
+yes
+Forced PWM
+7
+16.9 k
+external FB
+1
+no
+Auto PFM/PWM
+8
+21.0 k
+external FB
+1
+no
+Forced PWM
+9
+26.1 k
+VSET
+2.5
+yes
+Auto PFM/PWM with 
+AEE
+10
+32.4 k
+VSET
+2.5
+yes
+Forced PWM
+11
+40.2 k
+VSET
+2.5
+no
+Auto PFM/PWM with 
+AEE
+12
+49.9 k
+VSET
+2.5
+no
+Forced PWM
+13
+61.9 k
+VSET
+1
+yes
+Auto PFM/PWM
+14
+76.8 k
+VSET
+1
+yes
+Forced PWM
+15
+95.3 k
+VSET
+1
+no
+Auto PFM/PWM
+16
+118 k
+VSET
+1
+no
+Forced PWM
+(1)
+E96 Resistor Series, 1% Accuracy, Temperature Coefficient better or equal than ±200 ppm/°C
+7.3.2 Adjustable VO Operation (External Voltage Divider)
+The TPS62902 can be programmed by the MODE/S-CONF pin to either classical configuration where the FB/
+VSET pin is used as the feedback pin, sensing VO through an external resistive divider. The TPS62902 can also 
+be programmed to 16 different fixed output voltages. These are set through an external resistor between the 
+FB/VSET pin and GND. In this configuration, VO is directly sensed at the VOS terminal of the device.
+If the device is configured to operate in classical adjustable VO operation, the FB/VSET pin is used as 
+the feedback pin and needs to sense VO through an external divider network. Figure 7-2 shows the typical 
+schematic for this configuration.
+VIN
+3V t 17V
+EN
+SS/TR
+VIN
+MODE/
+S-CONF
+SW
+PG
+VOS
+FB/
+VSET
+R1
+R2
+TPS6290x
+L1
+VOUT
+0.6V t 5.5V
+GND
+R3
+C3
+C1
+10…F
+C2
+22…F
+Figure 7-2. Adjustable VO Operation Schematic
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+10
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 11
+7.3.3 Setable VO Operation (VSET and Internal Voltage Divider)
+If the device is configured to VSET-operation, VO is sensed only through the VOS pin by an internal resistor 
+divider. The target VO is programmed by an external resitor connected between the VSET pin and GND. Figure 
+7-3 shows the typical schematic for this configuration.
+VIN
+3V t 17V
+EN
+SS/TR
+VIN
+MODE/
+S-CONF
+SW
+PG
+VOS
+FB/
+VSET
+R2
+TPS6290x
+L1
+VOUT
+0.4V t 5.5V
+GND
+R3
+C3
+C1
+10…F
+C2
+22…F
+Figure 7-3. Setable VO Operation Schematic
+Table 7-2. VSET Selection Table
+#
+RESISTOR VALUE [Ω]
+TARGET VO [V]
+1
+GND
+1.2
+2
+4.64 k
+0.4
+3
+5.76 k
+0.6
+4
+7.15 k
+0.8
+5
+8.87 k
+1.0
+6
+11.0 k
+1.1
+7
+13.7 k
+1.3
+8
+16.9 k
+1.35
+9
+21.0 k
+1.8
+10
+26.1 k
+1.9
+11
+40.2 k
+2.5
+12
+61.9 k
+3.8
+13
+76.8 k
+5.0
+14
+95.3 k
+5.1
+15
+118.0 k
+5.5
+16
+249.00 k or larger/Open
+3.3
+7.3.4 Soft Start / Tracking (SS/TR)
+With the SS/TR pin, it is possible to adjust the soft start behavior and track an external voltage. See Section 
+8.2.2.6 for operation details.
+The internal soft-start circuitry controls the output voltage slope during start-up. This avoids excessive inrush 
+current and ensures a controlled output voltage rise time. It also prevents unwanted voltage drops from high 
+impedance power sources or batteries. When EN is set high to start operation, the device starts switching 
+after a delay, then the internal reference, and hence VO, rises with a slope controlled by an external capacitor 
+connected to the SS/TR pin.
+Leaving the SS/TR pin unconnected provides the fastest start-up, limited internally (the pin must not be pulled 
+LOW externally).
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+11
+Product Folder Links: TPS62902
+
+PDF PAGE 12
+If the device is set to shut down (EN = GND), undervoltage lockout, or thermal shutdown, an internal resistor 
+pulls the SS/TR pin down to ensure a proper low level. Returning from those states causes a new start-up 
+sequence as set by the SS/TR connection.
+A voltage supplied to SS/TR can be used to track a master voltage. The output voltage follows this voltage up 
+and down in forced PWM mode. In PFM mode, the output voltage decreases based on the load current.
+7.3.5 Smart Enable with Precise Threshold
+The voltage applied at the enable pin of the TPS62902 is compared to a fixed threshold rising voltage. This 
+allows you to drive the pin by a slowly changing voltage and enables the use of an external RC network to 
+achieve a power-up delay.
+The precise enable input allows the user to program the undervoltage lockout by adding a resistor divider to the 
+input of the enable pin.
+The enable input threshold for a falling edge is lower than the rising edge threshold. The TPS62902 starts 
+operation when the rising threshold is exceeded. For proper operation, the EN pin must be terminated and must 
+not be left floating. Pulling the EN pin low forces the device into shutdown. In this mode, the internal high-side 
+and low-side MOSFETs are turned off and the entire internal control circuitry is switched off.
+An internal resistor pulls the EN pin to GND when the device is disabled and avoids the pin to be float (once the 
+device is enabled, the pulldown is removed). This prevents an uncontrolled start-up of the device in case the EN 
+pin cannot be driven to a low level safely. With EN low, the device is in shutdown mode. The device is turned 
+on with EN set to a high level. The pulldown control circuit disconnects the pulldown resistor on the EN pin once 
+the internal control logic and the reference have been powered up. With EN set to a low level, the device enters 
+shutdown mode and the pulldown resistor is activated again.
+7.3.6 Power Good (PG)
+The TPS62902 has a built-in Power Good (PG) feature to indicate whether the output voltage has reached its 
+target and the device is ready. The PG signal can be used for start-up sequencing of multiple rails. The PG pin 
+is an open-drain output that requires a pullup resistor to any voltage up to the recommended input voltage level. 
+PG is low when the device is turned off due to EN, UVLO (undervoltage lockout), or thermal shutdown. VIN must 
+remain present for the PG pin to stay low.
+If the power good output is not used, it is recommended to tie to GND or leave it open.
+Table 7-3. Power Good Indicator Functional Table
+LOGIC SIGNALS
+PG STATUS
+VI
+EN-PIN
+THERMAL SHUTDOWN
+VO
+VI > UVLO
+HIGH
+No
+VO on target
+High Impedance
+VO < target
+LOW
+Yes
+x
+LOW
+LOW
+x
+x
+LOW
+1.8 V< VI < UVLO
+x
+x
+x
+LOW
+VI < 1.8 V
+x
+x
+x
+Undefined
+7.3.7 Undervoltage Lockout (UVLO)
+If the input voltage drops, the undervoltage lockout prevents mis-operation of the device by switching off both 
+the power FETs. The device is fully operational for voltages above the rising UVLO threshold and turns off if the 
+input voltage trips below the threshold for a falling supply voltage.
+7.3.8 Current Limit And Short Circuit Protection
+The TPS62902 is protected against overload and short circuit events. If the inductor current exceeds the 
+high-side FET current limit (ILIMH), the high-side switch is turned off and the low-side switch is turned on to 
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+12
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 13
+ramp down the inductor current. The high-side FET turns on again only if the current in the low-side FET has 
+decreased below the low-side FET current limit threshold.
+Due to internal propagation delay, the actual current can exceed the static current limit during that time. The 
+dynamic current limit is given as Equation 1:
+PD
+L
+LIMH
+typ
+peak
+t
+L
+V
+I
+I
+´
++
+=
+)
+(
+(1)
+where
+•
+ILIMH is the static high-side FET current limit as specified in the Electrical Characteristics
+•
+L is the effective inductance at the peak current
+•
+VL is the voltage across the inductor (VIN - VOUT)
+•
+tPD is the internal propagation delay of typically 50 ns
+The current limit can exceed static values, especially if the input voltage is high and very small inductances are 
+used. The dynamic high-side switch peak current can be calculated as follows:
+ns
+L
+VO U T
+V IN
+I
+I
+L IM H
+typ
+peak
+50
+)
+(
+´
+-
++
+=
+(2)
+7.3.9 Thermal Shutdown
+The junction temperature, TJ, of the device is monitored by an internal temperature sensor. If TJ rises and 
+exceeds the thermal shutdown threshold, TSD, the device shuts down. Both the high-side and low-side power 
+FETs are turned off and PG goes low. When TJ decreases below the hysteresis, the converter resumes normal 
+operation, beginning with soft start. During a PFM skip pause, the thermal shutdown feature is not active. A 
+shutdown or re-start is only triggered during a switching cycle. See Section 7.4.3.
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+13
+Product Folder Links: TPS62902
+
+PDF PAGE 14
+7.4 Device Functional Modes
+7.4.1 Pulse Width Modulation (PWM) Operation
+The TPS62902 has two operating modes: forced PWM mode discussed in this section and PWM/PFM as 
+discussed in Section 7.4.3.
+With the MODE/S-CONF pin configured for PWM mode, the TPS62902 operates with pulse width modulation in 
+continuous conduction mode (CCM) with a nominal switching frequency of 2.5/1.0 MHz. The frequency variation 
+in PWM is controlled and depends on VIN, VOUT, and the inductance. The on-time in forced PWM mode is given 
+by Equation 3:
+1
+OUT
+IN
+sw
+V
+TON
+V
+f
+ 
+u
+(3)
+7.4.2 AEE (Automatic Efficiency Enhancement)
+When the MODE/S-CONF pin is configured for AEE mode, the TPS62902 provides the highest efficiency over 
+the entire input voltage and output voltage range by automatically adjusting the switching frequency of the 
+converter. This is achieved by setting the predictive off-time of the converter. The efficiency of a switched mode 
+converter is determined by the power losses during the conversion. The efficiency decreases if VOUT decreases, 
+VIN increases as shown in Equation 4, or both. In order to keep the efficiency high over the entire duty cycle 
+range (VOUT/VIN ratio), the switching frequency is adjusted while maintaining the ripple current.
+2
+(
+)
+10
+IN
+OUT
+sw
+OUT
+IN
+V
+V
+F
+MHz
+V
+V
+
+ 
+u
+u
+(4)
+The AEE function in the TPS62902 adjusts the on-time (TON) in power save mode, depending on the input 
+voltage and the output voltage to maintain highest efficiency. The on-time in steady-state operation can be 
+estimated as using Equation 5:
+[ ]
+ns
+VOUT
+VIN
+VIN
+TON
+-
+´
+=100
+(5)
+Equation 6 shows the relation among the inductor ripple current, switching frequency, and duty cycle.
+1 (
+)
+1
+(
+)
+(
+)
+OUT
+IN
+L
+OUT
+OUT
+SW
+SW
+V
+V
+D
+I
+V
+V
+L
+f
+L
+f
+
+
+'
+ 
+u
+ 
+u
+u
+u
+(6)
+Efficiency increases by decreasing switching losses and preserving high efficiency for varying duty cycles, while 
+the ripple current amplitude remains low enough to deliver the full output current without reaching current limit. 
+The AEE feature provides an efficiency enhancement for various duty cycles, especially for lower VOUT values 
+where fixed frequency converters suffer from a significant efficiency drop. Furthermore, this feature compensates 
+for the very small duty cycles of high VIN to low VOUT conversion, which limits the control range in other 
+topologies.
+7.4.3 Power Save Mode Operation (Auto PFM/PWM)
+When the MODE/S-CONF pin is configured for power save mode (auto PFM/PWM). The device operates in 
+PWM mode as long the output current is higher than half of the ripple current of the inductor. To maintain high 
+efficiency at light loads, the device enters power save mode at the boundary to discontinuous conduction mode 
+(DCM). This happens if the output current becomes smaller than half of the ripple current of the inductor. The 
+power save mode is entered seamlessly when the load current decreases. This ensures a high efficiency in light 
+load operation. The device remains in power save mode as long as the inductor current is discontinuous.
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+14
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 15
+In power save mode, the switching frequency decreases linearly with the load current maintaining high efficiency. 
+The transition in and out of power save mode is seamless in both directions.
+In addition to adjusting the switching, the TPS62902 adjusts the on-time (TON) in power save mode, depending 
+on the input voltage and the output voltage to maintain highest efficiency using the AEE function when 2.5 MHz 
+is selected as described in Section 7.4.2.
+In power save mode, the TON time can be estimated using Equation 3 for 1 MHz and Equation 5 for 2.5 MHz 
+(given the AEE is enabled for 2.5 MHz).
+For very small output voltages, an absolute minimum on-time of about 50 ns is kept to limit switching losses. 
+The operating frequency is thereby reduced from its nominal value, which keeps efficiency high. Using TON, the 
+typical peak inductor current in power save mode is approximated by Equation 7:
+(
+)
+TO N
+L
+VO U T
+V IN
+IL P SM
+peak
+´
+-
+=
+)
+(
+(7)
+There is a minimum off-time which limits the duty cycle of the TPS62902. When VIN decreases to typically 
+15% above VOUT, the TPS62902 does not enter power save mode, regardless of the load current. The device 
+maintains output regulation in PWM mode.
+The output voltage ripple in power save mode is given by Equation 8:
+÷
+ø
+ö
+ç
+è
+æ
++
+-
+´
+´
+=
+D
+VOUT
+VOUT
+VIN
+C
+VIN
+L
+V
+1
+1
+200
+2
+(8)
+where
+•
+L is the effective inductance
+•
+C is the output effective capacitance
+7.4.4 100% Duty-Cycle Operation
+The duty cycle of the buck converter operating in PWM mode is given as D = VOUT/VIN. The duty cycle increases 
+as the input voltage comes close to the output voltage and the off-time gets smaller. When the minimum off-time 
+of typically 80 ns is reached, the TPS62902 scales down its switching frequency while it approaches 100% 
+mode. In 100% mode, it keeps the high-side switch on continuously. The high-side switch stays turned on as 
+long as the output voltage is below the internal set point. This allows the conversion of small input to output 
+voltage differences (for example, getting longest operation time of battery-powered applications). In 100% duty 
+cycle mode, the low-side FET is switched off.
+The minimum input voltage to maintain output voltage regulation, depending on the load current and the output 
+voltage level, can be calculated as:
+spacing
+(
+)
+L
+on
+DS
+R
+R
+IOUT
+VOUT
+VIN
++
++
+=
+)
+(
+(min)
+(9)
+where
+•
+IOUT is the output current
+•
+RDS(on) is the on-state resistance of the high-side FET
+•
+RL is the DC resistance of the inductor used
+7.4.5 Output Discharge Function
+The purpose of the discharge function is to ensure a defined down-ramp of the output voltage when the device 
+is being disabled but also to keep the output voltage close to 0 V when the device is off. The output discharge 
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+15
+Product Folder Links: TPS62902
+
+PDF PAGE 16
+feature is only active once TPS62902 has been enabled at least once since the supply voltage was applied. 
+The internal discharge resistor is connected to the VOS pin. The discharge function is enabled as soon as the 
+device is disabled, in thermal shutdown, or in undervoltage lockout. The minimum supply voltage required for the 
+discharge function to remain active typically is 2 V.
+7.4.6 Starting into a Pre-Biased Load
+The TPS62902 is capable of starting into a pre-biased output. The device only starts switching when the internal 
+soft-start ramp is equal or higher than the feedback voltage. If the voltage at the feedback pin is biased to a 
+higher voltage than the nominal value, the TPS62902 does not start switching unless the voltage at the feedback 
+pin drops to the target.
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+16
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 17
+8 Application and Implementation
+Note
+Information in the following applications sections is not part of the TI component specification, and 
+TI does not warrant its accuracy or completeness. TI’s customers are responsible for determining 
+suitability of components for their purposes. Customers should validate and test their design 
+implementation to confirm system functionality.
+8.1 Application Information
+The TPS62902 devices are highly-efficient, small, and highly-flexible synchronous step-down DC-DC converters 
+that are easy to use. A wide input voltage range of 3 V to 17 V supports a wide variety of inputs like 12-V supply 
+rails, single-cell or multi-cell Li-Ion, and 5-V or 3.3-V rails.
+8.2 Typical Application with Adjustable Output Voltage
+VIN
+3V t 17V
+EN
+SS/TR
+VIN
+MODE/
+S-CONF
+SW
+PG
+VOS
+FB/
+VSET
+R1
+R2
+TPS6290x
+L1
+VOUT
+0.6V t 5.5V
+GND
+R3
+C3
+C1
+10…F
+C2
+22…F
+Figure 8-1. Typical Application Circuit
+8.2.1 Design Requirements
+Table 8-1. List of Components
+REFERENCE
+DESCRIPTION
+MANUFACTURER
+IC
+17 V, 3-A Step-Down Converter
+TPS6290x series; Texas Instruments
+L
+1-µH inductor
+XGL4020-102; Coilcraft
+CIN
+10 µF, 25 V, Ceramic, 0805
+C3216X7R1E106M160AE, TDK
+COUT
+22 µF, 16 V, Ceramic, 0805
+C2012X7S1A226M125AC, TDK
+CSS
+Depends on soft start time; see Section 8.2.2.5.3
+16 V, Ceramic, X7R
+R1
+Depending on VOUT; see Section 8.2.2.2
+Standard 1% metal film
+R2
+Depending on VOUT; see Section 8.2.2.2
+Standard 1% metal film
+R3
+Depending on device setting, see Section 7.3.1
+Standard 1% metal film
+8.2.2 Detailed Design Procedure
+8.2.2.1 Custom Design With WEBENCH® Tools
+Click here to create a custom design using the TPS62902 device with the WEBENCH® Power Designer.
+1.
+Start by entering the input voltage (VIN), output voltage (VOUT), and output current (IOUT) requirements.
+2.
+Optimize the design for key parameters such as efficiency, footprint, and cost using the optimizer dial.
+3.
+Compare the generated design with other possible solutions from Texas Instruments.
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+17
+Product Folder Links: TPS62902
+
+PDF PAGE 18
+The WEBENCH Power Designer provides a customized schematic along with a list of materials with real-time 
+pricing and component availability.
+In most cases, these actions are available:
+•
+Run electrical simulations to see important waveforms and circuit performance
+•
+Run thermal simulations to understand board thermal performance
+•
+Export customized schematic and layout into popular CAD formats
+•
+Print PDF reports for the design, and share the design with colleagues
+Get more information about WEBENCH tools at www.ti.com/WEBENCH.
+8.2.2.2 Programming the Output Voltage
+The output voltage of the TPS62902 is adjustable. It can be programmed for output voltages from 0.6 V to 5.5 
+V using a resistor divider from VOUT to GND. The voltage at the FB pin is regulated to 600 mV. The value of 
+the output voltage is set by the selection of the resistor divider from Equation 10. It is recommended to choose 
+resistor values that allow a current of at least 2 μA, meaning the value of R2 should not exceed 400 kΩ. Lower 
+resistor values are recommended for highest accuracy and most robust design.
+÷
+ø
+ö
+ç
+è
+æ
+-
+=
+´
+1
+2
+1
+VFB
+VOUT
+R
+R
+(10)
+With typical VFB = 0.6 V:
+Table 8-2. Setting the Output Voltage
+NOMINAL OUTPUT VOLTAGE
+R1
+R2
+EXACT OUTPUT VOLTAGE
+0.75 V
+24.9 kΩ
+100 kΩ
+0.749 V
+1.2 V
+100 kΩ
+100 kΩ
+1.2 V
+1.5 V
+150 kΩ
+100 kΩ
+1.5 V
+1.8 V
+200 kΩ
+100 kΩ
+1.8 V
+2.0 V
+49.9 kΩ
+21.5 kΩ
+1.992 V
+2.5 V
+100 kΩ
+31.6 kΩ
+2.498 V
+3.0 V
+100 kΩ
+24.9 kΩ
+3.009 V
+3.3 V
+113 kΩ
+24.9 kΩ
+3.322 V
+5.0V
+182 kΩ
+24.9 kΩ
+4.985 V
+8.2.2.3 External Component Selection
+The external components have to fulfill the needs of the application, but also the stability criteria of the control 
+loop of the device. The TPS62902 is optimized to work within a range of external components. The LC output 
+filters inductance and capacitance have to be considered together, creating a double pole, responsible for the 
+corner frequency of the converter (see Section 8.2.2.7). Table 8-3 can be used to simplify the output filter 
+component selection. The values in Table 8-3 are nominal values. The effective capacitance was considered to 
+vary by +20% and -50%.
+Table 8-3. Recommended LC Output Filter Combinations
+4.7 µF
+10 µF
+22 µF
+47 µF
+100 µF
+200 µF
+1 µH
+√
+√(1)
+√
+√
+√(3)
+1.5 µH
+√
+√
+√
+√(3)
+2.2 µH
+√
+√(2)
+√
+√(3)
+(1)
+This LC combination is the standard value and recommended for most applications with 2.5 MHz switching frequency.
+(2)
+This LC combination is the standard value and recommended for most applications with 1-MHz switching frequency.
+(3)
+Output capacitance needs to have a ESR of ≥ 10 mΩ for stable operation, see Section 8.3.2.
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+18
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 19
+8.2.2.4 Inductor Selection
+The TPS62902 is designed for a nominal 1-µH inductor. Larger values can be used to achieve a lower inductor 
+current ripple but they can have a negative impact on efficiency and transient response. Smaller values than 1 
+µH will cause a larger inductor current ripple which causes larger negative inductor current in forced PWM mode 
+at low or no output current. Therefore, they are not recommended at large voltages across the inductor as it 
+is the case for high input voltages and low output voltages. Low-output current in forced PWM mode causes a 
+larger negative inductor current peak which can exceed the negative current limit. At low or no output current 
+and small inductor values, the output voltage cannot be regulated any more. More detailed information on further 
+LC combinations can be found in SLVA463.
+The inductor selection is affected by several factors like inductor ripple current, output ripple voltage, PWM-to-
+PFM transition point, and efficiency. In addition, the inductor selected has to be rated for appropriate saturation 
+current and DC resistance (DCR). Equation 11 calculates the maximum inductor current.
+2
+(max)
+(max)
+(max)
+L
+OUT
+L
+I
+I
+I
+D
++
+=
+(11)
+(max)
+(max)
+(min)
+1
+OUT
+IN
+L
+OUT
+sw
+V
+V
+I
+V
+L
+f
+§
+·
+
+¨
+¸
+¨
+¸
+'
+ 
+u¨
+¸
+u
+¨
+¸
+©
+¹
+(12)
+where
+•
+IL(max) is the maximum inductor current
+•
+ΔIL(max) is the maximum peak-to-peak inductor ripple current
+•
+L(min) is the minimum effective inductor value
+•
+fsw is the the actual PWM switching frequency
+•
+VOUT is the output voltage
+•
+VIN(max) is the maximum expected output voltage
+Calculating the maximum inductor current using the actual operating conditions gives the needed minimum 
+saturation current of the inductor. It is recommended to add a margin of about 20%. A larger inductor value is 
+also useful to get lower ripple current, but increases the transient response time and size as well. The following 
+inductors have been used with the TPS62902 and are recommended for use:
+Table 8-4. List of Inductors
+TYPE
+INDUCTANCE [µH]
+CURRENT [A](1)
+DIMENSIONS 
+[LxBxH] mm
+MANUFACTURER
+XGL4020-102ME
+1.0 µH, ±20%
+8.8
+4.0x4.0x2.1
+Coilcraft
+DFE252012F-1R0M
+1.0 µH, ±20%
+4.7
+2.5x2.5x1.2
+muRata
+CIGT252010TM1R0MLE
+1.0 µH, ±20%
+5.3
+2.5x2.5x1.0
+Samsung
+TFM252010ALM-1R0MTAA
+1.0 µH, ±20%
+4.7
+2.5x2.0x1.0
+TDK
+XEL5030-222ME
+2.2 μH, ±20%
+9.7
+5.3x5.5x3.1
+Coilcraft
+XGL4020-222ME
+2.2 μH, ±20%
+6.2
+4.0x4.0x2.1
+Coilcraft
+(1)
+ISAT at 30% drop
+The inductor value also determines the load current at which power save mode is entered:
+L
+PSM
+load
+I
+I
+D
+= 2
+1
+)
+(
+(13)
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+19
+Product Folder Links: TPS62902
+
+PDF PAGE 20
+8.2.2.5 Capacitor Selection
+8.2.2.5.1 Output Capacitor
+The recommended value for the output capacitor is 22 µF. The architecture of the TPS62902 allows the use 
+of tiny ceramic output capacitors with low equivalent series resistance (ESR). These capacitors provide low 
+output voltage ripple and are recommended. To keep its low resistance up to high frequencies and to get 
+narrow capacitance variation with temperature, it is recommended to use X7R or X5R dielectric. Using a higher 
+value has advantages like smaller voltage ripple and a tighter DC output accuracy in power save mode (see 
+SLVA463).
+In power save mode, the output voltage ripple depends on the output capacitance, its ESR, ESL, and the peak 
+inductor current. Using ceramic capacitors provides small ESR, ESL, and low ripple. The output capacitor needs 
+to be as close as possible to the device.
+For large output voltages, the dc bias effect of ceramic capacitors is large and the effective capacitance has to 
+be observed.
+8.2.2.5.2 Input Capacitor
+For most applications, 10 µF nominal is sufficient and is recommended, though a larger value reduces input 
+current ripple further. The input capacitor buffers the input voltage for transient events and also decouples the 
+converter from the supply. A low-ESR multilayer ceramic capacitor (MLCC) is recommended for best filtering and 
+should be placed between VIN and GND as close as possible to those pins.
+Table 8-5. List of Capacitors
+TYPE (1)
+NOMINAL CAPACITANCE [µF]
+VOLTAGE RATING [V]
+SIZE
+MANUFACTURER
+C3216X7R1E106K160AB
+10
+25
+0805
+TDK
+C2012X7S1A226M125AC
+22
+10
+0805
+TDK
+(1)
+Lower of IRMS at 40°C rise or ISAT at 30% drop.
+8.2.2.5.3 Soft-Start Capacitor
+A capacitor connected between SS/TR pin and GND allows a user-programmable start-up slope of the output 
+voltage.
+SS/TR
+to VREF
+ISS
+Figure 8-2. Soft-Start Operation Simplified Schematic
+An internal constant current source is provided to charge the external capacitance. A typical soft-start ramp time 
+is given by:
+TSS =
+CSS
+ISS × VREF + 55
+(14)
+where
+•
+CSS is the capacitance required at the SS/TR pin, the unit is pF.
+•
+TSS is the desired soft-start ramp time, the unit is µs.
+•
+ISS is the SS/TR source current, the unit is µA, see the Electrical Characteristics
+•
+VREF is the feedback regulation voltage (VFB /0.75), the unit is V, see the Electrical Characteristics
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+20
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 21
+The fastest achievable typical ramp time is 150 µs, even if the external Css capacitance is lower than 680 pF or 
+the pin is open. Generally, lower than 1 ms soft-start time is not recommanded for low inrush current.
+The soft-start time has variation, for more accurate configuration, the below maximum and minimum formula 
+need to be taken into consideration.
+TSS_max =
+CSS_max
+ISS_min × VREF_max + 160
+(15)
+TSS_min =
+CSS_min
+ISS_max × VREF_min −K
+(16)
+where K is the related to the value of CSS, the unit is µs, the relationship curve is shown in Figure 8-3 and Figure 
+8-4.
+Css(pF)
+K (us)
+500
+1000
+1500
+2000
+2500
+3000
+3500
+4000
+4500
+5000
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+Figure 8-3. Relationship curve of K and Css (680pF-4800pF)
+Css(pF)
+K(us)
+0
+20000
+40000
+60000
+80000
+100000
+120000
+0
+100
+200
+300
+400
+500
+600
+700
+Figure 8-4. Relationship curve of K and Css (4800pF-114000pF)
+8.2.2.6 Tracking Function
+If a tracking function is desired, the SS/TR pin can be used for this purpose by connecting it to an external 
+tracking voltage. The output voltage tracks that voltage with the typical gain and offset as specified in the 
+Electrical Characteristics.
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+21
+Product Folder Links: TPS62902
+
+PDF PAGE 22
+SS/TR
+to VREF
+ISS
+Figure 8-5. Tracking Operation Simplified Schematic
+/
+0.75
+FB
+SS TR
+V
+V
+ 
+u
+(17)
+When the SS/TR pin voltage is above 0.8 V, the internal voltage is clamped and the device goes to normal 
+regulation. This works for rising and falling tracking voltages with the same behavior, as long as the input voltage 
+is inside the recommended operating conditions. For decreasing SS/TR pin voltage in PFM mode, the device 
+does not sink current from the output. The resulting decrease of the output voltage can therefore be slower than 
+the SS/TR pin voltage if the load is light. When driving the SS/TR pin with an external voltage, do not exceed the 
+voltage rating of the SS/TR pin, which is 6 V. The SS/TR pin is internally connected with a resistor to GND when 
+EN = 0.
+If the input voltage drops below undervoltage lockout, the output voltage goes to zero, independent of the 
+tracking voltage. Figure 8-6 shows how to connect devices to get ratiometric and simultaneous sequencing by 
+using the tracking function. See Section 8.3.3 in the systems examples.
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+22
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 23
+EN
+SS/TR
+VIN
+MODE/
+S-CONF
+SW
+PG
+VOS
+FB/
+VSET
+TPS6290x
+1µH
+VOUT1
+GND
+22 …F
+EN
+SS/TR
+VIN
+MODE/
+S-CONF
+SW
+PG
+VOS
+FB/
+VSET
+TPS6290x
+1µH
+VOUT2
+GND
+22 …F
+R1
+R2
+R7
+R8
+R3
+R6
+R4
+R5
+CSS
+10uF
+VIN=12V
+10uF
+Device 1
+Device 2
+Figure 8-6. Schematic for Ratiometric and Simultaneous Start-up
+The resistive divider of R7 and R8 can be used to change the ramp rate of VOUT2 to be faster, slower, or the 
+same as VOUT1.
+A sequential start-up is achieved by connecting the PG pin of VOUT of device 1 to the EN pin of device 2. PG 
+requires a pullup resistor. Ratiometric start-up sequence happens if both supplies are sharing the same soft-start 
+capacitor. Equation 14 gives the soft-start time, though the SS/TR current has to be doubled. Details about these 
+and other tracking and sequencing circuits are found in SLVA470.
+Note
+If the voltage at the FB pin is below its typical value of 0.6 V, the output voltage accuracy can have a 
+wider tolerance than specified. The current of 2.5 µA out of the SS/TR pin also has an influence on the 
+tracking function, especially for high resistive external voltage dividers on the SS/TR pin.
+8.2.2.7 Output Filter and Loop Stability
+The devices of the TPS62902 family are internally compensated to be stable with L-C filter combinations 
+corresponding to a corner frequency to be calculated with Equation 18:
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+23
+Product Folder Links: TPS62902
+
+PDF PAGE 24
+C
+L
+f LC
+×
+=
+p
+2
+1
+(18)
+Proven nominal values for inductance and ceramic capacitance are given in Section 8.2.2.3 and are 
+recommended for use. Different values can work, but care has to be taken on the loop stability which is affected. 
+More information including a detailed LC stability matrix can be found in SLVA463.
+The TPS62902 devices include an internal 3-pF feedforward capacitor, connected between the VOS and FB 
+pins. This capacitor impacts the frequency behavior and sets a pole and zero in the control loop with the 
+resistors of the feedback divider, per Equation 19 and Equation 20:
+1
+1
+2
+3
+zero
+f
+R
+pF
+S
+ 
+u
+u
+(19)
+1
+2
+1
+1
+1
+2
+3
+pole
+f
+pF
+R
+R
+S
+§
+·
+ 
+u
+u
+¨
+¸
+u
+©
+¹
+(20)
+Though the TPS62902 devices are stable without the pole and zero being in a particular location, adjusting their 
+location to the specific needs of the application can provide better performance in power save mode, improved 
+transient response, or both. An external feedforward capacitor can also be added. A more detailed discussion on 
+the optimization for stability versus transient response can be found in SLVA289 and SLVA466.
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+24
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 25
+8.2.3 Application Curves
+IOUT (A)
+Efficiency (%)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+Auto PFM/PWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-7. Efficiency vs Output Current VOUT = 5 V
+IOUT (A)
+Efficiency (%)
+0.01
+0.020.03 0.05
+0.1
+0.2 0.3
+0.5 0.7
+1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+FPWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-8. Efficiency vs Output Current VOUT = 5 V
+IOUT (A)
+Efficiency (%)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+Auto PFM/PWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-9. Efficiency vs Output Current VOUT = 5 V
+IOUT (A)
+Efficiency (%)
+0.01
+0.020.03 0.05
+0.1
+0.2 0.3
+0.5 0.7
+1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+FPWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-10. Efficiency vs Output Current VOUT = 5 V
+IOUT (A)
+Efficiency (%)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+Auto PFM/PWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-11. Efficiency vs Output Current VOUT = 3.3 V
+IOUT (A)
+Efficiency (%)
+0.01
+0.020.03 0.05
+0.1
+0.2 0.3
+0.5 0.7
+1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+FPWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-12. Efficiency vs Output Current VOUT = 3.3 V
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+25
+Product Folder Links: TPS62902
+
+PDF PAGE 26
+8.2.3 Application Curves (continued)
+IOUT (A)
+Efficiency (%)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+Auto PFM/PWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-13. Efficiency vs Output Current VOUT = 3.3 V
+IOUT (A)
+Efficiency (%)
+0.01
+0.020.03 0.05
+0.1
+0.2 0.3
+0.5 0.7
+1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+FPWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-14. Efficiency vs Output Current VOUT = 3.3 V
+IOUT (A)
+Efficiency (%)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+Auto PFM/PWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-15. Efficiency vs Output Current VOUT = 1.8 V
+IOUT (A)
+Efficiency (%)
+0.01
+0.020.03 0.05
+0.1
+0.2 0.3
+0.5 0.7
+1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+FPWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-16. Efficiency vs Output Current VOUT = 1.8 V
+IOUT (A)
+Efficiency (%)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+Auto PFM/PWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-17. Efficiency vs Output Current VOUT = 1.8 V
+IOUT (A)
+Efficiency (%)
+0.01
+0.020.03 0.05
+0.1
+0.2 0.3
+0.5 0.7
+1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+FPWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-18. Efficiency vs Output Current VOUT = 1.8 V
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+26
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 27
+8.2.3 Application Curves (continued)
+IOUT (A)
+Efficiency (%)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+Auto PFM/PWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-19. Efficiency vs Output Current VOUT = 1.2 V
+IOUT (A)
+Efficiency (%)
+0.01
+0.020.03 0.05
+0.1
+0.2 0.3
+0.5 0.7
+1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+FPWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-20. Efficiency vs Output Current VOUT = 1.2 V
+IOUT (A)
+Efficiency (%)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+Auto PFM/PWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-21. Efficiency vs Output Current VOUT = 1.2 V 
+IOUT (A)
+Efficiency (%)
+0.01
+0.020.03 0.05
+0.1
+0.2 0.3
+0.5 0.7
+1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+FPWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-22. Efficiency vs Output Current VOUT = 1.2 V
+Input Voltage (V)
+Switching Frequency (MHz)
+6
+8
+10
+12
+14
+16
+18
+0
+0.5
+1
+1.5
+2
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+Auto PFM/PWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-23. Switching Frequency vs Input Voltage VOUT = 5 V
+Input Voltage (V)
+Switching Frequency (MHz)
+6
+8
+10
+12
+14
+16
+18
+0.9
+0.95
+1
+1.05
+1.1
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+FPWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-24. Switching Frequency vs Input Voltage VOUT = 5 V
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+27
+Product Folder Links: TPS62902
+
+PDF PAGE 28
+8.2.3 Application Curves (continued)
+Input Voltage (V)
+Switching Frequency (MHz)
+6
+8
+10
+12
+14
+16
+18
+0
+0.5
+1
+1.5
+2
+2.5
+3
+3.5
+4
+4.5
+5
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+Auto PFM/PWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-25. Switching Frequency vs Input Voltage VOUT = 5 V
+Input Voltage (V)
+Switching Frequency (MHz)
+6
+8
+10
+12
+14
+16
+18
+1.5
+2
+2.5
+3
+3.5
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+FPWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-26. Switching Frequency vs Input Voltage VOUT = 5 V
+Input Voltage (V)
+Switching Frequency (MHz)
+4
+6
+8
+10
+12
+14
+16
+18
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+1.4
+1.6
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+Auto PFM/PWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-27. Switching Frequency vs Input Voltage VOUT = 3.3 V
+Input Voltage (V)
+Switching Frequency (MHz)
+4
+6
+8
+10
+12
+14
+16
+18
+0.75
+0.8
+0.85
+0.9
+0.95
+1
+1.05
+1.1
+1.15
+1.2
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+FPWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-28. Switching Frequency vs Input Voltage VOUT = 3.3 V
+Input Voltage (V)
+Switching Frequency (MHz)
+4
+6
+8
+10
+12
+14
+16
+18
+0
+0.5
+1
+1.5
+2
+2.5
+3
+3.5
+4
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+Auto PFM/PWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-29. Switching Frequency vs Input Voltage VOUT = 3.3 V
+Input Voltage (V)
+Switching Frequency (MHz)
+4
+6
+8
+10
+12
+14
+16
+18
+1.4
+1.6
+1.8
+2
+2.2
+2.4
+2.6
+2.8
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+FPWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-30. Switching Frequency vs Input Voltage VOUT = 3.3 V
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+28
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 29
+8.2.3 Application Curves (continued)
+Input Voltage (V)
+Switching Frequency (MHz)
+2
+4
+6
+8
+10
+12
+14
+16
+18
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+1.1
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+Auto PFM/PWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-31. Switching Frequency vs Input Voltage VOUT = 1.8 V
+Input Voltage (V)
+Switching Frequency (MHz)
+2
+4
+6
+8
+10
+12
+14
+16
+18
+0.875
+0.9
+0.925
+0.95
+0.975
+1
+1.025
+1.05
+1.075
+1.1
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+FPWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-32. Switching Frequency vs Input Voltage VOUT = 1.8 V
+Input Voltage (V)
+Switching Frequency (MHz)
+2
+4
+6
+8
+10
+12
+14
+16
+18
+0
+0.3
+0.6
+0.9
+1.2
+1.5
+1.8
+2.1
+2.4
+2.7
+3
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+Auto PFM/PWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-33. Switching Frequency vs Input Voltage VOUT = 1.8 V
+Input Voltage (V)
+Switching Frequency (MHz)
+2
+4
+6
+8
+10
+12
+14
+16
+18
+2
+2.2
+2.4
+2.6
+2.8
+3
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+FPWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-34. Switching Frequency vs Input Voltage VOUT = 1.8 V
+Input Voltage (V)
+Switching Frequency (MHz)
+2
+4
+6
+8
+10
+12
+14
+16
+18
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+1.4
+1.6
+1.8
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+Auto PFM/PWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-35. Switching Frequency vs Input Voltage VOUT = 1.2 V
+Input Voltage (V)
+Switching Frequency (MHz)
+2
+4
+6
+8
+10
+12
+14
+16
+18
+0.8
+0.85
+0.9
+0.95
+1
+1.05
+1.1
+1.15
+1.2
+1.25
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+FPWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-36. Switching Frequency vs Input Voltage VOUT = 1.2 V 
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+29
+Product Folder Links: TPS62902
+
+PDF PAGE 30
+8.2.3 Application Curves (continued)
+Input Voltage (V)
+Switching Frequency (MHz)
+2
+4
+6
+8
+10
+12
+14
+16
+18
+0
+0.3
+0.6
+0.9
+1.2
+1.5
+1.8
+2.1
+2.4
+2.7
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+Auto PFM/PWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-37. Switching Frequency vs Input Voltage VOUT = 1.2 V 
+Input Voltage (V)
+Switching Frequency (MHz)
+2
+4
+6
+8
+10
+12
+14
+16
+18
+1.4
+1.6
+1.8
+2
+2.2
+2.4
+2.6
+2.8
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+FPWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-38. Switching Frequency vs Input Voltage VOUT = 1.2 V
+IOUT (A)
+VOUT DC (V)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+3.28
+3.282
+3.284
+3.286
+3.288
+3.29
+3.292
+3.294
+3.296
+3.298
+3.3
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+FPWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-39. Output Voltage vs Output Current VOUT = 3.3 V
+IOUT (A)
+VOUT DC (V)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+1.788
+1.79
+1.792
+1.794
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+FPWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-40. Output Voltage vs Output Current VOUT = 1.8 V
+VIN = 12 V
+1 MHz Auto 
+PFM/PWM
+Io = 10 mA
+VOUT = 1.2 V
+TA = 25°C
+Figure 8-41. Start-up Timing
+VIN = 12 V
+1 MHz Auto 
+PFM/PWM
+Io = 1 A
+VOUT = 1.2 V
+TA = 25°C
+Figure 8-42. Start-up Timing
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+30
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 31
+8.2.3 Application Curves (continued)
+VIN = 12 V
+1 MHz Auto 
+PFM/PWM
+Io = 1 A
+VOUT = 5 V
+TA = 25°C
+Figure 8-43. Start-up Timing
+VIN = 12 V
+2.5 MHz Auto 
+PFM/PWM
+Io = 1 A
+VOUT = 5 V
+TA = 25°C
+Figure 8-44. Start-up Timing
+VIN = 12 V
+1 MHz Auto 
+PFM/PWM
+Io = 0.1 A
+VOUT = 1.2 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-45. Output Voltage Ripple
+VIN = 12 V
+1 MHz FPWM
+Io = 0.1 A
+VOUT = 1.2 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-46. Output Voltage Ripple
+VIN = 12 V
+2.5 MHz Auto 
+PFM/PWM
+Io = 0.1 A
+VOUT = 1.2 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-47. Output Voltage Ripple
+VIN = 12 V
+2.5 MHz FPWM
+Io = 0.1 A
+VOUT = 1.2 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-48. Output Voltage Ripple
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+31
+Product Folder Links: TPS62902
+
+PDF PAGE 32
+8.2.3 Application Curves (continued)
+VIN = 12 V
+1 MHz Auto 
+PFM/PWM
+Io = 2 A
+VOUT = 1.2 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-49. Output Voltage Ripple
+VIN = 12 V
+1 MHz FPWM
+Io = 2 A
+VOUT = 1.2 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-50. Output Voltage Ripple
+VIN = 12 V
+2.5 MHz Auto 
+PFM/PWM
+Io = 2 A
+VOUT = 1.2 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-51. Output Voltage Ripple
+VIN = 12 V
+2.5 MHz FPWM
+Io = 2 A
+VOUT = 1.2 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-52. Output Voltage Ripple
+VIN = 12 V
+1 MHz FPWM
+Io = 10 mA
+VOUT = 3.0 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-53. Typical Operation
+VIN = 12 V
+2.5 MHz FPWM
+Io = 10 mA
+VOUT = 3.0 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-54. Typical Operation
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+32
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 33
+8.2.3 Application Curves (continued)
+VIN = 12 V
+2.5 MHz Auto 
+PFM/PWM
+Io = 10 mA
+VOUT = 3.0 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-55. Typical Operation
+VIN = 12 V
+1 MHz Auto 
+PFM/PWM
+Io = 1 A
+VOUT = 3.0 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-56. Typical Operation
+VIN = 12 V
+1 MHz Auto 
+PFM/PWM
+Io = 0A to1 A
+VOUT = 3.3 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-57. PSM to PWM Transition
+VIN = 12 V
+2.5 MHz FPWM
+Io = 5 mA to 1 A to 5 
+mA
+VOUT = 3.3 V
+TA = 25°C
+Figure 8-58. Load Transient Response
+VIN = 12 V
+2.5 MHz FPWM
+Io = 5 mA to 1 A
+VOUT = 3.3 V
+TA = 25°C
+Figure 8-59. Load Transient Response - Rising Edge
+VIN = 12 V
+2.5 MHz FPWM
+Io = 1 A to 5 mA
+VOUT = 3.3 V
+TA = 25°C
+Figure 8-60. Load Transient Response - Falling Edge
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+33
+Product Folder Links: TPS62902
+
+PDF PAGE 34
+8.2.3 Application Curves (continued)
+VIN = 12 V
+1 MHz Auto 
+PFM/PWM
+Io = 5 mA to 1 A to 5 
+mA
+VOUT = 3.3 V
+TA = 25°C
+Figure 8-61. Load Transient Response
+VIN = 12 V
+2.5 MHz Auto 
+PFM/PWM
+Io = 500 mA to 2 A to 
+500 mA
+VOUT = 3.3 V
+TA = 25°C
+Figure 8-62. Load Transient Response
+VIN = 6 V to 11 V
+2.5 MHz Auto 
+PFM/PWM
+Io = 1 A
+VOUT = 3.3 V
+TA = 25°C
+Figure 8-63. Line Transient Response - Rising
+VIN = 11 V to 6 V
+2.5 MHz Auto 
+PFM/PWM
+Io = 1 A
+VOUT = 3.3 V
+TA = 25°C
+Figure 8-64. Line Transient Response - Falling
+VIN = 12 V
+Ouput Discharge = No
+VOUT = 5 V
+TA = 25°C
+Figure 8-65. Output Discharge Function - Disabled
+VIN = 12 V
+Ouput Discharge = Yes
+VOUT = 5 V
+TA = 25°C
+Figure 8-66. Output Discharge Function - Enabled
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+34
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 35
+8.2.4 Typical Application with Setable VO using VSET
+VIN
+3V t 17V
+EN
+SS/TR
+VIN
+MODE/
+S-CONF
+SW
+PG
+VOS
+FB/
+VSET
+R2
+TPS6290x
+L1
+VOUT
+0.4V t 5.5V
+GND
+R3
+C3
+C1
+10…F
+C2
+22…F
+Figure 8-67. Typical Application Circuit (VSET)
+8.2.4.1 Design Requirements
+VSET allows you to set the output voltage using only one resistor to ground on the FB/VSET pin. Table 7-2 
+shows the 16 available options.
+8.2.4.2 Detailed Design Procedure
+The VSET option needs to be selected using the MODE/S-CONF pin. Once the device is configured to VSET-
+operation, VO is sensed only through the VOS-pin by an internal resistor divider. The target VO is programmed 
+by an external resitor R2 connected between FB/VSET and GND.
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+35
+Product Folder Links: TPS62902
+
+PDF PAGE 36
+8.2.4.3 Application Curves
+VIN = 12 V
+2.5 MHz Auto 
+PFM/PWM
+Io = 1 A
+VOUT = 1.2 V
+L = 2.2 μH
+TA = 25°C
+Figure 8-68. Output Voltage Ripple
+VIN (V)
+Vout Accuracy VSET (r%)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+0.8
+0.85
+0.9
+0.95
+1
+1.05
+1.1
+1.15
+1.2
+1.25
+1.3
+-40C
+-20C
+0C
+25C
+85C
+125C
+150C
+VIN = 3 V - 17 V
+Temp = -40°C to 150°C
+Figure 8-69. Output Voltage Accuracy - VSET Selected
+IOUT (A)
+Efficiency (%)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+Auto PFM/PWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-70. Efficiency vs Output Current VOUT = 0.4 V
+IOUT (A)
+Efficiency (%)
+0.01
+0.020.03 0.05
+0.1
+0.2 0.3
+0.5 0.7
+1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+FPWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-71. Efficiency vs Output Current VOUT = 0.4 V
+IOUT (A)
+Efficiency (%)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+Auto PFM/PWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-72. Efficiency vs Output Current VOUT = 0.4 V 
+IOUT (A)
+Efficiency (%)
+0.01
+0.020.03 0.05
+0.1
+0.2 0.3
+0.5 0.7
+1
+2
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+FPWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-73. Efficiency vs Output Current VOUT = 0.4 V
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+36
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 37
+8.2.4.3 Application Curves (continued)
+Input Voltage (V)
+Switching Frequency (MHz)
+3
+3.5
+4
+4.5
+5
+5.5
+6
+6.5
+7
+7.5
+8
+8.5
+9
+9.5 10
+0.65
+0.7
+0.75
+0.8
+0.85
+0.9
+0.95
+1
+1.05
+1.1
+1.15
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+Auto PFM/PWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-74. Switching Frequency vs Input Voltage VOUT = 0.4 V
+Input Voltage (V)
+Switching Frequency (MHz)
+2
+4
+6
+8
+10
+12
+14
+16
+0.6
+0.65
+0.7
+0.75
+0.8
+0.85
+0.9
+0.95
+1
+1.05
+1.1
+1.15
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+FPWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-75. Switching Frequency vs Input Voltage VOUT = 0.4 V 
+Input Voltage (V)
+Switching Frequency (MHz)
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+1.1
+1.2
+1.3
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+Auto PFM/PWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-76. Switching Frequency vs Input Voltage VOUT = 0.4 V 
+Input Voltage (V)
+Switching Frequency (MHz)
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+0.7
+0.75
+0.8
+0.85
+0.9
+0.95
+1
+1.05
+1.1
+1.15
+1.2
+Iout=0.1A
+Iout=0.5A
+Iout=1A
+Iout=2A
+FPWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-77. Switching Frequency vs Input Voltage VOUT = 0.4 V
+IOUT (A)
+VOUT DC (V)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+1.19
+1.2
+1.21
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+Auto PFM/PWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-78. Output Voltage vs Output Current VOUT = 1.2 V
+IOUT (A)
+VOUT DC (V)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+1.185
+1.187
+1.189
+1.191
+1.193
+1.195
+1.197
+1.199
+1.201
+1.203
+1.205
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+FPWM
+L = 2.2 μH
+Fsw = 1 MHz
+Figure 8-79. Output Voltage vs Output Current VOUT = 1.2 V 
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+37
+Product Folder Links: TPS62902
+
+PDF PAGE 38
+8.2.4.3 Application Curves (continued)
+IOUT (A)
+VOUT DC (V)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+1.176
+1.184
+1.192
+1.2
+1.208
+1.216
+1.224
+1.232
+1.24
+1.248
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+Auto PFM/PWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-80. Output Voltage vs Output Current VOUT = 1.2 V 
+IOUT (A)
+VOUT DC (V)
+1E-5
+0.0001
+0.001
+0.01
+0.1 0.2 0.5 1
+2
+1.19
+1.191
+1.192
+1.193
+1.194
+1.195
+1.196
+1.197
+1.198
+1.199
+1.2
+VIN=3V
+VIN=5V
+VIN=8V
+VIN=10V
+VIN=12V
+VIN=15V
+FPWM
+L = 1 μH
+Fsw = 2.5 MHz
+Figure 8-81. Output Voltage vs Output Current VOUT = 1.2 V
+8.3 System Examples
+8.3.1 LED Power Supply
+The TPS62902 can be used as a power supply for power LEDs. The FB pin can be easily set to lower values 
+than nominal by using the SS/TR pin. With that, the voltage drop on the sense resistor is low to avoid excessive 
+power loss. Since this pin provides 2.5 µA, the feedback pin voltage can be adjusted by an external resistor per 
+Equation 21. This drop, proportional to the LED current, is used to regulate the output voltage (anode voltage) to 
+a proper level to drive the LED. Both analog and PWM dimming are supported with the TPS62902. Figure 8-82 
+shows an application circuit, tested with analog dimming.
+VIN
+3V t 17V
+EN
+SS/TR
+VIN
+MODE/
+S-CONF
+SW
+PG
+VOS
+FB/
+VSET
+R2
+TPS6290x
+L1
+VOUT
+GND
+R3
+R4
+C1
+10…F
+C2
+22…F
+Figure 8-82. Single Power LED Supply
+spacing
+The resistor at SS/TR defines the FB voltage. It is set to 304 mV by RSS/TR = R4 = 162 kΩ using Equation 
+21. This cuts the losses on R4 to half from the nominal 0.6 V of feedback voltage while it still provides good 
+accuracy.
+spacing
+/
+0.75 2.5
+FB
+SS TR
+V
+uA R
+ 
+u
+u
+(21)
+spacing
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+38
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 39
+The device now supplies a constant current set by resistor R2 from FB/VSET to GND. The minimum input 
+voltage has to be rated according the forward voltage needed by the LED used. More information is available in 
+SLVA451.
+spacing
+8.3.2 Powering Multiple Loads
+In applications where the TPS62902 is used to power multiple load circuits, the total capacitance on the output 
+can be very large. In order to properly regulate the output voltage, there needs to be an appropriate AC signal 
+level on the VOS pin. Tantalum capacitors have a large enough ESR to keep output voltage ripple sufficiently 
+high on the VOS pin. With low-ESR ceramic capacitors, the output voltage ripple can get very low, so it is not 
+recommended to use a large capacitance directly on the output of the device. If there are several load circuits 
+with their associated input capacitor on a pcb, these loads are typically distributed across the board. This adds 
+enough trace resistance (Rtrace) to keep a large enough AC signal on the VOS pin for proper regulation.
+The minimum total trace resistance on the distributed load is 10 mΩ. The total capacitance n x CIN in the use 
+case below was 32 × 47 μF of ceramic X7R capacitors.
+VIN
+3V t 17V
+EN
+SS/TR
+VIN
+MODE/
+S-CONF
+SW
+PG
+VOS
+FB/
+VSET
+R1
+R2
+TPS6290x
+L1
+VOUT
+0.6V t 5.5V
+GND
+R3
+C3
+C1
+10…F
+C2
+22…F
+Load1
+Rtrace
+CIN
+Load2
+Rtrace
+CIN
+Loadn
+Rtrace
+CIN
+Figure 8-83. Multiple Loads
+8.3.3 Voltage Tracking
+Device 2 follows the voltage applied to the SS/TR pin. A ramp on SS/TR to 0.8 V ramps the output voltage 
+according to the 0.6-V reference on VFB.
+Tracking the 3.8 V of device 1 requires a resistor divider on SS/TR of device 2 to ouput 0.8 V when the output 
+voltage divider of device 1 is 0.6 V. The output current of 2.5 µA from the SS/TR pin cases an offset voltage on 
+the resistor divider formed by R7 and R8. The equivalent resistance of R7 // R8 should therefore be kept below 
+15 kΩ.
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+39
+Product Folder Links: TPS62902
+
+PDF PAGE 40
+EN
+SS/TR
+VIN
+MODE/
+S-CONF
+SW
+PG
+VOS
+FB/
+VSET
+TPS6290x
+1µH
+VOUT1
+GND
+22 …F
+EN
+SS/TR
+VIN
+MODE/
+S-CONF
+SW
+PG
+VOS
+FB/
+VSET
+TPS6290x
+1µH
+VOUT2
+GND
+22 …F
+R1
+R2
+R7
+R8
+R3
+R6
+R4
+R5
+CSS
+10uF
+VIN=12V
+10uF
+Device 1
+Device 2
+Figure 8-84. Tracking Example
+Figure 8-85. Tracking
+8.4 Power Supply Recommendations
+The power supply to the TPS62902 needs to have a current rating according to the supply voltage, output 
+voltage, and output current of the TPS62902.
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+40
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 41
+8.5 Layout
+8.5.1 Layout Guidelines
+A proper layout is critical for the operation of a switched mode power supply, even more at high switching 
+frequencies. Therefore, the PCB layout of the TPS62902 demands careful attention to ensure operation and to 
+get the performance specified. A poor layout can lead to issues like poor regulation (both line and load), stability 
+and accuracy weaknesses, increased EMI radiation, and noise sensitivity.
+See Figure 8-86 for the recommended layout of the TPS62902, which is designed for common external ground 
+connections. The input capacitor should be placed as close as possible between the VIN and GND pin of 
+TPS62902. Also, connect the VOS pin in the shortest way to VOUT at the output capacitor.
+Provide low inductive and resistive paths for loops with high di/dt. Therefore paths, conducting the switched load 
+current should be as short and wide as possible. Provide low capacitive paths (with respect to all other nodes) 
+for traces with high dv/dt. Therefore, the input and output capacitance should be placed as close as possible 
+to the IC pins and parallel wiring over long distances as well as narrow traces should be avoided. Loops which 
+conduct an alternating current should outline an area as small as possible, as this area is proportional to the 
+energy radiated.
+Sensitive nodes like FB and VOS need to be connected with short wires and not nearby high dv/dt signals (for 
+example SW). As they carry information about the output voltage, they should be connected as close as possible 
+to the actual output voltage (at the output capacitor). The capacitor on the SS/TR pin as well as the FB resistors, 
+R1 and R2, should be kept close to the IC and connect directly to those pins and the system ground plane. The 
+same applies to VSET resistor if VSET is used to scale the output voltage.
+The package uses the pins for power dissipation. Thermal vias on the VIN and GND pins help to spread the heat 
+through the pcb.
+In case any of the digital inputs EN, and MODE/S-CONF need to be tied to the input supply voltage at VIN, the 
+connection must be made directly at the input capacitor as indicated in the schematics.
+The recommended layout is implemented on the EVM and shown in its user's guide, SNVU745.
+8.5.2 Layout Example
+Figure 8-86. Layout
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+41
+Product Folder Links: TPS62902
+
+PDF PAGE 42
+8.5.2.1 Thermal Considerations
+Implementation of integrated circuits in low-profile and fine-pitch surface-mount packages typically requires 
+special attention to power dissipation. Many system-dependent issues such as thermal coupling, airflow, added 
+heat sinks and convection surfaces, and the presence of other heat-generating components affect the power-
+dissipation limits of a given component.
+Three basic approaches for enhancing thermal performance are listed below:
+•
+Improving the power dissipation capability of the PCB design, for example, increasing copper thickness, 
+thermal vias, number of layers
+•
+Introducing airflow in the system
+For more details on how to use the thermal parameters, see the application notes: Thermal Characteristics 
+Application Note (SZZA017), and (SPRA953).
+The TPS62902 is designed for a maximum operating junction temperature (TJ) of 150°C. Therefore, the 
+maximum output power is limited by the power losses that can be dissipated over the actual thermal resistance, 
+given by the package and the surrounding PCB structures. If the thermal resistance of the package is given, 
+the size of the surrounding copper area and a proper thermal connection of the IC can reduce the thermal 
+resistance. To get an improved thermal behavior, it is recommended to use top layer metal to connect the device 
+with wide and thick metal lines. Internal ground layers can connect to vias directly under the IC for improved 
+thermal performance.
+If short circuit or overload conditions are present, the device is protected by limiting internal power dissipation.
+The device is qualified for long term qualification with 150°C junction. For more details about the derating and life 
+time of the HotRod package, see the application note: SPRACS3.
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+42
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 43
+9 Device and Documentation Support
+9.1 Device Support
+9.1.1 Development Support
+9.1.1.1 Custom Design With WEBENCH® Tools
+Click here to create a custom design using the TPS62902 device with the WEBENCH® Power Designer.
+1.
+Start by entering the input voltage (VIN), output voltage (VOUT), and output current (IOUT) requirements.
+2.
+Optimize the design for key parameters such as efficiency, footprint, and cost using the optimizer dial.
+3.
+Compare the generated design with other possible solutions from Texas Instruments.
+The WEBENCH Power Designer provides a customized schematic along with a list of materials with real-time 
+pricing and component availability.
+In most cases, these actions are available:
+•
+Run electrical simulations to see important waveforms and circuit performance
+•
+Run thermal simulations to understand board thermal performance
+•
+Export customized schematic and layout into popular CAD formats
+•
+Print PDF reports for the design, and share the design with colleagues
+Get more information about WEBENCH tools at www.ti.com/WEBENCH.
+9.2 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on 
+Notifications to register and receive a weekly digest of any product information that has changed. For change 
+details, review the revision history included in any revised document.
+9.3 Support Resources
+TI E2E™ support forums are an engineer's go-to source for fast, verified answers and design help — straight 
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do 
+not necessarily reflect TI's views; see TI's Terms of Use.
+9.4 Trademarks
+DCS-Control™, SmartConfig™, and TI E2E™ are trademarks of Texas Instruments.
+WEBENCH® is a registered trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+9.5 Electrostatic Discharge Caution
+This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled 
+with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may 
+be more susceptible to damage because very small parametric changes could cause the device not to meet its published 
+specifications.
+9.6 Glossary
+TI Glossary 
+This glossary lists and explains terms, acronyms, and definitions.
+10 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most 
+current data available for the designated devices. This data is subject to change without notice and revision of 
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+43
+Product Folder Links: TPS62902
+
+PDF PAGE 44
+www.ti.com
+PACKAGE OUTLINE
+C
+6X 0.5
+(0.25)
+1.0
+0.8
+0.05
+0.00
+.
+(0.15) TYP
+3X 0.45
+0.25
+2X 1
+1
+4X 0.55
+0.35
+2X 0.9
+0.7
+3X 0.3
+0.2
+(45 X 0.1)
+PIN 1 ID
+6X 0.25
+0.15
+B
+2.1
+1.9
+A
+1.6
+1.4
+VQFN-HR - 1 mm max height
+RPJ0009A
+PLASTIC QUAD FLATPACK - NO LEAD
+4224505/A 10/2018
+PIN 1 INDEX AREA
+SEATING PLANE
+0.08 C
+1
+3
+4
+0.1
+C A B
+0.05
+C
+6
+7
+9
+PKG
+PKG
+NOTES:
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+0.1
+C A B
+0.05
+C
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+44
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 45
+www.ti.com
+EXAMPLE BOARD LAYOUT
+(1)
+3X (0.55)
+3X (0.25)
+6X (0.5)
+(0.25)
+2X (1)
+(0.925)
+2X (0.45)
+4X (0.65)
+6X (0.2)
+(1)
+(0.625)
+(0.625)
+0.05 MAX
+ALL AROUND
+0.05 MIN
+VQFN-HR - 1 mm max height
+RPJ0009A
+PLASTIC QUAD FLATPACK - NO LEAD
+4224505/A 10/2018
+PKG
+1
+3
+7
+PKG
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:30X
+4
+6
+9
+NOTES: (continued)
+3. For more information, see Texas Instruments literature number SLUA271 (www.ti.com/lit/slua271).
+4. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+METAL EDGE
+SOLDER MASK
+OPENING
+EXPOSED
+METAL
+NON SOLDER MASK
+DEFINED
+(PREFERRED)
+SOLDER MASK DETAILS
+SOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+EXPOSED
+METAL
+SOLDER MASK
+DEFINED
+www.ti.com
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+Copyright © 2023 Texas Instruments Incorporated
+Submit Document Feedback
+45
+Product Folder Links: TPS62902
+
+PDF PAGE 46
+www.ti.com
+EXAMPLE STENCIL DESIGN
+6X (0.5)
+(1)
+3X (0.25)
+3X (0.55)
+(0.925)
+2X (1)
+4X (0.2)
+4X (0.65)
+(0.625)
+(0.625)
+2X (0.45)
+(0.25)
+(1)
+VQFN-HR - 1 mm max height
+RPJ0009A
+PLASTIC QUAD FLATPACK - NO LEAD
+4224505/A 10/2018
+NOTES: (continued)
+5. For alternate stencil design recommendations, see IPC-7525 or board assembly site preference.
+PKG
+1
+3
+4
+6
+7
+9
+PKG
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE:40X
+TPS62902
+SLVSFM1A – MARCH 2021 – REVISED NOVEMBER 2023
+www.ti.com
+46
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+Product Folder Links: TPS62902
+
+PDF PAGE 47
+PACKAGE OPTION ADDENDUM
+www.ti.com
+9-Nov-2025
+PACKAGING INFORMATION
+Orderable part number
+Status
+(1)
+Material type
+(2)
+Package | Pins
+Package qty | Carrier
+RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C)
+Part marking
+(6)
+TPS62902RPJR
+Active
+Production
+VQFN-HR (RPJ) | 9
+3000 | LARGE T&R
+Yes
+SN
+Level-2-260C-1 YEAR
+-40 to 165
+FR8
+TPS62902RPJR.A
+Active
+Production
+VQFN-HR (RPJ) | 9
+3000 | LARGE T&R
+Yes
+SN
+Level-2-260C-1 YEAR
+-40 to 165
+FR8
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+ 
+ OTHER QUALIFIED VERSIONS OF TPS62902 :
+• Automotive : TPS62902-Q1
+Addendum-Page 1
+
+PDF PAGE 48
+PACKAGE OPTION ADDENDUM
+www.ti.com
+9-Nov-2025
+ NOTE: Qualified Version Definitions:
+• Automotive - Q100 devices qualified for high-reliability automotive applications targeting zero defects
+Addendum-Page 2
+
+PDF PAGE 49
+PACKAGE MATERIALS INFORMATION
+ 
+ 
+www.ti.com
+3-Sep-2026
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0
+B0
+K0
+W
+Dimension designed to accommodate the component length
+Dimension designed to accommodate the component thickness
+Overall width of the carrier tape
+Pitch between successive cavity centers
+Dimension designed to accommodate the component width
+TAPE DIMENSIONS
+K0
+ P1
+B0 W
+A0
+Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket Quadrants
+Sprocket Holes
+Q1
+Q1
+Q2
+Q2
+Q3
+Q3
+Q4
+Q4
+User Direction of Feed
+P1
+Reel
+Diameter
+ 
+*All dimensions are nominal
+Device
+Package
+Type
+Package
+Drawing
+Pins
+SPQ
+Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+TPS62902RPJR
+VQFN-
+HR
+RPJ
+9
+3000
+180.0
+8.4
+1.75
+2.25
+1.0
+4.0
+8.0
+Q1
+Pack Materials-Page 1
+
+PDF PAGE 50
+PACKAGE MATERIALS INFORMATION
+ 
+ 
+www.ti.com
+3-Sep-2026
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W
+L
+H
+ 
+*All dimensions are nominal
+Device
+Package Type
+Package Drawing
+Pins
+SPQ
+Length (mm)
+Width (mm)
+Height (mm)
+TPS62902RPJR
+VQFN-HR
+RPJ
+9
+3000
+210.0
+185.0
+35.0
+Pack Materials-Page 2
+
+PDF PAGE 51
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

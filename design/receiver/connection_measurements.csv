@@ -1,0 +1,36 @@
+group,endpoint_a,endpoint_b,purpose,measured_ohms_or_path,conditions_notes,status
+cable,PC-end contact 1 if Standard-A,"receiver-end contacts 1..9, record all matches","Identify actual cable mapping, including VBUS and USB2; adapt labels if PC end is Type-C",,,not measured
+cable,PC-end contact 2 if Standard-A,"receiver-end contacts 1..9, record all matches","Identify actual cable mapping, including VBUS and USB2; adapt labels if PC end is Type-C",,,not measured
+cable,PC-end contact 3 if Standard-A,"receiver-end contacts 1..9, record all matches","Identify actual cable mapping, including VBUS and USB2; adapt labels if PC end is Type-C",,,not measured
+cable,PC-end contact 4 if Standard-A,"receiver-end contacts 1..9, record all matches","Identify actual cable mapping, including VBUS and USB2; adapt labels if PC end is Type-C",,,not measured
+cable,PC-end contact 5 if Standard-A,"receiver-end contacts 1..9, record all matches","Identify actual cable mapping, including VBUS and USB2; adapt labels if PC end is Type-C",,,not measured
+cable,PC-end contact 6 if Standard-A,"receiver-end contacts 1..9, record all matches","Identify actual cable mapping, including VBUS and USB2; adapt labels if PC end is Type-C",,,not measured
+cable,PC-end contact 7 if Standard-A,"receiver-end contacts 1..9, record all matches","Identify actual cable mapping, including VBUS and USB2; adapt labels if PC end is Type-C",,,not measured
+cable,PC-end contact 8 if Standard-A,"receiver-end contacts 1..9, record all matches","Identify actual cable mapping, including VBUS and USB2; adapt labels if PC end is Type-C",,,not measured
+cable,PC-end contact 9 if Standard-A,"receiver-end contacts 1..9, record all matches","Identify actual cable mapping, including VBUS and USB2; adapt labels if PC end is Type-C",,,not measured
+signal,receiver USB contact 5,receiver SFP contact 12,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 5,receiver SFP contact 13,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 5,receiver SFP contact 18,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 5,receiver SFP contact 19,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 6,receiver SFP contact 12,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 6,receiver SFP contact 13,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 6,receiver SFP contact 18,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 6,receiver SFP contact 19,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 8,receiver SFP contact 12,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 8,receiver SFP contact 13,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 8,receiver SFP contact 18,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 8,receiver SFP contact 19,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 9,receiver SFP contact 12,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 9,receiver SFP contact 13,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 9,receiver SFP contact 18,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+signal,receiver USB contact 9,receiver SFP contact 19,"Check direct path, then trace via intervening parts; DC-open may be a coupling capacitor",,,not measured
+power,receiver SFP contact 15,each side of both magnetic components,Distinguish VccR/VccT branches and common feed,,,not measured
+power,receiver SFP contact 16,each side of both magnetic components,Distinguish VccR/VccT branches and common feed,,,not measured
+power,receiver USB VBUS contact 1,both ends of 1R0 resistor and IC pads,Identify input feed; use physical IC pad locations until pin 1 is known,,,not measured
+ground,receiver USB GND contact 4,"SFP contacts 1,10,11,14,17,20; USB7; shields separately",Record each result separately; do not assume shield and signal ground are identical,,,not measured
+control,receiver SFP 2 TX_FAULT,"resistors, LEDs, ground and supply branches",Resolve straps and status wiring; do not assign a signal from LED placement,,,not measured
+control,receiver SFP 3 TX_DISABLE,"resistors, LEDs, ground and supply branches",Resolve straps and status wiring; do not assign a signal from LED placement,,,not measured
+control,receiver SFP 6 MOD_ABS,"resistors, LEDs, ground and supply branches",Resolve straps and status wiring; do not assign a signal from LED placement,,,not measured
+control,receiver SFP 7 RS0,"resistors, LEDs, ground and supply branches",Resolve straps and status wiring; do not assign a signal from LED placement,,,not measured
+control,receiver SFP 8 RX_LOS,"resistors, LEDs, ground and supply branches",Resolve straps and status wiring; do not assign a signal from LED placement,,,not measured
+control,receiver SFP 9 RS1,"resistors, LEDs, ground and supply branches",Resolve straps and status wiring; do not assign a signal from LED placement,,,not measured

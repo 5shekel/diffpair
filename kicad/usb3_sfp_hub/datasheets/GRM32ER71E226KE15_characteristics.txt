@@ -1,0 +1,70 @@
+PDF PAGE 1
+Chip Multilayer Ceramic Capacitor
+Electrical Characteristics Data
+Murata Global Part No.
+Chip Size Code
+(mm/inch)
+Temp.
+Chara.
+Cap.Value
+Cap.Tol
+Rated Volt.
+Durability 
+(%Rated Volt.)
+GRM32ER71E226KE15
+3225M/1210
+X7R
+22μF
+±10%
+25Vdc
+150%
+This PDF has only typical specifications.
+Therefore, please approve our product specification 
+before ordering. Product specifications in this PDF are as of Sep. 2026.
+They are subject to change or our products in it may be discontinued without advance notice.
+Click here to visit
+Murata WEB site.
+1. Dimension
+L
+W
+T
+3.2±0.3
+2.5±0.2
+2.5±0.2
+2. Capacitance, D.F. and I.R.
+Specifications
+Measuring condition
+Capacitance
+19.8μF to 24.2μF
+120Hz / 0.5Vrms
+D.F.
+0.1(max.)
+120Hz / 0.5Vrms
+I.R.
+2.27 Mohm(min.)
+25.0V, 60s
+3. Impedance/ESR­Frequency
+Equipment:Impedance/Network Analyzer
+Impedance/ESR[ohm]
+Frequency[Hz]
+|Z|
+ESR
+4. Capacitance­DC Bias Characteristics
+120Hz / 0.5Vrms    Equipment:LCR Meter
+Cap Change[%]
+DC Bias[V]
+5. Capacitance­AC Voltage Characteristics
+120Hz     Equipment:LCR Meter
+Cap Change[%]
+AC Voltage[Vrms]
+6. Capacitance­Temp. Characteristics
+120Hz / 0.5Vrms    Equipment:LCR Meter
+Cap Change[%]
+Temperature[degC]
+7. Temperature Rise­Ripple Current
+Equipment:Temperature Rise ­ Ripple Current Measurement system
+Temperature[degC]
+Current[Arms]
+80kHz 0.5 Rated Voltage
+400kHz 0.5 Rated Voltage
+800kHz 0.5 Rated Voltage

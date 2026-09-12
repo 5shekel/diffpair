@@ -1,0 +1,873 @@
+{
+  "scope": "Ideal-source passive sensitivity exploration; no module/regulator qualification",
+  "effective_capacitance_assumption_uF_per_22uF_part": [
+    11,
+    24.2
+  ],
+  "candidates": [
+    {
+      "candidate": "L1u_direct1x22u_R0.43",
+      "L_uH": 1.0,
+      "additional_22uF_count_per_branch": 1,
+      "damping_ohm": 0.43,
+      "min_V": 3.0700641495176972,
+      "max_V": 3.4799858766089553,
+      "max_passband_peak_dB": 7.878398546160902,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 5.6898106349036155,
+          "gain_100kHz_dB": -14.326979720900354,
+          "gain_1MHz_dB": -46.689824317222495
+        },
+        "high_C_low_L": {
+          "peak_dB": 7.878398546160902,
+          "gain_100kHz_dB": -16.95149739619665,
+          "gain_1MHz_dB": -55.81683699389808
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.0700641495176972,
+          "maximum_at_high_source_V": 3.4799858766089553
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.094896137310863,
+          "maximum_at_high_source_V": 3.4613620193178103
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1235269961717123,
+          "maximum_at_high_source_V": 3.4511171343559983
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.137544161254088,
+          "maximum_at_high_source_V": 3.440604333211538
+        }
+      ],
+      "passes_test_window": false
+    },
+    {
+      "candidate": "L1u_direct1x22u_R0.1",
+      "L_uH": 1.0,
+      "additional_22uF_count_per_branch": 1,
+      "damping_ohm": 0.1,
+      "min_V": 3.0782332627646007,
+      "max_V": 3.473859114468875,
+      "max_passband_peak_dB": 11.101081248188775,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 9.227374142521121,
+          "gain_100kHz_dB": -17.79957819043685,
+          "gain_1MHz_dB": -48.07649036288767
+        },
+        "high_C_low_L": {
+          "peak_dB": 11.101081248188775,
+          "gain_100kHz_dB": -19.759958152162618,
+          "gain_1MHz_dB": -56.16529782180265
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.0782332627646007,
+          "maximum_at_high_source_V": 3.473859114468875
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.0948053673544567,
+          "maximum_at_high_source_V": 3.46143010546268
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.136490724691941,
+          "maximum_at_high_source_V": 3.4413944293397085
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1437621857080997,
+          "maximum_at_high_source_V": 3.435940867347188
+        }
+      ],
+      "passes_test_window": false
+    },
+    {
+      "candidate": "L1u_direct2x22u_R0.43",
+      "L_uH": 1.0,
+      "additional_22uF_count_per_branch": 2,
+      "damping_ohm": 0.43,
+      "min_V": 3.095785218633307,
+      "max_V": 3.460695183175828,
+      "max_passband_peak_dB": 10.467443837091617,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 7.4825904960395135,
+          "gain_100kHz_dB": -20.121084983215553,
+          "gain_1MHz_dB": -52.36299906911306
+        },
+        "high_C_low_L": {
+          "peak_dB": 10.467443837091617,
+          "gain_100kHz_dB": -23.287856148674276,
+          "gain_1MHz_dB": -61.77118990071953
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.095785218633307,
+          "maximum_at_high_source_V": 3.460695183175828
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1069200133202686,
+          "maximum_at_high_source_V": 3.4523441400655863
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1427425289593836,
+          "maximum_at_high_source_V": 3.436705528479342
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.148377742294359,
+          "maximum_at_high_source_V": 3.4324791628330518
+        }
+      ],
+      "passes_test_window": false
+    },
+    {
+      "candidate": "L1u_direct2x22u_R0.1",
+      "L_uH": 1.0,
+      "additional_22uF_count_per_branch": 2,
+      "damping_ohm": 0.1,
+      "min_V": 3.0981061002665977,
+      "max_V": 3.4589545205162646,
+      "max_passband_peak_dB": 13.544816550438867,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 9.975365146656634,
+          "gain_100kHz_dB": -22.075664033380637,
+          "gain_1MHz_dB": -53.109789348107896
+        },
+        "high_C_low_L": {
+          "peak_dB": 13.544816550438867,
+          "gain_100kHz_dB": -24.646052127020983,
+          "gain_1MHz_dB": -61.94535416151986
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.0981061002665977,
+          "maximum_at_high_source_V": 3.4589545205162646
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.107254446493448,
+          "maximum_at_high_source_V": 3.4520933043813
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.147854706006369,
+          "maximum_at_high_source_V": 3.4328878183641396
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1518119281911057,
+          "maximum_at_high_source_V": 3.4299147140702337
+        }
+      ],
+      "passes_test_window": false
+    },
+    {
+      "candidate": "L1u_direct4x22u_R0.43",
+      "L_uH": 1.0,
+      "additional_22uF_count_per_branch": 4,
+      "damping_ohm": 0.43,
+      "min_V": 3.119761400773569,
+      "max_V": 3.442713108559707,
+      "max_passband_peak_dB": 12.427779874136874,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 8.484500461853573,
+          "gain_100kHz_dB": -26.11252700704061,
+          "gain_1MHz_dB": -58.20463620820274
+        },
+        "high_C_low_L": {
+          "peak_dB": 12.427779874136874,
+          "gain_100kHz_dB": -29.489338185709066,
+          "gain_1MHz_dB": -67.75862555208758
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.119761400773569,
+          "maximum_at_high_source_V": 3.442713108559707
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.124284733945455,
+          "maximum_at_high_source_V": 3.439320631359964
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.158767056408261,
+          "maximum_at_high_source_V": 3.425404780093668
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.160920711203124,
+          "maximum_at_high_source_V": 3.4230575157085075
+        }
+      ],
+      "passes_test_window": false
+    },
+    {
+      "candidate": "L1u_direct4x22u_R0.1",
+      "L_uH": 1.0,
+      "additional_22uF_count_per_branch": 4,
+      "damping_ohm": 0.1,
+      "min_V": 3.1198615578900206,
+      "max_V": 3.442638980198192,
+      "max_passband_peak_dB": 14.833852835484436,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 9.931607239702165,
+          "gain_100kHz_dB": -27.139651609384817,
+          "gain_1MHz_dB": -58.59306289708669
+        },
+        "high_C_low_L": {
+          "peak_dB": 14.833852835484436,
+          "gain_100kHz_dB": -30.144278803339684,
+          "gain_1MHz_dB": -67.84564445182077
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1198615578900206,
+          "maximum_at_high_source_V": 3.442638980198192
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1240669692161833,
+          "maximum_at_high_source_V": 3.4394846935709493
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1603032145265675,
+          "maximum_at_high_source_V": 3.4286133032977903
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1621315330920003,
+          "maximum_at_high_source_V": 3.4238862366073652
+        }
+      ],
+      "passes_test_window": false
+    },
+    {
+      "candidate": "L0.47u_direct1x22u_R0.43",
+      "L_uH": 0.47,
+      "additional_22uF_count_per_branch": 1,
+      "damping_ohm": 0.43,
+      "min_V": 3.1105149884954413,
+      "max_V": 3.452368222035292,
+      "max_passband_peak_dB": 9.327845869463548,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 4.962741002416164,
+          "gain_100kHz_dB": -6.285893624977314,
+          "gain_1MHz_dB": -40.11566214545329
+        },
+        "high_C_low_L": {
+          "peak_dB": 9.327845869463548,
+          "gain_100kHz_dB": -8.955946320264678,
+          "gain_1MHz_dB": -49.2463315544585
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1105149884954413,
+          "maximum_at_high_source_V": 3.452368222035292
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.146602160806157,
+          "maximum_at_high_source_V": 3.425303132301599
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.14776109076559,
+          "maximum_at_high_source_V": 3.4346964894564898
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1690413542548597,
+          "maximum_at_high_source_V": 3.4187364362197736
+        }
+      ],
+      "passes_test_window": false
+    },
+    {
+      "candidate": "L0.47u_direct1x22u_R0.1",
+      "L_uH": 0.47,
+      "additional_22uF_count_per_branch": 1,
+      "damping_ohm": 0.1,
+      "min_V": 3.120711548768074,
+      "max_V": 3.444720934915568,
+      "max_passband_peak_dB": 9.719179143844803,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 7.340592843683224,
+          "gain_100kHz_dB": -10.228723365145907,
+          "gain_1MHz_dB": -41.50607042165116
+        },
+        "high_C_low_L": {
+          "peak_dB": 9.719179143844803,
+          "gain_100kHz_dB": -12.265036309561998,
+          "gain_1MHz_dB": -49.595689121232525
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.120711548768074,
+          "maximum_at_high_source_V": 3.444720934915568
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1429858775712796,
+          "maximum_at_high_source_V": 3.428015330633596
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1588199740507537,
+          "maximum_at_high_source_V": 3.4264024340437724
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1704528774699297,
+          "maximum_at_high_source_V": 3.417677808702195
+        }
+      ],
+      "passes_test_window": false
+    },
+    {
+      "candidate": "L0.47u_direct2x22u_R0.43",
+      "L_uH": 0.47,
+      "additional_22uF_count_per_branch": 2,
+      "damping_ohm": 0.43,
+      "min_V": 3.1300122977931144,
+      "max_V": 3.4377454337610396,
+      "max_passband_peak_dB": 11.6326393812575,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 6.426705962921014,
+          "gain_100kHz_dB": -12.71244431287468,
+          "gain_1MHz_dB": -45.79651318454083
+        },
+        "high_C_low_L": {
+          "peak_dB": 11.6326393812575,
+          "gain_100kHz_dB": -16.046318484189058,
+          "gain_1MHz_dB": -55.20683892812312
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1300122977931144,
+          "maximum_at_high_source_V": 3.4377454337610396
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1461861525911465,
+          "maximum_at_high_source_V": 3.4256151349889907
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1623835626551853,
+          "maximum_at_high_source_V": 3.4237297611545796
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1710380796352644,
+          "maximum_at_high_source_V": 3.417238912584064
+        }
+      ],
+      "passes_test_window": false
+    },
+    {
+      "candidate": "L0.47u_direct2x22u_R0.1",
+      "L_uH": 0.47,
+      "additional_22uF_count_per_branch": 2,
+      "damping_ohm": 0.1,
+      "min_V": 3.133856308202551,
+      "max_V": 3.4348624650997848,
+      "max_passband_peak_dB": 12.6007626498385,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 8.190079013285398,
+          "gain_100kHz_dB": -14.853070198871851,
+          "gain_1MHz_dB": -46.54444158955448
+        },
+        "high_C_low_L": {
+          "peak_dB": 12.6007626498385,
+          "gain_100kHz_dB": -17.525062197043756,
+          "gain_1MHz_dB": -55.38123418545987
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.133856308202551,
+          "maximum_at_high_source_V": 3.4348624650997848
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1460881466194275,
+          "maximum_at_high_source_V": 3.4256886427740807
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1671619623101543,
+          "maximum_at_high_source_V": 3.42014600574216
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1731373498152298,
+          "maximum_at_high_source_V": 3.4156644993063194
+        }
+      ],
+      "passes_test_window": false
+    },
+    {
+      "candidate": "L0.47u_direct4x22u_R0.43",
+      "L_uH": 0.47,
+      "additional_22uF_count_per_branch": 4,
+      "damping_ohm": 0.43,
+      "min_V": 3.147211024954732,
+      "max_V": 3.424846476062102,
+      "max_passband_peak_dB": 13.43980488546077,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 7.111748032768226,
+          "gain_100kHz_dB": -19.12396337776874,
+          "gain_1MHz_dB": -51.64233452261443
+        },
+        "high_C_low_L": {
+          "peak_dB": 13.43980488546077,
+          "gain_100kHz_dB": -22.60075477763749,
+          "gain_1MHz_dB": -61.197411609701085
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.147211024954732,
+          "maximum_at_high_source_V": 3.424846476062102
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1536088030252225,
+          "maximum_at_high_source_V": 3.4200481668212057
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.174128974240397,
+          "maximum_at_high_source_V": 3.4149205725839216
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1774263763238135,
+          "maximum_at_high_source_V": 3.4124478734480435
+        }
+      ],
+      "passes_test_window": true
+    },
+    {
+      "candidate": "L0.47u_direct4x22u_R0.1",
+      "L_uH": 0.47,
+      "additional_22uF_count_per_branch": 4,
+      "damping_ohm": 0.1,
+      "min_V": 3.148162448628376,
+      "max_V": 3.4241329146799457,
+      "max_passband_peak_dB": 14.825759528746268,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 8.25106367494161,
+          "gain_100kHz_dB": -20.205465191002936,
+          "gain_1MHz_dB": -52.031077511103405
+        },
+        "high_C_low_L": {
+          "peak_dB": 14.825759528746268,
+          "gain_100kHz_dB": -23.28382523847755,
+          "gain_1MHz_dB": -61.284489096363274
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.148162448628376,
+          "maximum_at_high_source_V": 3.4241329146799457
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1537792943454153,
+          "maximum_at_high_source_V": 3.4199202997866056
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1758353876221386,
+          "maximum_at_high_source_V": 3.4136371379140886
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.178536622897959,
+          "maximum_at_high_source_V": 3.411614253663469
+        }
+      ],
+      "passes_test_window": true
+    },
+    {
+      "candidate": "L0.11u_direct1x22u_R0.43",
+      "L_uH": 0.11,
+      "additional_22uF_count_per_branch": 1,
+      "damping_ohm": 0.43,
+      "min_V": 3.159708406772328,
+      "max_V": 3.4178447132918914,
+      "max_passband_peak_dB": 12.089600331925105,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 3.613801209606538,
+          "gain_100kHz_dB": 3.4630250669766176,
+          "gain_1MHz_dB": -27.413915152154054
+        },
+        "high_C_low_L": {
+          "peak_dB": 12.089600331925105,
+          "gain_100kHz_dB": 11.476665770969632,
+          "gain_1MHz_dB": -36.555158958891994
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.159708406772328,
+          "maximum_at_high_source_V": 3.4178447132918914
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1882005320309426,
+          "maximum_at_high_source_V": 3.3964761948151643
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1782446806717126,
+          "maximum_at_high_source_V": 3.4133635934986963
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1993460244632144,
+          "maximum_at_high_source_V": 3.3975378434277284
+        }
+      ],
+      "passes_test_window": true
+    },
+    {
+      "candidate": "L0.11u_direct1x22u_R0.1",
+      "L_uH": 0.11,
+      "additional_22uF_count_per_branch": 1,
+      "damping_ohm": 0.1,
+      "min_V": 3.1662905996840203,
+      "max_V": 3.4129083441809054,
+      "max_passband_peak_dB": 7.708343516139516,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 3.46271206060535,
+          "gain_100kHz_dB": 2.9472059595382527,
+          "gain_1MHz_dB": -28.82564232441836
+        },
+        "high_C_low_L": {
+          "peak_dB": 7.708343516139516,
+          "gain_100kHz_dB": 6.233758594933624,
+          "gain_1MHz_dB": -36.91011501656233
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1662905996840203,
+          "maximum_at_high_source_V": 3.4129083441809054
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1883765000143938,
+          "maximum_at_high_source_V": 3.3963442300414157
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.183207374330508,
+          "maximum_at_high_source_V": 3.409641713734812
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.199912485580362,
+          "maximum_at_high_source_V": 3.3971135445582132
+        }
+      ],
+      "passes_test_window": true
+    },
+    {
+      "candidate": "L0.11u_direct2x22u_R0.43",
+      "L_uH": 0.11,
+      "additional_22uF_count_per_branch": 2,
+      "damping_ohm": 0.43,
+      "min_V": 3.1697462602375155,
+      "max_V": 3.4103166483775467,
+      "max_passband_peak_dB": 14.1761845709357,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 4.125367632770681,
+          "gain_100kHz_dB": 2.6116261970170873,
+          "gain_1MHz_dB": -33.1362793288796
+        },
+        "high_C_low_L": {
+          "peak_dB": 14.1761845709357,
+          "gain_100kHz_dB": 2.454297265911311,
+          "gain_1MHz_dB": -42.553751229445524
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1697462602375155,
+          "maximum_at_high_source_V": 3.4103166483775467
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1885758228763668,
+          "maximum_at_high_source_V": 3.3961947419423097
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1858652363291644,
+          "maximum_at_high_source_V": 3.4076484198701125
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.19884862560941,
+          "maximum_at_high_source_V": 3.3979115330810683
+        }
+      ],
+      "passes_test_window": true
+    },
+    {
+      "candidate": "L0.11u_direct2x22u_R0.1",
+      "L_uH": 0.11,
+      "additional_22uF_count_per_branch": 2,
+      "damping_ohm": 0.1,
+      "min_V": 3.1727899790277427,
+      "max_V": 3.408033955577707,
+      "max_passband_peak_dB": 10.886202615143535,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 4.0859644139133335,
+          "gain_100kHz_dB": 0.3016579723017312,
+          "gain_1MHz_dB": -33.89086102845308
+        },
+        "high_C_low_L": {
+          "peak_dB": 10.886202615143535,
+          "gain_100kHz_dB": -0.5588472891751476,
+          "gain_1MHz_dB": -42.72958128481029
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1727899790277427,
+          "maximum_at_high_source_V": 3.408033955577707
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1876671289900202,
+          "maximum_at_high_source_V": 3.3968762556294947
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1882875591917466,
+          "maximum_at_high_source_V": 3.4058317149175044
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.199154498603739,
+          "maximum_at_high_source_V": 3.3976816967049164
+        }
+      ],
+      "passes_test_window": true
+    },
+    {
+      "candidate": "L0.11u_direct4x22u_R0.43",
+      "L_uH": 0.11,
+      "additional_22uF_count_per_branch": 4,
+      "damping_ohm": 0.43,
+      "min_V": 3.178117381893019,
+      "max_V": 3.4040384851744263,
+      "max_passband_peak_dB": 15.403895712792423,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 3.9195937058218098,
+          "gain_100kHz_dB": -4.38460484533175,
+          "gain_1MHz_dB": -39.005621443780065
+        },
+        "high_C_low_L": {
+          "peak_dB": 15.403895712792423,
+          "gain_100kHz_dB": -7.621620921531444,
+          "gain_1MHz_dB": -48.56371134647449
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.178117381893019,
+          "maximum_at_high_source_V": 3.4040384851744263
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.186956675775474,
+          "maximum_at_high_source_V": 3.3974090846622307
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.1918685194084255,
+          "maximum_at_high_source_V": 3.403146054354822
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.1983948712374235,
+          "maximum_at_high_source_V": 3.3982514352319524
+        }
+      ],
+      "passes_test_window": true
+    },
+    {
+      "candidate": "L0.11u_direct4x22u_R0.1",
+      "L_uH": 0.11,
+      "additional_22uF_count_per_branch": 4,
+      "damping_ohm": 0.1,
+      "min_V": 3.179250100685357,
+      "max_V": 3.403188955535966,
+      "max_passband_peak_dB": 13.930652618265345,
+      "ac": {
+        "low_C_high_L_hot": {
+          "peak_dB": 4.020616898840889,
+          "gain_100kHz_dB": -5.781041361733131,
+          "gain_1MHz_dB": -39.39623608906976
+        },
+        "high_C_low_L": {
+          "peak_dB": 13.930652618265345,
+          "gain_100kHz_dB": -8.54702122920896,
+          "gain_1MHz_dB": -48.65115172674316
+        }
+      },
+      "cases": [
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.179250100685357,
+          "maximum_at_high_source_V": 3.403188955535966
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.186645449787415,
+          "maximum_at_high_source_V": 3.397642502551097
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "minimum_at_low_source_V": 3.192917904107577,
+          "maximum_at_high_source_V": 3.402359093239301
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "minimum_at_low_source_V": 3.198502599140556,
+          "maximum_at_high_source_V": 3.3981705370450825
+        }
+      ],
+      "passes_test_window": true
+    }
+  ]
+}

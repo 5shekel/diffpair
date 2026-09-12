@@ -1,0 +1,24 @@
+{
+  "fileParamList": [
+    {
+      "partNum": "GRM32ER71E226KE15",
+      "graphClass": "c_dcbias_capchange_cap",
+      "operaTemp": 25,
+      "vAcRms": 0.5
+    },
+    {
+      "partNum": "GRM32ER71E226KE15",
+      "graphClass": "r",
+      "dcBias": 3.3,
+      "operaTemp": 25
+    },
+    {
+      "partNum": "GRM32ER71E226KE15",
+      "graphClass": "z",
+      "dcBias": 3.3,
+      "operaTemp": 25
+    }
+  ],
+  "formFormat": "csv",
+  "languageRegion": "en-us"
+}

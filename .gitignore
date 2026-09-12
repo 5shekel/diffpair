@@ -8,3 +8,18 @@
 .versions/
 webroot/*.html
 *.log
+
+# Local PDF rendering dependency
+.tools/pdf/
+__pycache__/
+design/receiver/build/
+
+# Download cache; extracted reference PDF and provenance are retained separately.
+design/references/VL813_GoodYuHuang_v1.2.zip
+design/references/vl813_project_page.html
+
+# Public manufacturer site application cache; API responses/data stay retained.
+design/references/murata_*.js
+design/references/murata_part_page.html
+design/references/murata_technical.bin
+design/references/murata_netlist.bin

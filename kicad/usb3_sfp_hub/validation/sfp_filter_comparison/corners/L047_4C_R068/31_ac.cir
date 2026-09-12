@@ -1,0 +1,9 @@
+SFP candidate L047_4C_R068, corner 31
+Rind feed lx 0.02790602
+Lfilter lx out 5.64e-07
+Cbypass out 0 100n
+Rcap out cpos 0.00875
+Cbulk cpos damp 9.68e-05
+Rdamp damp 0 0.07072
+Vfeed feed 0 DC 3.3 AC 1
+.end

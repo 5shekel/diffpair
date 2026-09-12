@@ -1,0 +1,40 @@
+{
+  "status": "PASS static voltage/current allocations only; sequencing/timing/hardware unqualified",
+  "source_class": "Manual primary datasheet transcription, not canonical extraction cache",
+  "sources": {
+    "VL813": "supplied rev1.00 pp11-12",
+    "TPS3808": "SBVS050N August 2026 pp3-7"
+  },
+  "source_hashes": {
+    "VL813.pdf": "a1c8ffc99febba19b2c470c6eb09c3a96e4a325c842d6c6359aed90c5fd69fba",
+    "kicad/usb3_sfp_hub/datasheets/TPS3808.pdf": "74d889c0f68af88032f1633c26381817cc03e10d9fd3b4c177a044ad3ed86eed"
+  },
+  "falling_threshold_range_V": [
+    3.0239499999999997,
+    3.1160499999999995
+  ],
+  "conservative_release_threshold_upper_V": 3.193951249999999,
+  "required_steady_HUB_3V3_minimum_V": 3.2,
+  "VL813_3V3_operating_range_V": [
+    3.0,
+    3.6
+  ],
+  "RESET_high_min_V_at_3V3_rail_3V": 2.8741237,
+  "VL813_VIH_min_V": 2.0,
+  "RESET_sink_current_upper_A": 0.00031052592036063116,
+  "U12_VOL_max_V_at_1mA_VDD_ge_1V8": 0.4,
+  "VL813_VIL_max_V": 0.8,
+  "CT_open_delay_ms_under_datasheet_test_conditions": [
+    12,
+    20,
+    28
+  ],
+  "limitations": [
+    "Only the 3.3V rail is monitored; core 1.2V and local 5V validity are not established by RESET.",
+    "HUB_3V3 must rise above the release threshold; 3.20V minimum steady output is a design constraint, not a measured LDO guarantee.",
+    "Supplied VL813 document gives reset polarity/logic levels but no minimum reset delay or complete power-sequencing requirement.",
+    "Reset-output load differs from TI timing-table default 100k/50pF; actual output edge/load/startup must be measured.",
+    "Fast brownout response, low-VDD behavior, clock readiness and regulator operation during reset remain unqualified.",
+    "J9 exposes an open-drain reset request; no optical recovery policy or controller has been implemented."
+  ]
+}

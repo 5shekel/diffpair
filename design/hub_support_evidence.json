@@ -1,0 +1,49 @@
+{
+  "source_author": "GoodYuHuang",
+  "project_url": "https://oshwhub.com/goodyuhuang/ji-yu-VL813de-USB3.0-HUBshe-ji",
+  "archive_url": "https://image.lceda.cn/attachments/2023/9/ess2KhkUToEo0os7mlsPlCX7Qj21Wk7vnuGh8z13.zip",
+  "retrieved": "2026-09-12",
+  "project_license_label": "GPL 3.0",
+  "source_class": "Primary author-published hardware example; not manufacturer application guidance",
+  "files": {
+    "VL813_GoodYuHuang_schematic.pdf": {
+      "sha256": "74aae8d1481d9caa0f70c645e0e84918b1396285dc5d757d15e4ca5ed4e8286a",
+      "bytes": 666879
+    },
+    "VL813_GoodYuHuang_v1.2.zip": {
+      "sha256": "b3199db45e032babe82397a678fa3c81802111c0a414f28aa365aa675723e76c",
+      "bytes": 35170629
+    }
+  },
+  "checked_visuals": [
+    "VL813_GoodYuHuang_hub_detail.png",
+    "VL813_reference_buck_detail.png"
+  ],
+  "adopted_as_candidates": [
+    "U1.18 to 3.3V; LX39 through 10uH to 1.2V and feedback37",
+    "4.7uF regulator caps; two parallel on buck output",
+    "25MHz crystal and 22pF per leg",
+    "10k/1uF reset RC"
+  ],
+  "engineering_additions": [
+    "16 per-pin 100nF bypass caps with placement targets",
+    "No USB2 data connections; optical policy unchanged"
+  ],
+  "not_adopted": [
+    "Pin40 left unresolved: datasheet lists DC12FB, example leaves DNP link",
+    "SSREXT 1k+5.1k example is not sufficient to establish manufacturer bias target",
+    "No Type-C switch, port-power IC or flash selection copied"
+  ],
+  "limits": [
+    "No measured optical-board connectivity",
+    "No selected crystal or regulator passive MPNs",
+    "No loop/startup/reset simulation or hardware qualification",
+    "New board is incomplete"
+  ],
+  "superseded_reset": {
+    "old": "10k/1uF RC",
+    "current": "TPS3808G33DBVR U12, R9 12.1k pullup, C38 100nF supply bypass, J9/R24 reset request",
+    "evidence": "kicad/usb3_sfp_hub/validation/hub_reset_checks.json",
+    "scope": "3.3V only, no core-rail or optical recovery qualification"
+  }
+}

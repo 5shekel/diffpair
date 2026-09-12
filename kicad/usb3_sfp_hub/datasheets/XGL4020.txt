@@ -1,0 +1,623 @@
+PDF PAGE 1
+Specifications subject to change without notice.
+Please check our website for latest information.
+US +1-847-639-6400   sales@coilcraft.com
++44-1236-730595   sales@coilcraft-europe.com
+UK
++886-2-2264 3646   sales@coilcraft.com.tw
+Taiwan
++86-21-6218 8074   sales@coilcraft.com.cn
+China
++ 65-6484 8412   sales@coilcraft.com.sg
+Singapore
+© Coilcraft Inc. 2026
+This product may not be used in medical or high
+risk applications without prior Coilcraft approval.
+Specification subject to change without notice.
+Please check web site for latest information.
+AEC
+Q200 125°C
++
+Halogen
+Free
+Shielded Power Inductors – XGL4020
+Document 1529-1
+
+Document 1529-1  Revised 02/19/26
+	
+	
+ Inductance2	
+ DCR (mOhms)3	
+ SRF typ4	
+	
+ Isat (A)5	
+	
+ Irms (A)6
+	  Part number1	
+±20% (µH)	
+typ      max	
+(MHz)	
+10% drop	
+20% drop	 30% drop	
+20°C rise  40°C rise
+XGL4020-400ME_	
+0.04	
+  0.66	
+  0.78	
+770	
+16.7	
+28.0	
+41.0	
+35.0	
+45.0
+XGL4020-111ME_	
+0.11	
+1.4	
+1.7	
+250	
+14.0	
+21.0	
+29.0	
+20.5	
+29.0
+XGL4020-251ME_	
+0.25	
+2.5	
+3.0	
+130	
+7.5	
+12.0	
+16.5	
+18.0	
+24.0
+XGL4020-331ME_	
+0.33	
+3.0	
+3.6	
+110	
+6.4	
+10.6	
+15.2	
+16.5	
+23.0
+XGL4020-471ME_	
+0.47	
+4.2	
+5.1	
+95	
+6.1	
+9.7	
+13.4	
+14.3	
+19.7
+XGL4020-601ME_	
+0.60	
+5.1	
+5.9	
+80	
+4.9	
+8.2	
+11.7	
+13.5	
+18.4
+XGL4020-821ME_	
+0.82	
+7.7	
+8.6	
+65	
+3.9	
+6.8	
+9.4	
+11.2	
+14.0
+XGL4020-102ME_	
+1.0	
+8.2	
+9.0	
+60	
+3.8	
+6.3	
+8.8	
+8.8	
+12.0
+XGL4020-152ME_	
+1.5	
+13.0	
+14.3	
+45	
+3.2	
+5.3	
+7.5	
+8.0	
+11.1
+XGL4020-222ME_	
+2.2	
+19.5	
+21.5	
+40	
+2.7	
+4.4	
+6.2	
+6.7	
+8.9
+XGL4020-332ME_	
+3.3	
+30.8	
+34.0	
+30	
+2.2	
+3.5	
+4.8	
+4.9	
+6.6
+XGL4020-472ME_	
+4.7	
+43.0	
+47.3	
+23	
+1.9	
+3.0	
+4.1	
+4.1	
+5.6
+XGL4020-562ME_	
+5.6	
+48.7	
+53.6	
+22	
+1.7	
+2.7	
+3.7	
+3.9	
+5.3
+XGL4020-682ME_	
+6.8	
+63.6	
+70.0	
+21	
+1.6	
+2.5	
+3.4	
+3.1	
+4.2
+XGL4020-822ME_	
+8.2	
+71.0	
+78.1	
+20	
+1.4	
+2.3	
+3.2	
+3.0	
+4.1
+Core material  Composite
+Core and winding loss  See www.coilcraft.com/coreloss
+Environmental  RoHS compliant, halogen free
+Terminations  RoHS compliant tin-silver (96.5/3.5) over copper. Other 
+terminations available at additional cost.
+Weight:  0.193 – 0.195 g
+Operating voltage:  80 V7
+Ambient temperature  –40°C to +125°C with (40°C rise) Irms current.
+Maximum part temperature  +165°C (ambient + temp rise). Derating.
+Storage temperature  Component: –55°C to +165°C. 
+Tape and reel packaging: –55°C to +80°C
+Resistance to soldering heat  Max three 40 second reflows at 
++260°C, parts cooled to room temperature between cycles
+Moisture Sensitivity Level (MSL)  1 (unlimited floor life at <30°C / 
+85% relative humidity)
+Packaging  1000/7″ reel; 3500/13″ reel  Plastic tape: 12 mm wide, 
+0.23 mm thick, 8 mm pocket spacing, 2.3 mm pocket depth
+PCB washing Tested to MIL-STD-202 Method 215 plus an additional 
+aqueous wash. See Doc787_PCB_Washing.pdf.
+•	Industry’s lowest DCR and ultra low AC losses over a wide 
+frequency range 
+•	AEC-Q200 qualified
+•	Superior current handling with soft saturation characteristics
+•	Wide inductance range up to 8.2 µH
+1.	When ordering, please specify termination and packaging codes:
+XGL4020-822MEC
+Termination:	 E	=	RoHS compliant tin-silver over copper.
+Special order: T = RoHS tin-silver-copper 
+(95.5/4/0.5) or S = non-RoHS tin-lead (63/37).
+Packaging:	
+C	=	7″ machine-ready reel. EIA-481 embossed plastic 
+tape.  Quantities less than full reel available: in tape 
+(not machine ready) or with leader and trailer ($25 
+charge).
+	
+D	=	13″ machine-ready reel. EIA-481 embossed plastic 
+tape. Factory order only, not stocked.
+2.	Inductance tested at 1 MHz, 0.1 Vrms, 0 Adc.
+3.	DCR measured on a micro-ohmmeter.
+4.	SRF measured using Agilent/HP 4395A or equivalent. 
+5.	DC current at 25°C that causes the specified inductance drop from its 
+value without current.
+Click for temperature derating information.
+Sample
+& buy
+Support
+& FAQ
+Web
+page
+Tools &
+software
+6.	Current that causes the specified temperature rise from 25°C ambient. 
+This information is for reference only and does not represent absolute 
+maximum ratings. Temperature rise is highly dependent on many 
+factors including pcb land pattern, trace size, air flow, and proximity to 
+other components. Therefore temperature rise should be verified in ap­
+plication conditions. Click for temperature derating information.
+7.	Voltage capability varies by part number and in many cases may be 
+higher than the listed voltage.
+8.	Electrical specifications at 25°C. 
+Refer to Doc 362 “Soldering Surface Mount Components” before soldering.
+
+PDF PAGE 2
+US +1-847-639-6400   sales@coilcraft.com
++44-1236-730595   sales@coilcraft-europe.com
+UK
++886-2-2264 3646   sales@coilcraft.com.tw
+Taiwan
++86-21-6218 8074   sales@coilcraft.com.cn
+China
++ 65-6484 8412   sales@coilcraft.com.sg
+Singapore
+© Coilcraft Inc. 2026
+This product may not be used in medical or high
+risk applications without prior Coilcraft approval.
+Specification subject to change without notice.
+Please check web site for latest information.
+AEC
+Q200 125°C
++
+Halogen
+Free
+Document 1529-2 
+ 
+Document 1529-2  Revised 02/19/26
+Shielded Power Inductors – XGL4020
+L vs Current
+0
+0
+0.2
+0.1
+0.3
+0.4
+2
+4
+6
+10
+12
+14
+16
+18
+20
+8
+Current (A)
+Inductance (µH)
+0.33 µH
+Current (A)
+Inductance (µH)
+Current (A)
+Inductance (µH)
+Current (A)
+10
+0
+20
+30
+40
+50
+70
+60
+0
+0.01
+0.02
+0.03
+Inductance (µH)
+0.04
+0.05
+0.
+0
+04
+µH
+0
+0
+1.0
+0.5
+2.0
+2.5
+1.5
+3.0
+2
+1
+4
+3
+6
+7
+5
+9
+10
+8
+Current (A)
+Inductance (µH)
+2.2 µH
+0
+0
+0.2
+0.1
+0.3
+0.4
+2
+4
+6
+10
+12
+14
+16
+18
+20
+8
+Current (A)
+Inductance (µH)
+0.47 µH
+0.5
+0.6
+Current (A)
+Inductance (µH)
+2
+0
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+4
+6
+8
+10
+14
+16
+18
+12
+0.60 µH
+0.7
+0.82 µH
+Current (A)
+Inductance (µH)
+2
+0
+0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+4
+6
+8
+10
+14
+12
+1.0 µH
+Current (A)
+Inductance (µH)
+2
+0
+0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+4
+6
+8
+10
+14
+12
+1.5 µH
+Current (A)
+Inductance (µH)
+2
+0
+0
+0.3
+0.6
+0.9
+1.2
+1.5
+1.8
+4
+6
+8
+10
+12
+
+PDF PAGE 3
+US +1-847-639-6400   sales@coilcraft.com
++44-1236-730595   sales@coilcraft-europe.com
+UK
++886-2-2264 3646   sales@coilcraft.com.tw
+Taiwan
++86-21-6218 8074   sales@coilcraft.com.cn
+China
++ 65-6484 8412   sales@coilcraft.com.sg
+Singapore
+© Coilcraft Inc. 2026
+This product may not be used in medical or high
+risk applications without prior Coilcraft approval.
+Specification subject to change without notice.
+Please check web site for latest information.
+AEC
+Q200 125°C
++
+Halogen
+Free
+Document 1529-3 
+ 
+Document 1529-3  Revised 02/19/26
+Shielded Power Inductors – XGL4020
+0.157 ±0.012
+4,0 ±0,3
+0.157 ±0.012
+4,0 ±0,3
+0.032 ±0.002
+0,82 ±0,05
+0.062 ±0.010
+1,57 ±0,25
+0.038
+0,98
+0.093
+2,37
+0.134
+3,4
+Recommended
+Land Pattern
+Dash
+number
+Dimensions are in inches
+mm
+XXX
+0.128
+3,25 typ
+0.083
+2,10 max*
+For optional tin-lead and tin-
+silver-copper terminations,
+dimensions are for the mounted
+part. Dimensions before
+mounting can be an additional
+0.005 inch / 0.13 mm.
+*
+Indicates direction of terminals and
+start (short) lead. Connect high dv/dt
+here for lowest EMI.
+Typical L vs Frequency
+0.01
+0.1
+1
+10
+100
+Inductance (µH)
+0.1
+1
+1000
+10
+100
+Frequency (
+Hz)
+M
+4.7 µH
+0.33 µH
+0.
+µH
+60
+0.
+µH
+82
+1.5 µH
+2.2 µH
+3.3 µH
+5.6 µH
+8.2 µH
+0.
+0
+04
+µH
+0.
+µH
+25
+0.
+µH
+11
+Current (A)
+Inductance (µH)
+1
+0
+0
+1
+2
+3
+4
+5
+6
+2
+3
+4
+5
+7
+6
+4.7 µH
+7
+Current (A)
+Inductance (µH)
+1
+0
+0
+1
+2
+3
+4
+5
+6
+2
+3
+4
+5
+7
+6
+5.6 µH
+7
+2
+1
+0
+0
+2
+4
+6
+8
+10
+3
+4
+5
+6
+Current (A)
+Inductance (µH)
+6.8 µH
+2
+1
+0
+0
+2
+4
+6
+8
+10
+3
+4
+5
+Current (A)
+Inductance (µH)
+8.2 µH
+6
+L vs Current
+0
+0
+2
+1
+3
+4
+1
+2
+3
+5
+6
+7
+4
+Current (A)
+Inductance (µH)
+3.3 µH

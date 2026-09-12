@@ -1,0 +1,909 @@
+{
+  "schematic": "kicad\\usb3_sfp_hub\\usb3_sfp_hub.kicad_sch",
+  "convention": {
+    "field_mapping": {
+      "mpn": "MPN",
+      "manufacturer": "Manufacturer"
+    },
+    "populated_counts": {
+      "mpn": 26,
+      "manufacturer": 26
+    },
+    "preferred_distributor": null,
+    "names_canonical": true,
+    "suggested_fields": [
+      "MPN",
+      "Manufacturer"
+    ]
+  },
+  "stats": {
+    "schematic_files": [
+      "kicad\\usb3_sfp_hub\\usb3_sfp_hub.kicad_sch",
+      "kicad\\usb3_sfp_hub\\sfp_support.kicad_sch",
+      "kicad\\usb3_sfp_hub\\hub_support.kicad_sch",
+      "kicad\\usb3_sfp_hub\\port_power.kicad_sch",
+      "kicad\\usb3_sfp_hub\\sfp_supply.kicad_sch",
+      "kicad\\usb3_sfp_hub\\usb3_esd.kicad_sch"
+    ],
+    "total_bom_lines": 35,
+    "total_components": 105,
+    "dnp_lines": 0,
+    "active_lines": 35,
+    "active_components": 105,
+    "with_mpn": 10,
+    "without_mpn": 25,
+    "with_datasheet": 9,
+    "without_datasheet": 26,
+    "with_digikey": 0,
+    "without_digikey": 35,
+    "with_mouser": 0,
+    "without_mouser": 35,
+    "with_lcsc": 0,
+    "without_lcsc": 35,
+    "with_element14": 0,
+    "without_element14": 35
+  },
+  "bom": [
+    {
+      "value": "100nF / 0402",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [
+        "Repurposed from former 1uF RESET RC capacitor; no capacitor directly on RESET_N"
+      ],
+      "references": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C11",
+        "C12",
+        "C14",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C27",
+        "C28",
+        "C29",
+        "C30",
+        "C31",
+        "C32",
+        "C33",
+        "C34",
+        "C35",
+        "C38",
+        "C39",
+        "C41",
+        "C42",
+        "C44",
+        "C45",
+        "C47",
+        "C48",
+        "C50",
+        "C51",
+        "C55"
+      ],
+      "quantity": 39,
+      "dnp": false,
+      "type": "capacitor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "22uF / 25V / X7R / 10%",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "mpn": "GRM32ER71E226KE15L",
+      "manufacturer": "Murata",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM32ER71E226KE15-04CA-EN_PDF_CERAMICCAPACITORSMD",
+      "description": "",
+      "bom_comments": [
+        "1210; manufacturer 3.3V/25C frequency data gives about 15.2uF and 20.5mOhm at 15kHz. Typical data, not guaranteed corner. Hot-plug/filter qualification pending."
+      ],
+      "references": [
+        "C10",
+        "C13"
+      ],
+      "quantity": 2,
+      "dnp": false,
+      "type": "capacitor",
+      "gaps": []
+    },
+    {
+      "value": "4.7uF / effective C TBD",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19"
+      ],
+      "quantity": 5,
+      "dnp": false,
+      "type": "capacitor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "22pF / candidate C0G",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "C36",
+        "C37"
+      ],
+      "quantity": 2,
+      "dnp": false,
+      "type": "capacitor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "220uF / 10V / 20%",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [
+        "Polarized low-ESR output bulk; MPN/package/ripple qualification pending; pin 1 positive"
+      ],
+      "references": [
+        "C40",
+        "C43",
+        "C46",
+        "C49"
+      ],
+      "quantity": 4,
+      "dnp": false,
+      "type": "capacitor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "10uF / 10V / X7R",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "C52"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "capacitor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "22uF / 10V / X7R",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [
+        "Effective 11-26.4uF target from TI Table 8-3; part and filtered-load stability pending"
+      ],
+      "references": [
+        "C53"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "capacitor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "10nF / 5% / C0G",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [
+        "Candidate soft start, about 3.26ms from TI equation 14; startup through SFP filters requires measurement"
+      ],
+      "references": [
+        "C54"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "capacitor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "SFP+ / MODULE TBD",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "J1"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "connector",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "USB3-A PORT 1",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "J2"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "connector",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "USB3-A PORT 2",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "J3"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "connector",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "USB3-A PORT 3",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "J4"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "connector",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "USB3-A PORT 4",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "J5"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "connector",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "3.3V management access / footprint TBD",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "J6"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "connector",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "5.0-5.2V at board / input TBD",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "J7"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "connector",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "Supply test access / footprint TBD",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "J8"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "connector",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "Short 1-2 to request reset / MPN TBD",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "J9"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "connector",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "4.7uH / XGL4020-472MEC",
+      "footprint": "power:L_Coilcraft_XGL4020",
+      "mpn": "XGL4020-472MEC",
+      "manufacturer": "Coilcraft",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf",
+      "description": "",
+      "bom_comments": [
+        "47.3mOhm max DCR at 25C; 1.9/3.0/4.1A Isat at 10/20/30% drop at 25C; thermal/AC and filter validation pending"
+      ],
+      "references": [
+        "L1",
+        "L2"
+      ],
+      "quantity": 2,
+      "dnp": false,
+      "type": "inductor",
+      "gaps": []
+    },
+    {
+      "value": "10uH / current rating TBD",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "L3"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "inductor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "1uH / XGL4020-102MEC",
+      "footprint": "power:L_Coilcraft_XGL4020",
+      "mpn": "XGL4020-102MEC",
+      "manufacturer": "Coilcraft",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf",
+      "description": "",
+      "bom_comments": [
+        "TI Table 8-4 listed part; 9mOhm max DCR; 3.8/6.3/8.8A Isat at 10/20/30% drop at 25C; stripe faces pad1 SW; thermal/AC/fault peaks pending"
+      ],
+      "references": [
+        "L4"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "inductor",
+      "gaps": []
+    },
+    {
+      "value": "0.43 / 1% / 0.25W",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "mpn": "ERJ8RQFR43V",
+      "manufacturer": "Panasonic",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf",
+      "description": "",
+      "bom_comments": [
+        "1206 damping candidate; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification."
+      ],
+      "references": [
+        "R1",
+        "R2"
+      ],
+      "quantity": 2,
+      "dnp": false,
+      "type": "resistor",
+      "gaps": []
+    },
+    {
+      "value": "4.7k / 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7"
+      ],
+      "quantity": 5,
+      "dnp": false,
+      "type": "resistor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "BIAS_R_TBD",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "R8"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "resistor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "12.1k / 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [
+        "TPS3808 open-drain RESET pullup; leakage/low-level DC bounds checked; reset timing qualification pending"
+      ],
+      "references": [
+        "R9"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "resistor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "23.2k / 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [
+        "TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max"
+      ],
+      "references": [
+        "R10",
+        "R11",
+        "R12",
+        "R13"
+      ],
+      "quantity": 4,
+      "dnp": false,
+      "type": "resistor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "1k / 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [
+        "Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior"
+      ],
+      "references": [
+        "R18",
+        "R19",
+        "R20",
+        "R21"
+      ],
+      "quantity": 4,
+      "dnp": false,
+      "type": "resistor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "32.4k / 1% / 100ppm",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [
+        "TI Table 7-1 option 10: VSET, 2.5MHz, forced PWM, discharge enabled; total tolerance within +/-4%, pin C <=30pF"
+      ],
+      "references": [
+        "R22"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "resistor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "10k / 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [
+        "External MR pullup, in parallel with internal pullup; external control must be open-drain to GND"
+      ],
+      "references": [
+        "R24",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R23"
+      ],
+      "quantity": 6,
+      "dnp": false,
+      "type": "resistor",
+      "gaps": [
+        "mpn"
+      ]
+    },
+    {
+      "value": "VL813(A1)",
+      "footprint": "lcsc:C69418_QFN-76_L9_0-W9_0-P0_40-EP6_4-TL",
+      "mpn": "VL813(A1)",
+      "manufacturer": "VIA Labs",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "../../VL813.pdf",
+      "description": "",
+      "bom_comments": [
+        "EOL reference baseline; footprint and operating circuit qualification pending"
+      ],
+      "references": [
+        "U1"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "ic",
+      "gaps": [
+        "datasheet"
+      ]
+    },
+    {
+      "value": "TPS2553DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "mpn": "TPS2553DBVR",
+      "manufacturer": "Texas Instruments",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/tps2552.pdf",
+      "description": "",
+      "bom_comments": [
+        "Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified."
+      ],
+      "references": [
+        "U2",
+        "U3",
+        "U4",
+        "U5"
+      ],
+      "quantity": 4,
+      "dnp": false,
+      "type": "ic",
+      "gaps": []
+    },
+    {
+      "value": "SN74LVC1G04DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "mpn": "SN74LVC1G04DBVR",
+      "manufacturer": "Texas Instruments",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf",
+      "description": "",
+      "bom_comments": [
+        "Inverts hub active-low gang enable; Ioff plus R15 holds EN low at VCC=0; ramp behavior requires test"
+      ],
+      "references": [
+        "U6"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "ic",
+      "gaps": []
+    },
+    {
+      "value": "TPS62902RPJR",
+      "footprint": "power:TI_RPJ0009A_1.5x2mm",
+      "mpn": "TPS62902RPJR",
+      "manufacturer": "Texas Instruments",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/tps62902.pdf",
+      "description": "",
+      "bom_comments": [
+        "RPJ nine-pad VQFN, no separate EP. Native local footprint from TI land pattern. VSET open=3.3V with 32.4k MODE; stock not verified."
+      ],
+      "references": [
+        "U7"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "ic",
+      "gaps": []
+    },
+    {
+      "value": "TPD4E02B04DQAR",
+      "footprint": "protection:TI_DQA0010A_1x2.5mm",
+      "mpn": "TPD4E02B04DQAR",
+      "manufacturer": "Texas Instruments",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf",
+      "description": "",
+      "bom_comments": [
+        "Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending."
+      ],
+      "references": [
+        "U8",
+        "U9",
+        "U10",
+        "U11"
+      ],
+      "quantity": 4,
+      "dnp": false,
+      "type": "ic",
+      "gaps": []
+    },
+    {
+      "value": "TPS3808G33DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "mpn": "TPS3808G33DBVR",
+      "manufacturer": "Texas Instruments",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/tps3808.pdf",
+      "description": "",
+      "bom_comments": [
+        "3.07V nominal falling threshold; CT open gives 12-28ms delay under specified test conditions. Monitors 3.3V only; core rail and optical recovery qualification pending."
+      ],
+      "references": [
+        "U12"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "ic",
+      "gaps": []
+    },
+    {
+      "value": "25MHz / CL and package TBD",
+      "footprint": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "",
+      "description": "",
+      "bom_comments": [],
+      "references": [
+        "Y1"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "crystal",
+      "gaps": [
+        "mpn"
+      ]
+    }
+  ],
+  "unrecognized_fields": null
+}

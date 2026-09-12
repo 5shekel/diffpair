@@ -1,0 +1,105 @@
+{
+  "status": "UNQUALIFIED: illustrative stress exposes a transient gap",
+  "engine": "KiCad bundled ngspice-46 shared library",
+  "engine_sha256": "c2c103033190aa0429703ad3333ed997a6dfcfe0795a4120f86c3c6f38c9b1dd",
+  "capacitor_typical_data": {
+    "source": "Murata public characteristic CSV at DC3.3V, 25C",
+    "evaluation_frequency_Hz": 15000.0,
+    "ESR_ohm": 0.020564100434705475,
+    "effective_C_from_impedance_F": 1.521240663279569e-05,
+    "nominal_resistance_sum_ohm": 0.49356410043470544
+  },
+  "cases": [
+    {
+      "case": "nominal_typical",
+      "L_H": 4.7e-06,
+      "effective_C_F": 1.521240663279569e-05,
+      "DCR_ohm": 0.043,
+      "damping_R_ohm": 0.43,
+      "capacitor_ESR_ohm": 0.020564100434705475,
+      "ac": {
+        "unloaded": {
+          "peak_gain_dB": 3.6335027619849187,
+          "peak_frequency_Hz": 16311.729092278545,
+          "gain_at_100kHz_dB": -15.93962776799803
+        },
+        "8ohm": {
+          "peak_gain_dB": 3.1228750543563537,
+          "peak_frequency_Hz": 15399.265260595072,
+          "gain_at_100kHz_dB": -16.434566838315753
+        }
+      },
+      "illustrative_step": {
+        "minimum_V": 3.0277267131608343,
+        "time_of_minimum_s": 0.00021006999999999997,
+        "below_3_14V": true,
+        "damping_peak_W": 0.04137997810229761,
+        "damping_energy_J_over_1ms": 5.165617794566134e-07
+      }
+    },
+    {
+      "case": "sensitivity_low_C_high_L",
+      "L_H": 5.639999999999999e-06,
+      "effective_C_F": 1.1e-05,
+      "DCR_ohm": 0.07332446,
+      "damping_R_ohm": 0.4472,
+      "capacitor_ESR_ohm": 0.035,
+      "ac": {
+        "unloaded": {
+          "peak_gain_dB": 4.239163496948199,
+          "peak_frequency_Hz": 17782.79410038941,
+          "gain_at_100kHz_dB": -16.74930377133256
+        },
+        "8ohm": {
+          "peak_gain_dB": 3.4483844652722184,
+          "peak_frequency_Hz": 16788.04018122577,
+          "gain_at_100kHz_dB": -17.283352180088087
+        }
+      },
+      "illustrative_step": {
+        "minimum_V": 2.962084552161617,
+        "time_of_minimum_s": 0.00021045,
+        "below_3_14V": true,
+        "damping_peak_W": 0.04410084355271189,
+        "damping_energy_J_over_1ms": 5.564116344646655e-07
+      }
+    },
+    {
+      "case": "sensitivity_high_C_low_L",
+      "L_H": 3.76e-06,
+      "effective_C_F": 2.42e-05,
+      "DCR_ohm": 0.025,
+      "damping_R_ohm": 0.42569999999999997,
+      "capacitor_ESR_ohm": 0.005,
+      "ac": {
+        "unloaded": {
+          "peak_gain_dB": 2.5602069253669963,
+          "peak_frequency_Hz": 13724.609610075753,
+          "gain_at_100kHz_dB": -14.6014375790023
+        },
+        "8ohm": {
+          "peak_gain_dB": 2.30886318977545,
+          "peak_frequency_Hz": 12956.86697517032,
+          "gain_at_100kHz_dB": -15.066340528071589
+        }
+      },
+      "illustrative_step": {
+        "minimum_V": 3.089099945221864,
+        "time_of_minimum_s": 0.00021002999999999997,
+        "below_3_14V": true,
+        "damping_peak_W": 0.038800973249512004,
+        "damping_energy_J_over_1ms": 4.5437333355550864e-07
+      }
+    }
+  ],
+  "limitations": [
+    "Ideal voltage feed omits regulator dynamics and inter-branch coupling.",
+    "Unknown module input capacitance, inrush shaping and actual current waveform are absent.",
+    "11uF/24.2uF corners are sensitivity assumptions, not guaranteed effective-C limits.",
+    "Constant ESR/effective C approximation is local to 15kHz; high-frequency ESL/core effects are omitted.",
+    "The voltage dip is a design gap under this assumed load, not a measured failure of the retained working pair.",
+    "Damping pulse energy is reported without a pulse-rating pass; resistor pulse capability remains open.",
+    "This is not SFF-8431 D.17 integrated-noise testing or a TPS62902 loop-stability test."
+  ],
+  "next_action": "Resolve module current rise/input capacitance; revise the filter if the stress waveform is required. Do not release PCB from these results."
+}

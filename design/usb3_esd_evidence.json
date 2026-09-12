@@ -1,0 +1,82 @@
+{
+  "source_class": "Primary manufacturer PDF manually transcribed; not canonical datasheet extraction cache",
+  "date": "2026-09-12",
+  "MPN": "TPD4E02B04DQAR",
+  "Manufacturer": "Texas Instruments",
+  "references": [
+    "U8",
+    "U9",
+    "U10",
+    "U11"
+  ],
+  "source_url": "https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf",
+  "source_revision": "SLVSD85B, July 2016",
+  "local_pdf": "kicad\\usb3_sfp_hub\\datasheets\\TPD4E02B04.pdf",
+  "sha256": "73d849fe5d7c9a57bebdb08f4a70f09f818edb5f14b9f56241bf87aea6b56ef0",
+  "pin_source_page": 3,
+  "pins": {
+    "1": "IO1 TX+",
+    "2": "IO2 TX-",
+    "3": "GND",
+    "4": "IO3 RX+",
+    "5": "IO4 RX-",
+    "6": "NC: PCB route to pin 5 net",
+    "7": "NC: PCB route to pin 4 net",
+    "8": "GND",
+    "9": "NC: PCB route to pin 2 net",
+    "10": "NC: PCB route to pin 1 net"
+  },
+  "signal_range_V": [
+    -3.6,
+    3.6
+  ],
+  "capacitance": {
+    "typ_pF": 0.25,
+    "max_pF": 0.33,
+    "conditions": "IO to GND at 0V, 1MHz, 25C",
+    "source_page": 5
+  },
+  "footprint": {
+    "library": "protection:TI_DQA0010A_1x2.5mm",
+    "drawing": "4220328/A 12/2015",
+    "source_pages": [
+      24,
+      25
+    ],
+    "copper_pad_mm": {
+      "signal": [
+        0.565,
+        0.2
+      ],
+      "ground": [
+        0.565,
+        0.4
+      ]
+    },
+    "ground_paste_mm": [
+      0.565,
+      0.36
+    ],
+    "NSMD_expansion_mm": 0.05,
+    "pad_row_spacing_mm": 0.835,
+    "pin_pitch_mm": 0.5,
+    "no_separate_EP": true
+  },
+  "placement": "At USB connector; TX connector side of AC caps; continuous copper across opposite pad pairs and short GND paths",
+  "checks": {
+    "native_connectivity": "PASS implemented scope, 16 signal lines and 18 USB2 NC contacts",
+    "native_footprint": "PASS copper/mask/paste geometry",
+    "ERC": {
+      "errors": 7,
+      "warnings": 20
+    }
+  },
+  "lifecycle": "Active per TI product page retrieved 2026-09-12; distributor stock unqueried",
+  "limitations": [
+    "No PCB or hardware ESD qualification; component IEC ratings are not system ratings.",
+    "No channel S-parameters, USB eye/return-loss or nonlinear ESD simulation performed.",
+    "Not for 5V VBUS; input/VBUS protection remains pending.",
+    "VL813 transient withstand/clamp coordination and board layout need qualification.",
+    "Other schematic parts retain incomplete MPN/datasheet coverage (analyzer DS-003)."
+  ]
+}

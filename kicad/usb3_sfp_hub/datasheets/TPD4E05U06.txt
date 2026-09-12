@@ -1,0 +1,1604 @@
+PDF PAGE 1
+TPDxE05U06 1, 4, 6 Channel ESD Protection Device for Super-Speed (Up to 6 Gbps) 
+Interface
+1 Features
+• IEC 61000-4-2 level 4 ESD protection
+– ±12kV contact discharge
+– ±15kV air gap discharge
+• IEC 61000-4-4 EFT protection
+– 80A (5/50ns)
+• IEC 61000-4-5 surge protection
+– 2.5A (8/20µs)
+• IO capacitance 0.42pF to 0.5pF (typical)
+• DC breakdown voltage 6.5V (minimum)
+• Ultra low leakage current 10nA (maximum)
+• Low ESD clamping voltage
+• Industrial temperature range: –40°C to +125°C
+• Easy straight-through routing packages
+• Industry standard SOD-523 package
+(1.60mm × 0.80mm × 0.65mm)
+2 Applications
+• HDMI 1.4b 
+• HDMI 2.0
+• USB 3.0
+• MHL
+• LVDS interfaces
+• DisplayPort
+• PCI-express® 
+• eSata interfaces
+• V-by-One® HS
+3 Description
+The TPDxE05U06 is a family of unidirectional 
+Transient Voltage Suppressor (TVS) based 
+Electrostatic Discharge (ESD) protection diodes with 
+ultra-low capacitance. Each device can dissipate ESD 
+strikes above the maximum level specified by the IEC 
+61000-4-2 international standard. The TPDxE05U06 
+ultra-low loading capacitance makes the device and 
+excellent choice for protecting any high-speed signal 
+pins.
+Typical applications for TPDxE05U06 includes high 
+speed signal lines in HDMI 1.4 b, HDMI 2.0, USB 3.0, 
+MHL, LVDS, DisplayPort, PCI-Express®, eSata, and 
+V-by-One® HS.
+Device Information
+PART NUMBER CHANNEL COUNT PACKAGE(1)
+TPD1E05U06 1 channel
+DPY (X1SON, 2)
+DYA (SOD-523, 2)
+TPD4E05U06 4 channels DQA (USON, 10)
+TPD6E05U06 6 channels RVZ (USON, 14)
+(1) For more information, see Section 10.
+12
+45
+3 8
+1
+2
+4
+5
+3 8
+Connector
+HDMI Controller
+TPD4E05U06
+TPD4E05U06
+D0-
+D1+
+D1-
+D2+
+D2-
+CLK+
+CLK-
+D0+
+GNDGND
+GNDGND
+Simplified Schematic
+D1+ D1- D2+ D2-
+GND
+TPD4E05U06 Functional Block Diagram
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications, 
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+PDF PAGE 2
+Table of Contents
+1 Features............................................................................1
+2 Applications.....................................................................1
+3 Description.......................................................................1
+4 Pin Configuration and Functions...................................3
+5 Specifications.................................................................. 6
+Absolute Maximum Ratings.............................................. 6
+5.1 ESD Ratings—JEDEC Specification...........................6
+5.2 ESD Ratings—IEC Specification................................ 6
+Recommended Operating Conditions...............................6
+5.3 Thermal Information....................................................7
+5.4 Electrical Characteristics.............................................7
+5.5 Typical Characteristics................................................9
+6 Detailed Description...................................................... 11
+6.1 Overview................................................................... 11
+6.2 Functional Block Diagram......................................... 11
+6.3 Feature Description...................................................12
+6.4 Device Functional Modes..........................................12
+7 Application and Implementation..................................13
+7.1 Application Information............................................. 13
+7.2 Typical Applications.................................................. 13
+7.3 Power Supply Recommendations.............................16
+7.4 Layout....................................................................... 16
+8 Device and Documentation Support............................19
+8.1 Documentation Support............................................ 19
+8.2 Receiving Notification of Documentation Updates....19
+8.3 Support Resources................................................... 19
+8.4 Trademarks...............................................................19
+8.5 Electrostatic Discharge Caution................................19
+8.6 Glossary....................................................................19
+9 Revision History............................................................ 19
+10 Mechanical, Packaging, and Orderable 
+Information.................................................................... 20
+10.1 Tape and Reel Information......................................20
+10.2 Mechanical Data..................................................... 22
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+2 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 3
+4 Pin Configuration and Functions
+1
+2
+I/O
+GND
+Figure 4-1. DPY Package 2-Pin X1SON (Top View)
+1 2
+ID Area Figure 4-2. DYA Package 2-Pin SOD-523 (Top View)
+Table 4-1. Pin Functions TPD1E05U06 DPY and DYA
+PIN
+TYPE(1) DESCRIPTION
+NAME NO.
+GND 2 Ground Ground; Connect to ground
+I/O 1 I/O ESD protected channel(2)
+(1) I = input, O = output
+(2) Place as close to the connector as possible.
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 3
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 4
+1D1+
+2
+3
+4
+5 6
+7
+8
+9
+10
+D1–
+GND
+D2+
+D2–
+NC
+NC
+GND
+NC
+NC
+Figure 4-3. DQA Package 10-Pin USON (Top View)
+Table 4-2. Pin Functions TPD4E05U06 DQA
+PIN
+TYPE(1) DESCRIPTION
+NAME NO.
+D1+ 1 I/O ESD protected channel(2)
+D1– 2 I/O ESD protected channel(2)
+D2+ 4 I/O ESD protected channel(2)
+D2– 5 I/O ESD protected channel(2)
+GND 3
+Ground Ground; Connect to ground
+GND 8
+NC 6
+— Not connected; Used for optional straight-through routing. Can be left floating or grounded
+NC 7
+NC 9
+NC 10
+(1) I = input, O = output
+(2) Place as close to the connector as possible.
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+4 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 5
+NC
+NC
+NC
+NC
+GND
+NC
+NC
+D1+
+D1–
+D2+
+D2–
+GND
+D3+
+D3–
+1
+2
+3
+4
+5
+6
+7 8
+9
+10
+11
+12
+13
+14
+Figure 4-4. RVZ Package 14-Pin USON (Top View)
+Table 4-3. Pin Functions TPD6E05U06 RVZ
+PIN
+TYPE(1) DESCRIPTION
+NAME NO.
+D1+ 14 I/O ESD protected channel(2)
+D1– 13 I/O ESD protected channel(2)
+D2+ 12 I/O ESD protected channel(2)
+D2– 11 I/O ESD protected channel(2)
+D3+ 9 I/O ESD protected channel(2)
+D3– 8 I/O ESD protected channel(2)
+GND 5
+Ground Ground; Connect to ground
+GND 10
+NC 1
+— Not connected; Used for optional straight-through routing. Can be left floating or grounded
+NC 2
+NC 3
+NC 4
+NC 6
+NC 7
+(1) I = input, O = output
+(2) Place as close to the connector as possible.
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 5
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 6
+5 Specifications
+Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted) (1)
+MIN MAX UNIT
+Electrical Fast Transient 
+(2) (3) IEC 61000-4-4 (5/50ns) 80 A
+Peak Pulse (2) (3)
+IEC 61000-4-5 Current 
+(8/20us) 2.5 A
+IEC 61000-4-5 Power 
+(8/20us) 40 W
+TA
+Ambient Operating 
+Temperature -40 125 °C
+Tstg Storage Temperature -65 155 °C
+(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress 
+ratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under 
+Recommended Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device 
+reliability.
+(2) Voltages are with respect to GND unless otherwise noted.
+(3) Measured at 25℃
+5.1 ESD Ratings—JEDEC Specification
+VALUE UNIT
+V(ESD) Electrostatic discharge – DPY, DQA, and RVZ
+Human body model (HBM), per ANSI/ESDA/
+JEDEC JS-001 (1) ±4000 V
+Charged device model (CDM), per JEDEC 
+specification JESD22-C101 (2) ±1500 V
+V(ESD) Electrostatic discharge – DYA
+Human body model (HBM), per ANSI/ESDA/
+JEDEC JS-001 ±2500 V
+Charged device model (CDM), per JEDEC 
+specification JS-002 ±1000 V
+(1) JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process. Manufacturing with
+less than 500-V HBM is possible with the necessary precautions. Pins listed as ±4000 V may actually have higher performance.
+(2) JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process. Manufacturing with
+less than 250-V CDM is possible with the necessary precautions. Pins listed as ±1500 V may actually have higher performance.
+5.2 ESD Ratings—IEC Specification
+VALUE UNIT
+V(ESD) Electrostatic discharge
+IEC 61000-4-2 contact discharge ±12000
+V
+IEC 61000-4-2 air-gap discharge ±15000
+Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)
+MIN NOM MAX UNIT
+VIO Input pin voltage 0 5.5 V
+TA
+Operating free-air 
+temperature -40 125 °C
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+6 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 7
+5.3 Thermal Information
+THERMAL METRIC (1)
+TPD1E05U06 TPD4E05U06 TPD6E05U06
+UNITDPY (X1SON) DYA (SOD523) DQA (USON) RVZ (USON)
+2 PINS 2 PINS 10 PINS 14 PINS
+RθJA Junction-to-ambient thermal resistance 697.3 772.1 327 197.9 °C/W
+RθJC(top)
+Junction-to-case (top) thermal 
+resistance 471 444.6 189.5 119.1 °C/W
+RθJB Junction-to-board thermal resistance 575.9 540.4 257.7 92.6 °C/W
+ΨJT
+Junction-to-top characterization 
+parameter 175.7 159.9 60.9 22 °C/W
+ΨJB
+Junction-to-board characterization 
+parameter 575.1 533.9 257 91.6 °C/W
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application 
+report.
+5.4 Electrical Characteristics
+over operating free-air temperature range (unless otherwise noted)
+PARAMETER TEST CONDITION MIN TYP MAX UNIT
+INPUT - OUTPUT RESISTANCE
+VRWM Reverse stand-off voltage IIO < 10 µA 5.5 V
+VBR Break-down voltage IIO = 1 mA 6.5 8.5 V
+VClamp Clamp voltage
+IPP = 1 A, TLP, from I/O to GND (1) 10
+V
+IPP = 5 A, TLP, from I/O to GND (1) 14
+IPP = 1 A, TLP, from GND to I/O (1) 3
+IPP = 5 A, TLP, from GND to I/O (1) 7
+ILEAK Leakage current VIO = 2.5 V 0.01 10 nA
+RDYN
+Dynamic 
+resistance
+DPY package
+I/O to GND (2) 0.8
+Ω
+GND to I/O (2) 0.8
+DYA package
+I/O to GND (2) 0.8
+GND to I/O (2) 0.7
+DQA package
+I/O to GND (2) 0.8
+GND to I/O (2) 0.8
+RVZ package
+I/O to GND (2) 0.8
+GND to I/O (2) 0.8
+CAPACITANCE
+CL Line capacitance (3) VIO = 2.5 V;  ƒ = 1 MHz , I/O to 
+GND
+TPD1E05U06 
+DPY
+package
+0.42
+pF
+TPD1E05U06 
+DYA
+package
+0.42
+TPD4E05U06 
+DQA
+package
+0.5
+TPD6E05U06 
+RVZ
+package
+0.47
+Δ CIO-
+TO-GND
+Variation of input capacitance GND Pin = 0 V, f = 1 MHz, VBIAS = 2.5 V,
+Channel x pin to GND – channel y pin to GND 0.05 0.07 pF
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 7
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 8
+5.4 Electrical Characteristics (continued)
+over operating free-air temperature range (unless otherwise noted)
+PARAMETER TEST CONDITION MIN TYP MAX UNIT
+CCROS
+S
+Channel to channel input capacitance GND Pin = 0 V, f = 1 MHz, VBIAS = 2.5 V, 
+between channel pins 0.01 0.06 pF
+(1) Transition line pulse with 100 ns width, 200 ps rise time.
+(2) Extraction of RDYN using least squares fit of TLP characteristics between I = 10 A and I = 20 A.
+(3) Capacitance data is taken at 25°C.
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+8 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 9
+5.5 Typical Characteristics
+–1.0 
+–0.8 
+–0.6 
+–0.4 
+–0.2 
+0.0 
+0.2 
+0.4 
+0.6 
+0.8 
+1.0 
+–2 –1 0 1 2 3 4 5 6 7 8 9 10 
+Current (mA) 
+Voltage (V) C001 
+Figure 5-1. DC Voltage Sweep I-V Curve
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
+–5 0 5 10 15 20 25 30 35 40 45 50
+Power (W) 
+Current (A) 
+Time (s) 
+Current
+Power
+C002 Figure 5-2. Surge Curve (tp = 8/20 μs), Pin IO to GND
+–5 
+0 
+5 
+10 
+15 
+20 
+25 
+30 
+35 
+0 5 10 15 20 25 30 35 40 
+Current (A) 
+Voltage (V) C003 
+Figure 5-3. Positive TLP Plot IO to GND
+0 
+5 
+10 
+15 
+20 
+25 
+0 5 10 15 20 25 
+Current (A) 
+Voltage (V) C008 Figure 5-4. Negative TLP Plot IO to GND
+0 
+50 
+100 
+150 
+200 
+250 
+300 
+–40 –20 0 20 40 60 80 100 120 
+Current (pA) 
+Temperature (C) C004 
+Figure 5-5. Leakage vs Temperature
+–10 
+0 
+10 
+20 
+30 
+40 
+50 
+60 
+70 
+80 
+0 25 50 75 100 125 150 175 200 
+Voltage (V) 
+Time (ns) C005 Figure 5-6. 8-kV IEC Waveform
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 9
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 10
+5.5 Typical Characteristics (continued)
+–90 
+–80 
+–70 
+–60 
+–50 
+–40 
+–30 
+–20 
+–10 
+0 
+10 
+0 25 50 75 100 125 150 175 200 
+Voltage (V) 
+Time (ns) C006 
+Figure 5-7. –8-kV IEC Waveform
+–12 
+–11 
+–10 
+–9 
+–8 
+–7 
+–6 
+–5 
+–4 
+–3 
+–2 
+–1 
+0 
+ 100k 1M 10M 100M 1000M 10000M 
+Insertion Loss (dB) 
+Frequency (Hz) C007 
+1G 10G Figure 5-8. TPD1E05U06 Insertion Loss
+–6 
+–5 
+–4 
+–3 
+–2 
+–1 
+0 
+ 100k 1M 10M 100M 1000M 10000M 
+Insertion Loss (dB) 
+Frequency (Hz) C009 
+1G 10G 
+Figure 5-9. TPD4E05U06 Insertion Loss
+–6 
+–5 
+–4 
+–3 
+–2 
+–1 
+0 
+ 100k 1M 10M 100M 1000M 10000M 
+Insertion Loss (dB) 
+Frequency (Hz) C010 
+1G 10G Figure 5-10. TPD6E05U06 Insertion Loss
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+10 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 11
+6 Detailed Description
+6.1 Overview
+The TPDxE05U06 is a family of unidirectional Transient Voltage Suppressor (TVS) based Electrostatic 
+Discharge (ESD) protection diodes with ultra-low capacitance. Each device can dissipate ESD strikes above 
+the maximum level specified by the IEC 61000-4-2 international standard. The TPDxE05U06 ultra-low loading 
+capacitance makes the device an excellent choice for protecting any high-speed signal pins.
+6.2 Functional Block Diagram
+I/O
+GND
+Figure 6-1. TPD1E05U06 Block Diagram
+D1+ D1- D2+ D2-
+GND
+Figure 6-2. TPD4E05U06 Block Diagram
+D1+ D1- D2+ D2-
+GND
+D3+ D3-
+Figure 6-3. TPD6E05U06 Block Diagram
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 11
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 12
+6.3 Feature Description
+The TPDxE05U06 is a family of unidirectional Transient Voltage Suppressor (TVS) Electrostatic Discharge 
+(ESD) protection diodes with ultra-low capacitance. Each device can dissipate ESD strikes above the maximum 
+level specified by the IEC 61000-4-2 international standard. The TPDxE05U06s ultra-low loading capacitance 
+makes it and excellent choice for protecting any high-speed signal pins.
+6.3.1 ±15-kV IEC61000-4-2 Level 4 ESD Protection
+The I/O pins can withstand ESD events up to ±12-kV contact and ±15-kV air. An ESD-surge clamp diverts the 
+current to ground.
+6.3.2 IEC61000-4-4 EFT Protection
+The I/O pins can withstand an electrical fast transient burst of up to 80 A (5/50 ns waveform, 4 kV with 50- Ω 
+impedance). An ESD-surge clamp diverts the current to ground. This has been validated on the TPD4E05U06 
+only.
+6.3.3 IEC61000-4-5 Surge Protection
+The I/O pins can withstand surge events up to 2.5 A and 40 W (8/20 µs waveform). An ESD-surge clamp diverts 
+this current to ground.
+6.3.4 I/O Capacitance
+The capacitance between each I/O pin to ground is 0.42 pF (TPD1E05U06), 0.5 pF (TPD4E05U06) or 0.47 pF 
+(TPD6E05U06). These devices support data rates up to 6 Gbps.
+6.3.5 DC Breakdown Voltage
+The DC breakdown voltage of each I/O pin is a minimum of 6.5V, which protects sensitive equipment from 
+surges above the reverse standoff voltage of 5.5V.
+6.3.6 Ultra-Low Leakage Current
+The I/O pins feature an ultra-low leakage current of 10 nA (maximum) with a bias of 2.5 V.
+6.3.7 Low ESD Clamping Voltage
+The I/O pins feature an ESD clamp that is capable of clamping the voltage to 10 V (IPP = 1 A).
+6.3.8 Industrial Temperature Range
+This device features an industrial operating range of –40°C to +125°C.
+6.3.9 Easy Flow-Through Routing
+The layout of this device makes it simple and easy to add protection to an existing layout. The packages offers 
+flow-through routing, requiring minimal modification to an existing layout.
+6.4 Device Functional Modes
+The TPDxE05U06 is a passive integrated circuit that triggers when voltages are above VBR or below the lower 
+diodes V f (–0.6 V). During ESD events, voltages as high as ±15 kV (air) can be directed to ground via the 
+internal diode network. When the voltages on the protected line fall below the trigger levels of TPDxE05U06 
+(usually within 10s of nano-seconds) the device reverts to passive.
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+12 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 13
+7 Application and Implementation
+Note
+Information in the following applications sections is not part of the TI component specification, 
+and TI does not warrant its accuracy or completeness. TI’s customers are responsible for 
+determining suitability of components for their purposes, as well as validating and testing their design 
+implementation to confirm system functionality.
+7.1 Application Information
+The TPDxE05U06 is a diode type TVS which is typically used to provide a path to ground for dissipating ESD 
+events on hi-speed signal lines between a human interface connector and a system. As the current from ESD 
+passes through the TVS, only a small voltage drop is present across the diode. This is the voltage presented to 
+the protected IC. The low R DYN of the triggered TVS holds this voltage, V CLAMP, to a safe level for the protected 
+IC.
+7.2 Typical Applications
+7.2.1 HDMI 2.0 Application
+HOT PLUG 1
+UTILITY 2
+TMDS D2+ 3
+TMDS_GND 4
+TMDS D2- 5
+TMDS D1+ 6
+TMDS_GND 7
+TMDS D1- 8
+TMDS D0+ 9
+TMDS_GND 10
+TMDS D0- 11
+TMDS CLK+ 12
+TMDS_GND 13
+TMDS CLK- 14
+CEC 15
+DDC/CEC GND 16
+SCL 17
+SDA 18
+P 5V0 19
+GND 20
+HDMI Connector
+1
+2
+3
+4
+5 6
+7
+8
+9
+10
+1
+2
+3
+4
+5 6
+7
+8
+9
+10
+CEC_CON
+SCL_CON
+SDA_CON
+EN
+5V_CON
+HPD_CON
+UTI_CON GND
+HPD_SYS
+5V_SYS
+VCCA
+SDA_SYS
+SCL_SYS
+CEC_SYS
+UTI_CON
+D2+
+D2-
+D1+
+D1-
+D0+
+D0-
+CLK+
+CLK-
+0.1 µF 0.1 µF
+UTI_CON
+D2+
+D2-
+D1+
+D1-
+D0+
+D0-
+CLK+
+CLK-
+5V Source
+HDMI Controller
+TPD4E05U06DQA
+TPD4E05U06DQA
+TPD5S116YFF
+Figure 7-1. HDMI 2.0 Schematic
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 13
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 14
+7.2.1.1 Design Requirements
+For this design example, the two TPD4E05U06 devices, and a TPD5S116 are being used in an HDMI 2.0 
+application. This provides a complete port protection scheme.
+Given the HDMI 2.0 application, the parameters listed in Table 7-1 are known.
+Table 7-1. Design Parameters
+DESIGN PARAMETER VALUE
+Signal range on pins 1, 2, 4, or 5 0 V to 5 V
+Operating frequency 3 GHz
+7.2.1.2 Detailed Design Procedure
+7.2.1.2.1 Signal Range on Pin 1, 2, 4, or 5
+The TPD4E05U06 has 4 identical protection channels for signal lines. The symmetry of the device provides 
+flexibility when selecting which of the 4 I/O channels is going to protect which signal lines. Any I/O supports a 
+signal range of 0 to 5.5 V.
+7.2.1.3 Application Curves
+Figure 7-2. 3.4-Gbps HDMI 1.4 TP1 Eye Diagram 
+Unpopulated EVM
+Figure 7-3. 3.4-Gbps HDMI 1.4 TP1 Eye Diagram 
+TPD1E05U06
+Figure 7-4. 3.4-Gbps HDMI 1.4 TP1 Eye Diagram 
+TPD4E05U06
+Figure 7-5. 3.4-Gbps HDMI 1.4 TP1 Eye Diagram 
+TPD6E05U06
+Figure 7-6. 6-Gbps HDMI 2.0 (TP1) Eye Diagram 
+Unpopulated EVM
+Figure 7-7. 6-Gbps HDMI 2.0 (TP1) Eye Diagram 
+TPD1E05U06
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+14 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 15
+Figure 7-8. 6-Gbps HDMI 2.0 (TP1) Eye Diagram 
+TPD4E05U06
+Figure 7-9. 6-Gbps HDMI 2.0 (TP1) Eye Diagram 
+TPD6E05U06
+7.2.2 HDMI 2.0 Application
+1
+2
+1
+2
+Connector
+HDMI 2.0 Controller
+TPD1E05U06
+TPD1E05U06
+D0-
+D1+
+D1-
+D2+
+D2-
+CLK+
+CLK-
+D0+
+GND
+GND
+2
+TPD1E05U06
+GND2
+TPD1E05U06
+GND2
+TPD1E05U06
+GND
+11
+11
+11
+2
+TPD1E05U06
+GND2
+TPD1E05U06
+GND2
+TPD1E05U06
+GND
+1
+1
+1
+Figure 7-10. HDMI 2.0 Schematic
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 15
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 16
+7.2.2.1 Design Requirements
+For this design example, the TPD1E05U06 and the TPD5S116 are used to protect the data pairs and control 
+lines of the HDMI 2.0 connection. This provides full HDMI 2.0 port protection.
+Given the HDMI 2.0 application, the following parameters in Table 7-2 are known.
+Table 7-2. Design Parameters
+DESIGN PARAMETER VALUE
+Signal range on data lines 0 V to 5 V
+Operating frequency 3 GHz
+7.2.2.2 Detailed Design Procedure
+7.2.2.2.1 Signal Range
+The TPD1E05U06 has 1 protection channel for signal lines, supporting a signal range of 0 V to 5.5 V.
+7.2.2.2.2 Operating Frequency
+The TPD1E05U06 has 0.42 pF of capacitance, which supports HDMI 2.0 data rates.
+7.2.2.3 Application Curves
+Refer to the Section 7.2.1.3 section.
+7.3 Power Supply Recommendations
+This device is a passive ESD protection device and there is no need to power it. Care must be taken to make 
+sure that the maximum voltage specifications for each line are not violated.
+7.4 Layout
+7.4.1 Layout Guidelines
+• The optimum placement is as close to the connector as possible.
+– EMI during an ESD event can couple from the trace being struck to other nearby unprotected traces, 
+resulting in early system failures.
+– The PCB designer needs to minimize the possibility of EMI coupling by keeping any unprotected traces 
+away from the protected traces which are between the TVS and the connector.
+• Route the protected traces as straight as possible.
+• Eliminate any sharp corners on the protected traces between the TVS and the connector by using rounded 
+corners with the largest radii possible.
+– Electric fields tend to build up on corners, increasing EMI coupling.
+7.4.2 Layout Example
+7.4.2.1 TPD4E05U06 Layout Example
+This application is typical of an HDMI 1.4 layout.
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+16 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 17
+VIA to GND Plane
+D2+D2- D1+D1- D0+D0- Clk+Clk-
+D1- D1+ D0+D0-
+NC NC NC NC
+GND
+GNDNC NC NC NC GNDNC NC NC NC
+D1- D1+ D0+D0-GND
+Figure 7-11. TPD4E05U06 Layout
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 17
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 18
+7.4.2.2 TPD1E05U06 Layout Example
+This application is typical of an HDMI 2.0 layout.
+Clk+Clk-D0+D0-D1+D1-D2+D2-
+VIA to GND Plane
+I/OGND I/OGND I/OGND I/OGND
+I/O GNDI/O GND I/O GNDI/O GND I/O GNDI/O GND I/O GNDI/O GND
+Figure 7-12. TPD1E05U06 Layout
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+18 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 19
+8 Device and Documentation Support
+8.1 Documentation Support
+8.1.1 Related Documentation
+For related documentation, see the following:
+• Texas Instruments, Reading and Understanding an ESD Protection data sheet
+• Texas Instruments, ESD Layout Guide application reports
+• Texas Instruments, TPD6E05U06RVZ EVM user's guide
+• Texas Instruments, Picking ESD Diodes for Ultra High-Speed Data Lines application reports
+• Texas Instruments, ESD PROTECTION DIODES EVM user's guide
+• Texas Instruments, TPD1E05U06DPY EVM user's guide
+• Texas Instruments, TPD4E05U06DQA EVM user's guide
+• Texas Instruments, Generic ESD Evaluation Module user's guide
+8.2 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on 
+Notifications to register and receive a weekly digest of any product information that has changed. For change 
+details, review the revision history included in any revised document.
+8.3 Support Resources
+TI E2E ™ support forums  are an engineer's go-to source for fast, verified answers and design help — straight 
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do 
+not necessarily reflect TI's views; see TI's Terms of Use.
+8.4 Trademarks
+TI E2E™ is a trademark of Texas Instruments.
+PCI-express® and PCI-Express® are registered trademarks of PCI-SIG .
+V-by-One® is a registered trademark of Thine Electronics, Inc.
+All trademarks are the property of their respective owners.
+8.5 Electrostatic Discharge Caution
+This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled 
+with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may 
+be more susceptible to damage because very small parametric changes could cause the device not to meet its published 
+specifications.
+8.6 Glossary
+TI Glossary This glossary lists and explains terms, acronyms, and definitions.
+9 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision N (February 2022) to Revision O (August 2024) Page
+• Updated the Device Information table................................................................................................................ 1
+Changes from Revision M (January 2017) to Revision N (February 2022) Page
+• Updated the SOD-523 package information from the body size dimensions (0.8 mm × 1.2 mm) to the lead-to-
+lead dimensions (1.60 mm × 0.80 mm × 0.65 mm) ...........................................................................................1
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 19
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 20
+10 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most 
+current data available for the designated devices. This data is subject to change without notice and revision of 
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+10.1 Tape and Reel Information
+Reel Width (W1)
+REEL DIMENSIONS
+A0
+B0
+K0
+W
+Dimension designed to accommodate the component length
+Dimension designed to accommodate the component thickness
+Overall width of the carrier tape
+Pitch between successive cavity centers
+Dimension designed to accommodate the component width
+TAPE DIMENSIONS
+K0 P1
+B0 W
+A0Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket Quadrants
+Sprocket Holes
+Q1 Q1Q2 Q2
+Q3 Q3Q4 Q4
+Reel
+Diameter
+User Direction of Feed
+P1
+Device Package
+Type
+Package 
+Drawing Pins SPQ
+Reel
+Diameter 
+(mm)
+Reel
+Width W1 
+(mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+TPD1E05U06DPYR X1SON DPY 2 10000 180.0 8.4 0.67 1.15 0.46 2.0 8.0 Q2
+TPD1E05U06DPYT X1SON DPY 2 250 180.0 9.5 0.66 1.15 0.66 2.0 8.0 Q1
+TPD1E05U06DYAR SOT-5X3 DYA 2 3000 178.0 9.5 0.5 1.94 0.73 2.0 8.0 Q1
+TPD4E05U06DQAR USON DQA 10 3000 180.0 8.4 1.2 2.7 0.63 4.0 8.0 Q1
+TPD6E05U06RVZR USON RVZ 14 3000 180.0 13.2 1.65 3.8 0.7 4.0 12.0 Q1
+TPD6E05U06RVZR USON RVZ 14 3000 178.0 13.5 1.6 3.75 0.7 4.0 12.0 Q1
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+20 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 21
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W L
+H
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+TPD1E05U06DPYR X1SON DPY 2 10,000 210.000 185.000 35.000
+TPD1E05U06DPYT X1SON DPY 2 250 184.0 184.0 19.0
+TPD1E05U06DYAR SOT-5X3 DYA 2 3000 210.0 200.0 42.0
+TPD4E05U06DQAR USON DQA 10 3000 210.0 185.0 35.0
+TPD6E05U06RVZR USON RVZ 14 3000 189.0 185.0 36.0
+TPD6E05U06RVZR USON RVZ 14 3000 184.0 184.0 19.0
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 21
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 22
+10.2 Mechanical Data
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+22 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 23
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 23
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 24
+www.ti.com
+PACKAGE OUTLINE
+C
+1.7
+1.5
+2X 0.35
+0.25
+2X 0.4
+0.2
+0.77 MAX
+2X 0.15
+0.08
+2X 0.3
+0.1 0.7
+0.5 TYPB 1.3
+1.1
+A
+0.85
+0.75
+NOTE 3
+SOT (SOD-523) - 0.77 mm max heightDYA0002A
+PLASTIC SMALL OUTLINE
+4224978/B   09/2021
+NOTES:
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold ﬂash, protrusions, or gate burrs. Mold ﬂash, protrusions, or gate burrs shall not
+exceed 0.15 mm per side.
+4. Reference JEITA SC-79 registration except for package height
+1 2
+PIN 1
+ID AREA
+SEATING PLANE
+0.05 C
+0.1 C A B
+0.05
+SYMM
+SYMM
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+24 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 25
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.05 MAX
+AROUND
+0.05 MIN
+AROUND
+2X (0.4)
+(R0.05) TYP2X (0.67)
+(1.48)
+4224978/B   09/2021
+SOT (SOD-523) - 0.77 mm max heightDYA0002A
+PLASTIC SMALL OUTLINE
+NOTES: (continued)
+5. Publication IPC-7351 may have alternate designs.
+6. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+SYMM
+LAND PATTERN EXAMPLE
+SCALE:40X
+SYMM
+1 2
+SOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+DEFINED
+METALSOLDER MASK
+OPENING
+NON SOLDER MASK
+DEFINED
+(PREFERRED)
+SOLDERMASK DETAILS
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 25
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 26
+www.ti.com
+EXAMPLE STENCIL DESIGN
+2X (0.67)
+2X (0.4)
+(R0.05) TYP
+(1.48)
+SOT (SOD-523) - 0.77 mm max heightDYA0002A
+PLASTIC SMALL OUTLINE
+4224978/B   09/2021
+NOTES: (continued)
+7. Laser cutting apertures with trapezoidal walls and rounded corners may oﬀer better paste release. IPC-7525 may have alternate
+design recommendations.
+8. Board assembly site may have diﬀerent recommendations for stencil design.
+SOLDER PASTE EXAMPLE
+BASED ON 0.1 mm THICK STENCIL
+SCALE:40X
+SYMM
+SYMM
+1 2
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+26 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 27
+www.ti.com
+GENERIC PACKAGE VIEW
+This image is a representation of the package family, actual package may vary.
+Refer to the product data sheet for package details.
+USON - 0.55 mm max heightDQA 10
+PLASTIC SMALL OUTLINE - NO LEAD1 x 2.5, 0.5 mm pitch
+4230320/A
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 27
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 28
+www.ti.com
+PACKAGE OUTLINE
+C
+8X 0.25
+0.15
+10X 0.43
+0.30
+2X
+2
+4X 0.5
+0.55 MAX
+0.05
+0.00
+2X 0.45
+0.35
+B 1.1
+0.9
+A
+2.6
+2.4
+(0.13) TYP
+(R )0.125
+USON - 0.55 mm max heightDQA0010A
+PLASTIC SMALL OUTLINE - NO LEAD
+4220328/A   12/2015
+PIN 1 INDEX AREA
+SEATING PLANE
+0.08 C
+1
+5 6
+10
+(OPTIONAL)
+PIN 1 ID
+0.1 C A B
+0.05 C
+0.1 C A B
+0.05
+NOTES:
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice.
+SCALE  6.000
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+28 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 29
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.07 MIN
+ALL AROUND
+0.07 MAX
+ALL AROUND
+4X (0.5)
+(0.835)
+8X (0.2)
+10X (0.565)
+(R ) TYP0.05
+2X (0.4)
+USON - 0.55 mm max heightDQA0010A
+PLASTIC SMALL OUTLINE - NO LEAD
+4220328/A   12/2015
+SYMM
+1
+5 6
+10
+SYMM
+LAND PATTERN EXAMPLE
+SCALE:30X
+NOTES: (continued)
+ 
+3. For more information, see Texas Instruments literature number SLUA271 (www.ti.com/lit/slua271).
+ 
+ 
+SOLDER MASK
+OPENINGSOLDER MASK
+METAL UNDER
+SOLDER MASK
+DEFINED
+METALSOLDER MASK
+OPENING
+NON SOLDER MASK
+SOLDER MASK DETAILS
+DEFINED
+(PREFERRED)
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 29
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 30
+www.ti.com
+EXAMPLE STENCIL DESIGN
+8X (0.2)
+10X (0.565)
+4X (0.5)
+2X (0.36)
+(0.835)
+(R ) TYP0.05
+USON - 0.55 mm max heightDQA0010A
+PLASTIC SMALL OUTLINE - NO LEAD
+4220328/A   12/2015
+NOTES: (continued)
+ 
+4. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations. 
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.1 mm THICK STENCIL
+ 
+EXPOSED PADS 3 & 8:
+ 90% PRINTED SOLDER COVERAGE BY AREA UNDER PACKAGE
+SCALE:40X
+SYMM
+1
+5 6
+10
+SYMM
+METAL
+TYP
+3 8
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+30 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 31
+www.ti.com
+PACKAGE OUTLINE
+C
+8X 0.25
+0.15
+8X 0.465
+0.265
+2X
+2
+4X 0.5
+0.55 MAX
+0.05
+0.00
+0.45
+0.35
+0.35
+0.25
+(0.8)
+B 1.1
+0.9
+A
+2.6
+2.4
+(0.1) TYP
+USON - 0.55 mm max heightDQA0010B
+PLASTIC SMALL OUTLINE - NO LEAD
+4230307/A   12/2023
+PIN 1
+INDEX AREA
+SEATING PLANE
+0.08 C
+1
+5 6
+10
+0.1 C A B
+0.05 C
+0.1 C A B
+0.05 C
+3
+PIN 1 ID 
+8
+NOTES:
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice.
+ 
+SYMM
+ SYMM
+SCALE  6.000
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 31
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 32
+www.ti.com
+EXAMPLE BOARD LAYOUT
+(0.4)
+(0.8)
+( 0.2)
+0.07 MIN
+ALL AROUND
+0.07 MAX
+ALL AROUND
+4X (0.5)
+(0.835)
+8X (0.2)
+10X (0.565)
+(R0.05) TYP
+(0.3)
+USON - 0.55 mm max heightDQA0010B
+PLASTIC SMALL OUTLINE - NO LEAD
+4230307/A   12/2023
+SYMM
+1
+5 6
+10
+SYMM
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:30X
+3 8
+NOTES: (continued)
+ 
+3. For more information, see Texas Instruments literature number SLUA271 (www.ti.com/lit/slua271).
+ 
+ 
+SOLDER MASK
+OPENINGSOLDER MASK
+METAL UNDER
+SOLDER MASK
+DEFINED
+EXPOSED
+METAL
+METALSOLDER MASK
+OPENING
+NON SOLDER MASK
+SOLDER MASK DETAILS
+DEFINED
+(PREFERRED)
+EXPOSED
+METAL
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+32 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 33
+www.ti.com
+EXAMPLE STENCIL DESIGN
+2X (0.4)2X (0.3)
+0.8
+2X (0.6)
+8X (0.2)
+10X (0.565)
+4X (0.5)
+(0.835)
+(R0.05) TYP
+USON - 0.55 mm max heightDQA0010B
+PLASTIC SMALL OUTLINE - NO LEAD
+4230307/A   12/2023
+NOTES: (continued)
+ 
+4. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations. 
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.1 mm THICK STENCIL 
+SCALE:40X
+SYMM
+1
+5 6
+10
+SYMM
+3 8
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 33
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 34
+www.ti.com
+PACKAGE OUTLINE
+C
+0.45
+0.30
+0.05
+0.00
+0.65
+0.1 C A B
+2X 0.55
+0.45
+2X 0.3
+0.2
+A 1.1
+0.9 B
+0.7
+0.5
+4224561/C   07/2024
+X1SON - 0.45 mm max heightDPY0002A
+PLASTIC SMALL OUTLINE - NO LEAD 
+PIN 1 INDEX AREA
+SEATING PLANE
+0.08 C
+1 2
+0.05 C A B
+SYMM
+SYMM
+PIN 1 ID
+OPTIONAL
+(45 X 0.1)
+NOTES:
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+per ASME Y14.5M
+2. This drawing is subject to change without notice.
+SCALE  11.000
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+34 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 35
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.07 MIN
+ALL AROUND0.07 MAX
+ALL AROUND
+(R0.05) TYP
+(0.7)
+2X (0.5)
+2X (0.3)
+4224561/C   07/2024
+SYMM
+X1SON - 0.45 mm max heightDPY0002A
+PLASTIC SMALL OUTLINE - NO LEAD 
+1 2
+SYMM
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:60X
+NOTES: (continued)
+3. For more information, see Texas Instruments literature number SLUA271 (www.ti.com/lit/slua271).
+4. Vias are optional depending on application, refer to device data sheet. If any vias are implemented, refer to their locations shown on this view.
+It is recommended that vias under paste be filled, plugged or tented.
+SOLDER MASK DETAILS
+METAL EDGE
+SOLDER MASK
+OPENING
+EXPOSED
+METAL
+NON SOLDER MASK
+DEFINED
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+OPENING
+EXPOSED
+METAL
+SOLDER MASK
+DEFINED
+(PREFERRED)
+www.ti.com
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 35
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 36
+www.ti.com
+EXAMPLE STENCIL DESIGN
+(R0.05) TYP
+(0.7)
+2X (0.5)
+2X (0.3) (0)
+4224561/C   07/2024
+X1SON - 0.45 mm max heightDPY0002A
+PLASTIC SMALL OUTLINE - NO LEAD 
+NOTES: (continued)
+5. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+design recommendations.
+SOLDER PASTE EXAMPLE
+BASED ON 0.1 mm THICK STENCIL
+ SCALE:60X
+SYMM
+1 2
+SYMM
+PCB PAD METAL
+UNDER SOLDER PASTE
+TPD1E05U06, TPD4E05U06, TPD6E05U06
+SLVSBO7O – DECEMBER 2012 – REVISED AUGUST 2024
+ www.ti.com
+36 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TPD1E05U06 TPD4E05U06 TPD6E05U06
+PDF PAGE 37
+PACKAGE OPTION ADDENDUM
+www.ti.com 28-Apr-2026
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+TPD1E05U06DPYR Active Production X1SON (DPY) | 2 10000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 (BK, C1, C6)
+C2
+TPD1E05U06DPYR.B Active Production X1SON (DPY) | 2 10000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 (BK, C1, C6)
+C2
+TPD1E05U06DPYT Last
+Time Buy
+Production X1SON (DPY) | 2 250 | SMALL T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 (BK, C1, C6)
+C2
+TPD1E05U06DPYT.B Last
+Time Buy
+Production X1SON (DPY) | 2 250 | SMALL T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 (BK, C1, C6)
+C2
+TPD1E05U06DPYTG4 Active Production X1SON (DPY) | 2 250 | SMALL T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 C1
+C2
+TPD1E05U06DPYTG4.B Active Production X1SON (DPY) | 2 250 | SMALL T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 C1
+C2
+TPD1E05U06DYAR Active Production SOT-5X3 (DYA) | 2 3000 | LARGE T&R Yes SN Level-3-260C-168 HR -40 to 125 1KS
+TPD1E05U06DYAR.B Active Production SOT-5X3 (DYA) | 2 3000 | LARGE T&R Yes SN Level-3-260C-168 HR -40 to 125 1KS
+TPD4E05U06DQAR Active Production USON (DQA) | 10 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 (BLG, BRG, DQA)
+BRY
+TPD4E05U06DQAR.B Active Production USON (DQA) | 10 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 (BLG, BRG, DQA)
+BRY
+TPD4E05U06DQARG4 Active Production USON (DQA) | 10 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 DQA
+TPD4E05U06DQARG4.B Active Production USON (DQA) | 10 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 DQA
+TPD6E05U06RVZR Active Production USON (RVZ) | 14 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 (BV, BVY)
+TPD6E05U06RVZR.B Active Production USON (RVZ) | 14 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 (BV, BVY)
+TPD6E05U06RVZRG4 Active Production USON (RVZ) | 14 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 BV
+TPD6E05U06RVZRG4.B Active Production USON (RVZ) | 14 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 BV
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+Addendum-Page 1
+PDF PAGE 38
+PACKAGE OPTION ADDENDUM
+www.ti.com 28-Apr-2026
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+ 
+ OTHER QUALIFIED VERSIONS OF TPD1E05U06, TPD4E05U06 :
+•Automotive : TPD1E05U06-Q1, TPD4E05U06-Q1
+ NOTE: Qualified Version Definitions:
+•Automotive - Q100 devices qualified for high-reliability automotive applications targeting zero defects
+Addendum-Page 2
+PDF PAGE 39
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

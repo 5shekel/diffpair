@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "scope": "Read-only current USB3 connection metadata; no throughput or optical-path proof",
+  "hub_interfaces_queried": 3,
+  "ports_queried": 32,
+  "connected_devices_seen": 7,
+  "non_superspeed_devices_omitted": 7,
+  "unknown_speed_devices": 0,
+  "usb3_connections": [],
+  "errors": [],
+  "captured_at_utc": "2026-09-12T09:08:09.1823757Z",
+  "operator_label": "reference_pair_disconnected_user_confirmed",
+  "executable_sha256": "170EF9D66D4CBD0E8B3DC1A4F7B02EDAB9605DBFDFDB03B979A7F46732A80DD7",
+  "source_sha256": "D87736FD25C06C946C2C2035ADA7152309DBB8064AC52986F11C12E575F231B7"
+}

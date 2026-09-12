@@ -1,0 +1,44 @@
+{
+  "source_class": "Manual pin/limit transcription from manufacturer PDFs, not canonical datasheet cache",
+  "selected_parts": {
+    "TPS2553DBVR": {
+      "Manufacturer": "Texas Instruments",
+      "Datasheet": "https://www.ti.com/lit/ds/symlink/tps2552.pdf",
+      "local_pdf": "TPS2552.pdf",
+      "pinout_DBV": {
+        "1": "IN",
+        "2": "GND",
+        "3": "EN active high",
+        "4": "FAULT open drain active low",
+        "5": "ILIM",
+        "6": "OUT"
+      },
+      "source_pages": [
+        5,
+        7,
+        20
+      ],
+      "lifecycle_observed": "ACTIVE 2026-09-12; TI direct store unavailable, distributor stock unchecked",
+      "sha256": "88e453700cea2b263cdb5b44fce1e883e0f6d3b975457f879ac1423eeea42071"
+    },
+    "SN74LVC1G04DBVR": {
+      "Manufacturer": "Texas Instruments",
+      "Datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf",
+      "local_pdf": "SN74LVC1G04.pdf",
+      "pinout_DBV": {
+        "1": "NC",
+        "2": "A",
+        "3": "GND",
+        "4": "Y inverter output",
+        "5": "VCC"
+      },
+      "source_pages": [
+        3,
+        5,
+        6
+      ],
+      "sha256": "ac04a53de979125799e57ea5a6dff4138fe53e0eceebe45c31f57523669887d5"
+    }
+  },
+  "qualification": "Netlist and static corners only; power ramps, supply sizing, capacitors, thermal, firmware and physical verification pending"
+}

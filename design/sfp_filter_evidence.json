@@ -1,0 +1,43 @@
+{
+  "source_class": "Primary manufacturer PDFs/product API and manual circuit interpretation; not canonical datasheet cache",
+  "date": "2026-09-12",
+  "parts": {
+    "C10_C13": {
+      "MPN": "GRM32ER71E226KE15L",
+      "Manufacturer": "Murata",
+      "specification_url": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM32ER71E226KE15-04CA-EN_PDF_CERAMICCAPACITORSMD",
+      "local_specification": "kicad/usb3_sfp_hub/datasheets/GRM32ER71E226KE15.pdf",
+      "nominal": "22uF, 25V, +/-10%, X7R, 1210",
+      "temperature_range_C": [
+        -55,
+        125
+      ],
+      "lifecycle": "In Production per current product API; distributor stock unchecked"
+    },
+    "R1_R2": {
+      "MPN": "ERJ8RQFR43V",
+      "Manufacturer": "Panasonic",
+      "product_url": "https://industrial.panasonic.com/ww/products/pt/current-sensing-chip-resistors/models/ERJ8RQFR43V",
+      "datasheet_url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf",
+      "nominal": "0.43 ohm, 1%, 0.25W, 1206, TCR 0 to +250ppm/K",
+      "local_pdf_status": "Unavailable: HTTP transport timeout twice. Web tool retrieved primary PDF and product page. Pulse qualification pending."
+    }
+  },
+  "public_API": "https://pimapi.murata.com/public/api/pim/v1",
+  "retrieval": "Public product web application exposes products/search and characteristics/search/technical, netlist and datalist. No authentication used. Legacy PDF link returned a blank file; overwritten only after valid current PDF arrived.",
+  "source_hashes": {
+    "kicad/usb3_sfp_hub/datasheets/GRM32ER71E226KE15.pdf": "31eff98e0e2198e8199f7fb5e6ef8a6e731fc6b62dd7540693cd30ed2a92f873",
+    "kicad/usb3_sfp_hub/datasheets/GRM32ER71E226KE15_characteristics.pdf": "81aa5baa6dfaa08eee0db98ad504ffb4fccbfc0c4d12c0c13fd769221f058957",
+    "design/references/murata_GRM32ER71E226KE15.json": "2c099aa596ae8ca99eca974c47362873195443574e4b88db18a9ec8601927234",
+    "design/references/murata_cap_characteristics.csv": "0fed987e5836ace2a19b8629e58d35c2f257c8b988d3557bbccbbefd62c3414d",
+    "design/references/murata_cap_characteristics_request.json": "8e8875f2b6b6b4e9dc253641a4c1979185fd4b62186fea0811683b80f2ca61e1"
+  },
+  "simulation": "kicad/usb3_sfp_hub/validation/sfp_filter/report.json",
+  "simulator": "KiCad installed ngspice-46 shared library, passive RLC only; no spinit/XSPICE models needed",
+  "limitations": [
+    "Capacitor ESR/effective C is typical data at 3.3V/25C and approximated near 15kHz.",
+    "Current step and sensitivity corners are explicit assumptions; no module input capacitance/regulator loop is modeled.",
+    "Nominal step stress dips below 3.14V; filter is not qualified.",
+    "Resistor local PDF, pulse rating and actual module hot-plug/load measurements remain open."
+  ]
+}

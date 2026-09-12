@@ -1,0 +1,1286 @@
+{
+  "scope": "Passive design comparison; not regulator/module/SFF qualification",
+  "source_range_V": [
+    3.20875,
+    3.39125
+  ],
+  "source_basis": "TPS62902 +/-1.25% plus +/-50mV disturbance allocation; constant ideal feed in each case",
+  "load": "0 to .6A, hold 35us, fall to .45A in 5us, then release to zero; rise/release durations 1/10/100us",
+  "corners": "Effective C and R sensitivity assumptions, Coilcraft DCR temperature estimate + 20mOhm PCB allocation at hot corner",
+  "candidates": [
+    {
+      "candidate": "L4.7u_R0.43",
+      "inductance_uH": 4.7,
+      "damping_ohm": 0.43,
+      "ac_nominal_8ohm": {
+        "peak_dB": 3.053049556069861,
+        "gain_100kHz_dB": -16.43666241720056,
+        "gain_1MHz_dB": -37.120202816263095
+      },
+      "step_10us_min_V": 2.8688351098119442,
+      "step_10us_max_V": 3.6041901424291805,
+      "passes_10us_voltage_window": false,
+      "transient": [
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 2.9180884375054545,
+          "max_V": 3.4054611394226972
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.1005884375055963,
+          "max_V": 3.5879611394226307
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 2.9360586909272874,
+          "max_V": 3.3919834666146014
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.118558690927383,
+          "max_V": 3.5744834666146232
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.1523581176891278,
+          "max_V": 3.2524832433312723
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3348581176891936,
+          "max_V": 3.434983243331314
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 2.8493217589992366,
+          "max_V": 3.4363251302221687
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.0318217589992416,
+          "max_V": 3.618825130222072
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 2.8688351098119442,
+          "max_V": 3.421690142429079
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.051335109811946,
+          "max_V": 3.6041901424291805
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.1196465122173644,
+          "max_V": 3.2398888869884854
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.302146512217319,
+          "max_V": 3.4223888869884758
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 2.9536903323777297,
+          "max_V": 3.3787596813946776
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.1361903323778617,
+          "max_V": 3.561259681394527
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 2.995489006704281,
+          "max_V": 3.347410733805022
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.1779890067042587,
+          "max_V": 3.529910733804996
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.158100781241062,
+          "max_V": 3.2418188788806597
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.340600781241125,
+          "max_V": 3.4243188788807233
+        }
+      ]
+    },
+    {
+      "candidate": "L4.7u_R0.22",
+      "inductance_uH": 4.7,
+      "damping_ohm": 0.22,
+      "ac_nominal_8ohm": {
+        "peak_dB": 5.7386588444615985,
+        "gain_100kHz_dB": -21.079216029721927,
+        "gain_1MHz_dB": -42.162922001191674
+      },
+      "step_10us_min_V": 2.8632922459565093,
+      "step_10us_max_V": 3.608347290061208,
+      "passes_10us_voltage_window": false,
+      "transient": [
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 2.9319298967818592,
+          "max_V": 3.3950800647889965
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.1144298967818465,
+          "max_V": 3.577580064788796
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 2.9459022846226306,
+          "max_V": 3.3846007732953742
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.128402284622658,
+          "max_V": 3.567100773295288
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.1530192539854878,
+          "max_V": 3.244636950036968
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.335519253985538,
+          "max_V": 3.4271369500370037
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 2.843342042935971,
+          "max_V": 3.4408099465666706
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.0258420429360866,
+          "max_V": 3.6233099465667635
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 2.8632922459565093,
+          "max_V": 3.425847290061075
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.045792245956497,
+          "max_V": 3.608347290061208
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.120876470580766,
+          "max_V": 3.236729758963417
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3033764705807087,
+          "max_V": 3.419229758963415
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.013147131237113,
+          "max_V": 3.3341671441761482
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.1956471312370853,
+          "max_V": 3.51666714417622
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.020573669756647,
+          "max_V": 3.328597240663133
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.203073669756703,
+          "max_V": 3.5110972406631547
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.157592696911335,
+          "max_V": 3.2296500728144997
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3400926969113853,
+          "max_V": 3.4121500728144785
+        }
+      ]
+    },
+    {
+      "candidate": "L4.7u_R0.1",
+      "inductance_uH": 4.7,
+      "damping_ohm": 0.1,
+      "ac_nominal_8ohm": {
+        "peak_dB": 8.960787256917731,
+        "gain_100kHz_dB": -25.23950209188961,
+        "gain_1MHz_dB": -47.95222505734551
+      },
+      "step_10us_min_V": 2.839825588289522,
+      "step_10us_max_V": 3.625947279955154,
+      "passes_10us_voltage_window": false,
+      "transient": [
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 2.912100693917922,
+          "max_V": 3.40995196121096
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.0946006939178856,
+          "max_V": 3.592451961210947
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 2.9272064695701747,
+          "max_V": 3.3986226371142125
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.109706469570196,
+          "max_V": 3.5811226371142055
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.150921755121918,
+          "max_V": 3.2442442292974087
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.333421755121997,
+          "max_V": 3.4267442292974097
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 2.8182352222336564,
+          "max_V": 3.45964004269726
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.0007352222336636,
+          "max_V": 3.6421400426972466
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 2.839825588289522,
+          "max_V": 3.443447279955146
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.022325588289517,
+          "max_V": 3.625947279955154
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.123611566692548,
+          "max_V": 3.238833525560956
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.306111566692543,
+          "max_V": 3.421333525560958
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.000649995725735,
+          "max_V": 3.3435399892901065
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.1831499957257963,
+          "max_V": 3.526039989290114
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.008647347048572,
+          "max_V": 3.337541981313027
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.1911473470485494,
+          "max_V": 3.5200419813130344
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.156033363907004,
+          "max_V": 3.2289020038140372
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3385333639070187,
+          "max_V": 3.411402003814011
+        }
+      ]
+    },
+    {
+      "candidate": "L1u_R0.43",
+      "inductance_uH": 1.0,
+      "damping_ohm": 0.43,
+      "ac_nominal_8ohm": {
+        "peak_dB": 1.3172865924808828,
+        "gain_100kHz_dB": -3.859912653757841,
+        "gain_1MHz_dB": -23.5700624587109
+      },
+      "step_10us_min_V": 3.107976484229299,
+      "step_10us_max_V": 3.451551824374031,
+      "passes_10us_voltage_window": false,
+      "transient": [
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 2.9779379374455663,
+          "max_V": 3.3778085289513147
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.1604379374457197,
+          "max_V": 3.560308528951398
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.135617397699556,
+          "max_V": 3.259549498565017
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.318117397700703,
+          "max_V": 3.442049498565087
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.1973574418308095,
+          "max_V": 3.2363163772116774
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3798574418308185,
+          "max_V": 3.418816377211807
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 2.9510995989716617,
+          "max_V": 3.386709015571043
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.1335995989716703,
+          "max_V": 3.5692090155710163
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.107976484229299,
+          "max_V": 3.269051824374028
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.2904764842292034,
+          "max_V": 3.451551824374031
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.1812556914696817,
+          "max_V": 3.2299666206614432
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.363755691469708,
+          "max_V": 3.4124666206613794
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.001139502918068,
+          "max_V": 3.3604073250952684
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.183639502918036,
+          "max_V": 3.5429073250955923
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.1516810545156324,
+          "max_V": 3.2475017085752325
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.334181054515691,
+          "max_V": 3.430001708575167
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.1985618006569467,
+          "max_V": 3.22924244886217
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3810618006569877,
+          "max_V": 3.4117424488623196
+        }
+      ]
+    },
+    {
+      "candidate": "L1u_R0.22",
+      "inductance_uH": 1.0,
+      "damping_ohm": 0.22,
+      "ac_nominal_8ohm": {
+        "peak_dB": 3.1688262311894073,
+        "gain_100kHz_dB": -7.194908595623875,
+        "gain_1MHz_dB": -28.680031641292185
+      },
+      "step_10us_min_V": 3.097194603793107,
+      "step_10us_max_V": 3.459638223351496,
+      "passes_10us_voltage_window": false,
+      "transient": [
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.0637121673584042,
+          "max_V": 3.3134783358310167
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.2462121673583604,
+          "max_V": 3.495978335831019
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.126085440999943,
+          "max_V": 3.266698409030628
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.3085854409999556,
+          "max_V": 3.449198409030615
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.1973574242741813,
+          "max_V": 3.234619516614709
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3798574242742143,
+          "max_V": 3.417119516614634
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.0371996046654015,
+          "max_V": 3.3221344532014987
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.2196996046654025,
+          "max_V": 3.504634453201467
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.097194603793107,
+          "max_V": 3.277138223351498
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.2796946037931245,
+          "max_V": 3.459638223351496
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.1812557247180173,
+          "max_V": 3.227793857989414
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3637557247180356,
+          "max_V": 3.4102938579894797
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.082198468965498,
+          "max_V": 3.299613512446811
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.2646984689653356,
+          "max_V": 3.4821135124469884
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.145581220161435,
+          "max_V": 3.252076579376667
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.3280812201613803,
+          "max_V": 3.4345765793766585
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.198561812201573,
+          "max_V": 3.227476057199382
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3810618122016245,
+          "max_V": 3.409976057199428
+        }
+      ]
+    },
+    {
+      "candidate": "L1u_R0.1",
+      "inductance_uH": 1.0,
+      "damping_ohm": 0.1,
+      "ac_nominal_8ohm": {
+        "peak_dB": 6.577177194007721,
+        "gain_100kHz_dB": -10.800373547065261,
+        "gain_1MHz_dB": -34.49144920453766
+      },
+      "step_10us_min_V": 3.0853174089413633,
+      "step_10us_max_V": 3.4685461095048,
+      "passes_10us_voltage_window": false,
+      "transient": [
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.083317334706394,
+          "max_V": 3.2987744473232166
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.2658173347064134,
+          "max_V": 3.4812744473230897
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.114914207416156,
+          "max_V": 3.2750768253964138
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.2974142074161126,
+          "max_V": 3.4575768253963663
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.1921323431643223,
+          "max_V": 3.2330422008941113
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3746323431643,
+          "max_V": 3.4155422008941363
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.0436716650375706,
+          "max_V": 3.3172803775831277
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.2261716650375747,
+          "max_V": 3.499780377583125
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.0853174089413633,
+          "max_V": 3.286046109504799
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.26781740894135,
+          "max_V": 3.4685461095048
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.179056324857813,
+          "max_V": 3.226991563329315
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3615563248578124,
+          "max_V": 3.4094915633293117
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.1197400085811826,
+          "max_V": 3.271457463534134
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.302240008581191,
+          "max_V": 3.4539574635341626
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.1378935227590974,
+          "max_V": 3.2578423466228292
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.3203935227591286,
+          "max_V": 3.4403423466228524
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.197461517098107,
+          "max_V": 3.224805104266198
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3799615170980988,
+          "max_V": 3.407305104266175
+        }
+      ]
+    },
+    {
+      "candidate": "L0.47u_R0.43",
+      "inductance_uH": 0.47,
+      "damping_ohm": 0.43,
+      "ac_nominal_8ohm": {
+        "peak_dB": 0.7475613296129145,
+        "gain_100kHz_dB": -0.6354121822571591,
+        "gain_1MHz_dB": -16.89515812501735
+      },
+      "step_10us_min_V": 3.157649492790666,
+      "step_10us_max_V": 3.417017671785309,
+      "passes_10us_voltage_window": true,
+      "transient": [
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.0237028022003747,
+          "max_V": 3.3452398367481093
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.206202802200476,
+          "max_V": 3.5277398367482613
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.176311188216908,
+          "max_V": 3.2307841091183187
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.358811188216861,
+          "max_V": 3.413284109118328
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.2028723896385887,
+          "max_V": 3.221711031986365
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3853723896385524,
+          "max_V": 3.4042110319864305
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 2.997540248972201,
+          "max_V": 3.3545989845987547
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.180040248972254,
+          "max_V": 3.537098984598839
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.157649492790666,
+          "max_V": 3.2345176717852837
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.340149492790589,
+          "max_V": 3.417017671785309
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.1886742524803635,
+          "max_V": 3.2139168858509186
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3711742524803543,
+          "max_V": 3.3964168858509156
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.047688271962812,
+          "max_V": 3.327250875549122
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.2301882719629016,
+          "max_V": 3.5097508755489777
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.182508975669815,
+          "max_V": 3.226135768307863
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.365008975669852,
+          "max_V": 3.4086357683079425
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.203437786672744,
+          "max_V": 3.2182234680186914
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3859377866729163,
+          "max_V": 3.4007234680185245
+        }
+      ]
+    },
+    {
+      "candidate": "L0.47u_R0.22",
+      "inductance_uH": 0.47,
+      "damping_ohm": 0.22,
+      "ac_nominal_8ohm": {
+        "peak_dB": 1.983247895965095,
+        "gain_100kHz_dB": -1.6558244847153762,
+        "gain_1MHz_dB": -22.075762983218695
+      },
+      "step_10us_min_V": 3.1560464075405625,
+      "step_10us_max_V": 3.4182199862689804,
+      "passes_10us_voltage_window": true,
+      "transient": [
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.082145154495249,
+          "max_V": 3.3014083186417515
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.2646451544951907,
+          "max_V": 3.4839083186418285
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.17307388919724,
+          "max_V": 3.2332120125450485
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.3555738891982814,
+          "max_V": 3.4157120125450686
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.2028723896541464,
+          "max_V": 3.2230383061474455
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3853723896541,
+          "max_V": 3.405538306147448
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.0626630004922113,
+          "max_V": 3.3057572913540163
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.2451630004922136,
+          "max_V": 3.4882572913539764
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.1560464075405625,
+          "max_V": 3.235719986268984
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.3385464075405937,
+          "max_V": 3.4182199862689804
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.1886742524804244,
+          "max_V": 3.215216603564755
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3711742524804578,
+          "max_V": 3.397716603564735
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.0997343681750955,
+          "max_V": 3.2882163624867125
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.2822343681752177,
+          "max_V": 3.4707163624870176
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.1810906232311646,
+          "max_V": 3.2271995537331106
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.3635906232314547,
+          "max_V": 3.4096995537331103
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.2034377922580597,
+          "max_V": 3.2189790877605198
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3859377922581366,
+          "max_V": 3.4014790877605283
+        }
+      ]
+    },
+    {
+      "candidate": "L0.47u_R0.1",
+      "inductance_uH": 0.47,
+      "damping_ohm": 0.1,
+      "ac_nominal_8ohm": {
+        "peak_dB": 4.710869480957095,
+        "gain_100kHz_dB": -3.346119228453888,
+        "gain_1MHz_dB": -27.90977846787635
+      },
+      "step_10us_min_V": 3.151539874700358,
+      "step_10us_max_V": 3.421599831875799,
+      "passes_10us_voltage_window": true,
+      "transient": [
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.1217798192195985,
+          "max_V": 3.2716825611946163
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.3042798192195937,
+          "max_V": 3.4541825611945765
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.167517506269183,
+          "max_V": 3.237379344992127
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.3500175062696957,
+          "max_V": 3.4198793449921334
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.200924373047977,
+          "max_V": 3.2240983704418
+        },
+        {
+          "corner": "nominal",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.3834243730479736,
+          "max_V": 3.40659837044176
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.0966944907951044,
+          "max_V": 3.2802338340749806
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.2791944907950925,
+          "max_V": 3.4627338340749874
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.151539874700358,
+          "max_V": 3.2390998318758015
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.3340398746994198,
+          "max_V": 3.421599831875799
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.188674253918563,
+          "max_V": 3.216242469374385
+        },
+        {
+          "corner": "low_C_high_L_hot",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.371174253918567,
+          "max_V": 3.3987424693743726
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.20875,
+          "min_V": 3.1431565022472157,
+          "max_V": 3.2556500795014136
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 1.0,
+          "source_V": 3.39125,
+          "min_V": 3.325656502247189,
+          "max_V": 3.438150079501411
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.20875,
+          "min_V": 3.1766632123189784,
+          "max_V": 3.230520079609555
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 10.0,
+          "source_V": 3.39125,
+          "min_V": 3.35916321231896,
+          "max_V": 3.4130200796095638
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.20875,
+          "min_V": 3.2033966417845208,
+          "max_V": 3.2194324618663184
+        },
+        {
+          "corner": "high_C_low_L",
+          "rise_us": 100.0,
+          "source_V": 3.39125,
+          "min_V": 3.38589664178451,
+          "max_V": 3.4019324618663407
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No real module input capacitance/inrush waveform; no converter loop or shared-feed impedance.",
+    "Constant ESR and effective C approximation; 1MHz gain is an indicative trend, not validated high-frequency attenuation.",
+    "SFF integrated noise and resistor pulse capability remain untested."
+  ]
+}

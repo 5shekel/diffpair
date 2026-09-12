@@ -1,0 +1,10 @@
+SFP reference filter nominal_typical
+Vfeed feed 0 DC 3.3 AC 1
+Rind feed lx 0.043
+Lfilter lx out 4.7e-06
+Cbypass out 0 100n
+Rcap out cpos 0.0205641004347
+Cbulk cpos damp 1.52124066328e-05
+Rdamp damp 0 0.43
+Rload out 0 8
+.end

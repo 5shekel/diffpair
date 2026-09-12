@@ -1,0 +1,47 @@
+{
+  "status": "PASS for stated DC allocations only; illustrative transient stress FAILS, see sfp_filter/report.json",
+  "regulator_vset_range_V": [
+    3.25875,
+    3.3412499999999996
+  ],
+  "allocated_branch_hot_resistance_ohm": 0.1,
+  "allocated_low_frequency_disturbance_V": 0.05,
+  "allocated_module_voltage_range_V": [
+    3.14875,
+    3.3912499999999994
+  ],
+  "remaining_voltage_margin_V": {
+    "low": 0.008750000000000036,
+    "high": 0.06875000000000053
+  },
+  "filter_inductor_MPN": "XGL4020-472MEC",
+  "filter_hot_DCR_estimate_ohm_at_165C": 0.07332446000000001,
+  "allocated_hot_PCB_resistance_ohm": 0.02,
+  "selected_branch_resistance_estimate_plus_PCB_allocation_ohm": 0.09332446000000001,
+  "selected_inductor_voltage_min_estimate_V": 3.152755324,
+  "sfp_table8_peak_A_per_branch": 0.6,
+  "two_branch_peak_plus_pullups_A": 1.2039279255319149,
+  "converter_output_rating_A": 2.0,
+  "regulator_rating_headroom_A": 0.7960720744680851,
+  "ripple_estimate_A_pp_at_typical_frequency": 0.6698717948717949,
+  "inductor_peak_estimate_A": 1.5388638229678122,
+  "inductor_MPN": "XGL4020-102MEC",
+  "inductor_Isat_at_25C_A": {
+    "10percent_drop": 3.8,
+    "20percent_drop": 6.3,
+    "30percent_drop": 8.8
+  },
+  "inductor_fault_basis": "3.9A maximum high-side current-limit threshold plus approximately 20% margin; delay and saturation curve still require validation",
+  "nominal_soft_start_estimate_ms": 3.255,
+  "mode_resistor_tolerance_plus_temperature_fraction": 0.0225,
+  "limitations": [
+    "An explicit 0-to-600mA/10us load-step study drops below 3.14V; these DC margins do not override that transient gap.",
+    "Resistance and disturbance numbers are requirements, not actual part or board measurements.",
+    "Module identity unknown; SFF-8431 power levels are a provisional design envelope.",
+    "66mV peak-to-peak SFF noise tolerance uses D.17 test spectrum; the 50mV allocation is not proof of that separate requirement.",
+    "PG measures unfiltered supply and is undefined below VIN=1.8V; it is not a module-ready detector.",
+    "No efficiency, whole-board input-current, inrush, filter stability, thermal, EMI or hot-plug pass is implied.",
+    "Soft-start equation is an initial estimate; VSET and filtered module loads need actual startup measurement.",
+    "Current/bias estimates use the manufacturer 25C table; temperature-dependent saturation, AC losses and switching-frequency spread remain unqualified."
+  ]
+}

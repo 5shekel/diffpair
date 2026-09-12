@@ -1,0 +1,9 @@
+SFP candidate L011_2C_R100, corner 25
+Rind feed lx 0.02263534
+Lfilter lx out 1.32e-07
+Cbypass out 0 100n
+Rcap out cpos 0.0025
+Cbulk cpos damp 4.84e-05
+Rdamp damp 0 0.099
+Vfeed feed 0 DC 3.3 AC 1
+.end

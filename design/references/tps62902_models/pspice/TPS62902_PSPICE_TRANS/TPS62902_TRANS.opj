@@ -1,0 +1,93 @@
+(ExpressProject "TPS62902_TRANS"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "17.4-2019 S019 (3960720)  [7/14/2021]-[09/30/21]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\tps62902rpj_trans.olb"
+        (Type "Schematic Library")))
+    ("Allegro Netlist Directory" "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File "tps62902_trans.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Display_Online_DRC_Results "FALSE")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (RootChangedForceReNetlist "x"))
+  (Folder "Layout")
+  (Folder "Outputs")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\tps62902_trans-pspicefiles\startup\startup.sim"
+        (DisplayName "STARTUP-STARTUP")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\tps62902_trans-pspicefiles\ibb_startup\ibb_startup.sim"
+        (DisplayName "IBB_STARTUP-IBB_STARTUP")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\tps62902_trans-pspicefiles\startup\startup.sim"))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\tps62902_trans.lib"
+        (Type "PSpiceLibrary")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (Folder "Logs")
+  (MPSSessionName "X0287672")
+  (PartMRUSelector
+    (TPS62902RPJ_TRANS
+      (FullPartName "TPS62902RPJR.Normal")
+      (LibraryName
+         "C:\ELABTRANS_WS\ELABTRANS_DS\PART_NUMBER\TPS62902\TPS62902_PSPICE_TRANS\TPS62902RPJ_TRANS.OLB")
+      (DeviceIndex "0"))
+    (TPS62903RPJ_TRANS
+      (FullPartName "TPS62903RPJT.Normal")
+      (LibraryName
+         "C:\ELABTRANS_WS\ELABTRANS_DS\PART_NUMBER\TPS62903\TPS62903_PSPICE_TRANS\TPS62903RPJ_TRANS.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (TPS629210-Q1DRL_TRANS
+      (FullPartName "TPS629210-Q1DRL_TRANS.Normal")
+      (LibraryName
+         "C:\ELABTRANS_WS\ELABTRANS_DS\PART_NUMBERS\TPS629210-Q1\TPS629210-Q1_PSPICE_TRANS\TPS629210-Q1DRL_TRANS.OLB")
+      (DeviceIndex "0"))
+    (TPS629210DRL_TRANS
+      (FullPartName "TPS629210DRL_TRANS.Normal")
+      (LibraryName
+         "C:\ELABTRANS_WS\ELABTRANS_DS\PART_NUMBERS\TPS629210\JUNE25_RELEASE_FINAL\TPS629210_PSPICE_TRANS\TPS629210DRL_TRANS.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\Cadence\SPB_17.4\tools\capture\library\pspice")
+  (GlobalState
+    (FileView
+      (Path "Design Resources"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 219 0 516"))
+      (Tab 0))))
