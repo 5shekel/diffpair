@@ -1,0 +1,54 @@
+{
+  "footprints": 61,
+  "back_smd_refs": [
+    "U1"
+  ],
+  "back_smd_pads": 77,
+  "tracks": 0,
+  "named_nets": 0,
+  "outline_closed": true,
+  "outline_dimensionally_verified": false,
+  "connector_saved_pad_fit": {
+    "J1": {
+      "rms_mm": 0.07489115586273372,
+      "max_mm": 0.21577706301183391,
+      "unique_matched_joints": 22
+    },
+    "J2": {
+      "rms_mm": 0.0715495958302597,
+      "max_mm": 0.16069747328426082,
+      "unique_matched_joints": 22
+    }
+  },
+  "limitation": "Structural/placement checks only; no electrical or manufacturing signoff",
+  "reference_images": [
+    {
+      "layer": "Dwgs.User",
+      "pixels_unchanged": true,
+      "size": [
+        1030,
+        1601
+      ],
+      "center_mm": [
+        148.5,
+        105
+      ],
+      "scale": 0.455365,
+      "sha256": "917acd128dd7d70f889049dee0ed36c413ab91c01847e87d0648e56eabfd78d3"
+    },
+    {
+      "layer": "Cmts.User",
+      "pixels_unchanged": true,
+      "size": [
+        1030,
+        1601
+      ],
+      "center_mm": [
+        148.5,
+        105
+      ],
+      "scale": 0.455365,
+      "sha256": "1708ba4c2e88230d3bce5a5e37c27213bd00871b5c40b07c01a45044a2eca26c"
+    }
+  ]
+}

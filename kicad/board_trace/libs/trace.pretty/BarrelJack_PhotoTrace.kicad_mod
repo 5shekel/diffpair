@@ -1,0 +1,99 @@
+(footprint "BarrelJack_PhotoTrace"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" ""
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "831dda27-eec9-48c6-8f2e-e17b3ed612da")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "73983ca1-5d9a-4103-b2ca-c4f277521107")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9d98900f-3c43-4e6b-b852-5ff33190cc87")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7385ee2d-b59a-423c-b4f5-1ef5d24ade4f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Trace limitations" "Photo proxy; slot sizes, pin functions and body dimensions unverified"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "6c806a48-655e-4144-b57c-0563c56a49e1")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -5.243373 -1.349397)
+		(end 4.356626 12.838554)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "d0fb3125-ee9f-4783-b58a-51d1dc8b4832")
+	)
+	(pad "1" thru_hole oval
+		(at -0.077108 0)
+		(size 3.546987 1.46506)
+		(drill oval 2.5 0.8)
+		(layers "*.Cu")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "25f801cd-8a03-4df0-9ce9-869b5d99a150")
+	)
+	(pad "2" thru_hole oval
+		(at 5.012048 2.467469)
+		(size 1.46506 3.546987)
+		(drill oval 0.8 2.5)
+		(layers "*.Cu")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "c1845fac-11c4-4917-af9b-db2e9d5defb0")
+	)
+	(pad "3" thru_hole oval
+		(at -0.077108 6.168674)
+		(size 3.546987 1.46506)
+		(drill oval 2.5 0.8)
+		(layers "*.Cu")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "8f0592c5-7c36-4aa8-bcc0-f459c7651aa4")
+	)
+	(embedded_fonts no)
+)

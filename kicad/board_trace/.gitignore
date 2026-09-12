@@ -1,0 +1,4 @@
+review/backups/
+review/*_crop.png
+review/raw_small.png
+*.next.kicad_pcb
