@@ -1,0 +1,30 @@
+{
+  "note": "Vendor assets salvaged from the retired kicad/usb3_over_optical_hub project so the VL813 hub controller and SFP+ connector remain available here.",
+  "source": "EasyEDA / LCSC vendor import, retrieved by LCSC part number",
+  "fetch_method": "See kicad/board_trace/scripts/easyeda_fetch.py and easyeda_convert.py (EasyEDA product API, e.g. https://easyeda.com/api/products/<LCSC>/components).",
+  "parts": {
+    "C69418": {
+      "description": "VL813 USB3 hub controller (QFN-76)",
+      "lcsc": "https://www.lcsc.com/product-detail/C69418.html",
+      "symbols": ["VL813(A1)"],
+      "footprint": "lcsc:C69418_QFN-76_L9_0-W9_0-P0_40-EP6_4-TL"
+    },
+    "C42418480": {
+      "description": "SFP+ 20-pin cage/connector (CONN-SMD_20P-P0_80_SFP20P)",
+      "lcsc": "https://www.lcsc.com/product-detail/C42418480.html",
+      "symbols": ["SFP20P"],
+      "footprint": "lcsc:C42418480_CONN-SMD_20P-P0_80_SFP20P"
+    }
+  },
+  "added_to_repo": "2026-08-23",
+  "salvaged_on": "2026-09-13",
+  "status": "Unverified vendor import; footprint/model geometry not independently checked against a manufacturer drawing.",
+  "sha256": {
+    "kicad\\usb3_sfp_hub\\libs\\lcsc\\3dmodels\\C69418.step": "a4a3b96abc95d4c0559bd24f5aae87951d31b87270ed4af83f9e2305eafccf23",
+    "kicad\\usb3_sfp_hub\\libs\\lcsc\\3dmodels\\C69418.wrl": "6f0db666f66f150823d8ea987e88b3907906ebb15ebdfcda5e670c4cf952eb51",
+    "kicad\\usb3_sfp_hub\\libs\\lcsc\\3dmodels\\C42418480.step": "9aef6b9bcb70a6d1d4f52423e44f8554588162d49b5e0b2215abe1f73f54c91b",
+    "kicad\\usb3_sfp_hub\\libs\\lcsc\\3dmodels\\C42418480.wrl": "5de8367919fb58a092777e1a270f60de3af74612baf6e0ab6e9ca58caf6caf64",
+    "kicad\\usb3_sfp_hub\\libs\\lcsc\\symbols\\lcsc_imported.kicad_sym": "77cef94217e429b2b9ee36280918e5b1561ddffd98cde98eae687ccd1b1eec9b",
+    "kicad\\usb3_sfp_hub\\libs\\lcsc.pretty\\C42418480_CONN-SMD_20P-P0_80_SFP20P.kicad_mod": "7e6f46d9937f00e8883d309bf43841ac99e963ee7ab31803d9cf26f3129ce7b2"
+  }
+}

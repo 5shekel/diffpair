@@ -26,7 +26,7 @@ map is not evidence of a working optical USB hub.
 | Artifact | What it proves | What it does not prove |
 |---|---|---|
 | `kicad/board_trace/` | Photo placement and geometry observations | Connectivity or operation |
-| `kicad/usb3_over_optical_hub/...` | Original two-symbol starting point | An implemented hub schematic |
+| `kicad/usb3_sfp_hub/libs/lcsc/` | Salvaged VL813 and SFP+ vendor symbols, footprint and 3D models, with provenance in `provenance.json` | Component qualification; import geometry not independently checked |
 | `kicad/usb3_sfp_hub/usb3_sfp_hub.kicad_sch` | New connected downstream electrical draft | A complete circuit or optical bridge |
 | `kicad/usb3_sfp_hub/sfp_support.kicad_sch` | Selected filter L/bulk C/damping R, management pullups and access connected across sheets | Qualified analog behavior or link controller; illustrative SPICE load-step fails voltage target |
 | `kicad/usb3_sfp_hub/sfp_supply.kicad_sch` | Independent 3.3 V regulator, selected inductors/local land patterns, soft-start and PG test access connected to the filters | Selected capacitors, actual voltage margins, stability, thermal or startup qualification |
