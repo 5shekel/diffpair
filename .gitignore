@@ -11,6 +11,10 @@ webroot/*.html
 
 # Local PDF rendering dependency
 .tools/pdf/
+
+# KiCad board trace backups
+kicad/board_trace/board_trace-backups/
+
 __pycache__/
 design/receiver/build/
 
