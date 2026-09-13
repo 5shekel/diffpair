@@ -95,10 +95,12 @@ for ref,x,y,size,value in [("L1",114,942,"4030","10uH"),
         evidence="Shielded inductor body; footprint is a size proxy, height unknown" + ("; adjacent silk reads 10uH" if ref=="L1" else ""))
 add("D1","Diode_SMD","D_SMB",168,1074,180,value="UNKNOWN (MARK:KE)",
     evidence="Former C50; molded two-terminal body and end band suggest a diode. SMB size, diode type and polarity are provisional")
-add("C51","Capacitor_THT","CP_Radial_D8.0mm_P2.50mm",166,1186,270,
-    evidence="Two back-photo joints at (166,1186)/(166,1253); radial electrolytic, diameter approximate and polarity unknown")
-add("J4","trace","BarrelJack_PhotoTrace",190,1328,value="DC barrel jack (unidentified)",
-    evidence="Former C52; C32-C34 were its solder tabs. Custom geometry from bottom photo; drill dimensions and pin functions unverified")
+add("C51","Capacitor_THT","CP_Radial_D5.0mm_P2.50mm",166,1186,270,
+    evidence="Two back-photo joints at (166,1186)/(166,1253); radial electrolytic, diameter approximate and polarity unknown. Downsized from a D8.0mm to a D5.0mm can because the real J4 jack body is longer than the photo proxy and would encroach on an 8mm can (same 2.50mm lead pitch, so the leads stay in the same holes)")
+add("J4","lcsc","C319099_DC-005-2.5A-2.0",188.06,1487.02,value="DC-005-2.5A-2.0 (XKB, LCSC C319099)",
+    evidence="Former C52. Real panel-mount DC power jack placed on the two photo-measured collinear holes (old pad1/old pad3); barrel faces the board edge. Land/pin numbers from vendor datasheet 'PCB HOLES (TOP VIEW)' and EasyEDA package; datasheet schedules pin1=tip, pin2=break, pin3=outer. Electrical use unverified",confidence="vendor-fit")
+add("CAGE1","lcsc","C5441174_CAGE-SFP-1X1-TH",773.55,963.28,value="SFP+ 1x1 cage (CND-tek 201N1Y02001)",
+    evidence="Real SFP+ cage fitted to J3 locating holes, centred on J3 X +12.0mm toward the module end; added after the photo-placement pass",confidence="vendor-fit")
 for ref,x,y in [("D2",450,1425),("D3",450,1498)]:
     add(ref,"LED_THT","LED_D5.0mm",x,y,value="LED (bent leads)",
         evidence="Visible LED and two through-hole joints, nominal 2.54mm pitch; polarity unknown, stock body does not model bent leads")

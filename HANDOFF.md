@@ -7,6 +7,17 @@
 
 ## Active goal continuation — electrical design
 
+**Latest continuation — board_trace real-part fit (2026-09-13):** on the photo
+placement model, the provisional barrel-jack proxy was replaced by the real XKB
+**DC-005-2.5A-2.0** (LCSC C319099) as J4, and the adjacent bulk capacitor C51 was
+downsized from a D8.0 to a D5.0 mm radial can so it clears the longer jack body.
+`placement_plan.json` now lists 62 parts (the CND-tek C5441174 SFP cage had never
+been added back to the plan); `06_check_saved.py` passes again, and native DRC is
+283 violations (128 errors, 155 warnings), 0 unconnected, no tracks or named nets.
+This is better than the 322-violation pre-jack board, mainly because the smaller
+C51 silkscreen removes 37 silk warnings. This is placement evidence only and makes
+no hub electrical change; hub J7 remains `input TBD`.
+
 **Latest continuation — hub reset supervisor:** current hub draft is now
 **105 physical components on six sheets**. U12 TPS3808G33DBVR replaces the
 former reset RC with a 3.3V supervisor: DBV pins 1 RESET_N, 2 GND, 3 MR_N,

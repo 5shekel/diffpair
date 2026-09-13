@@ -1,5 +1,5 @@
 {
-  "footprints": 61,
+  "footprints": 62,
   "back_smd_refs": [
     "U1"
   ],
@@ -15,7 +15,7 @@
       "unique_matched_joints": 22
     },
     "J2": {
-      "rms_mm": 0.0715495958302597,
+      "rms_mm": 0.07154959167799156,
       "max_mm": 0.16069747328426082,
       "unique_matched_joints": 22
     }

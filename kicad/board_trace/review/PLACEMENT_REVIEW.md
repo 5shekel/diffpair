@@ -77,3 +77,40 @@ position and scale. These checks are reproducible with `scripts/06_check_saved.p
 Next work: resolve U1/J3 fit and pin orientation, identify power circuitry, measure
 the mechanical features, and reconstruct nets from continuity evidence before
 building a connected schematic.
+
+## 2026-09-13 — real-part fit (SFP cage, DC jack)
+
+The photo-placement pass was then closed and real LCSC parts were fitted on top of
+it. `placement_plan.json` now carries **62 parts**, and `06_check_saved.py` passes
+again (the cage commit had left the plan/check stale):
+
+- **CAGE1** — CND-tek SFP+ 1x1 cage (LCSC C5441174), 17 legs on the J3 locating
+  holes; see `cage_fit.svg`/`cage_fit.pdf`.
+- **J4** — XKB **DC-005-2.5A-2.0** panel-mount DC power jack (LCSC C319099),
+  replacing the provisional `BarrelJack_PhotoTrace` proxy. The footprint is
+  transcribed from the vendor datasheet "PCB HOLES (TOP VIEW)" drawing (three
+  3.0 x 0.8 mm slots; the two collinear terminals 6.10 mm apart, the break terminal
+  4.60 mm to the side and centred) and the EasyEDA package (1.8 x 4.2 mm pad).
+  Origin = pin 1 (tip) and the barrel faces the board edge. Pin numbers follow the
+  datasheet SCHEDULE (1 = tip/centre, 2 = break/switch, 3 = outer/sleeve); the
+  EasyEDA package numbers the two collinear terminals 1/2 instead. J4 is placed on
+  the two photo-measured collinear holes, and its break terminal lands within about
+  0.65 mm of the old proxy's third joint. Electrical use is not established.
+- **C51** was downsized from a D8.0 mm to a D5.0 mm radial can: the real jack body
+  is longer than the photo proxy and encroached on an 8 mm capacitor. Both stock
+  footprints share the 2.50 mm lead pitch, so the leads stay in the same
+  photo-measured holes. Capacitance and height remain unmeasured.
+
+Native DRC after these changes: **283 violations (128 errors, 155 warnings)**, with
+0 unconnected items and still no tracks or named nets. This is **better** than the
+pre-jack board (322): the smaller C51 silkscreen alone removes 37 silk
+overlap/over-copper warnings, and replacing the jack removes one courtyard overlap
+and one PTH-inside-courtyard finding. J4 and C51 courtyards clear each other by
+0.37 mm. The DC jack has no F.SilkS outline on purpose (its body overhangs the
+board edge in a dense area, so silkscreen there would only add warnings).
+
+Because the edit went through pcbnew, the save re-serialised the whole board and
+the cage's 17 pads lost their explicit `"*.Mask"` wildcard (it is re-derived from
+the project on load, so the mask openings are unaffected; every other PTH pad on
+the board was already written that way). A handful of coordinates also round at
+the 1e-6 mm level. No other footprint's content changed.

@@ -10,7 +10,7 @@ link is bidirectional, so these names do not imply one-way signal flow.
 | Evidence | Top photo, enclosure photo, observation notes; no measured signal nets | Top/back photos and component placement model |
 | Reconstructed schematic | None | Partial: 105 physical components on six sheets |
 | Electrical PCB layout | None | None |
-| Photo placement model | None | 61 footprints, approximate outline, no named nets or routed tracks |
+| Photo placement model | None | 62 footprints (incl. a real SFP cage and the C319099 DC jack), approximate outline, no named nets or routed tracks |
 | ERC | Not applicable without schematic | 7 errors and 20 warnings |
 | Fabrication ready | No | No |
 | New-board operation tested | No | No |
@@ -21,7 +21,11 @@ switched port power, SFP supplies and
 management access, and downstream signal ESD arrays. **The optical signal
 interface remains open.** Bias/pin-40 decisions, control/firmware, protection and
 power qualification also remain incomplete. The photo placement model is a
-separate project and is not a routed version of this schematic.
+separate project and is not a routed version of this schematic. On that model,
+real LCSC parts now replace two photo proxies: the CND-tek C5441174 SFP+ cage
+(CAGE1) and the XKB **DC-005-2.5A-2.0** DC power jack (J4, LCSC C319099); the
+adjacent C51 bulk capacitor was downsized to a 5 mm can to clear the longer jack
+body. This is placement evidence only; the jack's electrical use is not established.
 
 On 2026-09-13 the unreferenced `kicad/usb3_over_optical_hub/` starting point was
 removed and its VL813 (LCSC C69418) and SFP+ 20-pin (C42418480) symbols, footprint

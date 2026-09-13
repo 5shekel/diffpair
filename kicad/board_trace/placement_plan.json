@@ -739,26 +739,38 @@
     {
       "ref": "C51",
       "library": "Capacitor_THT",
-      "fp": "CP_Radial_D8.0mm_P2.50mm",
+      "fp": "CP_Radial_D5.0mm_P2.50mm",
       "px": 166,
       "py": 1186,
       "rot": 270,
       "side": "F",
       "value": "UNKNOWN",
-      "evidence": "Two back-photo joints at (166,1186)/(166,1253); radial electrolytic, diameter approximate and polarity unknown",
+      "evidence": "Two back-photo joints at (166,1186)/(166,1253); radial electrolytic, diameter approximate and polarity unknown. Downsized from a D8.0mm to a D5.0mm can because the real J4 jack body is longer than the photo proxy and would encroach on an 8mm can (same 2.50mm lead pitch, so the leads stay in the same holes)",
       "confidence": "inferred"
     },
     {
       "ref": "J4",
-      "library": "trace",
-      "fp": "BarrelJack_PhotoTrace",
-      "px": 190,
-      "py": 1328,
+      "library": "lcsc",
+      "fp": "C319099_DC-005-2.5A-2.0",
+      "px": 188.06,
+      "py": 1487.02,
       "rot": 0,
       "side": "F",
-      "value": "DC barrel jack (unidentified)",
-      "evidence": "Former C52; C32-C34 were its solder tabs. Custom geometry from bottom photo; drill dimensions and pin functions unverified",
-      "confidence": "inferred"
+      "value": "DC-005-2.5A-2.0 (XKB, LCSC C319099)",
+      "evidence": "Former C52. Real panel-mount DC power jack placed on the two photo-measured collinear holes (old pad1/old pad3); barrel faces the board edge. Land/pin numbers from vendor datasheet 'PCB HOLES (TOP VIEW)' and EasyEDA package; datasheet schedules pin1=tip, pin2=break, pin3=outer. Electrical use unverified",
+      "confidence": "vendor-fit"
+    },
+    {
+      "ref": "CAGE1",
+      "library": "lcsc",
+      "fp": "C5441174_CAGE-SFP-1X1-TH",
+      "px": 773.55,
+      "py": 963.28,
+      "rot": 0,
+      "side": "F",
+      "value": "SFP+ 1x1 cage (CND-tek 201N1Y02001)",
+      "evidence": "Real SFP+ cage fitted to J3 locating holes, centred on J3 X +12.0mm toward the module end; added after the photo-placement pass",
+      "confidence": "vendor-fit"
     },
     {
       "ref": "D2",

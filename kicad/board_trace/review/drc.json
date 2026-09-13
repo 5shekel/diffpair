@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.kicad.org/drc.v1.json",
     "coordinate_units": "mm",
-    "date": "2026-09-11T14:29:35",
+    "date": "2026-09-13T17:13:11",
     "ignored_checks": [
         {
             "description": "Footprint has no courtyard defined",
@@ -64,115 +64,23 @@
             "type": "annular_width"
         },
         {
-            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
-            "items": [
-                {
-                    "description": "Pad 1 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 107.886746
-                    },
-                    "uuid": "54e271cb-012b-4f2f-9321-863d80f5e666"
-                },
-                {
-                    "description": "Pad 2 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 107.486746
-                    },
-                    "uuid": "7f188ba4-abb5-4b70-9e98-cfcfc46d68fd"
-                }
-            ],
-            "severity": "error",
-            "type": "clearance"
-        },
-        {
-            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
-            "items": [
-                {
-                    "description": "Pad 3 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 107.086746
-                    },
-                    "uuid": "afa037a1-ad5d-4a96-bfaf-e4ccf892d60c"
-                },
-                {
-                    "description": "Pad 2 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 107.486746
-                    },
-                    "uuid": "7f188ba4-abb5-4b70-9e98-cfcfc46d68fd"
-                }
-            ],
-            "severity": "error",
-            "type": "clearance"
-        },
-        {
-            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
-            "items": [
-                {
-                    "description": "Pad 3 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 107.086746
-                    },
-                    "uuid": "afa037a1-ad5d-4a96-bfaf-e4ccf892d60c"
-                },
-                {
-                    "description": "Pad 4 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 106.686746
-                    },
-                    "uuid": "9b4c5952-5443-46dd-a059-b349f0714319"
-                }
-            ],
-            "severity": "error",
-            "type": "clearance"
-        },
-        {
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1497 mm)",
             "items": [
                 {
-                    "description": "PTH pad 1 [<no net>] of D2",
+                    "description": "PTH pad 1 [<no net>] of D3",
                     "pos": {
                         "x": 145.993975,
-                        "y": 129.077108
+                        "y": 131.891566
                     },
-                    "uuid": "d85ddbc2-3b11-4428-80a2-772874e98fb3"
+                    "uuid": "e04a2b91-4667-4c58-87e1-ff7d2509a617"
                 },
                 {
-                    "description": "Pad 2 [<no net>] of R10 on F.Cu",
+                    "description": "Pad 2 [<no net>] of R11 on F.Cu",
                     "pos": {
                         "x": 144.544277,
-                        "y": 128.768674
+                        "y": 131.621686
                     },
-                    "uuid": "3c605f60-f721-482a-89f8-96b11a5c3f9f"
-                }
-            ],
-            "severity": "error",
-            "type": "clearance"
-        },
-        {
-            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
-            "items": [
-                {
-                    "description": "Pad 5 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 106.286746
-                    },
-                    "uuid": "f5670ec1-1dab-432f-a168-da9ceb229e6a"
-                },
-                {
-                    "description": "Pad 4 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 106.686746
-                    },
-                    "uuid": "9b4c5952-5443-46dd-a059-b349f0714319"
+                    "uuid": "97bdb11c-2d7c-4fa2-ba00-df99c4c9e45f"
                 }
             ],
             "severity": "error",
@@ -205,20 +113,43 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
-                    "description": "Pad 5 [<no net>] of U1 on B.Cu",
+                    "description": "Pad 1 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 134.808433,
-                        "y": 106.286746
+                        "y": 107.886746
                     },
-                    "uuid": "f5670ec1-1dab-432f-a168-da9ceb229e6a"
+                    "uuid": "54e271cb-012b-4f2f-9321-863d80f5e666"
                 },
                 {
-                    "description": "Pad 6 [<no net>] of U1 on B.Cu",
+                    "description": "Pad 2 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 134.808433,
-                        "y": 105.886746
+                        "y": 107.486746
                     },
-                    "uuid": "86a8f0c4-fd59-4eca-87ce-75876be317ff"
+                    "uuid": "7f188ba4-abb5-4b70-9e98-cfcfc46d68fd"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1520 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 9 [<no net>] of CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 92.724698
+                    },
+                    "uuid": "19a197e7-048e-4785-9ede-181fb9955132"
+                },
+                {
+                    "description": "Pad 1 [<no net>] of C41 on F.Cu",
+                    "pos": {
+                        "x": 159.291265,
+                        "y": 91.448192
+                    },
+                    "uuid": "2f68a70f-1a86-4b52-980e-6d16205bc4de"
                 }
             ],
             "severity": "error",
@@ -228,43 +159,20 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
-                    "description": "Pad 6 [<no net>] of U1 on B.Cu",
+                    "description": "Pad 3 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 134.808433,
-                        "y": 105.886746
+                        "y": 107.086746
                     },
-                    "uuid": "86a8f0c4-fd59-4eca-87ce-75876be317ff"
+                    "uuid": "afa037a1-ad5d-4a96-bfaf-e4ccf892d60c"
                 },
                 {
-                    "description": "Pad 7 [<no net>] of U1 on B.Cu",
+                    "description": "Pad 2 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 134.808433,
-                        "y": 105.486746
+                        "y": 107.486746
                     },
-                    "uuid": "7ed16700-6749-4d25-8bd0-c1ac744d95eb"
-                }
-            ],
-            "severity": "error",
-            "type": "clearance"
-        },
-        {
-            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
-            "items": [
-                {
-                    "description": "Pad 8 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 105.086746
-                    },
-                    "uuid": "e5236ddb-b14f-4fc4-ab13-256eef8adb88"
-                },
-                {
-                    "description": "Pad 7 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 105.486746
-                    },
-                    "uuid": "7ed16700-6749-4d25-8bd0-c1ac744d95eb"
+                    "uuid": "7f188ba4-abb5-4b70-9e98-cfcfc46d68fd"
                 }
             ],
             "severity": "error",
@@ -274,20 +182,135 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1497 mm)",
             "items": [
                 {
-                    "description": "PTH pad 1 [<no net>] of D3",
+                    "description": "PTH pad 1 [<no net>] of D2",
                     "pos": {
                         "x": 145.993975,
-                        "y": 131.891566
+                        "y": 129.077108
                     },
-                    "uuid": "e04a2b91-4667-4c58-87e1-ff7d2509a617"
+                    "uuid": "d85ddbc2-3b11-4428-80a2-772874e98fb3"
                 },
                 {
-                    "description": "Pad 2 [<no net>] of R11 on F.Cu",
+                    "description": "Pad 2 [<no net>] of R10 on F.Cu",
                     "pos": {
                         "x": 144.544277,
-                        "y": 131.621686
+                        "y": 128.768674
                     },
-                    "uuid": "97bdb11c-2d7c-4fa2-ba00-df99c4c9e45f"
+                    "uuid": "3c605f60-f721-482a-89f8-96b11a5c3f9f"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
+            "items": [
+                {
+                    "description": "Pad 3 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 107.086746
+                    },
+                    "uuid": "afa037a1-ad5d-4a96-bfaf-e4ccf892d60c"
+                },
+                {
+                    "description": "Pad 4 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 106.686746
+                    },
+                    "uuid": "9b4c5952-5443-46dd-a059-b349f0714319"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
+            "items": [
+                {
+                    "description": "Pad 4 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 106.686746
+                    },
+                    "uuid": "9b4c5952-5443-46dd-a059-b349f0714319"
+                },
+                {
+                    "description": "Pad 5 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 106.286746
+                    },
+                    "uuid": "f5670ec1-1dab-432f-a168-da9ceb229e6a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
+            "items": [
+                {
+                    "description": "Pad 6 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 105.886746
+                    },
+                    "uuid": "86a8f0c4-fd59-4eca-87ce-75876be317ff"
+                },
+                {
+                    "description": "Pad 5 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 106.286746
+                    },
+                    "uuid": "f5670ec1-1dab-432f-a168-da9ceb229e6a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
+            "items": [
+                {
+                    "description": "Pad 6 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 105.886746
+                    },
+                    "uuid": "86a8f0c4-fd59-4eca-87ce-75876be317ff"
+                },
+                {
+                    "description": "Pad 7 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 105.486746
+                    },
+                    "uuid": "7ed16700-6749-4d25-8bd0-c1ac744d95eb"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
+            "items": [
+                {
+                    "description": "Pad 7 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 105.486746
+                    },
+                    "uuid": "7ed16700-6749-4d25-8bd0-c1ac744d95eb"
+                },
+                {
+                    "description": "Pad 8 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 105.086746
+                    },
+                    "uuid": "e5236ddb-b14f-4fc4-ab13-256eef8adb88"
                 }
             ],
             "severity": "error",
@@ -320,20 +343,43 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
+                    "description": "Pad 10 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 104.286746
+                    },
+                    "uuid": "a617f2e6-b63f-44c8-9d24-67b1adcf3569"
+                },
+                {
+                    "description": "Pad 11 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 103.886746
+                    },
+                    "uuid": "713ef3f0-c4d9-4712-8f12-8878d58135d3"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
+            "items": [
+                {
+                    "description": "Pad 10 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 104.286746
+                    },
+                    "uuid": "a617f2e6-b63f-44c8-9d24-67b1adcf3569"
+                },
+                {
                     "description": "Pad 9 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 134.808433,
                         "y": 104.686746
                     },
                     "uuid": "3cf1ef1d-0d69-4f56-99d0-e15dd01f9c17"
-                },
-                {
-                    "description": "Pad 10 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 104.286746
-                    },
-                    "uuid": "a617f2e6-b63f-44c8-9d24-67b1adcf3569"
                 }
             ],
             "severity": "error",
@@ -342,14 +388,6 @@
         {
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
-                {
-                    "description": "Pad 10 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 104.286746
-                    },
-                    "uuid": "a617f2e6-b63f-44c8-9d24-67b1adcf3569"
-                },
                 {
                     "description": "Pad 11 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -357,14 +395,7 @@
                         "y": 103.886746
                     },
                     "uuid": "713ef3f0-c4d9-4712-8f12-8878d58135d3"
-                }
-            ],
-            "severity": "error",
-            "type": "clearance"
-        },
-        {
-            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
-            "items": [
+                },
                 {
                     "description": "Pad 12 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -372,37 +403,6 @@
                         "y": 103.486746
                     },
                     "uuid": "34dfd06f-486d-4440-86ab-3b298fb3c5ef"
-                },
-                {
-                    "description": "Pad 11 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 103.886746
-                    },
-                    "uuid": "713ef3f0-c4d9-4712-8f12-8878d58135d3"
-                }
-            ],
-            "severity": "error",
-            "type": "clearance"
-        },
-        {
-            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
-            "items": [
-                {
-                    "description": "Pad 12 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 103.486746
-                    },
-                    "uuid": "34dfd06f-486d-4440-86ab-3b298fb3c5ef"
-                },
-                {
-                    "description": "Pad 13 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 103.086746
-                    },
-                    "uuid": "b5867cb4-4bb1-4a54-9cad-6b842171ff34"
                 }
             ],
             "severity": "error",
@@ -420,12 +420,12 @@
                     "uuid": "b5867cb4-4bb1-4a54-9cad-6b842171ff34"
                 },
                 {
-                    "description": "Pad 14 [<no net>] of U1 on B.Cu",
+                    "description": "Pad 12 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 134.808433,
-                        "y": 102.686746
+                        "y": 103.486746
                     },
-                    "uuid": "b9c681c1-faaa-4cc3-9440-fe74f84aa1d0"
+                    "uuid": "34dfd06f-486d-4440-86ab-3b298fb3c5ef"
                 }
             ],
             "severity": "error",
@@ -435,20 +435,20 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
-                    "description": "Pad 15 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 134.808433,
-                        "y": 102.286746
-                    },
-                    "uuid": "0464f79c-1343-4b7c-9265-0861b0ff2faf"
-                },
-                {
                     "description": "Pad 14 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 134.808433,
                         "y": 102.686746
                     },
                     "uuid": "b9c681c1-faaa-4cc3-9440-fe74f84aa1d0"
+                },
+                {
+                    "description": "Pad 13 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 103.086746
+                    },
+                    "uuid": "b5867cb4-4bb1-4a54-9cad-6b842171ff34"
                 }
             ],
             "severity": "error",
@@ -458,13 +458,28 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
+                    "description": "Pad 14 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 102.686746
+                    },
+                    "uuid": "b9c681c1-faaa-4cc3-9440-fe74f84aa1d0"
+                },
+                {
                     "description": "Pad 15 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 134.808433,
                         "y": 102.286746
                     },
                     "uuid": "0464f79c-1343-4b7c-9265-0861b0ff2faf"
-                },
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
+            "items": [
                 {
                     "description": "Pad 16 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -472,6 +487,14 @@
                         "y": 101.886746
                     },
                     "uuid": "94d3ff9c-2af2-4c5f-bd3f-fc7f0a5cbd51"
+                },
+                {
+                    "description": "Pad 15 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 134.808433,
+                        "y": 102.286746
+                    },
+                    "uuid": "0464f79c-1343-4b7c-9265-0861b0ff2faf"
                 }
             ],
             "severity": "error",
@@ -573,20 +596,20 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
+                    "description": "Pad 22 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 136.408433,
+                        "y": 99.886746
+                    },
+                    "uuid": "a7a9c2f2-b8d5-40bc-a4cf-fb09947918d4"
+                },
+                {
                     "description": "Pad 21 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 136.008433,
                         "y": 99.886746
                     },
                     "uuid": "41bb56c1-7d1e-44fa-9dfd-4674146b96ab"
-                },
-                {
-                    "description": "Pad 22 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 136.408433,
-                        "y": 99.886746
-                    },
-                    "uuid": "a7a9c2f2-b8d5-40bc-a4cf-fb09947918d4"
                 }
             ],
             "severity": "error",
@@ -619,20 +642,20 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
+                    "description": "Pad 24 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 137.208433,
+                        "y": 99.886746
+                    },
+                    "uuid": "8401864f-b509-499f-b82e-767d3ccd2e61"
+                },
+                {
                     "description": "Pad 23 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 136.808433,
                         "y": 99.886746
                     },
                     "uuid": "9619cab1-5398-4965-8d77-5fea47917842"
-                },
-                {
-                    "description": "Pad 24 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 137.208433,
-                        "y": 99.886746
-                    },
-                    "uuid": "8401864f-b509-499f-b82e-767d3ccd2e61"
                 }
             ],
             "severity": "error",
@@ -642,20 +665,20 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
-                    "description": "Pad 25 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 137.608433,
-                        "y": 99.886746
-                    },
-                    "uuid": "7a04c206-27bd-4e9d-9bc6-4ff29fdd6f6b"
-                },
-                {
                     "description": "Pad 24 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 137.208433,
                         "y": 99.886746
                     },
                     "uuid": "8401864f-b509-499f-b82e-767d3ccd2e61"
+                },
+                {
+                    "description": "Pad 25 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 137.608433,
+                        "y": 99.886746
+                    },
+                    "uuid": "7a04c206-27bd-4e9d-9bc6-4ff29fdd6f6b"
                 }
             ],
             "severity": "error",
@@ -664,14 +687,6 @@
         {
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
-                {
-                    "description": "Pad 25 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 137.608433,
-                        "y": 99.886746
-                    },
-                    "uuid": "7a04c206-27bd-4e9d-9bc6-4ff29fdd6f6b"
-                },
                 {
                     "description": "Pad 26 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -679,6 +694,14 @@
                         "y": 99.886746
                     },
                     "uuid": "29e7002f-e6de-476b-9275-cca686ba65c2"
+                },
+                {
+                    "description": "Pad 25 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 137.608433,
+                        "y": 99.886746
+                    },
+                    "uuid": "7a04c206-27bd-4e9d-9bc6-4ff29fdd6f6b"
                 }
             ],
             "severity": "error",
@@ -757,20 +780,20 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
+                    "description": "Pad 30 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 139.608433,
+                        "y": 99.886746
+                    },
+                    "uuid": "bfa86d5a-3d5d-4bc0-b609-9f6bce8e51ef"
+                },
+                {
                     "description": "Pad 29 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 139.208433,
                         "y": 99.886746
                     },
                     "uuid": "9060d349-fb4a-409a-b2be-012191ca0ed1"
-                },
-                {
-                    "description": "Pad 30 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 139.608433,
-                        "y": 99.886746
-                    },
-                    "uuid": "bfa86d5a-3d5d-4bc0-b609-9f6bce8e51ef"
                 }
             ],
             "severity": "error",
@@ -803,28 +826,13 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
-                    "description": "Pad 32 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 140.408433,
-                        "y": 99.886746
-                    },
-                    "uuid": "0a3fc288-bcb5-4e77-a2ac-822d932257d9"
-                },
-                {
                     "description": "Pad 31 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 140.008433,
                         "y": 99.886746
                     },
                     "uuid": "537e3a70-d699-4369-9f06-585a574657fc"
-                }
-            ],
-            "severity": "error",
-            "type": "clearance"
-        },
-        {
-            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
-            "items": [
+                },
                 {
                     "description": "Pad 32 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -832,14 +840,6 @@
                         "y": 99.886746
                     },
                     "uuid": "0a3fc288-bcb5-4e77-a2ac-822d932257d9"
-                },
-                {
-                    "description": "Pad 33 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 140.808433,
-                        "y": 99.886746
-                    },
-                    "uuid": "73cead69-c53f-4c84-92df-45c040909224"
                 }
             ],
             "severity": "error",
@@ -856,6 +856,21 @@
                     },
                     "uuid": "73cead69-c53f-4c84-92df-45c040909224"
                 },
+                {
+                    "description": "Pad 32 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 140.408433,
+                        "y": 99.886746
+                    },
+                    "uuid": "0a3fc288-bcb5-4e77-a2ac-822d932257d9"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
+            "items": [
                 {
                     "description": "Pad 34 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -863,6 +878,14 @@
                         "y": 99.886746
                     },
                     "uuid": "c498be42-a024-4410-ac1b-dc28a6072dc4"
+                },
+                {
+                    "description": "Pad 33 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 140.808433,
+                        "y": 99.886746
+                    },
+                    "uuid": "73cead69-c53f-4c84-92df-45c040909224"
                 }
             ],
             "severity": "error",
@@ -871,6 +894,14 @@
         {
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
+                {
+                    "description": "Pad 34 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 141.208433,
+                        "y": 99.886746
+                    },
+                    "uuid": "c498be42-a024-4410-ac1b-dc28a6072dc4"
+                },
                 {
                     "description": "Pad 35 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -878,14 +909,6 @@
                         "y": 99.886746
                     },
                     "uuid": "8c7edeec-facd-4024-9171-b71691faeb62"
-                },
-                {
-                    "description": "Pad 34 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 141.208433,
-                        "y": 99.886746
-                    },
-                    "uuid": "c498be42-a024-4410-ac1b-dc28a6072dc4"
                 }
             ],
             "severity": "error",
@@ -964,13 +987,28 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
+                    "description": "Pad 40 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 143.608433,
+                        "y": 101.086746
+                    },
+                    "uuid": "eda3465c-95e8-44ba-9718-f5427767358f"
+                },
+                {
                     "description": "Pad 39 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 143.608433,
                         "y": 100.686746
                     },
                     "uuid": "63f6cc19-bdce-43ca-835a-8d379eaee946"
-                },
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
+            "items": [
                 {
                     "description": "Pad 40 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -978,6 +1016,14 @@
                         "y": 101.086746
                     },
                     "uuid": "eda3465c-95e8-44ba-9718-f5427767358f"
+                },
+                {
+                    "description": "Pad 41 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 143.608433,
+                        "y": 101.486746
+                    },
+                    "uuid": "1cb10a64-51de-41b1-a4e7-146cb1cd9955"
                 }
             ],
             "severity": "error",
@@ -994,21 +1040,6 @@
                     },
                     "uuid": "1cb10a64-51de-41b1-a4e7-146cb1cd9955"
                 },
-                {
-                    "description": "Pad 40 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 143.608433,
-                        "y": 101.086746
-                    },
-                    "uuid": "eda3465c-95e8-44ba-9718-f5427767358f"
-                }
-            ],
-            "severity": "error",
-            "type": "clearance"
-        },
-        {
-            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
-            "items": [
                 {
                     "description": "Pad 42 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -1016,14 +1047,6 @@
                         "y": 101.886746
                     },
                     "uuid": "f5fa5bd4-11df-4185-97ab-53fb27fb271b"
-                },
-                {
-                    "description": "Pad 41 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 143.608433,
-                        "y": 101.486746
-                    },
-                    "uuid": "1cb10a64-51de-41b1-a4e7-146cb1cd9955"
                 }
             ],
             "severity": "error",
@@ -1125,20 +1148,20 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
-                    "description": "Pad 47 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 143.608433,
-                        "y": 103.886746
-                    },
-                    "uuid": "3c2b23ef-674c-4a2f-8e10-cb8917f06164"
-                },
-                {
                     "description": "Pad 46 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 143.608433,
                         "y": 103.486746
                     },
                     "uuid": "bc9d9b0f-2838-4f56-98a5-098bbe72c586"
+                },
+                {
+                    "description": "Pad 47 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 143.608433,
+                        "y": 103.886746
+                    },
+                    "uuid": "3c2b23ef-674c-4a2f-8e10-cb8917f06164"
                 }
             ],
             "severity": "error",
@@ -1171,20 +1194,43 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
+                    "description": "Pad 49 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 143.608433,
+                        "y": 104.686746
+                    },
+                    "uuid": "d59c45f5-a953-43bc-ae78-6fc4e80ea892"
+                },
+                {
+                    "description": "Pad 50 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 143.608433,
+                        "y": 105.086746
+                    },
+                    "uuid": "e33efdfb-c0b0-4f87-9325-6aee9911d12e"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
+            "items": [
+                {
+                    "description": "Pad 49 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 143.608433,
+                        "y": 104.686746
+                    },
+                    "uuid": "d59c45f5-a953-43bc-ae78-6fc4e80ea892"
+                },
+                {
                     "description": "Pad 48 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 143.608433,
                         "y": 104.286746
                     },
                     "uuid": "9cbdcb24-967a-41dd-a6bb-043d3f0fbd8a"
-                },
-                {
-                    "description": "Pad 49 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 143.608433,
-                        "y": 104.686746
-                    },
-                    "uuid": "d59c45f5-a953-43bc-ae78-6fc4e80ea892"
                 }
             ],
             "severity": "error",
@@ -1193,37 +1239,6 @@
         {
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
-                {
-                    "description": "Pad 50 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 143.608433,
-                        "y": 105.086746
-                    },
-                    "uuid": "e33efdfb-c0b0-4f87-9325-6aee9911d12e"
-                },
-                {
-                    "description": "Pad 49 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 143.608433,
-                        "y": 104.686746
-                    },
-                    "uuid": "d59c45f5-a953-43bc-ae78-6fc4e80ea892"
-                }
-            ],
-            "severity": "error",
-            "type": "clearance"
-        },
-        {
-            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
-            "items": [
-                {
-                    "description": "Pad 50 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 143.608433,
-                        "y": 105.086746
-                    },
-                    "uuid": "e33efdfb-c0b0-4f87-9325-6aee9911d12e"
-                },
                 {
                     "description": "Pad 51 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -1231,6 +1246,14 @@
                         "y": 105.486746
                     },
                     "uuid": "c540d432-baf1-4d88-a39a-3f41b13d38f7"
+                },
+                {
+                    "description": "Pad 50 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 143.608433,
+                        "y": 105.086746
+                    },
+                    "uuid": "e33efdfb-c0b0-4f87-9325-6aee9911d12e"
                 }
             ],
             "severity": "error",
@@ -1286,20 +1309,20 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
+                    "description": "Pad 54 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 143.608433,
+                        "y": 106.686746
+                    },
+                    "uuid": "45994609-5a4b-4cfe-b279-fd1838efb9b1"
+                },
+                {
                     "description": "Pad 53 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 143.608433,
                         "y": 106.286746
                     },
                     "uuid": "fee58d06-bb02-4ab5-86f1-18e90f430993"
-                },
-                {
-                    "description": "Pad 54 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 143.608433,
-                        "y": 106.686746
-                    },
-                    "uuid": "45994609-5a4b-4cfe-b279-fd1838efb9b1"
                 }
             ],
             "severity": "error",
@@ -1354,14 +1377,6 @@
         {
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
-                {
-                    "description": "Pad 56 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 143.608433,
-                        "y": 107.486746
-                    },
-                    "uuid": "b88e9823-44c2-44d8-a112-9af9dacd4f7e"
-                },
                 {
                     "description": "Pad 57 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -1369,6 +1384,14 @@
                         "y": 107.886746
                     },
                     "uuid": "a3a700e1-af3c-4ef4-9c01-5b85cf580306"
+                },
+                {
+                    "description": "Pad 56 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 143.608433,
+                        "y": 107.486746
+                    },
+                    "uuid": "b88e9823-44c2-44d8-a112-9af9dacd4f7e"
                 }
             ],
             "severity": "error",
@@ -1424,20 +1447,20 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
+                    "description": "Pad 61 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 141.608433,
+                        "y": 108.686746
+                    },
+                    "uuid": "bdd166c1-cff7-4225-bb4c-88007abb623b"
+                },
+                {
                     "description": "Pad 60 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 142.008433,
                         "y": 108.686746
                     },
                     "uuid": "465f318c-4aaa-40ac-9bdd-6e337cfdf3af"
-                },
-                {
-                    "description": "Pad 61 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 141.608433,
-                        "y": 108.686746
-                    },
-                    "uuid": "bdd166c1-cff7-4225-bb4c-88007abb623b"
                 }
             ],
             "severity": "error",
@@ -1447,20 +1470,20 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
-                    "description": "Pad 61 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 141.608433,
-                        "y": 108.686746
-                    },
-                    "uuid": "bdd166c1-cff7-4225-bb4c-88007abb623b"
-                },
-                {
                     "description": "Pad 62 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 141.208433,
                         "y": 108.686746
                     },
                     "uuid": "bfac71a7-6e00-495e-879e-6fc7bce844bc"
+                },
+                {
+                    "description": "Pad 61 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 141.608433,
+                        "y": 108.686746
+                    },
+                    "uuid": "bdd166c1-cff7-4225-bb4c-88007abb623b"
                 }
             ],
             "severity": "error",
@@ -1515,14 +1538,6 @@
         {
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
-                {
-                    "description": "Pad 64 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 140.408433,
-                        "y": 108.686746
-                    },
-                    "uuid": "b7a6394f-c8df-4cba-b8fe-d4c60b47ecda"
-                },
                 {
                     "description": "Pad 65 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -1530,6 +1545,14 @@
                         "y": 108.686746
                     },
                     "uuid": "6a5d68d6-6540-469e-bac6-4a2940535fac"
+                },
+                {
+                    "description": "Pad 64 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 140.408433,
+                        "y": 108.686746
+                    },
+                    "uuid": "b7a6394f-c8df-4cba-b8fe-d4c60b47ecda"
                 }
             ],
             "severity": "error",
@@ -1561,6 +1584,14 @@
         {
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
+                {
+                    "description": "Pad 66 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 139.608433,
+                        "y": 108.686746
+                    },
+                    "uuid": "86fc598d-be8c-4ab7-af22-11456d47b5d5"
+                },
                 {
                     "description": "Pad 67 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -1568,14 +1599,6 @@
                         "y": 108.686746
                     },
                     "uuid": "52fd1d23-7c5e-4ffc-b396-53ef0fef061b"
-                },
-                {
-                    "description": "Pad 66 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 139.608433,
-                        "y": 108.686746
-                    },
-                    "uuid": "86fc598d-be8c-4ab7-af22-11456d47b5d5"
                 }
             ],
             "severity": "error",
@@ -1746,20 +1769,20 @@
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
                 {
-                    "description": "Pad 75 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 136.008433,
-                        "y": 108.686746
-                    },
-                    "uuid": "a0219b9b-1470-4759-bf2b-b51806df845e"
-                },
-                {
                     "description": "Pad 74 [<no net>] of U1 on B.Cu",
                     "pos": {
                         "x": 136.408433,
                         "y": 108.686746
                     },
                     "uuid": "41edb4ad-b070-458a-b33e-659fe7bcfc55"
+                },
+                {
+                    "description": "Pad 75 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 136.008433,
+                        "y": 108.686746
+                    },
+                    "uuid": "a0219b9b-1470-4759-bf2b-b51806df845e"
                 }
             ],
             "severity": "error",
@@ -1768,14 +1791,6 @@
         {
             "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)",
             "items": [
-                {
-                    "description": "Pad 75 [<no net>] of U1 on B.Cu",
-                    "pos": {
-                        "x": 136.008433,
-                        "y": 108.686746
-                    },
-                    "uuid": "a0219b9b-1470-4759-bf2b-b51806df845e"
-                },
                 {
                     "description": "Pad 76 [<no net>] of U1 on B.Cu",
                     "pos": {
@@ -1783,6 +1798,14 @@
                         "y": 108.686746
                     },
                     "uuid": "e635b9cb-fdb3-4627-a417-a6ac6afc26bb"
+                },
+                {
+                    "description": "Pad 75 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 136.008433,
+                        "y": 108.686746
+                    },
+                    "uuid": "a0219b9b-1470-4759-bf2b-b51806df845e"
                 }
             ],
             "severity": "error",
@@ -2390,29 +2413,6 @@
             "description": "Courtyards overlap",
             "items": [
                 {
-                    "description": "Footprint D1",
-                    "pos": {
-                        "x": 135.121686,
-                        "y": 115.544578
-                    },
-                    "uuid": "4f93c7c6-02e4-4458-9057-fb1b5eb2b334"
-                },
-                {
-                    "description": "Footprint C51",
-                    "pos": {
-                        "x": 135.044578,
-                        "y": 119.86265
-                    },
-                    "uuid": "a30da45b-71d6-4b80-b407-a3530120b2e4"
-                }
-            ],
-            "severity": "error",
-            "type": "courtyards_overlap"
-        },
-        {
-            "description": "Courtyards overlap",
-            "items": [
-                {
                     "description": "Footprint R11",
                     "pos": {
                         "x": 143.719277,
@@ -2436,6 +2436,75 @@
             "description": "Courtyards overlap",
             "items": [
                 {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 99.274698
+                    },
+                    "uuid": "74979e39-b839-4921-b232-32cbe54ee8f8"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad [<no net>] of J3",
+                    "pos": {
+                        "x": 153.666265,
+                        "y": 99.274698
+                    },
+                    "uuid": "767e0d50-e428-4f72-98d2-34c9692e3a9b"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad [<no net>] of J3",
+                    "pos": {
+                        "x": 163.266265,
+                        "y": 99.274698
+                    },
+                    "uuid": "04c64195-c164-4153-8563-f42a85bc6411"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
                     "description": "Footprint C48",
                     "pos": {
                         "x": 142.716867,
@@ -2454,29 +2523,6 @@
             ],
             "severity": "error",
             "type": "courtyards_overlap"
-        },
-        {
-            "description": "PTH inside courtyard",
-            "items": [
-                {
-                    "description": "PTH pad 1 [<no net>] of J4",
-                    "pos": {
-                        "x": 135.892771,
-                        "y": 125.337349
-                    },
-                    "uuid": "083be088-2288-4abc-ae25-f8fc8e1f0b28"
-                },
-                {
-                    "description": "Footprint C51",
-                    "pos": {
-                        "x": 135.044578,
-                        "y": 119.86265
-                    },
-                    "uuid": "a30da45b-71d6-4b80-b407-a3530120b2e4"
-                }
-            ],
-            "severity": "error",
-            "type": "pth_inside_courtyard"
         },
         {
             "description": "Courtyards overlap",
@@ -2565,6 +2611,328 @@
                         "y": 129.077108
                     },
                     "uuid": "c38d2c9d-a7ff-4567-8528-4fb1beb76872"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint C40",
+                    "pos": {
+                        "x": 156.750602,
+                        "y": 91.448192
+                    },
+                    "uuid": "c46c4418-b132-4e18-b9e9-6ba8e54d9b59"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 158.825517,
+                        "y": 86.636289
+                    },
+                    "uuid": "cc6b6a5e-fe28-4bbd-baf6-1f7a044f1abb"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 10 [<no net>] of J2",
+                    "pos": {
+                        "x": 155.317465,
+                        "y": 87.665223
+                    },
+                    "uuid": "e5db6759-d643-4992-98a5-738068fb903f"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 11 [<no net>] of J2",
+                    "pos": {
+                        "x": 157.81739,
+                        "y": 87.684533
+                    },
+                    "uuid": "5120d693-ed2d-47cd-a68f-1eeded1d5982"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 12 [<no net>] of J2",
+                    "pos": {
+                        "x": 159.81733,
+                        "y": 87.699982
+                    },
+                    "uuid": "5ae4d838-a7e0-4abe-96c2-d59df1d349f4"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 13 [<no net>] of J2",
+                    "pos": {
+                        "x": 162.317256,
+                        "y": 87.719292
+                    },
+                    "uuid": "c78cb885-2a23-4e14-8ea0-ca628a26953f"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 14 [<no net>] of J2",
+                    "pos": {
+                        "x": 162.805655,
+                        "y": 89.223109
+                    },
+                    "uuid": "a83f5425-d1a3-4de9-abbc-d89bfd062462"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 15 [<no net>] of J2",
+                    "pos": {
+                        "x": 160.805714,
+                        "y": 89.207661
+                    },
+                    "uuid": "e8d0781c-13f3-4683-a3d3-f1592a014a7a"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 16 [<no net>] of J2",
+                    "pos": {
+                        "x": 158.805774,
+                        "y": 89.192213
+                    },
+                    "uuid": "a4842f30-fb57-492a-96a7-c24630be8b9d"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 17 [<no net>] of J2",
+                    "pos": {
+                        "x": 156.805834,
+                        "y": 89.176761
+                    },
+                    "uuid": "82d7988e-bf25-468d-a66e-5a1c5082a79c"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 18 [<no net>] of J2",
+                    "pos": {
+                        "x": 154.805893,
+                        "y": 89.161316
+                    },
+                    "uuid": "20e4a2bb-f692-482a-83e4-4212b0916c5e"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 19 [<no net>] of J2",
+                    "pos": {
+                        "x": 152.243849,
+                        "y": 88.121496
+                    },
+                    "uuid": "726c13a6-a669-4d86-bfb3-56dfd7ee3e37"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 20 [<no net>] of J2",
+                    "pos": {
+                        "x": 165.383457,
+                        "y": 88.222991
+                    },
+                    "uuid": "a8fa9360-fb65-4b22-89fd-7a098ad10fb4"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint C41",
+                    "pos": {
+                        "x": 160.066265,
+                        "y": 91.448192
+                    },
+                    "uuid": "e83f08db-83d0-4515-bb1e-3c9059598098"
+                },
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
                 }
             ],
             "severity": "error",
@@ -2715,7 +3083,7 @@
             "type": "lib_footprint_mismatch"
         },
         {
-            "description": "Footprint 'CP_Radial_D8.0mm_P2.50mm' does not match copy in library 'Capacitor_THT'",
+            "description": "Footprint 'CP_Radial_D5.0mm_P2.50mm' does not match copy in library 'Capacitor_THT'",
             "items": [
                 {
                     "description": "Footprint C51",
@@ -2754,6 +3122,21 @@
                         "y": 86.636289
                     },
                     "uuid": "cc6b6a5e-fe28-4bbd-baf6-1f7a044f1abb"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'C5441174_CAGE-SFP-1X1-TH' does not match copy in library 'lcsc'",
+            "items": [
+                {
+                    "description": "Footprint CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 111.274698
+                    },
+                    "uuid": "f76a544e-6b3c-42e4-ac71-fdfef579e2e7"
                 }
             ],
             "severity": "warning",
@@ -3260,8 +3643,8 @@
                 {
                     "description": "Reference field of C51",
                     "pos": {
-                        "x": 135.044578,
-                        "y": 118.36265
+                        "x": 138.794578,
+                        "y": 121.11265
                     },
                     "uuid": "3482f025-90a9-4aaf-b9cd-51a9d23423b7"
                 }
@@ -3290,8 +3673,8 @@
                 {
                     "description": "Reference field of J4",
                     "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
+                        "x": 135.893,
+                        "y": 129.47
                     },
                     "uuid": "1601b220-9196-441a-88ba-45485431fa85"
                 }
@@ -3747,6 +4130,52 @@
             "description": "Silkscreen clearance",
             "items": [
                 {
+                    "description": "Reference field of CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 89.499698
+                    },
+                    "uuid": "9238d530-d0e6-441c-9506-95905f8787f3"
+                },
+                {
+                    "description": "Reference field of C40",
+                    "pos": {
+                        "x": 156.750602,
+                        "y": 89.948192
+                    },
+                    "uuid": "d656c024-a255-4955-beee-b02a74948e38"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of C41",
+                    "pos": {
+                        "x": 160.066265,
+                        "y": 89.948192
+                    },
+                    "uuid": "25dbcd79-dd4c-4bea-93f6-8363f929c618"
+                },
+                {
+                    "description": "Reference field of CAGE1",
+                    "pos": {
+                        "x": 158.466265,
+                        "y": 89.499698
+                    },
+                    "uuid": "9238d530-d0e6-441c-9506-95905f8787f3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
                     "description": "Reference field of C47",
                     "pos": {
                         "x": 135.391566,
@@ -3862,6 +4291,75 @@
             "description": "Silkscreen clearance",
             "items": [
                 {
+                    "description": "Circle of D2 on F.Silkscreen",
+                    "pos": {
+                        "x": 147.263975,
+                        "y": 129.077108
+                    },
+                    "uuid": "a475bc41-33a3-4069-be0a-e24708b186f0"
+                },
+                {
+                    "description": "Arc of D3 on F.Silkscreen",
+                    "pos": {
+                        "x": 147.263975,
+                        "y": 131.891566
+                    },
+                    "uuid": "fe82da46-e6d6-4f05-bae2-59e46b7c8044"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Circle of D2 on F.Silkscreen",
+                    "pos": {
+                        "x": 147.263975,
+                        "y": 129.077108
+                    },
+                    "uuid": "a475bc41-33a3-4069-be0a-e24708b186f0"
+                },
+                {
+                    "description": "Circle of D3 on F.Silkscreen",
+                    "pos": {
+                        "x": 147.263975,
+                        "y": 131.891566
+                    },
+                    "uuid": "e5f3c5c4-1420-4ba9-911c-1ef5866084e6"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C28 on F.Silkscreen",
+                    "pos": {
+                        "x": 148.320865,
+                        "y": 126.888313
+                    },
+                    "uuid": "61644191-73f2-4d87-954e-f6cb8a3fb5d1"
+                },
+                {
+                    "description": "Circle of D2 on F.Silkscreen",
+                    "pos": {
+                        "x": 147.263975,
+                        "y": 129.077108
+                    },
+                    "uuid": "a475bc41-33a3-4069-be0a-e24708b186f0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
                     "description": "Circle of D3 on F.Silkscreen",
                     "pos": {
                         "x": 147.263975,
@@ -3931,29 +4429,6 @@
             "description": "Silkscreen clearance",
             "items": [
                 {
-                    "description": "Circle of D2 on F.Silkscreen",
-                    "pos": {
-                        "x": 147.263975,
-                        "y": 129.077108
-                    },
-                    "uuid": "a475bc41-33a3-4069-be0a-e24708b186f0"
-                },
-                {
-                    "description": "Arc of D3 on F.Silkscreen",
-                    "pos": {
-                        "x": 147.263975,
-                        "y": 131.891566
-                    },
-                    "uuid": "fe82da46-e6d6-4f05-bae2-59e46b7c8044"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
                     "description": "Arc of D2 on F.Silkscreen",
                     "pos": {
                         "x": 147.263975,
@@ -3977,52 +4452,6 @@
             "description": "Silkscreen clearance",
             "items": [
                 {
-                    "description": "Circle of D2 on F.Silkscreen",
-                    "pos": {
-                        "x": 147.263975,
-                        "y": 129.077108
-                    },
-                    "uuid": "a475bc41-33a3-4069-be0a-e24708b186f0"
-                },
-                {
-                    "description": "Circle of D3 on F.Silkscreen",
-                    "pos": {
-                        "x": 147.263975,
-                        "y": 131.891566
-                    },
-                    "uuid": "e5f3c5c4-1420-4ba9-911c-1ef5866084e6"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Segment of C28 on F.Silkscreen",
-                    "pos": {
-                        "x": 148.320865,
-                        "y": 126.888313
-                    },
-                    "uuid": "61644191-73f2-4d87-954e-f6cb8a3fb5d1"
-                },
-                {
-                    "description": "Circle of D2 on F.Silkscreen",
-                    "pos": {
-                        "x": 147.263975,
-                        "y": 129.077108
-                    },
-                    "uuid": "a475bc41-33a3-4069-be0a-e24708b186f0"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
                     "description": "Segment of L3 on F.Silkscreen",
                     "pos": {
                         "x": 145.849036,
@@ -4037,512 +4466,6 @@
                         "y": 124.878313
                     },
                     "uuid": "e56111ba-d1f1-410f-9260-f0c0de7a9c6d"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Segment of D1 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.781686,
-                        "y": 117.694578
-                    },
-                    "uuid": "0e4c6d7e-42ad-4c09-9e2c-c1d572a6c647"
-                },
-                {
-                    "description": "Reference field of C51",
-                    "pos": {
-                        "x": 135.044578,
-                        "y": 118.36265
-                    },
-                    "uuid": "3482f025-90a9-4aaf-b9cd-51a9d23423b7"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Segment of D1 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.781686,
-                        "y": 117.694578
-                    },
-                    "uuid": "0e4c6d7e-42ad-4c09-9e2c-c1d572a6c647"
-                },
-                {
-                    "description": "Circle of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 135.044578,
-                        "y": 121.11265
-                    },
-                    "uuid": "37067cb2-2e32-4b7d-9246-f452ec13bbf4"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.294578,
-                        "y": 123.59265
-                    },
-                    "uuid": "9376f2e9-50ee-40ae-a842-ef89bc269916"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.324578,
-                        "y": 123.55265
-                    },
-                    "uuid": "ecb2abe9-434b-4669-b335-502572c93db5"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.353578,
-                        "y": 123.51265
-                    },
-                    "uuid": "d292dbc9-bf5a-4c97-b52f-5c32a375842b"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.381578,
-                        "y": 123.47265
-                    },
-                    "uuid": "a243a802-a097-476a-b346-54a950a3dec1"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.133578,
-                        "y": 123.79265
-                    },
-                    "uuid": "f38d223c-83a0-436b-8c9f-6738fbef3b0c"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.167578,
-                        "y": 123.75265
-                    },
-                    "uuid": "c3dec052-8232-4d1a-9e85-bf642f13f68f"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.200578,
-                        "y": 123.71265
-                    },
-                    "uuid": "ff57becb-2b35-4744-b0f8-53243773755e"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.232578,
-                        "y": 123.67265
-                    },
-                    "uuid": "500ae5ef-4104-4b10-ba19-132308caab74"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.263578,
-                        "y": 123.63265
-                    },
-                    "uuid": "72915cf5-ef9f-4df8-9b9b-580356f5f322"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.409578,
-                        "y": 123.43265
-                    },
-                    "uuid": "500bf26a-e84a-4fe1-9617-c49781b8140e"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 137.740578,
-                        "y": 124.19265
-                    },
-                    "uuid": "8610f54b-6604-45ea-a876-1491ff1c0195"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 137.785578,
-                        "y": 124.15265
-                    },
-                    "uuid": "b2e791a9-82ea-472e-ae0c-1bb17cf427f3"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 137.828578,
-                        "y": 124.11265
-                    },
-                    "uuid": "7d1fb2d5-3cf3-4222-b334-bea549261980"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 137.870578,
-                        "y": 124.07265
-                    },
-                    "uuid": "01a0e478-acdc-4079-a66f-9dc9d85f0a34"
-                },
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 137.911578,
-                        "y": 124.03265
-                    },
-                    "uuid": "bce2493d-ede8-4238-af6b-62b7752558bd"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 137.950578,
-                        "y": 123.99265
-                    },
-                    "uuid": "d56e64eb-18ab-47e6-b27b-d75080e57a1d"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 137.989578,
-                        "y": 123.95265
-                    },
-                    "uuid": "2820fe34-f039-41b6-9edc-3c6b92416944"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.026578,
-                        "y": 123.91265
-                    },
-                    "uuid": "7062dfa3-9813-4db7-80b6-094327a160ac"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.063578,
-                        "y": 123.87265
-                    },
-                    "uuid": "66d0ca49-1b4b-455a-a54e-9dabb900d137"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_overlap"
-        },
-        {
-            "description": "Silkscreen clearance",
-            "items": [
-                {
-                    "description": "Reference field of J4",
-                    "pos": {
-                        "x": 135.969879,
-                        "y": 123.837349
-                    },
-                    "uuid": "1601b220-9196-441a-88ba-45485431fa85"
-                },
-                {
-                    "description": "Segment of C51 on F.Silkscreen",
-                    "pos": {
-                        "x": 138.099578,
-                        "y": 123.83265
-                    },
-                    "uuid": "e0794fdd-477f-4bbf-ba41-d5637aa8e022"
                 }
             ],
             "severity": "warning",
@@ -5541,75 +5464,6 @@
             "description": "Silkscreen clipped by solder mask",
             "items": [
                 {
-                    "description": "Segment of D3 on F.Silkscreen",
-                    "pos": {
-                        "x": 144.703975,
-                        "y": 130.346566
-                    },
-                    "uuid": "305764d6-7aa9-4db9-877b-10fb4f61ffe9"
-                },
-                {
-                    "description": "Pad 2 [<no net>] of R11 on F.Cu",
-                    "pos": {
-                        "x": 144.544277,
-                        "y": 131.621686
-                    },
-                    "uuid": "97bdb11c-2d7c-4fa2-ba00-df99c4c9e45f"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_over_copper"
-        },
-        {
-            "description": "Silkscreen clipped by solder mask",
-            "items": [
-                {
-                    "description": "Circle of D3 on F.Silkscreen",
-                    "pos": {
-                        "x": 147.263975,
-                        "y": 131.891566
-                    },
-                    "uuid": "e5f3c5c4-1420-4ba9-911c-1ef5866084e6"
-                },
-                {
-                    "description": "Pad 2 [<no net>] of R11 on F.Cu",
-                    "pos": {
-                        "x": 144.544277,
-                        "y": 131.621686
-                    },
-                    "uuid": "97bdb11c-2d7c-4fa2-ba00-df99c4c9e45f"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_over_copper"
-        },
-        {
-            "description": "Silkscreen clipped by solder mask",
-            "items": [
-                {
-                    "description": "Reference field of C26",
-                    "pos": {
-                        "x": 145.724096,
-                        "y": 124.878313
-                    },
-                    "uuid": "e56111ba-d1f1-410f-9260-f0c0de7a9c6d"
-                },
-                {
-                    "description": "Pad 1 [<no net>] of L3 on F.Cu",
-                    "pos": {
-                        "x": 147.459036,
-                        "y": 124.94518
-                    },
-                    "uuid": "539a5008-7506-419d-9387-30d21823555a"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_over_copper"
-        },
-        {
-            "description": "Silkscreen clipped by solder mask",
-            "items": [
-                {
                     "description": "Arc of D2 on F.Silkscreen",
                     "pos": {
                         "x": 147.263975,
@@ -5771,20 +5625,66 @@
             "description": "Silkscreen clipped by solder mask",
             "items": [
                 {
-                    "description": "Segment of C47 on F.Silkscreen",
+                    "description": "Segment of D3 on F.Silkscreen",
                     "pos": {
-                        "x": 134.881566,
-                        "y": 111.829736
+                        "x": 144.703975,
+                        "y": 130.346566
                     },
-                    "uuid": "9c51e4f4-4a8f-477a-bd13-4a47bba95926"
+                    "uuid": "305764d6-7aa9-4db9-877b-10fb4f61ffe9"
                 },
                 {
-                    "description": "Pad 1 [<no net>] of L1 on F.Cu",
+                    "description": "Pad 2 [<no net>] of R11 on F.Cu",
                     "pos": {
-                        "x": 133.039759,
-                        "y": 111.955421
+                        "x": 144.544277,
+                        "y": 131.621686
                     },
-                    "uuid": "fd0580c4-0f60-4963-bf4d-aba1b24f7fd0"
+                    "uuid": "97bdb11c-2d7c-4fa2-ba00-df99c4c9e45f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Circle of D3 on F.Silkscreen",
+                    "pos": {
+                        "x": 147.263975,
+                        "y": 131.891566
+                    },
+                    "uuid": "e5f3c5c4-1420-4ba9-911c-1ef5866084e6"
+                },
+                {
+                    "description": "Pad 2 [<no net>] of R11 on F.Cu",
+                    "pos": {
+                        "x": 144.544277,
+                        "y": 131.621686
+                    },
+                    "uuid": "97bdb11c-2d7c-4fa2-ba00-df99c4c9e45f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of C26",
+                    "pos": {
+                        "x": 145.724096,
+                        "y": 124.878313
+                    },
+                    "uuid": "e56111ba-d1f1-410f-9260-f0c0de7a9c6d"
+                },
+                {
+                    "description": "Pad 1 [<no net>] of L3 on F.Cu",
+                    "pos": {
+                        "x": 147.459036,
+                        "y": 124.94518
+                    },
+                    "uuid": "539a5008-7506-419d-9387-30d21823555a"
                 }
             ],
             "severity": "warning",
@@ -5840,20 +5740,20 @@
             "description": "Silkscreen clipped by solder mask",
             "items": [
                 {
-                    "description": "Segment of C51 on F.Silkscreen",
+                    "description": "Reference field of U2",
                     "pos": {
-                        "x": 137.359578,
-                        "y": 116.702952
+                        "x": 142.948192,
+                        "y": 119.287951
                     },
-                    "uuid": "786ccf16-bbf8-4da5-b408-be809e47908c"
+                    "uuid": "417fef0f-df1e-47d0-a8e1-a2e36e2c98d3"
                 },
                 {
-                    "description": "Pad 1 [<no net>] of D1 on F.Cu",
+                    "description": "Pad 2 [<no net>] of U2 on F.Cu",
                     "pos": {
-                        "x": 137.271686,
-                        "y": 115.544578
+                        "x": 142.948192,
+                        "y": 119.650451
                     },
-                    "uuid": "ac8f70e6-d2a5-4507-9f9d-7fe341b343d4"
+                    "uuid": "806d1766-b7a2-4221-80cb-5c55de5f66e2"
                 }
             ],
             "severity": "warning",
@@ -5863,66 +5763,20 @@
             "description": "Silkscreen clipped by solder mask",
             "items": [
                 {
-                    "description": "Reference field of C49",
+                    "description": "Segment of C47 on F.Silkscreen",
                     "pos": {
-                        "x": 145.608433,
-                        "y": 115.818072
+                        "x": 134.881566,
+                        "y": 111.829736
                     },
-                    "uuid": "63f2ac47-d593-4012-ab1b-ba32ce814cad"
+                    "uuid": "9c51e4f4-4a8f-477a-bd13-4a47bba95926"
                 },
                 {
-                    "description": "Pad 2 [<no net>] of R9 on F.Cu",
+                    "description": "Pad 1 [<no net>] of L1 on F.Cu",
                     "pos": {
-                        "x": 145.181777,
-                        "y": 115.390361
+                        "x": 133.039759,
+                        "y": 111.955421
                     },
-                    "uuid": "898968f7-1f13-43f9-899f-80ad33674ebe"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_over_copper"
-        },
-        {
-            "description": "Silkscreen clipped by solder mask",
-            "items": [
-                {
-                    "description": "Reference field of R8",
-                    "pos": {
-                        "x": 148.692771,
-                        "y": 111.577108
-                    },
-                    "uuid": "bae8809f-6c2d-4f36-8beb-0e433f3899f4"
-                },
-                {
-                    "description": "Pad 2 [<no net>] of R8 on F.Cu",
-                    "pos": {
-                        "x": 148.692771,
-                        "y": 112.252108
-                    },
-                    "uuid": "ac30c019-0604-479b-b3cc-6eab06222ea4"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_over_copper"
-        },
-        {
-            "description": "Silkscreen clipped by solder mask",
-            "items": [
-                {
-                    "description": "Reference field of R8",
-                    "pos": {
-                        "x": 148.692771,
-                        "y": 111.577108
-                    },
-                    "uuid": "bae8809f-6c2d-4f36-8beb-0e433f3899f4"
-                },
-                {
-                    "description": "Pad 1 [<no net>] of R7 on F.Cu",
-                    "pos": {
-                        "x": 148.692771,
-                        "y": 110.894879
-                    },
-                    "uuid": "27b8c5f9-bcd8-4513-bfc3-1989623bf337"
+                    "uuid": "fd0580c4-0f60-4963-bf4d-aba1b24f7fd0"
                 }
             ],
             "severity": "warning",
@@ -5955,29 +5809,6 @@
             "description": "Silkscreen clipped by solder mask",
             "items": [
                 {
-                    "description": "Reference field of U2",
-                    "pos": {
-                        "x": 142.948192,
-                        "y": 119.287951
-                    },
-                    "uuid": "417fef0f-df1e-47d0-a8e1-a2e36e2c98d3"
-                },
-                {
-                    "description": "Pad 2 [<no net>] of U2 on F.Cu",
-                    "pos": {
-                        "x": 142.948192,
-                        "y": 119.650451
-                    },
-                    "uuid": "806d1766-b7a2-4221-80cb-5c55de5f66e2"
-                }
-            ],
-            "severity": "warning",
-            "type": "silk_over_copper"
-        },
-        {
-            "description": "Silkscreen clipped by solder mask",
-            "items": [
-                {
                     "description": "Reference field of C54",
                     "pos": {
                         "x": 142.986746,
@@ -5992,6 +5823,29 @@
                         "y": 121.925451
                     },
                     "uuid": "a6f67af8-08d1-4731-b8fc-b705d1de9226"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of C49",
+                    "pos": {
+                        "x": 145.608433,
+                        "y": 115.818072
+                    },
+                    "uuid": "63f2ac47-d593-4012-ab1b-ba32ce814cad"
+                },
+                {
+                    "description": "Pad 2 [<no net>] of R9 on F.Cu",
+                    "pos": {
+                        "x": 145.181777,
+                        "y": 115.390361
+                    },
+                    "uuid": "898968f7-1f13-43f9-899f-80ad33674ebe"
                 }
             ],
             "severity": "warning",
@@ -6038,6 +5892,52 @@
                         "y": 118.789759
                     },
                     "uuid": "95d4f0d3-0a59-47e1-8409-6b250df5c679"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R8",
+                    "pos": {
+                        "x": 148.692771,
+                        "y": 111.577108
+                    },
+                    "uuid": "bae8809f-6c2d-4f36-8beb-0e433f3899f4"
+                },
+                {
+                    "description": "Pad 2 [<no net>] of R8 on F.Cu",
+                    "pos": {
+                        "x": 148.692771,
+                        "y": 112.252108
+                    },
+                    "uuid": "ac30c019-0604-479b-b3cc-6eab06222ea4"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R8",
+                    "pos": {
+                        "x": 148.692771,
+                        "y": 111.577108
+                    },
+                    "uuid": "bae8809f-6c2d-4f36-8beb-0e433f3899f4"
+                },
+                {
+                    "description": "Pad 1 [<no net>] of R7 on F.Cu",
+                    "pos": {
+                        "x": 148.692771,
+                        "y": 110.894879
+                    },
+                    "uuid": "27b8c5f9-bcd8-4513-bfc3-1989623bf337"
                 }
             ],
             "severity": "warning",
