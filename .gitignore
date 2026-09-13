@@ -27,3 +27,7 @@ design/references/murata_*.js
 design/references/murata_part_page.html
 design/references/murata_technical.bin
 design/references/murata_netlist.bin
+
+# Generated analyzer dumps (regenerate on demand; not design evidence)
+kicad/usb3_sfp_hub/bom/analysis.json
+kicad/usb3_sfp_hub/validation/schematic_analysis.json

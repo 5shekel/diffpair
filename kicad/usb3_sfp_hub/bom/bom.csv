@@ -1,36 +1,36 @@
-Reference,Qty,Value,Footprint,MPN,Manufacturer,Chosen_Distributor,Datasheet,Validated,DNP,Notes
-"C1,C2,C3,C4,C5,C6,C7,C8,C9,C11,C12,C14,C20,C21,C22,C23,C24,C25,C26,C27,C28,C29,C30,C31,C32,C33,C34,C35,C38,C39,C41,C42,C44,C45,C47,C48,C50,C51,C55",39,100nF / 0402,0402,,,,,,,Repurposed from former 1uF RESET RC capacitor; no capacitor directly on RESET_N
-"C10,C13",2,22uF / 25V / X7R / 10%,1210,GRM32ER71E226KE15L,Murata,,https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM32ER71E226KE15-04CA-EN_PDF_CERAMICCAPACITORSMD,,,"1210; manufacturer 3.3V/25C frequency data gives about 15.2uF and 20.5mOhm at 15kHz. Typical data, not guaranteed corner. Hot-plug/filter qualification pending."
-"C15,C16,C17,C18,C19",5,4.7uF / effective C TBD,,,,,,,,
-"C36,C37",2,22pF / candidate C0G,0402,,,,,,,
-"C40,C43,C46,C49",4,220uF / 10V / 20%,,,,,,,,Polarized low-ESR output bulk; MPN/package/ripple qualification pending; pin 1 positive
-C52,1,10uF / 10V / X7R,,,,,,,,
-C53,1,22uF / 10V / X7R,,,,,,,,Effective 11-26.4uF target from TI Table 8-3; part and filtered-load stability pending
-C54,1,10nF / 5% / C0G,0402,,,,,,,"Candidate soft start, about 3.26ms from TI equation 14; startup through SFP filters requires measurement"
-J1,1,SFP+ / MODULE TBD,,,,,,,,
-J2,1,USB3-A PORT 1,,,,,,,,
-J3,1,USB3-A PORT 2,,,,,,,,
-J4,1,USB3-A PORT 3,,,,,,,,
-J5,1,USB3-A PORT 4,,,,,,,,
-J6,1,3.3V management access / footprint TBD,,,,,,,,
-J7,1,5.0-5.2V at board / input TBD,,,,,,,,
-J8,1,Supply test access / footprint TBD,,,,,,,,
-J9,1,Short 1-2 to request reset / MPN TBD,PinHeader_1x02_P2.54mm_Vertical,,,,,,,
-"L1,L2",2,4.7uH / XGL4020-472MEC,Coilcraft_XGL4020,XGL4020-472MEC,Coilcraft,,https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf,,,47.3mOhm max DCR at 25C; 1.9/3.0/4.1A Isat at 10/20/30% drop at 25C; thermal/AC and filter validation pending
-L3,1,10uH / current rating TBD,,,,,,,,
-L4,1,1uH / XGL4020-102MEC,Coilcraft_XGL4020,XGL4020-102MEC,Coilcraft,,https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf,,,"TI Table 8-3 starting value at 2.5MHz; choose rated part and validate effective L, temperature and fault peaks"
-"R1,R2",2,0.43 / 1% / 0.25W,1206,ERJ8RQFR43V,Panasonic,,https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf,,,1206 damping candidate; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification.
-"R3,R4,R5,R6,R7",5,4.7k / 1%,0603,,,,,,,
-R8,1,BIAS_R_TBD,0603,,,,,,,
-R9,1,12.1k / 1%,0603,,,,,,,TPS3808 open-drain RESET pullup; leakage/low-level DC bounds checked; reset timing qualification pending
-"R10,R11,R12,R13",4,23.2k / 1%,0603,,,,,,,TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max
-"R18,R19,R20,R21",4,1k / 1%,0603,,,,,,,Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior
-R22,1,32.4k / 1% / 100ppm,0603,,,,,,,"TI Table 7-1 option 10: VSET, 2.5MHz, forced PWM, discharge enabled; total tolerance within +/-4%, pin C <=30pF"
-"R24,R14,R15,R16,R17,R23",6,10k / 1%,0603,,,,,,,"External MR pullup, in parallel with internal pullup; external control must be open-drain to GND"
-U1,1,VL813(A1),C69418_QFN-76_L9_0-W9_0-P0_40-EP6_4-TL,VL813(A1),VIA Labs,,../../VL813.pdf,,,EOL reference baseline; footprint and operating circuit qualification pending
-"U2,U3,U4,U5",4,TPS2553DBVR,SOT-23-6,TPS2553DBVR,Texas Instruments,,https://www.ti.com/lit/ds/symlink/tps2552.pdf,,,"Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified."
-U6,1,SN74LVC1G04DBVR,SOT-23-5,SN74LVC1G04DBVR,Texas Instruments,,https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf,,,Inverts hub active-low gang enable; Ioff plus R15 holds EN low at VCC=0; ramp behavior requires test
-U7,1,TPS62902RPJR,TI_RPJ0009A_1.5x2mm,TPS62902RPJR,Texas Instruments,,https://www.ti.com/lit/ds/symlink/tps62902.pdf,,,"RPJ nine-pad VQFN, no separate EP. Footprint pending. VSET open=3.3V with 32.4k MODE; stock not verified."
-"U8,U9,U10,U11",4,TPD4E02B04DQAR,TI_DQA0010A_1x2.5mm,TPD4E02B04DQAR,Texas Instruments,,https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf,,,"Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending."
-U12,1,TPS3808G33DBVR,SOT-23-6,TPS3808G33DBVR,Texas Instruments,,https://www.ti.com/lit/ds/symlink/tps3808.pdf,,,3.07V nominal falling threshold; CT open gives 12-28ms delay under specified test conditions. Monitors 3.3V only; core rail and optical recovery qualification pending.
-Y1,1,25MHz / CL and package TBD,,,,,,,,
+Reference,Qty,Value,Footprint,MPN,Manufacturer,LCSC,LC_Stock,Chosen_Distributor,Datasheet,Validated,DNP,Notes
+"C1,C2,C3,C4,C5,C6,C7,C8,C9,C11,C12,C14,C20,C21,C22,C23,C24,C25,C26,C27,C28,C29,C30,C31,C32,C33,C34,C35,C38,C39,C41,C42,C44,C45,C47,C48,C50,C51,C55",39,100nF / 0402,0402,CL05B104KO5NNNC,Samsung Electro-Mechanics,C1525,16407331,,,,,Repurposed from former 1uF RESET RC capacitor; no capacitor directly on RESET_N
+"C10,C13",2,22uF / 25V / X7R / 10%,1210,GRM32ER71E226KE15L,Murata,C21397,16741,,https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM32ER71E226KE15-04CA-EN_PDF_CERAMICCAPACITORSMD,,,"1210; manufacturer 3.3V/25C frequency data gives about 15.2uF and 20.5mOhm at 15kHz. Typical data, not guaranteed corner. Hot-plug/filter qualification pending."
+"C15,C16,C17,C18,C19",5,4.7uF / effective C TBD,,,,,,,,,,
+"C36,C37",2,22pF / candidate C0G,0402,,,,,,,,,
+"C40,C43,C46,C49",4,220uF / 10V / 20%,,,,,,,,,,Polarized low-ESR output bulk; MPN/package/ripple qualification pending; pin 1 positive
+C52,1,10uF / 10V / X7R,,,,,,,,,,
+C53,1,22uF / 10V / X7R,,,,,,,,,,Effective 11-26.4uF target from TI Table 8-3; part and filtered-load stability pending
+C54,1,10nF / 5% / C0G,0402,,,,,,,,,"Candidate soft start, about 3.26ms from TI equation 14; startup through SFP filters requires measurement"
+J1,1,SFP+ / MODULE TBD,,,,,,,,,,
+J2,1,USB3-A PORT 1,,,,,,,,,,
+J3,1,USB3-A PORT 2,,,,,,,,,,
+J4,1,USB3-A PORT 3,,,,,,,,,,
+J5,1,USB3-A PORT 4,,,,,,,,,,
+J6,1,3.3V management access / footprint TBD,,,,,,,,,,
+J7,1,5.0-5.2V at board / input TBD,,,,,,,,,,
+J8,1,Supply test access / footprint TBD,,,,,,,,,,
+J9,1,Short 1-2 to request reset / MPN TBD,PinHeader_1x02_P2.54mm_Vertical,,,,,,,,,
+"L1,L2",2,4.7uH / FTC303018D4R7MBCA,Changjiang_FTC303020D,FTC303018D4R7MBCA,Changjiang (cjiang),C5832388,13560,,https://www.lcsc.com/product-detail/C5832388.html,,,"3x3mm molded, sized to the calipered reference board; 72mOhm max DCR at 25C; 3.4A Irms / 4.7A Isat. 72mOhm exceeds the earlier XGL-based 0.10 ohm branch allocation (~0.13 ohm hot + copper at 165C); the reference board uses this size, so the 600mA envelope is likely conservative. Branch current/margin need measurement."
+L3,1,10uH / current rating TBD,,,,,,,,,,
+L4,1,1uH / XGL4020-102MEC,Coilcraft_XGL4020,XGL4020-102MEC,Coilcraft,C5357696,2910,,https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf,,,TI Table 8-4 listed part; 9mOhm max DCR; 3.8/6.3/8.8A Isat at 10/20/30% drop at 25C; stripe faces pad1 SW; thermal/AC/fault peaks pending
+"R1,R2",2,0.43 / 1% / 0.25W,1206,RTF06KR430FTG,FH,C44453441,3681,,https://www.lcsc.com/product-detail/C44453441.html,,,"430mOhm 1% 250mW current-sense, 1206; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification."
+"R3,R4,R5,R6,R7",5,4.7k / 1%,0603,0603WAF4701T5E,UNI-ROYAL,C23162,9126951,,,,,
+R8,1,BIAS_R_TBD,0603,,,,,,,,,
+R9,1,12.1k / 1%,0603,0603WAF1212T5E,UNI-ROYAL,C22864,11506,,,,,TPS3808 open-drain RESET pullup; leakage/low-level DC bounds checked; reset timing qualification pending
+"R10,R11,R12,R13",4,23.2k / 1%,0603,FRC0603F2322TS,FOJAN,C2930078,122693,,,,,TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max
+"R18,R19,R20,R21",4,1k / 1%,0603,0603WAF1001T5E,UNI-ROYAL,C21190,15873089,,,,,Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior
+R22,1,32.4k / 1% / 100ppm,0603,FRC0603F3242TS,FOJAN,C2998122,26316,,,,,"TI Table 7-1 option 10: VSET, 2.5MHz, forced PWM, discharge enabled; total tolerance within +/-4%, pin C <=30pF"
+"R24,R14,R15,R16,R17,R23",6,10k / 1%,0603,0603WAF1002T5E,UNI-ROYAL,C25804,37165617,,,,,"External MR pullup, in parallel with internal pullup; external control must be open-drain to GND"
+U1,1,VL813(A1),C69418_QFN-76_L9_0-W9_0-P0_40-EP6_4-TL,VL813(A1),VIA Labs,,,,../../VL813.pdf,,,EOL reference baseline; footprint and operating circuit qualification pending; no LCSC listing (VIA EOL)
+"U2,U3,U4,U5",4,TPS2553DBVR,SOT-23-6,TPS2553DBVR,Texas Instruments,C55266,44248,,https://www.ti.com/lit/ds/symlink/tps2552.pdf,,,"Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified."
+U6,1,SN74LVC1G04DBVR,SOT-23-5,SN74LVC1G04DBVR,Texas Instruments,C7827,22576,,https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf,,,Inverts hub active-low gang enable; Ioff plus R15 holds EN low at VCC=0; ramp behavior requires test
+U7,1,TPS62902RPJR,TI_RPJ0009A_1.5x2mm,TPS62902RPJR,Texas Instruments,C2870154,36025,,https://www.ti.com/lit/ds/symlink/tps62902.pdf,,,"RPJ nine-pad VQFN, no separate EP. Native local footprint from TI land pattern. VSET open=3.3V with 32.4k MODE; stock not verified."
+"U8,U9,U10,U11",4,TPD4E02B04DQAR,TI_DQA0010A_1x2.5mm,TPD4E02B04DQAR,Texas Instruments,C106794,27956,,https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf,,,"Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending."
+U12,1,TPS3808G33DBVR,SOT-23-6,TPS3808G33DBVR,Texas Instruments,C43698,6139,,https://www.ti.com/lit/ds/symlink/tps3808.pdf,,,3.07V nominal falling threshold; CT open gives 12-28ms delay under specified test conditions. Monitors 3.3V only; core rail and optical recovery qualification pending.
+Y1,1,25MHz / CL and package TBD,,,,,,,,,,

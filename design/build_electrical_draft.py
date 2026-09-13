@@ -154,6 +154,28 @@ def label(net,pos,key,angle=0):
         drawings.append(f'(global_label {q(net)} (shape bidirectional) (at {pos[0]} {pos[1]} {angle}) (effects (font (size 1 1)) (justify {justify})) (uuid {q(uid(key))}))')
     else:
         drawings.append(f'(label {q(net)} (at {pos[0]} {pos[1]} 0) (effects (font (size 1 1)) (justify {justify} bottom)) (uuid {q(uid(key))}))')
+# JLCPCB/LCSC sourcing for component values whose design is settled (2026-09-13).
+# Basic LCSC parts carry no JLCPCB setup fee; extended parts add one-time setup per value.
+# Entries with only LCSC keep the MPN/Manufacturer already set on the symbol.
+# Deliberately omitted: TBD/candidate values and connectors with no assigned footprint.
+SOURCING={
+ "100nF / 0402":{"LCSC":"C1525","MPN":"CL05B104KO5NNNC","Manufacturer":"Samsung Electro-Mechanics"},
+ "1k / 1%":{"LCSC":"C21190","MPN":"0603WAF1001T5E","Manufacturer":"UNI-ROYAL"},
+ "4.7k / 1%":{"LCSC":"C23162","MPN":"0603WAF4701T5E","Manufacturer":"UNI-ROYAL"},
+ "10k / 1%":{"LCSC":"C25804","MPN":"0603WAF1002T5E","Manufacturer":"UNI-ROYAL"},
+ "12.1k / 1%":{"LCSC":"C22864","MPN":"0603WAF1212T5E","Manufacturer":"UNI-ROYAL"},
+ "23.2k / 1%":{"LCSC":"C2930078","MPN":"FRC0603F2322TS","Manufacturer":"FOJAN"},
+ "32.4k / 1% / 100ppm":{"LCSC":"C2998122","MPN":"FRC0603F3242TS","Manufacturer":"FOJAN"},
+ "0.43 / 1% / 0.25W":{"LCSC":"C44453441"},
+ "22uF / 25V / X7R / 10%":{"LCSC":"C21397"},
+ "4.7uH / FTC303018D4R7MBCA":{"LCSC":"C5832388"},
+ "1uH / XGL4020-102MEC":{"LCSC":"C5357696"},
+ "TPS2553DBVR":{"LCSC":"C55266"},
+ "SN74LVC1G04DBVR":{"LCSC":"C7827"},
+ "TPS62902RPJR":{"LCSC":"C2870154"},
+ "TPD4E02B04DQAR":{"LCSC":"C106794"},
+ "TPS3808G33DBVR":{"LCSC":"C43698"},
+}
 def add(name,ref,unit,x,y,connections,value=None,properties=None,footprint=None):
     title,pins=definitions[name][unit-1]
     v=value or ("VL813(A1)" if name=="VL813_A1" else name)
@@ -163,7 +185,10 @@ def add(name,ref,unit,x,y,connections,value=None,properties=None,footprint=None)
           f'(property "Reference" {q(ref)} (at {x} {y-max(p[4] for p in pins)-ref_offset} 0) (effects (font (size 1.27 1.27))))',
           f'(property "Value" {q(v)} (at {x} {y-min(p[4] for p in pins)+value_offset} 0) (effects (font (size 1 1))))']
     item.append(f'(property "Footprint" {q(footprints[name] if footprint is None else footprint)} (at {x} {y} 0) (effects (font (size 1 1)) hide))')
-    for key,val in (properties or {}).items():
+    props=dict(properties or {})
+    for key,val in SOURCING.get(v,{}).items():
+        props.setdefault(key,val)
+    for key,val in props.items():
         item.append(f'(property {q(key)} {q(val)} (at {x} {y} 0) (effects (font (size 1 1)) hide))')
     for n,_,_,dx,dy,angle in pins:
         item.append(f'(pin {q(n)} (uuid {q(uid(ref+":"+n))}))')
@@ -181,7 +206,7 @@ def add(name,ref,unit,x,y,connections,value=None,properties=None,footprint=None)
 positions=[(170.18,50.8),(254,48.26),(254,91.44),(254,134.62),(254,177.8),
            (294.64,243.84),(60.96,215.9),(167.64,147.32)]
 for unit,((x,y),numbers) in enumerate(zip(positions,groups),1):
-    add("VL813_A1","U1",unit,x,y,{n:hub_nets[n] for n in numbers},properties={"MPN":"VL813(A1)","Manufacturer":"VIA Labs","Datasheet":"../../VL813.pdf","BOM Comments":"EOL reference baseline; footprint and operating circuit qualification pending"})
+    add("VL813_A1","U1",unit,x,y,{n:hub_nets[n] for n in numbers},properties={"MPN":"VL813(A1)","Manufacturer":"VIA Labs","Datasheet":"../../VL813.pdf","BOM Comments":"EOL reference baseline; footprint and operating circuit qualification pending; no LCSC listing (VIA EOL)"})
 ground_sfp={1,10,11,14,17,20}
 sfp_nets={n:("GND" if n in ground_sfp else "SFP_"+sfp_names[n]) for n in sfp_names}
 add("SFP_PLUS","J1",1,63.5,50.8,sfp_nets,value="SFP+ / MODULE TBD")
@@ -240,13 +265,13 @@ sheet=root_sheet+"/"+child_sheet  # KiCad instance path includes the parent root
 # Do not copy the test source's 0.1-ohm impedance into the production supply path.
 for branch,y,rail in [(0,43.18,"SFP_VccT"),(1,96.52,"SFP_VccR")]:
     bulk_node=f"SFP_DAMP_{'T' if branch==0 else 'R'}"
-    add("L",f"L{branch+1}",1,66.04,y,{1:"SFP_3V3_FEED",2:rail},"4.7uH / XGL4020-472MEC",
-        {"MPN":"XGL4020-472MEC","Manufacturer":"Coilcraft","Datasheet":"https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf","BOM Comments":"47.3mOhm max DCR at 25C; 1.9/3.0/4.1A Isat at 10/20/30% drop at 25C; thermal/AC and filter validation pending"},footprint="power:L_Coilcraft_XGL4020")
+    add("L",f"L{branch+1}",1,66.04,y,{1:"SFP_3V3_FEED",2:rail},"4.7uH / FTC303018D4R7MBCA",
+        {"MPN":"FTC303018D4R7MBCA","Manufacturer":"Changjiang (cjiang)","Datasheet":"https://www.lcsc.com/product-detail/C5832388.html","BOM Comments":"3x3mm molded, sized to the calipered reference board; 72mOhm max DCR at 25C; 3.4A Irms / 4.7A Isat. 72mOhm exceeds the earlier XGL-based 0.10 ohm branch allocation (~0.13 ohm hot + copper at 165C); the reference board uses this size, so the 600mA envelope is likely conservative. Branch current/margin need measurement."},footprint="Inductor_SMD:L_Changjiang_FTC303020D")
     add("C_SERIES",f"C{9+branch*3}",1,167.64,y,{1:"SFP_3V3_FEED",2:"GND"},"100nF / 0402")
     add("C_BULK",f"C{10+branch*3}",1,269.24,y,{1:rail,2:bulk_node},"22uF / 25V / X7R / 10%",
         {"MPN":"GRM32ER71E226KE15L","Manufacturer":"Murata","Datasheet":"https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM32ER71E226KE15-04CA-EN_PDF_CERAMICCAPACITORSMD","BOM Comments":"1210; manufacturer 3.3V/25C frequency data gives about 15.2uF and 20.5mOhm at 15kHz. Typical data, not guaranteed corner. Hot-plug/filter qualification pending."},footprint="Capacitor_SMD:C_1210_3225Metric")
     add("R",f"R{branch+1}",1,368.3,y,{1:bulk_node,2:"GND"},"0.43 / 1% / 0.25W",
-        {"MPN":"ERJ8RQFR43V","Manufacturer":"Panasonic","Datasheet":"https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf","BOM Comments":"1206 damping candidate; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification."},footprint="Resistor_SMD:R_1206_3216Metric")
+        {"MPN":"RTF06KR430FTG","Manufacturer":"FH","Datasheet":"https://www.lcsc.com/product-detail/C44453441.html","BOM Comments":"430mOhm 1% 250mW current-sense, 1206; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification."},footprint="Resistor_SMD:R_1206_3216Metric")
     add("C_SERIES",f"C{11+branch*3}",1,167.64,y+20.32,{1:rail,2:"GND"},"100nF / 0402")
 for ref,net,rail,x,y in [
     ("R3","SFP_TX_FAULT","SFP_VccT",66.04,157.48),
@@ -339,7 +364,7 @@ add("SUPPLY_TEST","J8",1,350.52,73.66,{1:"SFP_3V3_FEED",2:"SFP_FEED_PG",3:"GND"}
 note("SFP REGULATED SUPPLY — 3.3V / 2A CONVERTER",15.24,12.7,"supply-title",2.0)
 note("U7 is independent of the hub 3.3V LDO. Both SFP filters share its output.\nMODE 32.4k selects forced PWM / 2.5MHz / VSET / discharge. Pin 9 deliberately OPEN selects 3.3V.\nEN follows local 5V. This sheet does not implement commanded module power cycling.",15.24,205.74,"supply-config",1.3)
 note("PG is test access only: it senses the regulator output BEFORE L1/L2. It does not prove module voltage or link readiness.\nPG is undefined below VIN=1.8V; no reset or TX-enable logic is driven from it.\nNominal 10nF soft start is about 3.26ms. Module inrush, filter resonance, rail skew and brownout remain test items.",15.24,231.14,"supply-pg",1.3)
-note("Source: TI TPS62902 SLVSFM1A pp.3,5-6,10-12,18-21,45-46; Coilcraft XGL4020 Doc1529. Capacitor selection pending.\nNative RPJ/XGL4020 footprints checked. DC allocation: <=0.10 ohm per filter branch; 50mV low-frequency disturbances.\nThese are design constraints, not measured performance. Module electrical and optical compatibility remains unqualified.",15.24,256.54,"supply-limits",1.2)
+note("Source: TI TPS62902 SLVSFM1A pp.3,5-6,10-12,18-21,45-46; Coilcraft XGL4020 Doc1529 for L4; cjiang FTC3030 for L1/L2. Capacitor selection pending.\nNative RPJ/XGL4020 footprints checked; L1/L2 use the KiCad Changjiang FTC3030 3x3mm land pattern. DC allocation: <=0.10 ohm per filter branch; 50mV low-frequency disturbances.\nThe 3x3mm filter part is about 72mOhm and does not meet that allocation, but matches the working reference board. These are design constraints, not measured performance. Module electrical and optical compatibility remains unqualified.",15.24,256.54,"supply-limits",1.2)
 supply_instances,supply_drawings=instances,drawings
 instances,drawings=[],[]
 sheet=root_sheet+"/"+esd_sheet

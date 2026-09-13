@@ -15,12 +15,13 @@
       "lifecycle": "In Production per current product API; distributor stock unchecked"
     },
     "R1_R2": {
-      "MPN": "ERJ8RQFR43V",
-      "Manufacturer": "Panasonic",
-      "product_url": "https://industrial.panasonic.com/ww/products/pt/current-sensing-chip-resistors/models/ERJ8RQFR43V",
-      "datasheet_url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf",
-      "nominal": "0.43 ohm, 1%, 0.25W, 1206, TCR 0 to +250ppm/K",
-      "local_pdf_status": "Unavailable: HTTP transport timeout twice. Web tool retrieved primary PDF and product page. Pulse qualification pending."
+      "MPN": "RTF06KR430FTG",
+      "Manufacturer": "FH",
+      "product_url": "https://www.lcsc.com/product-detail/C44453441.html",
+      "datasheet_url": "https://www.lcsc.com/product-detail/C44453441.html",
+      "nominal": "0.43 ohm, 1%, 0.25W, 1206, TCR +/-100ppm/C, metal-film current sense",
+      "lcsc": "C44453441",
+      "local_pdf_status": "No local PDF; LCSC product page only. Replaces the earlier Panasonic ERJ8RQFR43V, which has no LCSC listing. Pulse qualification pending."
     }
   },
   "public_API": "https://pimapi.murata.com/public/api/pim/v1",

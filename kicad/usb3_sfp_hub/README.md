@@ -43,10 +43,14 @@ leaving VSET open selects 3.3 V. EN follows the board's 5 V supply.
 
 The full-temperature VSET regulation range is ±1.25%. The draft allocates at most
 0.10 ohm hot resistance per filter branch and 50 mV for low-frequency disturbances.
-At the SFF-8431 level-II instantaneous limit of 600 mA per branch, this leaves
-8.75 mV above the connector's 3.14 V floor. These are **requirements on the
-unfinished circuit**, not measured performance. The separate SFF noise test,
-filter resonance, startup rail skew and module hot-plug still need qualification.
+At the SFF-8431 level-II instantaneous limit of 600 mA per branch, that allocation
+leaves 8.75 mV above the connector's 3.14 V floor. **The selected 3×3 mm filter part
+does not meet that allocation** (see below), and the working reference hardware
+implies the real per-branch current is lower: the 600 mA figure is a conservative
+envelope to be replaced by a measurement, not a proven load. These are
+**requirements on the unfinished circuit**, not measured performance. The separate
+SFF noise test, filter resonance, startup rail skew and module hot-plug still need
+qualification.
 [TI electrical limits](https://www.ti.com/lit/ds/symlink/tps62902.pdf), pp. 5–6;
 [SFF-8431 Table 8 and D.17](https://members.snia.org/document/dl/25891).
 
@@ -59,14 +63,21 @@ total input budget, stability and thermal work remain open.
 and their limits; [`sfp_supply_evidence.json`](../../design/sfp_supply_evidence.json)
 records source provenance. PDFs are in `datasheets/`.
 
-L1/L2 now use Coilcraft XGL4020-472MEC and L4 uses XGL4020-102MEC, with a local
-footprint based on the recommended 0.98 × 3.4 mm lands and 2.37 mm centre spacing.
-The filter inductor's maximum 25 °C DCR is 47.3 mOhm. Applying the manufacturer's
-copper-temperature equation to a 165 °C part-temperature bound gives about
-73.3 mOhm; adding a 20 mOhm hot-copper allocation fits the 100 mOhm branch budget.
-This is a resistance estimate, not a thermal pass. Saturation figures are specified
-at 25 °C; AC losses and hot saturation still need qualification.
-[Coilcraft XGL4020](https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf),
+L4 uses Coilcraft XGL4020-102MEC with a local footprint based on the recommended
+0.98 × 3.4 mm lands and 2.37 mm centre spacing.
+
+L1/L2 use **cjiang FTC303018D4R7MBCA** (LCSC C5832388), a 3.0 × 3.0 mm molded
+inductor, because a caliper check of the reference board shows the filter inductors
+are 3×3 mm, not 4×4. Its maximum 25 °C DCR is 72 mOhm (3.4 A Irms, 4.7 A Isat),
+near the best available in the 3×3 mm class. Applying the copper-temperature
+equation to a 165 °C bound gives about 112 mOhm; with the 20 mOhm hot-copper
+allocation the branch is about 0.13 ohm, **above the earlier 0.10 ohm target**.
+That exceeds the allocation but matches the working reference board, so the budget
+gap is a conservative-envelope issue. The KiCad
+`Inductor_SMD:L_Changjiang_FTC303020D` land pattern is shared across the
+3.0 × 3.0 mm FTC3030 family. This is a resistance estimate, not a thermal pass;
+AC losses and hot saturation still need qualification.
+[cjiang FTC3030 (LCSC C5832388)](https://www.lcsc.com/product-detail/C5832388.html),
 [temperature equation](https://www.coilcraft.com/en-us/resources/application-notes/current-and-temperature-ratings/).
 
 [`power_footprints.json`](validation/power_footprints.json) checks the saved pads,
@@ -118,6 +129,18 @@ distributor stock remains unchecked. The majority of passives/connectors are
 still generic. Local PDFs are in [`datasheets/`](datasheets/); `TPS2552.pdf` is the
 shared family datasheet covering the selected TPS2553 as well.
 
+On 2026-09-13 the settled passive and IC values received LCSC/JLCPCB part numbers
+(stored as an `LCSC` symbol property and exported to `bom.csv`). JLCPCB **basic**
+parts: 100 nF 0402 C1525, 1 k/4.7 k/10 k 0603 C21190/C23162/C25804. **Extended**
+parts: 12.1 k C22864, 23.2 k C2930078, 32.4 k C2998122, the 3×3 mm filter inductor
+C5832388, the damping resistor C44453441, and the selected Murata, Coilcraft and TI
+parts. Two settled lines still have **no usable JLCPCB source** and are flagged in
+the BOM: U1 `VL813(A1)` is EOL with no LCSC listing, and L4 `XGL4020-102MEC`
+(C5357696) has low stock. R1/R2 were moved from the untraceable Panasonic
+ERJ8RQFR43V to the stocked FH RTF06KR430FTG (C44453441), and L1/L2 from the
+unavailable XGL4020-472MEC to the stocked 3×3 mm part above. Values and footprints
+still marked TBD, and the unassigned connectors, are not yet sourced.
+
 ## Hub support sheet
 
 [`hub_support.kicad_sch`](hub_support.kicad_sch), [preview](validation/hub_support.png),
@@ -165,10 +188,11 @@ ground labels connect both sheets; other hub nets remain local.
 
 - L1/L2 provide separate 4.7 uH branches from `SFP_3V3_FEED_PENDING` to VccT/VccR.
   Each branch has input/output 100 nF bypass and a 22 uF bulk capacitor in series
-  with a damping resistor to ground. C10/C13 now use GRM32ER71E226KE15L and R1/R2
-  use ERJ8RQFR43V (0.43 ohm, 1%, 0.25 W, 1206). Nominal resistor plus inductor DCR
-  plus capacitor ESR is about 0.494 ohm at 15 kHz. This follows
-  SFF-8431 D.17/Figure 56; the figure's test-source resistance is not a fitted part.
+  with a damping resistor to ground. C10/C13 use GRM32ER71E226KE15L and R1/R2 use
+  FH RTF06KR430FTG (LCSC C44453441; 430 mOhm, 1%, 0.25 W, 1206, current sense).
+  Nominal resistor plus inductor DCR plus capacitor ESR is about 0.494 ohm at
+  15 kHz. This follows SFF-8431 D.17/Figure 56; the figure's test-source resistance
+  is not a fitted part.
 - R3/R4/R5 are 4.7 kOhm pullups for TX_FAULT, RX_LOS and MOD_ABS. R6/R7 are
   4.7 kOhm SDA/SCL pullups, initially assuming 100 kHz and at most 100 pF bus
   capacitance. Verify actual bus capacitance and rise time before increasing speed.
@@ -207,14 +231,14 @@ series-R/C approximation from that data. Constant ESR, sensitivity capacitances,
 ideal input and omitted module/regulator dynamics limit the result. It does not
 establish integrated SFF noise compliance or regulator loop stability.
 [Murata product and data](https://pim.murata.com/en-us/pim/details/?partNum=GRM32ER71E226KE15%23),
-[Panasonic resistor specifications](https://industrial.panasonic.com/ww/products/pt/current-sensing-chip-resistors/models/ERJ8RQFR43V).
+[FH RTF06KR430FTG (LCSC C44453441)](https://www.lcsc.com/product-detail/C44453441.html).
 
 Source responses, requests and numerical curves are retained under
 `design/references/murata_*`; valid Murata PDFs and the 0 V/25 C SPICE model are in
 `datasheets/`. The supplied capacitor model is not used as a 3.3 V model.
-The Panasonic PDF download timed out; the selection uses the primary product
-table and the PDF retrieved through web browsing. Local PDF and pulse capability
-remain sourcing/qualification gaps. See `design/sfp_filter_evidence.json`.
+The damping resistor is now the LCSC-stocked FH RTF06KR430FTG, replacing the
+Panasonic ERJ8RQFR43V that has no LCSC listing. Its pulse rating and local PDF
+remain qualification gaps. See `design/sfp_filter_evidence.json`.
 
 ## Optical interface decision still open
 

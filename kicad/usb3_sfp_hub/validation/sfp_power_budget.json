@@ -1,5 +1,5 @@
 {
-  "status": "PASS for stated DC allocations only; illustrative transient stress FAILS, see sfp_filter/report.json",
+  "status": "SCREEN: the 0.10 ohm allocation fits the SFF window, but the selected 3x3mm reference part exceeds it at 600mA (reported, not asserted); illustrative transient stress also FAILS, see sfp_filter/report.json",
   "regulator_vset_range_V": [
     3.25875,
     3.3412499999999996
@@ -14,11 +14,13 @@
     "low": 0.008750000000000036,
     "high": 0.06875000000000053
   },
-  "filter_inductor_MPN": "XGL4020-472MEC",
-  "filter_hot_DCR_estimate_ohm_at_165C": 0.07332446000000001,
+  "filter_inductor_MPN": "FTC303018D4R7MBCA",
+  "filter_inductor_DCR_25C_ohm": 0.072,
+  "selected_part_meets_0.10_ohm_allocation": false,
+  "filter_hot_DCR_estimate_ohm_at_165C": 0.11161439999999999,
   "allocated_hot_PCB_resistance_ohm": 0.02,
-  "selected_branch_resistance_estimate_plus_PCB_allocation_ohm": 0.09332446000000001,
-  "selected_inductor_voltage_min_estimate_V": 3.152755324,
+  "selected_branch_resistance_estimate_plus_PCB_allocation_ohm": 0.1316144,
+  "selected_inductor_voltage_min_estimate_V": 3.1297813600000004,
   "sfp_table8_peak_A_per_branch": 0.6,
   "two_branch_peak_plus_pullups_A": 1.2039279255319149,
   "converter_output_rating_A": 2.0,
@@ -35,6 +37,7 @@
   "nominal_soft_start_estimate_ms": 3.255,
   "mode_resistor_tolerance_plus_temperature_fraction": 0.0225,
   "limitations": [
+    "L1/L2 now match the calipered 3x3mm reference-board part (cjiang FTC303018D4R7MBCA, 72mOhm). Its hot resistance plus the PCB allocation (~0.13 ohm) exceeds the earlier XGL-based 0.10 ohm target, so the 600mA DC low-side margin is negative. The working reference hardware implies a lower real per-branch current; measure it before treating this branch as qualified.",
     "An explicit 0-to-600mA/10us load-step study drops below 3.14V; these DC margins do not override that transient gap.",
     "Resistance and disturbance numbers are requirements, not actual part or board measurements.",
     "Module identity unknown; SFF-8431 power levels are a provisional design envelope.",

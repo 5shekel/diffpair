@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\dev\diffpair\kicad\usb3_sfp_hub\usb3_sfp_hub.kicad_sch</source>
-    <date>2026-09-12T12:16:05</date>
+    <date>2026-09-13T14:39:14</date>
     <tool>Eeschema 10.0.5</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -118,11 +118,17 @@
       <value>100nF / 0402</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="usb3_sfp_hub"/>
       <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -140,11 +146,17 @@
       <value>100nF / 0402</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="usb3_sfp_hub"/>
       <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -162,11 +174,17 @@
       <value>100nF / 0402</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="usb3_sfp_hub"/>
       <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -184,11 +202,17 @@
       <value>100nF / 0402</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="usb3_sfp_hub"/>
       <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -206,11 +230,17 @@
       <value>100nF / 0402</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="usb3_sfp_hub"/>
       <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -228,11 +258,17 @@
       <value>100nF / 0402</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="usb3_sfp_hub"/>
       <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -250,11 +286,17 @@
       <value>100nF / 0402</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="usb3_sfp_hub"/>
       <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -272,11 +314,17 @@
       <value>100nF / 0402</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="usb3_sfp_hub"/>
       <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -452,7 +500,7 @@
       <fields>
         <field name="MPN">VL813(A1)</field>
         <field name="Manufacturer">VIA Labs</field>
-        <field name="BOM Comments">EOL reference baseline; footprint and operating circuit qualification pending</field>
+        <field name="BOM Comments">EOL reference baseline; footprint and operating circuit qualification pending; no LCSC listing (VIA EOL)</field>
         <field name="Footprint">lcsc:C69418_QFN-76_L9_0-W9_0-P0_40-EP6_4-TL</field>
         <field name="Datasheet">../../VL813.pdf</field>
         <field name="Description"/>
@@ -460,7 +508,7 @@
       <libsource lib="draft" part="VL813_A1" description=""/>
       <property name="MPN" value="VL813(A1)"/>
       <property name="Manufacturer" value="VIA Labs"/>
-      <property name="BOM Comments" value="EOL reference baseline; footprint and operating circuit qualification pending"/>
+      <property name="BOM Comments" value="EOL reference baseline; footprint and operating circuit qualification pending; no LCSC listing (VIA EOL)"/>
       <property name="Sheetname" value="usb3_sfp_hub"/>
       <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -581,11 +629,17 @@
       <value>100nF / 0402</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -607,6 +661,7 @@
         <field name="MPN">GRM32ER71E226KE15L</field>
         <field name="Manufacturer">Murata</field>
         <field name="BOM Comments">1210; manufacturer 3.3V/25C frequency data gives about 15.2uF and 20.5mOhm at 15kHz. Typical data, not guaranteed corner. Hot-plug/filter qualification pending.</field>
+        <field name="LCSC">C21397</field>
         <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
         <field name="Datasheet">https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM32ER71E226KE15-04CA-EN_PDF_CERAMICCAPACITORSMD</field>
         <field name="Description"/>
@@ -615,6 +670,7 @@
       <property name="MPN" value="GRM32ER71E226KE15L"/>
       <property name="Manufacturer" value="Murata"/>
       <property name="BOM Comments" value="1210; manufacturer 3.3V/25C frequency data gives about 15.2uF and 20.5mOhm at 15kHz. Typical data, not guaranteed corner. Hot-plug/filter qualification pending."/>
+      <property name="LCSC" value="C21397"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -632,11 +688,17 @@
       <value>100nF / 0402</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -654,11 +716,17 @@
       <value>100nF / 0402</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -680,6 +748,7 @@
         <field name="MPN">GRM32ER71E226KE15L</field>
         <field name="Manufacturer">Murata</field>
         <field name="BOM Comments">1210; manufacturer 3.3V/25C frequency data gives about 15.2uF and 20.5mOhm at 15kHz. Typical data, not guaranteed corner. Hot-plug/filter qualification pending.</field>
+        <field name="LCSC">C21397</field>
         <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
         <field name="Datasheet">https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM32ER71E226KE15-04CA-EN_PDF_CERAMICCAPACITORSMD</field>
         <field name="Description"/>
@@ -688,6 +757,7 @@
       <property name="MPN" value="GRM32ER71E226KE15L"/>
       <property name="Manufacturer" value="Murata"/>
       <property name="BOM Comments" value="1210; manufacturer 3.3V/25C frequency data gives about 15.2uF and 20.5mOhm at 15kHz. Typical data, not guaranteed corner. Hot-plug/filter qualification pending."/>
+      <property name="LCSC" value="C21397"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -705,11 +775,17 @@
       <value>100nF / 0402</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -753,21 +829,23 @@
       </units>
     </comp>
     <comp ref="L1">
-      <value>4.7uH / XGL4020-472MEC</value>
-      <footprint>power:L_Coilcraft_XGL4020</footprint>
-      <datasheet>https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf</datasheet>
+      <value>4.7uH / FTC303018D4R7MBCA</value>
+      <footprint>Inductor_SMD:L_Changjiang_FTC303020D</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/C5832388.html</datasheet>
       <fields>
-        <field name="MPN">XGL4020-472MEC</field>
-        <field name="Manufacturer">Coilcraft</field>
-        <field name="BOM Comments">47.3mOhm max DCR at 25C; 1.9/3.0/4.1A Isat at 10/20/30% drop at 25C; thermal/AC and filter validation pending</field>
-        <field name="Footprint">power:L_Coilcraft_XGL4020</field>
-        <field name="Datasheet">https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf</field>
+        <field name="MPN">FTC303018D4R7MBCA</field>
+        <field name="Manufacturer">Changjiang (cjiang)</field>
+        <field name="BOM Comments">3x3mm molded, sized to the calipered reference board; 72mOhm max DCR at 25C; 3.4A Irms / 4.7A Isat. 72mOhm exceeds the earlier XGL-based 0.10 ohm branch allocation (~0.13 ohm hot + copper at 165C); the reference board uses this size, so the 600mA envelope is likely conservative. Branch current/margin need measurement.</field>
+        <field name="LCSC">C5832388</field>
+        <field name="Footprint">Inductor_SMD:L_Changjiang_FTC303020D</field>
+        <field name="Datasheet">https://www.lcsc.com/product-detail/C5832388.html</field>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="L" description=""/>
-      <property name="MPN" value="XGL4020-472MEC"/>
-      <property name="Manufacturer" value="Coilcraft"/>
-      <property name="BOM Comments" value="47.3mOhm max DCR at 25C; 1.9/3.0/4.1A Isat at 10/20/30% drop at 25C; thermal/AC and filter validation pending"/>
+      <property name="MPN" value="FTC303018D4R7MBCA"/>
+      <property name="Manufacturer" value="Changjiang (cjiang)"/>
+      <property name="BOM Comments" value="3x3mm molded, sized to the calipered reference board; 72mOhm max DCR at 25C; 3.4A Irms / 4.7A Isat. 72mOhm exceeds the earlier XGL-based 0.10 ohm branch allocation (~0.13 ohm hot + copper at 165C); the reference board uses this size, so the 600mA envelope is likely conservative. Branch current/margin need measurement."/>
+      <property name="LCSC" value="C5832388"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -782,21 +860,23 @@
       </units>
     </comp>
     <comp ref="L2">
-      <value>4.7uH / XGL4020-472MEC</value>
-      <footprint>power:L_Coilcraft_XGL4020</footprint>
-      <datasheet>https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf</datasheet>
+      <value>4.7uH / FTC303018D4R7MBCA</value>
+      <footprint>Inductor_SMD:L_Changjiang_FTC303020D</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/C5832388.html</datasheet>
       <fields>
-        <field name="MPN">XGL4020-472MEC</field>
-        <field name="Manufacturer">Coilcraft</field>
-        <field name="BOM Comments">47.3mOhm max DCR at 25C; 1.9/3.0/4.1A Isat at 10/20/30% drop at 25C; thermal/AC and filter validation pending</field>
-        <field name="Footprint">power:L_Coilcraft_XGL4020</field>
-        <field name="Datasheet">https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf</field>
+        <field name="MPN">FTC303018D4R7MBCA</field>
+        <field name="Manufacturer">Changjiang (cjiang)</field>
+        <field name="BOM Comments">3x3mm molded, sized to the calipered reference board; 72mOhm max DCR at 25C; 3.4A Irms / 4.7A Isat. 72mOhm exceeds the earlier XGL-based 0.10 ohm branch allocation (~0.13 ohm hot + copper at 165C); the reference board uses this size, so the 600mA envelope is likely conservative. Branch current/margin need measurement.</field>
+        <field name="LCSC">C5832388</field>
+        <field name="Footprint">Inductor_SMD:L_Changjiang_FTC303020D</field>
+        <field name="Datasheet">https://www.lcsc.com/product-detail/C5832388.html</field>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="L" description=""/>
-      <property name="MPN" value="XGL4020-472MEC"/>
-      <property name="Manufacturer" value="Coilcraft"/>
-      <property name="BOM Comments" value="47.3mOhm max DCR at 25C; 1.9/3.0/4.1A Isat at 10/20/30% drop at 25C; thermal/AC and filter validation pending"/>
+      <property name="MPN" value="FTC303018D4R7MBCA"/>
+      <property name="Manufacturer" value="Changjiang (cjiang)"/>
+      <property name="BOM Comments" value="3x3mm molded, sized to the calipered reference board; 72mOhm max DCR at 25C; 3.4A Irms / 4.7A Isat. 72mOhm exceeds the earlier XGL-based 0.10 ohm branch allocation (~0.13 ohm hot + copper at 165C); the reference board uses this size, so the 600mA envelope is likely conservative. Branch current/margin need measurement."/>
+      <property name="LCSC" value="C5832388"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -813,19 +893,21 @@
     <comp ref="R1">
       <value>0.43 / 1% / 0.25W</value>
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
-      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf</datasheet>
+      <datasheet>https://www.lcsc.com/product-detail/C44453441.html</datasheet>
       <fields>
-        <field name="MPN">ERJ8RQFR43V</field>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="BOM Comments">1206 damping candidate; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification.</field>
+        <field name="MPN">RTF06KR430FTG</field>
+        <field name="Manufacturer">FH</field>
+        <field name="BOM Comments">430mOhm 1% 250mW current-sense, 1206; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification.</field>
+        <field name="LCSC">C44453441</field>
         <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
-        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf</field>
+        <field name="Datasheet">https://www.lcsc.com/product-detail/C44453441.html</field>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
-      <property name="MPN" value="ERJ8RQFR43V"/>
-      <property name="Manufacturer" value="Panasonic"/>
-      <property name="BOM Comments" value="1206 damping candidate; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification."/>
+      <property name="MPN" value="RTF06KR430FTG"/>
+      <property name="Manufacturer" value="FH"/>
+      <property name="BOM Comments" value="430mOhm 1% 250mW current-sense, 1206; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification."/>
+      <property name="LCSC" value="C44453441"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -842,19 +924,21 @@
     <comp ref="R2">
       <value>0.43 / 1% / 0.25W</value>
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
-      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf</datasheet>
+      <datasheet>https://www.lcsc.com/product-detail/C44453441.html</datasheet>
       <fields>
-        <field name="MPN">ERJ8RQFR43V</field>
-        <field name="Manufacturer">Panasonic</field>
-        <field name="BOM Comments">1206 damping candidate; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification.</field>
+        <field name="MPN">RTF06KR430FTG</field>
+        <field name="Manufacturer">FH</field>
+        <field name="BOM Comments">430mOhm 1% 250mW current-sense, 1206; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification.</field>
+        <field name="LCSC">C44453441</field>
         <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
-        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf</field>
+        <field name="Datasheet">https://www.lcsc.com/product-detail/C44453441.html</field>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
-      <property name="MPN" value="ERJ8RQFR43V"/>
-      <property name="Manufacturer" value="Panasonic"/>
-      <property name="BOM Comments" value="1206 damping candidate; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification."/>
+      <property name="MPN" value="RTF06KR430FTG"/>
+      <property name="Manufacturer" value="FH"/>
+      <property name="BOM Comments" value="430mOhm 1% 250mW current-sense, 1206; nominal total R about 0.494Ohm at 15kHz. Pulse capability and board filter response require qualification."/>
+      <property name="LCSC" value="C44453441"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -872,11 +956,17 @@
       <value>4.7k / 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
+        <field name="LCSC">C23162</field>
+        <field name="MPN">0603WAF4701T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
+      <property name="LCSC" value="C23162"/>
+      <property name="MPN" value="0603WAF4701T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -894,11 +984,17 @@
       <value>4.7k / 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
+        <field name="LCSC">C23162</field>
+        <field name="MPN">0603WAF4701T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
+      <property name="LCSC" value="C23162"/>
+      <property name="MPN" value="0603WAF4701T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -916,11 +1012,17 @@
       <value>4.7k / 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
+        <field name="LCSC">C23162</field>
+        <field name="MPN">0603WAF4701T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
+      <property name="LCSC" value="C23162"/>
+      <property name="MPN" value="0603WAF4701T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -938,11 +1040,17 @@
       <value>4.7k / 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
+        <field name="LCSC">C23162</field>
+        <field name="MPN">0603WAF4701T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
+      <property name="LCSC" value="C23162"/>
+      <property name="MPN" value="0603WAF4701T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -960,11 +1068,17 @@
       <value>4.7k / 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
+        <field name="LCSC">C23162</field>
+        <field name="MPN">0603WAF4701T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
+      <property name="LCSC" value="C23162"/>
+      <property name="MPN" value="0603WAF4701T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="SFP power and management"/>
       <property name="Sheetfile" value="sfp_support.kicad_sch"/>
       <sheetpath names="/SFP power and management/" tstamps="/f3215b86-39ab-57d1-b140-98659a3ff7ab/"/>
@@ -1099,6 +1213,9 @@
       <fields>
         <field name="Placement target">U1.2</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1106,6 +1223,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.2"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1125,6 +1245,9 @@
       <fields>
         <field name="Placement target">U1.8</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1132,6 +1255,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.8"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1151,6 +1277,9 @@
       <fields>
         <field name="Placement target">U1.27</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1158,6 +1287,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.27"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1177,6 +1309,9 @@
       <fields>
         <field name="Placement target">U1.36</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1184,6 +1319,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.36"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1203,6 +1341,9 @@
       <fields>
         <field name="Placement target">U1.41</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1210,6 +1351,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.41"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1229,6 +1373,9 @@
       <fields>
         <field name="Placement target">U1.49</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1236,6 +1383,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.49"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1255,6 +1405,9 @@
       <fields>
         <field name="Placement target">U1.71</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1262,6 +1415,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.71"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1281,6 +1437,9 @@
       <fields>
         <field name="Placement target">U1.5</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1288,6 +1447,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.5"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1307,6 +1469,9 @@
       <fields>
         <field name="Placement target">U1.13</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1314,6 +1479,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.13"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1333,6 +1501,9 @@
       <fields>
         <field name="Placement target">U1.24</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1340,6 +1511,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.24"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1359,6 +1533,9 @@
       <fields>
         <field name="Placement target">U1.30</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1366,6 +1543,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.30"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1385,6 +1565,9 @@
       <fields>
         <field name="Placement target">U1.48</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1392,6 +1575,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.48"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1411,6 +1597,9 @@
       <fields>
         <field name="Placement target">U1.58</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1418,6 +1607,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.58"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1437,6 +1629,9 @@
       <fields>
         <field name="Placement target">U1.61</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1444,6 +1639,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.61"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1463,6 +1661,9 @@
       <fields>
         <field name="Placement target">U1.68</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1470,6 +1671,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.68"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1489,6 +1693,9 @@
       <fields>
         <field name="Placement target">U1.74</field>
         <field name="Basis">Engineering starting value; place at assigned supply pin</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1496,6 +1703,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U1.74"/>
       <property name="Basis" value="Engineering starting value; place at assigned supply pin"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1559,6 +1769,9 @@
       <fields>
         <field name="Placement target">U12.6 to U12.2</field>
         <field name="BOM Comments">Repurposed from former 1uF RESET RC capacitor; no capacitor directly on RESET_N</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1566,6 +1779,9 @@
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U12.6 to U12.2"/>
       <property name="BOM Comments" value="Repurposed from former 1uF RESET RC capacitor; no capacitor directly on RESET_N"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1670,12 +1886,18 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="BOM Comments">TPS3808 open-drain RESET pullup; leakage/low-level DC bounds checked; reset timing qualification pending</field>
+        <field name="LCSC">C22864</field>
+        <field name="MPN">0603WAF1212T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
       <property name="BOM Comments" value="TPS3808 open-drain RESET pullup; leakage/low-level DC bounds checked; reset timing qualification pending"/>
+      <property name="LCSC" value="C22864"/>
+      <property name="MPN" value="0603WAF1212T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1694,12 +1916,18 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="BOM Comments">External MR pullup, in parallel with internal pullup; external control must be open-drain to GND</field>
+        <field name="LCSC">C25804</field>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
       <property name="BOM Comments" value="External MR pullup, in parallel with internal pullup; external control must be open-drain to GND"/>
+      <property name="LCSC" value="C25804"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1721,6 +1949,7 @@
         <field name="MPN">TPS3808G33DBVR</field>
         <field name="Manufacturer">Texas Instruments</field>
         <field name="BOM Comments">3.07V nominal falling threshold; CT open gives 12-28ms delay under specified test conditions. Monitors 3.3V only; core rail and optical recovery qualification pending.</field>
+        <field name="LCSC">C43698</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps3808.pdf</field>
         <field name="Description"/>
@@ -1729,6 +1958,7 @@
       <property name="MPN" value="TPS3808G33DBVR"/>
       <property name="Manufacturer" value="Texas Instruments"/>
       <property name="BOM Comments" value="3.07V nominal falling threshold; CT open gives 12-28ms delay under specified test conditions. Monitors 3.3V only; core rail and optical recovery qualification pending."/>
+      <property name="LCSC" value="C43698"/>
       <property name="Sheetname" value="Hub power and clock"/>
       <property name="Sheetfile" value="hub_support.kicad_sch"/>
       <sheetpath names="/Hub power and clock/" tstamps="/c29cd5e5-2d8c-5655-a256-f03a07318fe2/"/>
@@ -1772,12 +2002,18 @@
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
         <field name="Placement target">U2.1</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U2.1"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -1819,12 +2055,18 @@
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
         <field name="Placement target">J2.1</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="J2.1"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -1843,12 +2085,18 @@
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
         <field name="Placement target">U3.1</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U3.1"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -1890,12 +2138,18 @@
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
         <field name="Placement target">J3.1</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="J3.1"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -1914,12 +2168,18 @@
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
         <field name="Placement target">U4.1</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U4.1"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -1961,12 +2221,18 @@
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
         <field name="Placement target">J4.1</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="J4.1"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -1985,12 +2251,18 @@
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
         <field name="Placement target">U5.1</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U5.1"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2032,12 +2304,18 @@
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
         <field name="Placement target">J5.1</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="J5.1"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2056,12 +2334,18 @@
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
         <field name="Placement target">U6.5</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U6.5"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2080,12 +2364,18 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="BOM Comments">TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max</field>
+        <field name="LCSC">C2930078</field>
+        <field name="MPN">FRC0603F2322TS</field>
+        <field name="Manufacturer">FOJAN</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
       <property name="BOM Comments" value="TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max"/>
+      <property name="LCSC" value="C2930078"/>
+      <property name="MPN" value="FRC0603F2322TS"/>
+      <property name="Manufacturer" value="FOJAN"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2104,12 +2394,18 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="BOM Comments">TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max</field>
+        <field name="LCSC">C2930078</field>
+        <field name="MPN">FRC0603F2322TS</field>
+        <field name="Manufacturer">FOJAN</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
       <property name="BOM Comments" value="TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max"/>
+      <property name="LCSC" value="C2930078"/>
+      <property name="MPN" value="FRC0603F2322TS"/>
+      <property name="Manufacturer" value="FOJAN"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2128,12 +2424,18 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="BOM Comments">TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max</field>
+        <field name="LCSC">C2930078</field>
+        <field name="MPN">FRC0603F2322TS</field>
+        <field name="Manufacturer">FOJAN</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
       <property name="BOM Comments" value="TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max"/>
+      <property name="LCSC" value="C2930078"/>
+      <property name="MPN" value="FRC0603F2322TS"/>
+      <property name="Manufacturer" value="FOJAN"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2152,12 +2454,18 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="BOM Comments">TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max</field>
+        <field name="LCSC">C2930078</field>
+        <field name="MPN">FRC0603F2322TS</field>
+        <field name="Manufacturer">FOJAN</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
       <property name="BOM Comments" value="TPS255x Table 2: 1023.7/1109.7/1207.5mA min/nom/max"/>
+      <property name="LCSC" value="C2930078"/>
+      <property name="MPN" value="FRC0603F2322TS"/>
+      <property name="Manufacturer" value="FOJAN"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2175,11 +2483,17 @@
       <value>10k / 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
+        <field name="LCSC">C25804</field>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
+      <property name="LCSC" value="C25804"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2197,11 +2511,17 @@
       <value>10k / 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
+        <field name="LCSC">C25804</field>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
+      <property name="LCSC" value="C25804"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2219,11 +2539,17 @@
       <value>10k / 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
+        <field name="LCSC">C25804</field>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
+      <property name="LCSC" value="C25804"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2241,11 +2567,17 @@
       <value>10k / 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
+        <field name="LCSC">C25804</field>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
+      <property name="LCSC" value="C25804"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2264,12 +2596,18 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="BOM Comments">Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior</field>
+        <field name="LCSC">C21190</field>
+        <field name="MPN">0603WAF1001T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
       <property name="BOM Comments" value="Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior"/>
+      <property name="LCSC" value="C21190"/>
+      <property name="MPN" value="0603WAF1001T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2288,12 +2626,18 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="BOM Comments">Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior</field>
+        <field name="LCSC">C21190</field>
+        <field name="MPN">0603WAF1001T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
       <property name="BOM Comments" value="Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior"/>
+      <property name="LCSC" value="C21190"/>
+      <property name="MPN" value="0603WAF1001T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2312,12 +2656,18 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="BOM Comments">Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior</field>
+        <field name="LCSC">C21190</field>
+        <field name="MPN">0603WAF1001T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
       <property name="BOM Comments" value="Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior"/>
+      <property name="LCSC" value="C21190"/>
+      <property name="MPN" value="0603WAF1001T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2336,12 +2686,18 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="BOM Comments">Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior</field>
+        <field name="LCSC">C21190</field>
+        <field name="MPN">0603WAF1001T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
       <property name="BOM Comments" value="Passive output discharge; 27mW maximum at 5.2V; verify selected capacitor and back-drive behavior"/>
+      <property name="LCSC" value="C21190"/>
+      <property name="MPN" value="0603WAF1001T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2363,6 +2719,7 @@
         <field name="MPN">TPS2553DBVR</field>
         <field name="Manufacturer">Texas Instruments</field>
         <field name="BOM Comments">Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified.</field>
+        <field name="LCSC">C55266</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps2552.pdf</field>
         <field name="Description"/>
@@ -2371,6 +2728,7 @@
       <property name="MPN" value="TPS2553DBVR"/>
       <property name="Manufacturer" value="Texas Instruments"/>
       <property name="BOM Comments" value="Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified."/>
+      <property name="LCSC" value="C55266"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2396,6 +2754,7 @@
         <field name="MPN">TPS2553DBVR</field>
         <field name="Manufacturer">Texas Instruments</field>
         <field name="BOM Comments">Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified.</field>
+        <field name="LCSC">C55266</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps2552.pdf</field>
         <field name="Description"/>
@@ -2404,6 +2763,7 @@
       <property name="MPN" value="TPS2553DBVR"/>
       <property name="Manufacturer" value="Texas Instruments"/>
       <property name="BOM Comments" value="Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified."/>
+      <property name="LCSC" value="C55266"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2429,6 +2789,7 @@
         <field name="MPN">TPS2553DBVR</field>
         <field name="Manufacturer">Texas Instruments</field>
         <field name="BOM Comments">Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified.</field>
+        <field name="LCSC">C55266</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps2552.pdf</field>
         <field name="Description"/>
@@ -2437,6 +2798,7 @@
       <property name="MPN" value="TPS2553DBVR"/>
       <property name="Manufacturer" value="Texas Instruments"/>
       <property name="BOM Comments" value="Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified."/>
+      <property name="LCSC" value="C55266"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2462,6 +2824,7 @@
         <field name="MPN">TPS2553DBVR</field>
         <field name="Manufacturer">Texas Instruments</field>
         <field name="BOM Comments">Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified.</field>
+        <field name="LCSC">C55266</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps2552.pdf</field>
         <field name="Description"/>
@@ -2470,6 +2833,7 @@
       <property name="MPN" value="TPS2553DBVR"/>
       <property name="Manufacturer" value="Texas Instruments"/>
       <property name="BOM Comments" value="Active-high constant-current version; DBV pin 4 FAULT, pin 5 ILIM. Stock not verified."/>
+      <property name="LCSC" value="C55266"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2495,6 +2859,7 @@
         <field name="MPN">SN74LVC1G04DBVR</field>
         <field name="Manufacturer">Texas Instruments</field>
         <field name="BOM Comments">Inverts hub active-low gang enable; Ioff plus R15 holds EN low at VCC=0; ramp behavior requires test</field>
+        <field name="LCSC">C7827</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf</field>
         <field name="Description"/>
@@ -2503,6 +2868,7 @@
       <property name="MPN" value="SN74LVC1G04DBVR"/>
       <property name="Manufacturer" value="Texas Instruments"/>
       <property name="BOM Comments" value="Inverts hub active-low gang enable; Ioff plus R15 holds EN low at VCC=0; ramp behavior requires test"/>
+      <property name="LCSC" value="C7827"/>
       <property name="Sheetname" value="Downstream port power"/>
       <property name="Sheetfile" value="port_power.kicad_sch"/>
       <sheetpath names="/Downstream port power/" tstamps="/32c4f820-24c7-5b08-8915-02cbe7662b1a/"/>
@@ -2596,12 +2962,18 @@
       <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <fields>
         <field name="Placement target">U7.6 to U7.4; minimize input switching loop</field>
+        <field name="LCSC">C1525</field>
+        <field name="MPN">CL05B104KO5NNNC</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="C_SERIES" description=""/>
       <property name="Placement target" value="U7.6 to U7.4; minimize input switching loop"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="MPN" value="CL05B104KO5NNNC"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="SFP regulated supply"/>
       <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
       <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
@@ -2645,6 +3017,7 @@
         <field name="MPN">XGL4020-102MEC</field>
         <field name="Manufacturer">Coilcraft</field>
         <field name="BOM Comments">TI Table 8-4 listed part; 9mOhm max DCR; 3.8/6.3/8.8A Isat at 10/20/30% drop at 25C; stripe faces pad1 SW; thermal/AC/fault peaks pending</field>
+        <field name="LCSC">C5357696</field>
         <field name="Footprint">power:L_Coilcraft_XGL4020</field>
         <field name="Datasheet">https://www.coilcraft.com/getmedia/76c9c081-4945-4c85-9129-9356e1ad6734/xgl4020.pdf</field>
         <field name="Description"/>
@@ -2653,6 +3026,7 @@
       <property name="MPN" value="XGL4020-102MEC"/>
       <property name="Manufacturer" value="Coilcraft"/>
       <property name="BOM Comments" value="TI Table 8-4 listed part; 9mOhm max DCR; 3.8/6.3/8.8A Isat at 10/20/30% drop at 25C; stripe faces pad1 SW; thermal/AC/fault peaks pending"/>
+      <property name="LCSC" value="C5357696"/>
       <property name="Sheetname" value="SFP regulated supply"/>
       <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
       <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
@@ -2671,12 +3045,18 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="BOM Comments">TI Table 7-1 option 10: VSET, 2.5MHz, forced PWM, discharge enabled; total tolerance within +/-4%, pin C &lt;=30pF</field>
+        <field name="LCSC">C2998122</field>
+        <field name="MPN">FRC0603F3242TS</field>
+        <field name="Manufacturer">FOJAN</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
       <property name="BOM Comments" value="TI Table 7-1 option 10: VSET, 2.5MHz, forced PWM, discharge enabled; total tolerance within +/-4%, pin C &lt;=30pF"/>
+      <property name="LCSC" value="C2998122"/>
+      <property name="MPN" value="FRC0603F3242TS"/>
+      <property name="Manufacturer" value="FOJAN"/>
       <property name="Sheetname" value="SFP regulated supply"/>
       <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
       <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
@@ -2694,11 +3074,17 @@
       <value>10k / 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
+        <field name="LCSC">C25804</field>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="Manufacturer">UNI-ROYAL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="draft" part="R" description=""/>
+      <property name="LCSC" value="C25804"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="Manufacturer" value="UNI-ROYAL"/>
       <property name="Sheetname" value="SFP regulated supply"/>
       <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
       <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
@@ -2720,6 +3106,7 @@
         <field name="MPN">TPS62902RPJR</field>
         <field name="Manufacturer">Texas Instruments</field>
         <field name="BOM Comments">RPJ nine-pad VQFN, no separate EP. Native local footprint from TI land pattern. VSET open=3.3V with 32.4k MODE; stock not verified.</field>
+        <field name="LCSC">C2870154</field>
         <field name="Footprint">power:TI_RPJ0009A_1.5x2mm</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps62902.pdf</field>
         <field name="Description"/>
@@ -2728,6 +3115,7 @@
       <property name="MPN" value="TPS62902RPJR"/>
       <property name="Manufacturer" value="Texas Instruments"/>
       <property name="BOM Comments" value="RPJ nine-pad VQFN, no separate EP. Native local footprint from TI land pattern. VSET open=3.3V with 32.4k MODE; stock not verified."/>
+      <property name="LCSC" value="C2870154"/>
       <property name="Sheetname" value="SFP regulated supply"/>
       <property name="Sheetfile" value="sfp_supply.kicad_sch"/>
       <sheetpath names="/SFP regulated supply/" tstamps="/ce55d780-89cc-5677-b03d-f3ceed7642be/"/>
@@ -2757,6 +3145,7 @@
         <field name="Manufacturer">Texas Instruments</field>
         <field name="Placement target">J2 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8</field>
         <field name="BOM Comments">Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending.</field>
+        <field name="LCSC">C106794</field>
         <field name="Footprint">protection:TI_DQA0010A_1x2.5mm</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf</field>
         <field name="Description"/>
@@ -2766,6 +3155,7 @@
       <property name="Manufacturer" value="Texas Instruments"/>
       <property name="Placement target" value="J2 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8"/>
       <property name="BOM Comments" value="Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending."/>
+      <property name="LCSC" value="C106794"/>
       <property name="Sheetname" value="USB3 signal protection"/>
       <property name="Sheetfile" value="usb3_esd.kicad_sch"/>
       <sheetpath names="/USB3 signal protection/" tstamps="/a86a6896-3b25-5572-ab90-645d34a7ad3a/"/>
@@ -2796,6 +3186,7 @@
         <field name="Manufacturer">Texas Instruments</field>
         <field name="Placement target">J3 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8</field>
         <field name="BOM Comments">Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending.</field>
+        <field name="LCSC">C106794</field>
         <field name="Footprint">protection:TI_DQA0010A_1x2.5mm</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf</field>
         <field name="Description"/>
@@ -2805,6 +3196,7 @@
       <property name="Manufacturer" value="Texas Instruments"/>
       <property name="Placement target" value="J3 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8"/>
       <property name="BOM Comments" value="Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending."/>
+      <property name="LCSC" value="C106794"/>
       <property name="Sheetname" value="USB3 signal protection"/>
       <property name="Sheetfile" value="usb3_esd.kicad_sch"/>
       <sheetpath names="/USB3 signal protection/" tstamps="/a86a6896-3b25-5572-ab90-645d34a7ad3a/"/>
@@ -2835,6 +3227,7 @@
         <field name="Manufacturer">Texas Instruments</field>
         <field name="Placement target">J4 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8</field>
         <field name="BOM Comments">Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending.</field>
+        <field name="LCSC">C106794</field>
         <field name="Footprint">protection:TI_DQA0010A_1x2.5mm</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf</field>
         <field name="Description"/>
@@ -2844,6 +3237,7 @@
       <property name="Manufacturer" value="Texas Instruments"/>
       <property name="Placement target" value="J4 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8"/>
       <property name="BOM Comments" value="Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending."/>
+      <property name="LCSC" value="C106794"/>
       <property name="Sheetname" value="USB3 signal protection"/>
       <property name="Sheetfile" value="usb3_esd.kicad_sch"/>
       <sheetpath names="/USB3 signal protection/" tstamps="/a86a6896-3b25-5572-ab90-645d34a7ad3a/"/>
@@ -2874,6 +3268,7 @@
         <field name="Manufacturer">Texas Instruments</field>
         <field name="Placement target">J5 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8</field>
         <field name="BOM Comments">Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending.</field>
+        <field name="LCSC">C106794</field>
         <field name="Footprint">protection:TI_DQA0010A_1x2.5mm</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf</field>
         <field name="Description"/>
@@ -2883,6 +3278,7 @@
       <property name="Manufacturer" value="Texas Instruments"/>
       <property name="Placement target" value="J5 SuperSpeed contacts; TX connector side of AC capacitors; short ground returns at pins 3/8"/>
       <property name="BOM Comments" value="Bidirectional +/-3.6V signal-only TVS; 0.25pF typical, 0.33pF max at 0V/1MHz/25C. NC pads used for PCB flow-through, not internally connected. SI/ESD tests pending."/>
+      <property name="LCSC" value="C106794"/>
       <property name="Sheetname" value="USB3 signal protection"/>
       <property name="Sheetfile" value="usb3_esd.kicad_sch"/>
       <sheetpath names="/USB3 signal protection/" tstamps="/a86a6896-3b25-5572-ab90-645d34a7ad3a/"/>

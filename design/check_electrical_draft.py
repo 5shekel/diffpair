@@ -72,7 +72,7 @@ for branch,pin in [(0,16),(1,15)]:
     assert components[inductor].findtext("value").startswith("4.7uH")
     assert components[bulk].findtext("value").startswith("22uF")
     assert components[damp].findtext("value")=="0.43 / 1% / 0.25W"
-    for ref,mpn,fp in [(bulk,'GRM32ER71E226KE15L','Capacitor_SMD:C_1210_3225Metric'),(damp,'ERJ8RQFR43V','Resistor_SMD:R_1206_3216Metric')]:
+    for ref,mpn,fp in [(bulk,'GRM32ER71E226KE15L','Capacitor_SMD:C_1210_3225Metric'),(damp,'RTF06KR430FTG','Resistor_SMD:R_1206_3216Metric')]:
         props={p.attrib['name']:p.attrib['value'] for p in components[ref].findall('property')}
         assert props['MPN']==mpn
         assert components[ref].findtext('footprint')==fp
@@ -170,10 +170,12 @@ isolated("U7",9)  # Table 7-2 option 16, provided MODE selects VSET operation.
 assert components["R22"].findtext("value")=="32.4k / 1% / 100ppm"
 assert components["U7"].findtext("value")=="TPS62902RPJR"
 assert components["U7"].findtext("footprint")=="power:TI_RPJ0009A_1.5x2mm"
-for ref,mpn in [('L1','XGL4020-472MEC'),('L2','XGL4020-472MEC'),('L4','XGL4020-102MEC')]:
+for ref,mpn,mfr,fp in [('L1','FTC303018D4R7MBCA','Changjiang (cjiang)','Inductor_SMD:L_Changjiang_FTC303020D'),
+                       ('L2','FTC303018D4R7MBCA','Changjiang (cjiang)','Inductor_SMD:L_Changjiang_FTC303020D'),
+                       ('L4','XGL4020-102MEC','Coilcraft','power:L_Coilcraft_XGL4020')]:
     props={p.attrib['name']:p.attrib['value'] for p in components[ref].findall('property')}
-    assert props['MPN']==mpn and props['Manufacturer']=='Coilcraft'
-    assert components[ref].findtext('footprint')=='power:L_Coilcraft_XGL4020'
+    assert props['MPN']==mpn and props['Manufacturer']==mfr
+    assert components[ref].findtext('footprint')==fp
 assert components["L4"].findtext("value").startswith("1uH")
 assert components["C54"].findtext("value")=="10nF / 5% / C0G"
 assert nodes[("U7","3")]!=nodes[("U1","18")]

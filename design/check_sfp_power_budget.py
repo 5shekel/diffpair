@@ -14,8 +14,8 @@ components = {c.attrib['ref']: c for c in xml.find('components')}
 expected = {'U7':'TPS62902RPJR', 'R22':'32.4k / 1% / 100ppm',
             'R23':'10k / 1%', 'C54':'10nF / 5% / C0G',
             'C52':'10uF / 10V / X7R', 'C53':'22uF / 10V / X7R',
-            'L4':'1uH / XGL4020-102MEC', 'L1':'4.7uH / XGL4020-472MEC',
-            'L2':'4.7uH / XGL4020-472MEC'}
+            'L4':'1uH / XGL4020-102MEC', 'L1':'4.7uH / FTC303018D4R7MBCA',
+            'L2':'4.7uH / FTC303018D4R7MBCA'}
 for ref,value in expected.items():
     assert components[ref].findtext('value') == value, (ref,value)
 
@@ -32,10 +32,13 @@ module_max = v_max+disturbance
 assert module_min >= 3.14 and module_max <= 3.46
 # Selected filter inductors: manufacturer DCR max at 25C, copper temperature
 # estimate through maximum rated part temperature. This is not a thermal model.
-hot_dcr_estimate = .0473*(1+.00393*(165-25))
+filter_dcr_25c = .072  # cjiang FTC303018D4R7MBCA 3x3mm, matches the reference board.
+hot_dcr_estimate = filter_dcr_25c*(1+.00393*(165-25))
 copper_resistance_allocation = .020  # PCB hot resistance, must be verified after routing.
 selected_branch_resistance = hot_dcr_estimate+copper_resistance_allocation
-assert selected_branch_resistance <= branch_resistance_max
+# Reported, not asserted: the reference-hardware 3x3mm part exceeds the earlier
+# XGL4020-based 0.10 ohm allocation. This is an open qualification item, not a pass.
+selected_part_meets_allocation = selected_branch_resistance <= branch_resistance_max
 # All five management pullups asserted, plus regulator PG pullup asserted.
 # The former is deliberately conservative: MOD_ABS/status/I2C need not all sink.
 pullup_current = v_max/(4700*.99)*5 + v_max/(10000*.99)
@@ -55,13 +58,15 @@ mode_resistor_error = .01+100e-6*125  # 25 to 150C; excludes aging.
 assert mode_resistor_error < .04
 
 result = {
-    'status':'PASS for stated DC allocations only; illustrative transient stress FAILS, see sfp_filter/report.json',
+    'status':'SCREEN: the 0.10 ohm allocation fits the SFF window, but the selected 3x3mm reference part exceeds it at 600mA (reported, not asserted); illustrative transient stress also FAILS, see sfp_filter/report.json',
     'regulator_vset_range_V':[v_min,v_max],
     'allocated_branch_hot_resistance_ohm':branch_resistance_max,
     'allocated_low_frequency_disturbance_V':disturbance,
     'allocated_module_voltage_range_V':[module_min,module_max],
     'remaining_voltage_margin_V':{'low':module_min-3.14,'high':3.46-module_max},
-    'filter_inductor_MPN':'XGL4020-472MEC',
+    'filter_inductor_MPN':'FTC303018D4R7MBCA',
+    'filter_inductor_DCR_25C_ohm':filter_dcr_25c,
+    'selected_part_meets_0.10_ohm_allocation':selected_part_meets_allocation,
     'filter_hot_DCR_estimate_ohm_at_165C':hot_dcr_estimate,
     'allocated_hot_PCB_resistance_ohm':copper_resistance_allocation,
     'selected_branch_resistance_estimate_plus_PCB_allocation_ohm':selected_branch_resistance,
@@ -78,6 +83,7 @@ result = {
     'nominal_soft_start_estimate_ms':soft_start_typ_us/1000,
     'mode_resistor_tolerance_plus_temperature_fraction':mode_resistor_error,
     'limitations':[
+        'L1/L2 now match the calipered 3x3mm reference-board part (cjiang FTC303018D4R7MBCA, 72mOhm). Its hot resistance plus the PCB allocation (~0.13 ohm) exceeds the earlier XGL-based 0.10 ohm target, so the 600mA DC low-side margin is negative. The working reference hardware implies a lower real per-branch current; measure it before treating this branch as qualified.',
         'An explicit 0-to-600mA/10us load-step study drops below 3.14V; these DC margins do not override that transient gap.',
         'Resistance and disturbance numbers are requirements, not actual part or board measurements.',
         'Module identity unknown; SFF-8431 power levels are a provisional design envelope.',
