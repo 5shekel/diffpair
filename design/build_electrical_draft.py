@@ -206,7 +206,7 @@ def add(name,ref,unit,x,y,connections,value=None,properties=None,footprint=None)
 positions=[(170.18,50.8),(254,48.26),(254,91.44),(254,134.62),(254,177.8),
            (294.64,243.84),(60.96,215.9),(167.64,147.32)]
 for unit,((x,y),numbers) in enumerate(zip(positions,groups),1):
-    add("VL813_A1","U1",unit,x,y,{n:hub_nets[n] for n in numbers},properties={"MPN":"VL813(A1)","Manufacturer":"VIA Labs","Datasheet":"../../VL813.pdf","BOM Comments":"EOL reference baseline; footprint and operating circuit qualification pending; no LCSC listing (VIA EOL)"})
+    add("VL813_A1","U1",unit,x,y,{n:hub_nets[n] for n in numbers},properties={"MPN":"VL813(A1)","Manufacturer":"VIA Labs","Datasheet":"../../VL813.pdf","BOM Comments":"EOL reference baseline; footprint and operating circuit qualification pending; no LCSC listing (VIA EOL). Non-drop-in replacement candidate: Genesys GL3510-OSY52 (LCSC C7501408), QFN-64 USB3.1 Gen1 4-port with built-in 5Vto3.3V/1.2V regulators; different package/pinout, needs a new symbol/footprint and power/clock review."})
 ground_sfp={1,10,11,14,17,20}
 sfp_nets={n:("GND" if n in ground_sfp else "SFP_"+sfp_names[n]) for n in sfp_names}
 add("SFP_PLUS","J1",1,63.5,50.8,sfp_nets,value="SFP+ / MODULE TBD")

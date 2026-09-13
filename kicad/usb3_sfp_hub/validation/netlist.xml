@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\dev\diffpair\kicad\usb3_sfp_hub\usb3_sfp_hub.kicad_sch</source>
-    <date>2026-09-13T14:39:14</date>
+    <date>2026-09-13T14:47:27</date>
     <tool>Eeschema 10.0.5</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -500,7 +500,7 @@
       <fields>
         <field name="MPN">VL813(A1)</field>
         <field name="Manufacturer">VIA Labs</field>
-        <field name="BOM Comments">EOL reference baseline; footprint and operating circuit qualification pending; no LCSC listing (VIA EOL)</field>
+        <field name="BOM Comments">EOL reference baseline; footprint and operating circuit qualification pending; no LCSC listing (VIA EOL). Non-drop-in replacement candidate: Genesys GL3510-OSY52 (LCSC C7501408), QFN-64 USB3.1 Gen1 4-port with built-in 5Vto3.3V/1.2V regulators; different package/pinout, needs a new symbol/footprint and power/clock review.</field>
         <field name="Footprint">lcsc:C69418_QFN-76_L9_0-W9_0-P0_40-EP6_4-TL</field>
         <field name="Datasheet">../../VL813.pdf</field>
         <field name="Description"/>
@@ -508,7 +508,7 @@
       <libsource lib="draft" part="VL813_A1" description=""/>
       <property name="MPN" value="VL813(A1)"/>
       <property name="Manufacturer" value="VIA Labs"/>
-      <property name="BOM Comments" value="EOL reference baseline; footprint and operating circuit qualification pending; no LCSC listing (VIA EOL)"/>
+      <property name="BOM Comments" value="EOL reference baseline; footprint and operating circuit qualification pending; no LCSC listing (VIA EOL). Non-drop-in replacement candidate: Genesys GL3510-OSY52 (LCSC C7501408), QFN-64 USB3.1 Gen1 4-port with built-in 5Vto3.3V/1.2V regulators; different package/pinout, needs a new symbol/footprint and power/clock review."/>
       <property name="Sheetname" value="usb3_sfp_hub"/>
       <property name="Sheetfile" value="usb3_sfp_hub.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>

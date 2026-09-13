@@ -285,6 +285,13 @@ The retained VL813 baseline is a legacy part: VIA lists it under EOL products.
 That matters for a subsequent component selection decision; this draft does not
 claim new-production availability. [VIA VL813](https://www.via-labs.com/product_show.php?id=81).
 
+A candidate replacement is recorded against U1 but is **not drop-in**: Genesys
+Logic **GL3510-OSY52** (LCSC C7501408), a USB 3.1 Gen 1 four-port hub in QFN-64
+with built-in 5 V→3.3 V and 5 V→1.2 V regulators (which could remove the external
+hub regulators). It is not pin- or footprint-compatible with the VL813's QFN-76,
+so adopting it requires a new symbol, footprint and power/clock review.
+[GL3510-OSY52 (LCSC C7501408)](https://www.lcsc.com/product-detail/C7501408.html).
+
 ## Reproduce
 
 The hub reset RC has been replaced by **U12 TPS3808G33DBVR**, monitoring
