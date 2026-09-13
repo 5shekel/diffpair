@@ -1,5 +1,10 @@
 # HANDOFF — USB3-only hub over SFP+ and photo tracing
 
+> **Historical document — superseded 2026-09-13.** The active objective and
+> completion criteria now live in [`design/GOAL.md`](design/GOAL.md), with
+> [`design/STATUS.md`](design/STATUS.md) as the current-state snapshot. This file
+> is retained for session history only; do not use it as the source of truth.
+
 ## Active goal continuation — electrical design
 
 **Latest continuation — hub reset supervisor:** current hub draft is now

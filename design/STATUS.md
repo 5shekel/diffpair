@@ -1,4 +1,4 @@
-# Board status — 2026-09-12
+# Board status — 2026-09-13
 
 Naming here follows the user's description: **receiver** means the small PC-side
 USB-to-fiber unit; **hub/transmitter** means the four-port remote unit. The optical
@@ -23,6 +23,12 @@ interface remains open.** Bias/pin-40 decisions, control/firmware, protection an
 power qualification also remain incomplete. The photo placement model is a
 separate project and is not a routed version of this schematic.
 
+On 2026-09-13 the unreferenced `kicad/usb3_over_optical_hub/` starting point was
+removed and its VL813 (LCSC C69418) and SFP+ 20-pin (C42418480) symbols, footprint
+and 3D models were salvaged byte-identically into `kicad/usb3_sfp_hub/libs/lcsc/`,
+with provenance in `provenance.json`. This made no functional schematic change;
+the electrical state below is unchanged.
+
 The design is **USB3 only**. All ten hub USB2 data pins and all eight downstream
 USB2 contacts are isolated in the current native netlist. No USB2 management
 channel is being added. The existing receiver/cable/modules are the current
@@ -37,6 +43,7 @@ receiver underside/cable connections and negotiated-speed/recovery evidence.
 Files:
 
 - Hub schematic: `kicad/usb3_sfp_hub/usb3_sfp_hub.kicad_sch`
+- Vendor library provenance: `kicad/usb3_sfp_hub/libs/lcsc/provenance.json`
 - Photo model: `kicad/board_trace/board_trace.kicad_pcb`
 - Receiver evidence: `design/receiver/README.md`
 - USB3 capture: `design/receiver/capture_usb3.ps1`
